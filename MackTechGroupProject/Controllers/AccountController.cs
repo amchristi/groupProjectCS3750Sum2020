@@ -154,12 +154,23 @@ namespace MackTechGroupProject.Controllers
                 var FirstName = model.FirstName;
                 var LastName = model.LastName;
 
+                bool IsInstructorResult = model.IsInstructor;
+
                 var user = new ApplicationUser { UserName = model.Email, Email = model.Email, FirstName = model.FirstName, LastName = model.LastName };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
-                    
+
+                    if (IsInstructorResult == true)
+                    {
+                        await UserManager.AddToRolesAsync(user.Id, "Instructor");
+                    }
+                    else
+                    {
+                        await UserManager.AddToRolesAsync(user.Id, "Student");
+                    }
+
                     // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=320771
                     // Send an email with this link
                     // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);

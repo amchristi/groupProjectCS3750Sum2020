@@ -89,6 +89,9 @@ namespace MackTechGroupProject.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+        [Display(Name = "Are you an instructor?")]
+        public bool IsInstructor { get; set; }
     }
 
     public class ResetPasswordViewModel
