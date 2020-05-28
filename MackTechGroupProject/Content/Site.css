@@ -1,4 +1,11 @@
-﻿body {
+﻿/*color Scheme 
+    background color:490191
+    brand and text color:(159,157,161,.5)
+    link color:(191,13,78,.8)
+    active or hovered links color:(38,31,44,.5)
+*/
+
+body {
     padding-top: 50px;
     padding-bottom: 20px;
 }
@@ -22,3 +29,22 @@ select,
 textarea {
     max-width: 280px;
 }
+
+
+.navbar-custom {
+    background-color: #490191;
+}
+    /* change the brand and text color */
+    .navbar-custom .navbar-brand,
+    .navbar-custom .navbar-text {
+        color: rgba(159,157,161,.5);
+    }
+    /* change the link color */
+    .navbar-custom .navbar-nav .nav-link {
+        color: rgba(191,13,78,.8);
+    }
+    /* change the color of active or hovered links */
+    .navbar-custom .nav-item.active .nav-link,
+    .navbar-custom .nav-item:hover .nav-link {
+        color: rgba(38,31,44,.5);
+    }
