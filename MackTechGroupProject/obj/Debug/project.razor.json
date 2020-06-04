@@ -1,0 +1,19 @@
+{
+  "FilePath": "d:\\nickb\\Weber State University\\cs3750\\teamProjectCS3750\\groupProjectCS3750Sum2020\\MackTechGroupProject\\MackTechGroupProject.csproj",
+  "Configuration": {
+    "ConfigurationName": "UnsupportedRazor",
+    "LanguageVersion": "1.0",
+    "Extensions": [
+      {
+        "ExtensionName": "UnsupportedRazorExtension"
+      }
+    ]
+  },
+  "ProjectWorkspaceState": {
+    "TagHelpers": [],
+    "CSharpLanguageVersion": 703
+  },
+  "RootNamespace": null,
+  "Documents": [],
+  "SerializationFormat": "0.2"
+}
