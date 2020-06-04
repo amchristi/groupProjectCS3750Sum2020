@@ -6878,6 +6878,30 @@ div.ToDoCheckBox {
 }
 
 
+/***************************        Nick's edits for the Calendar            *************************/
+/*
+    light purple:#F2E6FF
+    Dark Purple: #5900B3
+*/
 
+h2.CalendarHeader {
+    text-align: center;
+}
+
+td.CalendarBlock {
+    height: 50px;
+    width: 50px;
+    border: #343A44 3px solid;
+    background-color: #5900B3;
+    text-align: left;
+    vertical-align: text-top;
+    color: white;
+    font-size: 20px;
+}
+
+table.CalendarTable {
+    border: #343A44 3px solid;
+    background-color: #5900B3;
+}
 
 /*# sourceMappingURL=bootstrap.css.map */
