@@ -6754,4 +6754,130 @@ button.close {
     display: none !important;
   }
 }
+
+/***************************        Andy's edits for the class cards            *************************/
+/*
+    light purple:#F2E6FF
+    Dark Purple: #5900B3
+*/
+div.classCard {
+    height: 320px;
+    width: 300px;
+    border: #343A44 6px ridge;
+    background-color: #5900B3;
+    border-radius: 20px;
+    box-shadow: 6px -6px 18px #343A44, -6px 6px 18px #343A44;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding: 15px;
+    padding-top: 20px;
+    color: #F2E6FF;
+    transition: box-shadow 1s;
+}
+
+section.Sec-ClassCard {
+    height: auto;
+    width: auto;
+    border: #343A44 6px ridge;
+    background-color: #F2E6FF;
+    border-radius: 20px;
+    box-shadow: 6px -6px 18px #343A44, -6px 6px 18px #343A44;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 0;
+    margin-left: 0;
+    padding: 10px;
+    color: #000000;
+    transition: box-shadow 1s;
+    text-align: center;
+}
+
+section.homeClassPageMenu {
+    height: auto;
+    width: auto;
+    border: #343A44 6px ridge;
+    background-color: #5900B3;
+    border-radius: 20px;
+    box-shadow: 6px -6px 18px #343A44, -6px 6px 18px #343A44;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-right: 0;
+    margin-left: 0;
+    padding: 10px;
+    color: #000000;
+    transition: box-shadow 1s;
+}
+
+table.classListTable {
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+div.homeClassMenuButton {
+    height: auto;
+    width: auto;
+    border: #343A44 2px inset;
+    background-color: #F2E6FF;
+    border-radius: 20px;
+    text-align: center;
+    margin: 5px;
+}
+
+a.homeClassMenuButton {
+    color: #F2E6FF;
+}
+
+/***************************        Montana's edits for the todo list            *************************/
+/*
+    light purple:#F2E6FF
+    Dark Purple: #5900B3
+*/
+
+div.ToDoHeader {
+    font-size: 150%;
+    padding-top: 20px;
+    margin-bottom: -15px;
+}
+
+table.ToDoItems {
+    table-layout: auto;
+    width:100%;
+    margin-top: -13px;
+}
+
+div.ToDoCol1 {
+    text-align: center;
+}
+
+ToDoCol2Class {
+    text-transform: uppercase;
+}
+
+div.ToDoCol3Points {
+    text-align: right;
+}
+
+div.ToDoCol3DueDate {
+    text-align: right;
+}
+
+
+td.ToDoItems, th.ToDoItems {
+    border-bottom: solid 1px #5900B3;
+    padding-bottom: 7px;
+    padding-top: 7px;
+}
+
+div.ToDoCheckBox {
+    text-align: right;
+    font-size: 50px;
+    vertical-align: text-top;
+}
+
+
+
+
 /*# sourceMappingURL=bootstrap.css.map */
