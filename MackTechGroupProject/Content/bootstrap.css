@@ -6794,6 +6794,23 @@ section.Sec-ClassCard {
     text-align: center;
 }
 
+section.homePageNotifications {
+    height: 320px;
+    width: auto;
+    border: #343A44 6px ridge;
+    background-color: #5900B3;
+    border-radius: 20px;
+    box-shadow: 6px -6px 18px #343A44, -6px 6px 18px #343A44;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-right: 0;
+    margin-left: 0;
+    padding: 10px;
+    color: #F2E6FF;
+    transition: box-shadow 1s;
+    text-align: center;
+}
+
 section.homeClassPageMenu {
     height: auto;
     width: auto;
@@ -6829,6 +6846,30 @@ div.homeClassMenuButton {
 a.homeClassMenuButton {
     color: #F2E6FF;
 }
+
+table.Notifications{
+    width: 100%;
+    color: #F2E6FF;
+}
+td.noteCol2 {
+    width: 80px;
+}
+
+td.noteCol3{
+    width:80px;
+}
+
+td.NoteScore {
+    text-align: right;
+
+}
+
+tr.noteRow {
+    border-bottom: solid 1px #F2E6FF;
+    padding-bottom: 7px;
+    padding-top: 7px;
+    color: #F2E6FF;
+
 
 /***************************        Montana's edits for the todo list            *************************/
 /*
