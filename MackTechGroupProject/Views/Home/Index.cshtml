@@ -18,7 +18,7 @@
                         <p>
                             Schedule: T/Th 7:30a - 9:00a
                         </p>
-                        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Class Details &raquo;</a></p>
+                        <p><a class="btn btn-default" href="@Url.Action("CS3750", "Courses")">Class Details &raquo;</a></p>
                     </div>
                 </td>
                 <td>
@@ -27,7 +27,7 @@
                         <p>
                             Schedule: M/W 7:30a - 9:00a
                         </p>
-                        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Class Details &raquo;</a></p>
+                        <p><a class="btn btn-default" href="@Url.Action("CS3620", "Courses")">Class Details &raquo;</a></p>
                     </div>
                 </td>
             </tr>
@@ -40,7 +40,7 @@
                         <p>
                             Schedule: Online, group meeting TH 7:30p
                         </p>
-                        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Class Details &raquo;</a></p>
+                        <p><a class="btn btn-default" href="@Url.Action("MATH1220", "Courses")">Class Details &raquo;</a></p>
                     </div>
                 </td>
 
@@ -54,7 +54,7 @@
                         <p>
                             Lab: TH: 2:30p - 4:30p
                         </p>
-                        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Class Details &raquo;</a></p>
+                        <p><a class="btn btn-default" href="@Url.Action("PHYS2120", "Courses")">Class Details &raquo;</a></p>
                     </div>
                 </td>
 
@@ -79,7 +79,7 @@
                         Phys 2120<br />
                     </div>
                     <div class="ToDoCol2Task">
-                        <a class="ToDoItemTaskLink" href="https://go.microsoft.com/fwlink/?LinkId=301865" target="_blank">Assignment 1</a>
+                        <a class="ToDoItemTaskLink" href="@Url.Action("Assignment1", "Assignments")" target="_blank">Assignment 1</a>
                     </div>
                 </td>
                 <td class="ToDoItems">
@@ -103,7 +103,7 @@
                         CS 3750<br />
                     </div>
                     <div class="ToDoCol2Task">
-                        <a class="ToDoItemTaskLink" href="https://go.microsoft.com/fwlink/?LinkId=301865" target="_blank">Assignment 3</a>
+                        <a class="ToDoItemTaskLink" href="@Url.Action("Assignment3", "Assignments")" target="_blank">Assignment 3</a>
                     </div>
                 </td>
                 <td class="ToDoItems">
@@ -127,7 +127,7 @@
                         CS 3620<br />
                     </div>
                     <div class="ToDoCol2Task">
-                        <a class="ToDoItemTaskLink" href="https://go.microsoft.com/fwlink/?LinkId=301865" target="_blank">Discussion</a>
+                        <a class="ToDoItemTaskLink" href="@Url.Action("Discussion", "Assignments")" target="_blank">Discussion</a>
                     </div>
                 </td>
                 <td class="ToDoItems">
@@ -151,7 +151,7 @@
                         Math 1220<br />
                     </div>
                     <div class="ToDoCol2Task">
-                        <a class="ToDoItemTaskLink" href="https://go.microsoft.com/fwlink/?LinkId=301865" target="_blank">Assignment 2</a>
+                        <a class="ToDoItemTaskLink" href="@Url.Action("Assignment2", "Assignments")" target="_blank">Assignment 2</a>
                     </div>
                 </td>
                 <td class="ToDoItems">
@@ -280,21 +280,19 @@
     
     <section class="homeClassPageMenu">
         <div class="homeClassMenuButton">
-            <a href="Grades.html">
+            <a href="@Url.Action("Grades", "Courses")">
                 <h2>Grades</h2>
             </a>
         </div>
         <div class="homeClassMenuButton">
-            <a href="Registration.html">
+            <a href="@Url.Action("Registration", "Misc")">
                 <h2>Registration</h2>
             </a>
         </div>
         <div class="homeClassMenuButton">
-            <a href="Message.html">
+            <a href="@Url.Action("Message", "Misc")">
                 <h2>Message</h2>
             </a>
         </div>
     </section>
 </aside>
-<footer class="col-md-12">
-</footer>
