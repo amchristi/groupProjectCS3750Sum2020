@@ -168,8 +168,11 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AssignmentsController.cs" />
+    <Compile Include="Controllers\CoursesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MiscController.cs" />
     <Compile Include="Extensions\IdentityExtensions.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -236,6 +239,17 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Courses\CS3750.cshtml" />
+    <Content Include="Views\Courses\CS3620.cshtml" />
+    <Content Include="Views\Courses\MATH1220.cshtml" />
+    <Content Include="Views\Courses\PHYS2120.cshtml" />
+    <Content Include="Views\Assignments\Assignment1.cshtml" />
+    <Content Include="Views\Assignments\Assignment2.cshtml" />
+    <Content Include="Views\Assignments\Assignment3.cshtml" />
+    <Content Include="Views\Misc\Registration.cshtml" />
+    <Content Include="Views\Misc\Message.cshtml" />
+    <Content Include="Views\Courses\Grades.cshtml" />
+    <Content Include="Views\Assignments\Discussion.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
