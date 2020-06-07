@@ -94,6 +94,45 @@ namespace MackTechGroupProject.Models
         public bool IsInstructor { get; set; }
     }
 
+    public class ProfileViewModel
+    {
+        [Required]
+        [Display(Name = "Address Line 1")]
+        public string AddressOne { get; set; }
+
+        [Display(Name = "Address Line 2")]
+        public string AddressTwo { get; set; }
+
+        [Required]
+        [Display(Name = "City")]
+        public string City { get; set; }
+
+        [Required]
+        [Display(Name = "State")]
+        public string State { get; set; }
+
+        [Required]
+        [Display(Name = "Zip Code")]
+        public string ZipCode { get; set; }
+
+        [Required]
+        [Phone]
+        [Display(Name = "Phone Number")]
+        public string PhoneNum { get; set; }
+
+        [Display(Name = "Link 1")]
+        public string LinkOne { get; set; }
+
+        [Display(Name = "Link 2")]
+        public string LinkTwo { get; set; }
+
+        [Display(Name = "Link 3")]
+        public string LinkThree { get; set; }
+        
+        [Display(Name = "Bio")]
+        public string BioInfo { get; set; }
+    }
+
     public class ResetPasswordViewModel
     {
         [Required]

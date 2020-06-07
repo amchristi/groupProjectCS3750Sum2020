@@ -1,0 +1,107 @@
+﻿@using Microsoft.AspNet.Identity
+@using MackTechGroupProject.Extensions
+
+@model MackTechGroupProject.Models.ProfileViewModel
+@{
+    ViewBag.Title = "Profile";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ProfileInfoDetails</title>
+</head>
+<body>
+    <div>
+        <h4>ProfileViewModel</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.AddressOne)
+            </dt>
+    
+            <dd>
+                <p> @User.Identity.GetUserAddressOne() </p>
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.AddressTwo)
+            </dt>
+    
+            <dd>
+                <p> @User.Identity.GetUserAddressTwo() </p>
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.City)
+            </dt>
+    
+            <dd>
+                <p> @User.Identity.GetUserCity() </p>
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.State)
+            </dt>
+    
+            <dd>
+                <p> @User.Identity.GetUserState() </p>
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.ZipCode)
+            </dt>
+    
+            <dd>
+                <p> @User.Identity.GetUserZipCode() </p>
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.PhoneNum)
+            </dt>
+    
+            <dd>
+                <p> @User.Identity.GetUserPhoneNumber() </p>
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.LinkOne)
+            </dt>
+    
+            <dd>
+                <p> @User.Identity.GetUserLinkOne() </p>
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.LinkTwo)
+            </dt>
+    
+            <dd>
+                <p> @User.Identity.GetUserLinkTwo() </p>
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.LinkThree)
+            </dt>
+    
+            <dd>
+                <p> @User.Identity.GetUserLinkThree() </p>
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.BioInfo)
+            </dt>
+    
+            <dd>
+                <p> @User.Identity.GetUserBioInfo() </p>
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit Profile", "ProfileInfoEdit", "Account")
+    </p>
+</body>
+</html>

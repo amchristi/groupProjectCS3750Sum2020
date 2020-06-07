@@ -151,12 +151,25 @@ namespace MackTechGroupProject.Controllers
         {
             if (ModelState.IsValid)
             {
-                var FirstName = model.FirstName;
-                var LastName = model.LastName;
-
                 bool IsInstructorResult = model.IsInstructor;
 
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email, FirstName = model.FirstName, LastName = model.LastName };
+                var user = new ApplicationUser 
+                { 
+                    UserName = model.Email,
+                    Email = model.Email,
+                    FirstName = model.FirstName,
+                    LastName = model.LastName,
+                    AddressOne = "",
+                    AddressTwo = "",
+                    City = "",
+                    State = "",
+                    ZipCode = "",
+                    PhoneNum = "",
+                    LinkOne = "",
+                    LinkTwo = "",
+                    LinkThree = "",
+                    BioInfo = "" 
+                };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
@@ -183,6 +196,78 @@ namespace MackTechGroupProject.Controllers
             }
 
             // If we got this far, something failed, redisplay form
+            return View(model);
+        }
+
+        public ActionResult ProfileInfoDetails()
+        {
+            return View();
+        }
+
+        public ActionResult ProfileInfoEdit()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> ProfileInfoEdit(ProfileViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
+            var user = await UserManager.FindByIdAsync(User.Identity.GetUserId());
+
+            user.AddressOne = model.AddressOne;
+            user.AddressTwo = model.AddressTwo;
+            user.City = model.City;
+            user.State = model.State;
+            user.ZipCode = model.ZipCode;
+            user.PhoneNum = model.PhoneNum;
+            user.LinkOne = model.LinkOne;
+            user.LinkTwo = model.LinkTwo;
+            user.LinkThree = model.LinkThree;
+            user.BioInfo = model.BioInfo;
+
+            if(model.AddressTwo == null)
+            {
+                user.AddressTwo = "";
+            }
+
+            if (model.LinkOne == null)
+            {
+                user.LinkOne = "";
+            }
+
+            if (model.LinkTwo == null)
+            {
+                user.LinkTwo = "";
+            }
+
+            if (model.LinkThree == null)
+            {
+                user.LinkThree = "";
+            }
+
+            if (model.BioInfo == null)
+            {
+                user.BioInfo = "";
+            }
+
+            var result = await UserManager.UpdateAsync(user);
+
+            if (user != null)
+            {
+                await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
+            }
+
+            if (result.Succeeded)
+            {
+                return RedirectToAction("ProfileInfoDetails", "Account");
+            }
+
             return View(model);
         }
 

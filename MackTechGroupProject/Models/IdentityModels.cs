@@ -11,6 +11,16 @@ namespace MackTechGroupProject.Models
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        public string AddressOne { get; set; }
+        public string AddressTwo { get; set; }
+        public string City { get; set; }
+        public string State { get; set; }
+        public string ZipCode { get; set; }
+        public string PhoneNum { get; set; }
+        public string LinkOne { get; set; }
+        public string LinkTwo { get; set; }
+        public string LinkThree { get; set; }
+        public string BioInfo { get; set; }
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {
@@ -19,10 +29,25 @@ namespace MackTechGroupProject.Models
             // Add custom user claims here
             userIdentity.AddClaim(new Claim("FirstName", this.FirstName));
             userIdentity.AddClaim(new Claim("LastName", this.LastName));
+            userIdentity.AddClaim(new Claim("AddressOne", this.AddressOne));
+            userIdentity.AddClaim(new Claim("AddressTwo", this.AddressTwo));
+            userIdentity.AddClaim(new Claim("City", this.City));
+            userIdentity.AddClaim(new Claim("State", this.State));
+            userIdentity.AddClaim(new Claim("ZipCode", this.ZipCode));
+            userIdentity.AddClaim(new Claim("PhoneNum", this.PhoneNum));
+            userIdentity.AddClaim(new Claim("LinkOne", this.LinkOne));
+            userIdentity.AddClaim(new Claim("LinkTwo", this.LinkTwo));
+            userIdentity.AddClaim(new Claim("LinkThree", this.LinkThree));
+            userIdentity.AddClaim(new Claim("BioInfo", this.BioInfo));
 
             return userIdentity;
         }
     }
+
+    //public class Profile
+    //{
+
+    //}
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
@@ -30,6 +55,9 @@ namespace MackTechGroupProject.Models
             : base("DefaultConnection", throwIfV1Schema: false)
         {
         }
+
+        //try adding databases here
+        //public DbSet<Profile> Profile { get; set; }
 
         public static ApplicationDbContext Create()
         {
