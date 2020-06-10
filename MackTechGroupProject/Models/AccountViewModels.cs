@@ -96,6 +96,7 @@ namespace MackTechGroupProject.Models
 
     public class ProfileViewModel
     {
+       
         [Required]
         [Display(Name = "Address Line 1")]
         public string AddressOne { get; set; }

@@ -524,3 +524,5 @@ C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\ob
 C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.Migrations.Profile_Columns.resources
 C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.csproj.GenerateResource.cache
 C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.csprojAssemblyReference.cache
+C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.Migrations.Profile_Columns.resources
+C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.csproj.GenerateResource.cache
