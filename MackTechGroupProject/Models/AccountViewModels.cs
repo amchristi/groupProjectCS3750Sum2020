@@ -109,10 +109,13 @@ namespace MackTechGroupProject.Models
         public string City { get; set; }
 
         [Required]
+        [RegularExpression(@"^(?:(A[KLRZ]|C[AOT]|D[CE]|FL|GA|HI|I[ADLN]|K[SY]|LA|M[ADEINOST]|N[CDEHJMVY]|O[HKR]|P[AR]|RI|S[CD]|T[NX]|UT|V[AIT]|W[AIVY]))$", 
+            ErrorMessage = "Invalid State. Please enter valid two letter abbreviation")]
         [Display(Name = "State")]
         public string State { get; set; }
 
         [Required]
+        [RegularExpression(@"^\d{5}(-\d{4})?$", ErrorMessage = "Invalid Zip")]
         [Display(Name = "Zip Code")]
         public string ZipCode { get; set; }
 
