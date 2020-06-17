@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MackTechGroupProject.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,6 +9,8 @@ namespace MackTechGroupProject.Controllers
 {
     public class CoursesController : Controller
     {
+        private CoursesContext db = new CoursesContext();
+
         // GET: Courses
         public ActionResult CS3620()
         {
