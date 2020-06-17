@@ -9,6 +9,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using MackTechGroupProject.Models;
+using System.IO;
 
 namespace MackTechGroupProject.Controllers
 {
@@ -219,6 +220,10 @@ namespace MackTechGroupProject.Controllers
             }
 
             var user = await UserManager.FindByIdAsync(User.Identity.GetUserId());
+
+            //CONVERT PIC TO BYTES
+            //HttpPostedFileBase file = Request.Files["ImageData"];
+            //model.ProfilePic = ConvertToBytes(file);
 
             user.AddressOne = model.AddressOne;
             user.AddressTwo = model.AddressTwo;
@@ -578,6 +583,16 @@ namespace MackTechGroupProject.Controllers
                 }
                 context.HttpContext.GetOwinContext().Authentication.Challenge(properties, LoginProvider);
             }
+        }
+
+        //************************** ADD FOR PROFILE PICTURE ******************************
+
+        public byte[] ConvertToBytes(HttpPostedFileBase image)
+        {
+            byte[] imageBytes = null;
+            BinaryReader reader = new BinaryReader(image.InputStream);
+            imageBytes = reader.ReadBytes((int)image.ContentLength);
+            return imageBytes;
         }
         #endregion
     }

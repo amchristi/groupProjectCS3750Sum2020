@@ -97,6 +97,9 @@ namespace MackTechGroupProject.Models
     public class ProfileViewModel
     {
        
+        [Display(Name = "Change Picture")]
+        public byte[] ProfilePic { get; set; }
+        
         [Required]
         [Display(Name = "Address Line 1")]
         public string AddressOne { get; set; }
@@ -132,7 +135,8 @@ namespace MackTechGroupProject.Models
 
         [Display(Name = "Link 3")]
         public string LinkThree { get; set; }
-        
+
+        [DataType(DataType.MultilineText)]
         [Display(Name = "Bio")]
         public string BioInfo { get; set; }
     }

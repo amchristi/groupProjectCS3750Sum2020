@@ -190,7 +190,6 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MiscController.cs" />
-    <Compile Include="Controllers\TestCoursesController.cs" />
     <Compile Include="Extensions\IdentityExtensions.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -277,6 +276,7 @@
     <Content Include="Views\Assignments\Discussion.cshtml" />
     <Content Include="Views\Account\ProfileInfoEdit.cshtml" />
     <Content Include="Views\Account\ProfileInfoDetails.cshtml" />
+    <Content Include="Views\Courses\AddCourse.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

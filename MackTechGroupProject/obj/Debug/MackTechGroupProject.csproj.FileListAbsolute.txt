@@ -535,3 +535,12 @@ C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bi
 C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Stripe.net.xml
 C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Threading.Tasks.Extensions.xml
+C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Stripe.net.dll
+C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Threading.Tasks.Extensions.dll
+C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Stripe.net.pdb
+C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Stripe.net.xml
+C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Threading.Tasks.Extensions.xml
