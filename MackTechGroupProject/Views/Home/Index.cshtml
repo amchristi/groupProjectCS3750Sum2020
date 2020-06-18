@@ -169,6 +169,8 @@
 </main>
 
 <aside class="col-md-4">
+
+     <!--
     <section class="homePageCalendar">
         <h2 class="CalendarHeader">Calendar</h2>
         <table class="CalendarTable">
@@ -277,7 +279,7 @@
             </tr>
         </table>
     </section>
-    
+    -->
     <section class="homePageNotifications">
         <h2>Notifications</h2>
         <table class="Notifications">
@@ -343,6 +345,11 @@
     
     <section class="homeClassPageMenu">
         <div class="homeClassMenuButton">
+            <a href="@Url.Action("Calendar", "Misc")">
+                <h2>Calendar</h2>
+            </a>
+        </div>
+        <div class="homeClassMenuButton">
             <a href="@Url.Action("Grades", "Courses")">
                 <h2>Grades</h2>
             </a>
@@ -352,5 +359,6 @@
                 <h2>Registration</h2>
             </a>
         </div>
+
     </section>
 </aside>
