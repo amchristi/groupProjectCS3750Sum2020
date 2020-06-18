@@ -17,5 +17,13 @@ namespace MackTechGroupProject.Controllers
         {
             return View();
         }
+        public ActionResult Calendar()
+        {
+            return View();
+        }
+        public ActionResult NewEvent()
+        {
+            return View();
+        }
     }
 }
