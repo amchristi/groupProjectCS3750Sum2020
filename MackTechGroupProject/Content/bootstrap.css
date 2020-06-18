@@ -6927,12 +6927,11 @@ div.ToDoCheckBox {
 */
 
 h2.CalendarHeader {
-    text-align: center;
+    text-align: left;
 }
 
 td.CalendarBlock {
-    height: 50px;
-    width: 50px;
+
     border: #343A44 3px solid;
     background-color: #5900B3;
     text-align: left;
@@ -6942,8 +6941,61 @@ td.CalendarBlock {
 }
 
 table.CalendarTable {
+    width: 770px;
+    height: 700px;
     border: #343A44 3px solid;
     background-color: #5900B3;
+    background-color: #5900B3;    
+    box-shadow: 6px -6px 18px #343A44, -6px 6px 18px #343A44;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-right: 0;
+    margin-left: 0;
+    padding: 10px;
+    color: #000000;
+    transition: box-shadow 1s;
+    vertical-align: central;
+}
+
+th.CalendarDay {
+    height: 30px;
+    width: 110px;
+    text-align: center;
+    vertical-align: central;
+    color: white;
+    font-size: 20px;
+}
+
+section.addCalendarEvent {
+    position: fixed;
+    left: 940px;
+    top: 200px;
+    height: auto;
+    width: auto;
+    border: #343A44 6px ridge;
+    background-color: #5900B3;
+    border-radius: 20px;
+    box-shadow: 6px -6px 18px #343A44, -6px 6px 18px #343A44;
+  
+    color: #000000;
+    transition: box-shadow 1s;
+    vertical-align: central;
+}
+
+div.addEventButton {
+    
+    height: 30px;
+    width: 140px;
+    border: #343A44 2px inset;
+    background-color: #F2E6FF;
+    border-radius: 20px;
+    text-align: center;    
+    font-size: 20px;
+}
+
+h2.addCalLink {
+    font-size: 20px;
+    margin-top: -4px;
 }
 
 /*# sourceMappingURL=bootstrap.css.map */
