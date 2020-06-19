@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data.Entity;
 using System.Security.Claims;
 using System.Threading.Tasks;
@@ -23,6 +24,8 @@ namespace MackTechGroupProject.Models
         public string LinkThree { get; set; }
         public string BioInfo { get; set; }
         public byte[] ProfileImage { get; set; }
+
+        public ICollection<Enrollment> Enrollments { get; set; }
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {
@@ -53,8 +56,8 @@ namespace MackTechGroupProject.Models
         {
         }
 
-        //try adding databases here
         public DbSet<Course> Courses { get; set; }
+        public DbSet<Enrollment> Enrollments { get; set; }
 
         public static ApplicationDbContext Create()
         {

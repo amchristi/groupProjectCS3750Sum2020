@@ -22,7 +22,6 @@ namespace MackTechGroupProject.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        //***NICK IF YOU WANT TO MAKE THIS AN ASYNC METHOD***//
         public ActionResult AddCourse(Course model)
         {
             if (ModelState.IsValid)
@@ -37,9 +36,8 @@ namespace MackTechGroupProject.Controllers
                     MaxCapacity = model.MaxCapacity
                 };
 
-                //***NICK TRY SOMETHING LIKE THIS***//
-                //db.Courses.Add(course);
-                //db.SaveChanges();
+                db.Courses.Add(course);
+                db.SaveChanges();
 
                 return RedirectToAction("Index", "Home");
             }

@@ -54,14 +54,14 @@ namespace MackTechGroupProject.Models
         [Display(Name = "Max Capacity")]
         public int MaxCapacity { get; set; }
 
+        public ICollection<Enrollment> Enrollments { get; set; }
 
     }
 
-    /// <summary>
-    /// For future use if needed
-    /// </summary>
-    //public class StudentCourse
-    //{
-
-    //}
+    public class Enrollment
+    {
+        public int EnrollmentId { get; set; }
+        public ApplicationUser Student { get; set; }
+        public Course Course { get; set; }
+    }
 }
