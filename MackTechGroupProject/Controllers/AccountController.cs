@@ -154,8 +154,8 @@ namespace MackTechGroupProject.Controllers
             {
                 bool IsInstructorResult = model.IsInstructor;
 
-                var user = new ApplicationUser 
-                { 
+                var user = new ApplicationUser
+                {
                     UserName = model.Email,
                     Email = model.Email,
                     FirstName = model.FirstName,
@@ -169,7 +169,8 @@ namespace MackTechGroupProject.Controllers
                     LinkOne = "",
                     LinkTwo = "",
                     LinkThree = "",
-                    BioInfo = "" 
+                    BioInfo = "",
+                    ProfileImage = new byte[0]
                 };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
@@ -223,8 +224,9 @@ namespace MackTechGroupProject.Controllers
 
             //CONVERT PIC TO BYTES
             //HttpPostedFileBase file = Request.Files["ImageData"];
-            //model.ProfilePic = ConvertToBytes(file);
+            //model.ProfileImage = ConvertToBytes(file);
 
+            user.ProfileImage = model.ProfileImage; 
             user.AddressOne = model.AddressOne;
             user.AddressTwo = model.AddressTwo;
             user.City = model.City;

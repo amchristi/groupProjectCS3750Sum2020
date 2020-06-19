@@ -194,13 +194,12 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202006060106582_Profile_Columns.cs" />
-    <Compile Include="Migrations\202006060106582_Profile_Columns.Designer.cs">
-      <DependentUpon>202006060106582_Profile_Columns.cs</DependentUpon>
+    <Compile Include="Migrations\202006190155056_Added_Course_Table.cs" />
+    <Compile Include="Migrations\202006190155056_Added_Course_Table.Designer.cs">
+      <DependentUpon>202006190155056_Added_Course_Table.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\CoursesContext.cs" />
     <Compile Include="Models\CoursesModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -296,8 +295,8 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202006060106582_Profile_Columns.resx">
-      <DependentUpon>202006060106582_Profile_Columns.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202006190155056_Added_Course_Table.resx">
+      <DependentUpon>202006190155056_Added_Course_Table.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

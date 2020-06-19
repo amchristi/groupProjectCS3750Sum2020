@@ -1,4 +1,5 @@
-﻿using System.Data.Entity;
+﻿using System;
+using System.Data.Entity;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
@@ -21,6 +22,7 @@ namespace MackTechGroupProject.Models
         public string LinkTwo { get; set; }
         public string LinkThree { get; set; }
         public string BioInfo { get; set; }
+        public byte[] ProfileImage { get; set; }
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {
@@ -44,11 +46,6 @@ namespace MackTechGroupProject.Models
         }
     }
 
-    //public class Profile
-    //{
-
-    //}
-
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
@@ -57,7 +54,7 @@ namespace MackTechGroupProject.Models
         }
 
         //try adding databases here
-        //public DbSet<Profile> Profile { get; set; }
+        public DbSet<Course> Courses { get; set; }
 
         public static ApplicationDbContext Create()
         {

@@ -3,10 +3,23 @@ namespace MackTechGroupProject.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Profile_Columns : DbMigration
+    public partial class Added_Course_Table : DbMigration
     {
         public override void Up()
         {
+            CreateTable(
+                "dbo.Courses",
+                c => new
+                    {
+                        CourseID = c.Int(nullable: false, identity: true),
+                        CourseName = c.String(nullable: false),
+                        InstructorID = c.Int(nullable: false),
+                        CreditHours = c.Int(nullable: false),
+                        ClassLocation = c.String(nullable: false),
+                        MaxCapacity = c.Int(nullable: false),
+                    })
+                .PrimaryKey(t => t.CourseID);
+            
             CreateTable(
                 "dbo.AspNetRoles",
                 c => new
@@ -47,6 +60,7 @@ namespace MackTechGroupProject.Migrations
                         LinkTwo = c.String(),
                         LinkThree = c.String(),
                         BioInfo = c.String(),
+                        ProfileImage = c.Binary(),
                         Email = c.String(maxLength: 256),
                         EmailConfirmed = c.Boolean(nullable: false),
                         PasswordHash = c.String(),
@@ -106,6 +120,7 @@ namespace MackTechGroupProject.Migrations
             DropTable("dbo.AspNetUsers");
             DropTable("dbo.AspNetUserRoles");
             DropTable("dbo.AspNetRoles");
+            DropTable("dbo.Courses");
         }
     }
 }

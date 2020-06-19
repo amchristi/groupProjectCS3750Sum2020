@@ -521,8 +521,6 @@ C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\ob
 C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.csproj.CopyComplete
 C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.dll
 C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.pdb
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.Migrations.Profile_Columns.resources
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.csproj.GenerateResource.cache
 C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.csprojAssemblyReference.cache
 C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.Migrations.Profile_Columns.resources
 C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.csproj.GenerateResource.cache
@@ -544,3 +542,5 @@ C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupP
 C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Stripe.net.xml
 C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Threading.Tasks.Extensions.xml
+C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.Migrations.Added_Course_Table.resources
+C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.csproj.GenerateResource.cache

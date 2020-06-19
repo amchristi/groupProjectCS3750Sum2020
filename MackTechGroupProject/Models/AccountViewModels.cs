@@ -98,7 +98,7 @@ namespace MackTechGroupProject.Models
     {
        
         [Display(Name = "Change Picture")]
-        public byte[] ProfilePic { get; set; }
+        public byte[] ProfileImage { get; set; }
         
         [Required]
         [Display(Name = "Address Line 1")]

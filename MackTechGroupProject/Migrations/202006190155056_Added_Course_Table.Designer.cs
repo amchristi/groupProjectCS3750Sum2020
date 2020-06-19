@@ -7,13 +7,13 @@ namespace MackTechGroupProject.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class Profile_Columns : IMigrationMetadata
+    public sealed partial class Added_Course_Table : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Profile_Columns));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Added_Course_Table));
         
         string IMigrationMetadata.Id
         {
-            get { return "202006060106582_Profile_Columns"; }
+            get { return "202006190155056_Added_Course_Table"; }
         }
         
         string IMigrationMetadata.Source

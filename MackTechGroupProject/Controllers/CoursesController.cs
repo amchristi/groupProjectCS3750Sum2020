@@ -10,8 +10,6 @@ namespace MackTechGroupProject.Controllers
 {
     public class CoursesController : Controller
     {
-        private CoursesContext db = new CoursesContext();
-
         //Add Course
         public ActionResult AddCourse()
         {
@@ -22,15 +20,22 @@ namespace MackTechGroupProject.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> AddCourse(Course model)
+        public ActionResult AddCourse(Course model)
         {
             if (ModelState.IsValid)
             {
-               
-               //do stuff
+                //do stuff
+                var course = new Course
+                {
+                    CourseID = model.CourseID,
+                    CourseName = model.CourseName,
+                    InstructorID = model.InstructorID,
+                    CreditHours = model.CreditHours,
+                    ClassLocation = model.ClassLocation,
+                    MaxCapacity = model.MaxCapacity
+                };
 
-               return RedirectToAction("Index", "Home");
-                
+                return RedirectToAction("Index", "Home");
             }
 
             // If we got this far, something failed, redisplay form
