@@ -10,6 +10,8 @@ namespace MackTechGroupProject.Controllers
 {
     public class CoursesController : Controller
     {
+        private ApplicationDbContext db = new ApplicationDbContext();
+
         //Add Course
         public ActionResult AddCourse()
         {
@@ -20,11 +22,11 @@ namespace MackTechGroupProject.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
+        //***NICK IF YOU WANT TO MAKE THIS AN ASYNC METHOD***//
         public ActionResult AddCourse(Course model)
         {
             if (ModelState.IsValid)
             {
-                //do stuff
                 var course = new Course
                 {
                     CourseID = model.CourseID,
@@ -34,6 +36,10 @@ namespace MackTechGroupProject.Controllers
                     ClassLocation = model.ClassLocation,
                     MaxCapacity = model.MaxCapacity
                 };
+
+                //***NICK TRY SOMETHING LIKE THIS***//
+                //db.Courses.Add(course);
+                //db.SaveChanges();
 
                 return RedirectToAction("Index", "Home");
             }
