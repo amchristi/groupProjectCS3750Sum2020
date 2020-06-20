@@ -6,7 +6,7 @@
     ViewBag.Title = "Profile";
 }
 
-@using (Html.BeginForm("ProfileInfoEdit", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+@using (Html.BeginForm("ProfileInfoEdit", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form", enctype = "multipart/form-data"}))
 {
     @Html.AntiForgeryToken()
 
@@ -22,7 +22,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.ProfileImage, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                <input type="file" name="ImageData" id="ImageData" onchange="fileCheck(this);" />            
+                <input type="file" name="UserPhoto" id="fileUpload" accept=".png,.jpg,.jpeg,.gif,.tif" />            
                 @*
                 @Html.EditorFor(model => model.ProfilePic, new { htmlAttributes = new { @Value = @User.Identity.GetUserAddressOne(), @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.ProfilePic, "", new { @class = "text-danger" })

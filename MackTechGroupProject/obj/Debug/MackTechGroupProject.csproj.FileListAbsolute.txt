@@ -660,3 +660,4 @@ C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Deb
 C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.dll
 C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.pdb
 C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.Migrations.Added_Enrollment_Table.resources
+C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.Migrations.Added_Enrollment_Table.resources

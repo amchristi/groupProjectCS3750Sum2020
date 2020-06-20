@@ -220,13 +220,25 @@ namespace MackTechGroupProject.Controllers
                 return View(model);
             }
 
+            // To convert the user uploaded Photo as Byte Array before save to DB    
+            byte[] imageData = null;
+            if (Request.Files.Count > 0)
+            {
+                HttpPostedFileBase poImgFile = Request.Files["UserPhoto"];
+
+                using (var binary = new BinaryReader(poImgFile.InputStream))
+                {
+                    imageData = binary.ReadBytes(poImgFile.ContentLength);
+                }
+            }
+
             var user = await UserManager.FindByIdAsync(User.Identity.GetUserId());
 
-            //CONVERT PIC TO BYTES
-            //HttpPostedFileBase file = Request.Files["ImageData"];
-            //model.ProfileImage = ConvertToBytes(file);
 
-            user.ProfileImage = model.ProfileImage; 
+            model.ProfileImage = imageData;
+            
+
+            user.ProfileImage = model.ProfileImage;
             user.AddressOne = model.AddressOne;
             user.AddressTwo = model.AddressTwo;
             user.City = model.City;
