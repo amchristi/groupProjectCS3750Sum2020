@@ -4,6 +4,8 @@
 @model MackTechGroupProject.Models.ProfileViewModel
 @{
     ViewBag.Title = "Profile";
+
+    var ProfileImage = String.Format("data:image/gif;base64,{0}", @User.Identity.GetUserProfileImage());
 }
 
 <!DOCTYPE html>
@@ -18,9 +20,13 @@
         <h4>Profile Details</h4>
         <hr />
 
-        <img src="http://placehold.it/400x200" class="user">
-
         <dl class="dl-horizontal">
+
+            <dt>
+                <img src="@ProfileImage" class="user">
+            </dt>
+            <dd>
+            </dd>
 
             <dt>Id</dt>
             <dd>

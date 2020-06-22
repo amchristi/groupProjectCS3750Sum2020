@@ -9,6 +9,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using MackTechGroupProject.Models;
+using MackTechGroupProject.Extensions;
 using System.IO;
 
 namespace MackTechGroupProject.Controllers
@@ -154,6 +155,12 @@ namespace MackTechGroupProject.Controllers
             {
                 bool IsInstructorResult = model.IsInstructor;
 
+                //convert default profile image to 
+                //string folderPath = Server.MapPath("~/Images/");
+                //string fileName = "default_profile_image.png";
+                //string imagePath = folderPath + fileName;
+                //byte[] bytes = System.IO.File.ReadAllBytes(imagePath);
+
                 var user = new ApplicationUser
                 {
                     UserName = model.Email,
@@ -208,6 +215,10 @@ namespace MackTechGroupProject.Controllers
 
         public ActionResult ProfileInfoEdit()
         {
+            var ProfileImage = String.Format("data:image/gif;base64,{0}", @User.Identity.GetUserProfileImage());
+
+            ViewBag.ProfileImage = ProfileImage;
+
             return View();
         }
 

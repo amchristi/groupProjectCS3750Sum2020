@@ -44,6 +44,7 @@ namespace MackTechGroupProject.Models
             userIdentity.AddClaim(new Claim("LinkTwo", this.LinkTwo));
             userIdentity.AddClaim(new Claim("LinkThree", this.LinkThree));
             userIdentity.AddClaim(new Claim("BioInfo", this.BioInfo));
+            userIdentity.AddClaim(new Claim("ProfileImage", Convert.ToBase64String(this.ProfileImage)));
 
             return userIdentity;
         }

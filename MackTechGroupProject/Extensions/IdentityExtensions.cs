@@ -4,6 +4,7 @@ using System.Linq;
 using System.Security.Claims;
 using System.Security.Principal;
 using System.Web;
+using System.Web.Mvc;
 
 namespace MackTechGroupProject.Extensions
 {
@@ -101,6 +102,14 @@ namespace MackTechGroupProject.Extensions
         public static string GetUserBioInfo(this IIdentity identity)
         {
             var claim = ((ClaimsIdentity)identity).FindFirst("BioInfo");
+
+            // Test for null to avoid issues during local testing
+            return (claim != null) ? claim.Value : string.Empty;
+        }
+
+        public static string GetUserProfileImage(this IIdentity identity)
+        {
+            var claim = ((ClaimsIdentity)identity).FindFirst("ProfileImage");
 
             // Test for null to avoid issues during local testing
             return (claim != null) ? claim.Value : string.Empty;
