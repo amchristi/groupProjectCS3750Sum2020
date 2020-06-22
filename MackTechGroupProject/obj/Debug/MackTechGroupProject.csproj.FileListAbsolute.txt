@@ -206,7 +206,6 @@ C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupP
 C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.csproj.CopyComplete
 C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.dll
 C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.pdb
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.csprojAssemblyReference.cache
 D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\MackTechGroupProject.dll.config
 D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\MackTechGroupProject.dll
 D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\MackTechGroupProject.pdb
@@ -522,7 +521,6 @@ C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\ob
 C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.dll
 C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.pdb
 C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.csprojAssemblyReference.cache
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.Migrations.Profile_Columns.resources
 C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.csproj.GenerateResource.cache
 C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Stripe.net.dll
@@ -661,3 +659,6 @@ C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Deb
 C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.pdb
 C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.Migrations.Added_Enrollment_Table.resources
 C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.Migrations.Added_Enrollment_Table.resources
+C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.Migrations.Added_Course_Table.resources
+C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.Migrations.Added_Enrollment_Table.resources
+C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.csprojAssemblyReference.cache

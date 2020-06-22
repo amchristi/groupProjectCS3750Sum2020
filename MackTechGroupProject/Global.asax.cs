@@ -18,4 +18,5 @@ namespace MackTechGroupProject
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
     }
+
 }

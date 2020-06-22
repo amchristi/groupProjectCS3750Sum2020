@@ -2,10 +2,10 @@
     ViewBag.Title = "Home Page";
 }
 
-    <div class="jumbotron">
-        <h1>MACK Tech "Canvas"</h1>
-        <p class="lead">Select your class below to view more detail.</p>
-    </div>
+<div class="jumbotron">
+    <h1>MACK Tech "Canvas" - Student View</h1>
+    <p class="lead">Select your class below to view more detail.</p>
+</div>
 
 <main class="col-md-8">
     <section class="Sec-ClassCard">
@@ -64,8 +64,9 @@
 
     <section class="Sec-ToDoList">
         <div class="ToDoHeader">
-        <h2>To Do</h2></div>
-        <hr style="height:3px;border-width:0;color:#5900B3;background-color:#5900B3"/>
+            <h2>To Do</h2>
+        </div>
+        <hr style="height:3px;border-width:0;color:#5900B3;background-color:#5900B3" />
         <table class="ToDoItems">
             <tr class="ToDoItems">
                 <td class="ToDoItems">
@@ -170,7 +171,7 @@
 
 <aside class="col-md-4">
 
-     <!--
+    <!--
     <section class="homePageCalendar">
         <h2 class="CalendarHeader">Calendar</h2>
         <table class="CalendarTable">
@@ -340,9 +341,9 @@
                 </td>
             </tr>
         </table>
-        
+
     </section>
-    
+
     <section class="homeClassPageMenu">
         <div class="homeClassMenuButton">
             <a href="@Url.Action("Calendar", "Misc")">
@@ -352,6 +353,11 @@
         <div class="homeClassMenuButton">
             <a href="@Url.Action("Grades", "Courses")">
                 <h2>Grades</h2>
+            </a>
+        </div>
+        <div class="homeClassMenuButton">
+            <a href="@Url.Action("Registration", "Misc")">
+                <h2>Registration</h2>
             </a>
         </div>
 

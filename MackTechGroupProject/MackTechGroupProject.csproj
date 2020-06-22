@@ -282,6 +282,7 @@
     <Content Include="Views\Account\ProfileInfoEdit.cshtml" />
     <Content Include="Views\Account\ProfileInfoDetails.cshtml" />
     <Content Include="Views\Courses\AddCourse.cshtml" />
+    <Content Include="Views\Home\IndexStudent.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
