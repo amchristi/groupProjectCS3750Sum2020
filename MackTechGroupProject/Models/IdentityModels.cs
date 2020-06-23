@@ -18,7 +18,6 @@ namespace MackTechGroupProject.Models
         public string City { get; set; }
         public string State { get; set; }
         public string ZipCode { get; set; }
-        //public string PhoneNum { get; set; }
         public string LinkOne { get; set; }
         public string LinkTwo { get; set; }
         public string LinkThree { get; set; }

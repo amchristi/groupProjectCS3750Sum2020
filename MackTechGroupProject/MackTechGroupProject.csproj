@@ -206,6 +206,14 @@
     <Compile Include="Migrations\202006230826252_One_PhoneNumber_Column.Designer.cs">
       <DependentUpon>202006230826252_One_PhoneNumber_Column.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202006231839269_Instructor_ID_Courses.cs" />
+    <Compile Include="Migrations\202006231839269_Instructor_ID_Courses.Designer.cs">
+      <DependentUpon>202006231839269_Instructor_ID_Courses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006231854354_Course_Database_Change.cs" />
+    <Compile Include="Migrations\202006231854354_Course_Database_Change.Designer.cs">
+      <DependentUpon>202006231854354_Course_Database_Change.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\CoursesModels.cs" />
@@ -316,6 +324,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202006230826252_One_PhoneNumber_Column.resx">
       <DependentUpon>202006230826252_One_PhoneNumber_Column.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006231839269_Instructor_ID_Courses.resx">
+      <DependentUpon>202006231839269_Instructor_ID_Courses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006231854354_Course_Database_Change.resx">
+      <DependentUpon>202006231854354_Course_Database_Change.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

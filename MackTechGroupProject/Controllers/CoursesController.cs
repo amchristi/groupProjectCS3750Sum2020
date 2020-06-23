@@ -5,12 +5,14 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.Owin;
 
 namespace MackTechGroupProject.Controllers
 {
     public class CoursesController : Controller
     {
-        private ApplicationDbContext db = new ApplicationDbContext();
+        //private ApplicationDbContext db = new ApplicationDbContext();
 
         //Add Course
         public ActionResult AddCourse()
@@ -24,20 +26,26 @@ namespace MackTechGroupProject.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult AddCourse(Course model)
         {
+            String userId = User.Identity.GetUserId();
+
+            var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
+            var currentInstructor = context.Users.Where(x => x.Id == userId).FirstOrDefault();
+
+
             if (ModelState.IsValid)
             {
                 var course = new Course
                 {
                     CourseID = model.CourseID,
                     CourseName = model.CourseName,
-                    InstructorID = model.InstructorID,
+                    Instructor = currentInstructor,
                     CreditHours = model.CreditHours,
                     ClassLocation = model.ClassLocation,
                     MaxCapacity = model.MaxCapacity
                 };
 
-                db.Courses.Add(course);
-                db.SaveChanges();
+                context.Courses.Add(course);
+                context.SaveChanges();
 
                 return RedirectToAction("Index", "Home");
             }
