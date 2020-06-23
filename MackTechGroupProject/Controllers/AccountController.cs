@@ -11,6 +11,7 @@ using Microsoft.Owin.Security;
 using MackTechGroupProject.Models;
 using MackTechGroupProject.Extensions;
 using System.IO;
+using Microsoft.Ajax.Utilities;
 
 namespace MackTechGroupProject.Controllers
 {
@@ -155,11 +156,14 @@ namespace MackTechGroupProject.Controllers
             {
                 bool IsInstructorResult = model.IsInstructor;
 
-                //convert default profile image to 
-                //string folderPath = Server.MapPath("~/Images/");
-                //string fileName = "default_profile_image.png";
-                //string imagePath = folderPath + fileName;
-                //byte[] bytes = System.IO.File.ReadAllBytes(imagePath);
+                string fileName = HttpContext.Server.MapPath(@"~/Images/default_profile.png");
+
+                byte[] imageData = null;
+                FileInfo fileInfo = new FileInfo(fileName);
+                long imageFileLength = fileInfo.Length;
+                FileStream fs = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+                BinaryReader br = new BinaryReader(fs);
+                imageData = br.ReadBytes((int)imageFileLength);
 
                 var user = new ApplicationUser
                 {
@@ -172,12 +176,12 @@ namespace MackTechGroupProject.Controllers
                     City = "",
                     State = "",
                     ZipCode = "",
-                    PhoneNum = "",
+                    PhoneNumber = "",
                     LinkOne = "",
                     LinkTwo = "",
                     LinkThree = "",
                     BioInfo = "",
-                    ProfileImage = new byte[0]
+                    ProfileImage = imageData
                 };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
@@ -215,11 +219,34 @@ namespace MackTechGroupProject.Controllers
 
         public ActionResult ProfileInfoEdit()
         {
-            var ProfileImage = String.Format("data:image/gif;base64,{0}", @User.Identity.GetUserProfileImage());
-
-            ViewBag.ProfileImage = ProfileImage;
-
             return View();
+        }
+
+        public FileContentResult UserPhotos()
+        {
+            if (User.Identity.IsAuthenticated)
+            {
+                String userId = User.Identity.GetUserId();
+
+                // to get the user details to load user Image    
+                var dbUsers = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
+                var userImage = dbUsers.Users.Where(x => x.Id == userId).FirstOrDefault();
+
+                return new FileContentResult(userImage.ProfileImage, "image/jpeg");
+            }
+            else
+            {
+                string fileName = HttpContext.Server.MapPath(@"~/Images/default_profile.png");
+
+                byte[] imageData = null;
+                FileInfo fileInfo = new FileInfo(fileName);
+                long imageFileLength = fileInfo.Length;
+                FileStream fs = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+                BinaryReader br = new BinaryReader(fs);
+                imageData = br.ReadBytes((int)imageFileLength);
+
+                return File(imageData, "image/png");
+            }
         }
 
         [HttpPost]
@@ -245,17 +272,21 @@ namespace MackTechGroupProject.Controllers
 
             var user = await UserManager.FindByIdAsync(User.Identity.GetUserId());
 
+            //declare an emtpy byte array to use for comparison
+            byte[] emptyByte = new byte[0];
 
-            model.ProfileImage = imageData;
-            
+            if(!imageData.SequenceEqual(emptyByte))
+            {
+                model.ProfileImage = imageData;
+                user.ProfileImage = model.ProfileImage;
+            }
 
-            user.ProfileImage = model.ProfileImage;
             user.AddressOne = model.AddressOne;
             user.AddressTwo = model.AddressTwo;
             user.City = model.City;
             user.State = model.State;
             user.ZipCode = model.ZipCode;
-            user.PhoneNum = model.PhoneNum;
+            user.PhoneNumber = model.PhoneNumber;
             user.LinkOne = model.LinkOne;
             user.LinkTwo = model.LinkTwo;
             user.LinkThree = model.LinkThree;
@@ -608,16 +639,6 @@ namespace MackTechGroupProject.Controllers
                 }
                 context.HttpContext.GetOwinContext().Authentication.Challenge(properties, LoginProvider);
             }
-        }
-
-        //************************** ADD FOR PROFILE PICTURE ******************************
-
-        public byte[] ConvertToBytes(HttpPostedFileBase image)
-        {
-            byte[] imageBytes = null;
-            BinaryReader reader = new BinaryReader(image.InputStream);
-            imageBytes = reader.ReadBytes((int)image.ContentLength);
-            return imageBytes;
         }
         #endregion
     }

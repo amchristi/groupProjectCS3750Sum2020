@@ -18,7 +18,7 @@ namespace MackTechGroupProject.Models
         public string City { get; set; }
         public string State { get; set; }
         public string ZipCode { get; set; }
-        public string PhoneNum { get; set; }
+        //public string PhoneNum { get; set; }
         public string LinkOne { get; set; }
         public string LinkTwo { get; set; }
         public string LinkThree { get; set; }
@@ -39,12 +39,11 @@ namespace MackTechGroupProject.Models
             userIdentity.AddClaim(new Claim("City", this.City));
             userIdentity.AddClaim(new Claim("State", this.State));
             userIdentity.AddClaim(new Claim("ZipCode", this.ZipCode));
-            userIdentity.AddClaim(new Claim("PhoneNum", this.PhoneNum));
+            userIdentity.AddClaim(new Claim("PhoneNumber", this.PhoneNumber));
             userIdentity.AddClaim(new Claim("LinkOne", this.LinkOne));
             userIdentity.AddClaim(new Claim("LinkTwo", this.LinkTwo));
             userIdentity.AddClaim(new Claim("LinkThree", this.LinkThree));
             userIdentity.AddClaim(new Claim("BioInfo", this.BioInfo));
-            userIdentity.AddClaim(new Claim("ProfileImage", Convert.ToBase64String(this.ProfileImage)));
 
             return userIdentity;
         }
@@ -53,7 +52,7 @@ namespace MackTechGroupProject.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("TitanDbConnection", throwIfV1Schema: false)
         {
         }
 

@@ -24,9 +24,9 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Dashboard", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Registration", "Registration", "Misc")</li>
+                    @*<li>@Html.ActionLink("Registration", "Registration", "Misc")</li>
                     <li>@Html.ActionLink("Add Course", "AddCourse", "Courses")</li>
-                    <li>@Html.ActionLink("Account", "Account", "Misc")</li>
+                    <li>@Html.ActionLink("Account", "Account", "Misc")</li>*@
                     @if (Request.IsAuthenticated)
                     {
                         if (this.User.IsInRole("Student"))

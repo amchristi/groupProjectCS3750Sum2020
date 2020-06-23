@@ -4,8 +4,6 @@
 @model MackTechGroupProject.Models.ProfileViewModel
 @{
     ViewBag.Title = "Profile";
-
-    var ProfileImage = String.Format("data:image/gif;base64,{0}", @User.Identity.GetUserProfileImage());
 }
 
 <!DOCTYPE html>
@@ -23,7 +21,7 @@
         <dl class="dl-horizontal">
 
             <dt>
-                <img src="@ProfileImage" class="user">
+                <img src="@Url.Action("UserPhotos", "Account")" class="user">
             </dt>
             <dd>
             </dd>
@@ -76,7 +74,7 @@
             </dd>
 
             <dt>
-                @Html.DisplayNameFor(model => model.PhoneNum)
+                @Html.DisplayNameFor(model => model.PhoneNumber)
             </dt>
 
             <dd>

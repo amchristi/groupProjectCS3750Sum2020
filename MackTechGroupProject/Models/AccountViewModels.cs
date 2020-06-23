@@ -125,7 +125,7 @@ namespace MackTechGroupProject.Models
         [Required]
         [Phone]
         [Display(Name = "Phone Number")]
-        public string PhoneNum { get; set; }
+        public string PhoneNumber { get; set; }
 
         [Display(Name = "Link 1")]
         public string LinkOne { get; set; }
