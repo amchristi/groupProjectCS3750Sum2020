@@ -1,0 +1,76 @@
+<div class="jumbotron">
+    <h1>Student Account</h1>
+    <p class="lead"> Welcome, see your account details below.</p>
+</div>
+
+<main class="col-md-8">
+    <section class="Sec-ClassCard">
+        <h2 class="ClassCardHeader">Student Account</h2>
+        <table class="StudentBill">
+            <tr class="StudentBillRow">
+                <th class="StudentBillCol">Course Number</th>
+                <th class="StudentBillCol">Course Name</th>
+                <th class="StudentBillCol">Insturctor Name</th>
+                <th class="StudentBillCol">Credit Hours</th>
+                <th class="StudentBillCol">Course Price</th>
+            </tr>
+            <tr>
+                <td>1234</td>
+                <td>CS 3750 </td>
+                <td>A. Christi</td>
+                <td> 4 </td>
+                <td> 950 </td>
+            </tr>
+            <tr>
+                <td>1234</td>
+                <td>CS 3750 </td>
+                <td>A. Christi</td>
+                <td> 4 </td>
+                <td> 950 </td>
+            </tr>
+            <tr>
+                <td>1234</td>
+                <td>CS 3750 </td>
+                <td>A. Christi</td>
+                <td> 4 </td>
+                <td> 950 </td>
+            </tr>
+            <tr>
+                <th>Totals:</th>
+                <th></th>
+                <th></th>
+                <th>=total credit hours</th>
+                <th>=total price</th>
+            </tr>
+        </table>
+    </section>
+    <section>
+        <div class="homeClassMenuButton">
+            <a href="@Url.Action("BillPay", "Misc")">
+                <h2>Pay Now</h2>
+            </a>
+        </div>
+    </section>
+    
+</main>
+
+<aside class="col-md-4">
+    <section class="homeClassPageMenu">
+        <div class="homeClassMenuButton">
+            <a href="@Url.Action("Calendar", "Misc")">
+                <h2>Calendar</h2>
+            </a>
+        </div>
+        <div class="homeClassMenuButton">
+            <a href="@Url.Action("Grades", "Courses")">
+                <h2>Grades</h2>
+            </a>
+        </div>
+        <div class="homeClassMenuButton">
+            <a href="@Url.Action("Registration", "Misc")">
+                <h2>Registration</h2>
+            </a>
+        </div>
+
+    </section>
+</aside>
