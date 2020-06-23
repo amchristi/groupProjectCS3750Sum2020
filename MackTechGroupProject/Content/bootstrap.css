@@ -6998,4 +6998,18 @@ h2.addCalLink {
     margin-top: -4px;
 }
 
+
+/*Styling edits for Account page*/
+table.StudentBill {
+    width: 770px;
+    height: auto;
+}
+tr.StudentBillRow {
+    height: 20px;
+}
+th.StudentBillCol {
+    width: 100px;
+}
+
+
 /*# sourceMappingURL=bootstrap.css.map */
