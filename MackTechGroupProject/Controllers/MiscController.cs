@@ -25,5 +25,16 @@ namespace MackTechGroupProject.Controllers
         {
             return View();
         }
+
+        public ActionResult Account()
+        {
+            return View();
+        }
+
+        public ActionResult BillPay()
+        {
+            return View();
+        }
+
     }
 }
