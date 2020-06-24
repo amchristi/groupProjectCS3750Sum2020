@@ -11,9 +11,6 @@ namespace MackTechGroupProject.Models
    /// </summary>
     public class Course
     {
-        [Required]
-        [DataType(DataType.Text)]
-        //[RegularExpression(@"^\d{5}$", ErrorMessage = "Invalid Course ID")]
         [Display(Name = "Course ID")]
         public int CourseID { get; set; }
 
@@ -34,11 +31,11 @@ namespace MackTechGroupProject.Models
         [Display(Name = "Course Name")]
         public string CourseName { get; set; }
 
-        //[Required]
-        //[DataType(DataType.Text)]
-        //[RegularExpression(@"^\d{8}$", ErrorMessage = "Invalid Instructor ID")]
         [Display(Name = "Instructor ID")]
         public ApplicationUser Instructor { get; set; }
+
+        [Display(Name = "Instructor Name")]
+        public string InstructorName { get; set; }
 
         [Required]
         [DataType(DataType.Text)]

@@ -10,18 +10,9 @@ namespace MackTechGroupProject.Controllers
 {
     public class HomeController : Controller
     {
-
-        private ApplicationDbContext db = new ApplicationDbContext();
-
         [Authorize]
         public ActionResult Index()
         {
-            var currentUserId = User.Identity.GetUserId();
-
-            ViewBag.UserId = currentUserId;
-
-            var userEnrollments = db.Enrollments.Where(x => x.Student.Id.ToString() == currentUserId).FirstOrDefault();
-
             return View();
         }
 

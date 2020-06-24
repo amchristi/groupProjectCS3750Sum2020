@@ -12,8 +12,6 @@ namespace MackTechGroupProject.Controllers
 {
     public class CoursesController : Controller
     {
-        //private ApplicationDbContext db = new ApplicationDbContext();
-
         //Add Course
         public ActionResult AddCourse()
         {
@@ -31,6 +29,8 @@ namespace MackTechGroupProject.Controllers
             var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
             var currentInstructor = context.Users.Where(x => x.Id == userId).FirstOrDefault();
 
+            string instructorName = currentInstructor.FirstName + " " + currentInstructor.LastName;
+
             if (ModelState.IsValid)
             {
                 var course = new Course
@@ -41,6 +41,7 @@ namespace MackTechGroupProject.Controllers
                     CourseNumber = model.CourseNumber,
                     CourseName = model.CourseName,
                     Instructor = currentInstructor,
+                    InstructorName = instructorName,
                     CreditHours = model.CreditHours,
                     ClassLocation = model.ClassLocation,
                     MaxCapacity = model.MaxCapacity

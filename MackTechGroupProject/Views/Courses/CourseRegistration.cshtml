@@ -4,7 +4,7 @@
     ViewBag.Title = "CourseRegistration";
 }
 
-    <h2>Course Registration</h2>
+<h2>Course Registration</h2>
 
 <!DOCTYPE html>
 
@@ -16,7 +16,7 @@
 <body>
     <table class="table">
         <tr>
-            <th></th>
+            @*<th></th>*@
             <th>
                 @Html.DisplayNameFor(model => model.Department)
             </th>
@@ -30,6 +30,9 @@
                 @Html.DisplayNameFor(model => model.CreditHours)
             </th>
             <th>
+                @Html.DisplayNameFor(model => model.InstructorName)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.ClassLocation)
             </th>
             <th>
@@ -40,9 +43,9 @@
     
     @foreach (var item in Model) {
     <tr>
-        <td>
+        @*<td>
             @Html.ActionLink("Details", "Details", new { id = item.CourseID })
-        </td>
+        </td>*@
         <td>
             @Html.DisplayFor(modelItem => item.Department)
         </td>
@@ -56,13 +59,16 @@
             @Html.DisplayFor(modelItem => item.CreditHours)
         </td>
         <td>
+            @Html.DisplayFor(modelItem => item.InstructorName)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.ClassLocation)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.MaxCapacity)
         </td>
         <td>
-            @Html.ActionLink("Register", "Register", new { id = item.CourseID })
+            @Html.ActionLink("Register", "RegisterForCourse")
         </td>
     </tr>
     }

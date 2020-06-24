@@ -670,3 +670,5 @@ C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Deb
 C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.Migrations.Instructor_ID_Courses.resources
 C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.Migrations.Course_Database_Change.resources
 C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.Migrations.guid_course.resources
+C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.Migrations.Instructor_Name_Courses.resources
+C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.Migrations.course_model_update.resources
