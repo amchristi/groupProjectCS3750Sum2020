@@ -32,7 +32,7 @@
                         if (this.User.IsInRole("Student"))
                         {
                             <li>@Html.ActionLink("Profile", "ProfileInfoDetails", "Account")</li>
-                            <li>@Html.ActionLink("Registration", "Registration", "Misc")</li>
+                            <li>@Html.ActionLink("Registration", "CourseRegistration", "Courses")</li>
                         }
                         if (this.User.IsInRole("Instructor"))
                         {

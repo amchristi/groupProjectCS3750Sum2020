@@ -56,6 +56,12 @@ namespace MackTechGroupProject.Controllers
             return View(model);
         }
 
+        public ActionResult CourseRegistration()
+        {
+            var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
+
+            return View(context.Courses.ToList());
+        }
 
         // GET: Courses
         public ActionResult CS3620()

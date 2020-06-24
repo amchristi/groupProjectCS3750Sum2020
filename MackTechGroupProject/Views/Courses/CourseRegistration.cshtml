@@ -1,0 +1,72 @@
+﻿@model IEnumerable<MackTechGroupProject.Models.Course>
+
+@{
+    ViewBag.Title = "CourseRegistration";
+}
+
+    <h2>Course Registration</h2>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>CourseRegistration</title>
+</head>
+<body>
+    <table class="table">
+        <tr>
+            <th></th>
+            <th>
+                @Html.DisplayNameFor(model => model.Department)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CourseNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CourseName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreditHours)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ClassLocation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaxCapacity)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.ActionLink("Details", "Details", new { id = item.CourseID })
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Department)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CourseNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CourseName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreditHours)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClassLocation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaxCapacity)
+        </td>
+        <td>
+            @Html.ActionLink("Register", "Register", new { id = item.CourseID })
+        </td>
+    </tr>
+    }
+    
+    </table>
+</body>
+</html>
