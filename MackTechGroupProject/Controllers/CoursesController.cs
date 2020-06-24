@@ -31,12 +31,14 @@ namespace MackTechGroupProject.Controllers
             var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
             var currentInstructor = context.Users.Where(x => x.Id == userId).FirstOrDefault();
 
-
             if (ModelState.IsValid)
             {
                 var course = new Course
                 {
                     CourseID = model.CourseID,
+                    CRN = model.CRN,
+                    Department = model.Department,
+                    CourseNumber = model.CourseNumber,
                     CourseName = model.CourseName,
                     Instructor = currentInstructor,
                     CreditHours = model.CreditHours,

@@ -17,6 +17,18 @@ namespace MackTechGroupProject.Models
         [Display(Name = "Course ID")]
         public int CourseID { get; set; }
 
+        public Guid CRN { get; set; }
+
+        [Required]
+        [DataType(DataType.Text)]
+        public string Department { get; set; }
+
+        [Required]
+        [DataType(DataType.Text)]
+        [Display(Name ="Course Number")]
+        [RegularExpression(@"^[0-9]{4}$", ErrorMessage = "Invalid Course Number")]
+        public int CourseNumber { get; set; }
+
         [Required]
         [DataType(DataType.Text)]
         [Display(Name = "Course Name")]
@@ -30,13 +42,13 @@ namespace MackTechGroupProject.Models
 
         [Required]
         [DataType(DataType.Text)]
-        [RegularExpression(@"^[0-4]{1}$", ErrorMessage = "Invalid Number of Credit Hours")]
+        [RegularExpression(@"^[0-5]{1}$", ErrorMessage = "Invalid Number of Credit Hours")]
         [Display(Name = "Credit Hours")]
         public int CreditHours { get; set; }
 
         [Required]
         [DataType(DataType.Text)]
-        [RegularExpression(@"^[A-Z]{2}$", ErrorMessage = "Invalid Location")]
+        [RegularExpression(@"^[A-Z]{3}$", ErrorMessage = "Invalid Location")]
         [Display(Name = "Class Location")]
         public string ClassLocation { get; set; }
 
@@ -55,7 +67,6 @@ namespace MackTechGroupProject.Models
         */
 
         public ICollection<Enrollment> Enrollments { get; set; }
-
     }
 
     public class Enrollment

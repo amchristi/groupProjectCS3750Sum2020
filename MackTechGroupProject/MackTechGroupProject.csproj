@@ -214,6 +214,10 @@
     <Compile Include="Migrations\202006231854354_Course_Database_Change.Designer.cs">
       <DependentUpon>202006231854354_Course_Database_Change.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202006240237208_guid_course.cs" />
+    <Compile Include="Migrations\202006240237208_guid_course.Designer.cs">
+      <DependentUpon>202006240237208_guid_course.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\CoursesModels.cs" />
@@ -330,6 +334,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202006231854354_Course_Database_Change.resx">
       <DependentUpon>202006231854354_Course_Database_Change.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006240237208_guid_course.resx">
+      <DependentUpon>202006240237208_guid_course.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
