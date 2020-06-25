@@ -76,16 +76,35 @@ namespace MackTechGroupProject.Controllers
             var currentStudent = context.Users.Where(x => x.Id == userId).FirstOrDefault();
             var selectedCourse = context.Courses.Where(x => x.CourseID == selectedCourseId).FirstOrDefault();
 
-            var studentEnrollment = new Enrollment
+            if (ModelState.IsValid)
             {
-                Course = selectedCourse,
-                Student = currentStudent
-            };
+                var studentEnrollment = new Enrollment
+                {
+                    Course = selectedCourse,
+                    Student = currentStudent
+                };
 
-            context.Enrollments.Add(studentEnrollment);
-            context.SaveChanges();
+                var currentEnrollments = context.Enrollments.Include(x => x.Student).Include(c => c.Course).Where(s => s.Student.Id == userId).ToList();
 
-            return RedirectToAction("StudentAccount", "Courses");
+                //check to see if the course already exists in student's currentEnrollments
+                bool hasCourse = currentEnrollments.Any(x => x.Course.CourseID == id);
+
+                if (!hasCourse)
+                {
+                    context.Enrollments.Add(studentEnrollment);
+                    context.SaveChanges();
+
+                    return RedirectToAction("StudentAccount", "Courses");
+                }
+                else
+                {
+                    TempData["ErrorMessage"] = "Error: You are already registered for this course";
+                    return RedirectToAction("CourseRegistration", "Courses");
+                }
+            }
+
+            //don't want to get this far
+            return RedirectToAction("CourseRegistration", "Courses");
         }
 
         public ActionResult StudentAccount()
