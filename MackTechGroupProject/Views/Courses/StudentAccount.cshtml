@@ -40,38 +40,44 @@
             </th>
             <th></th>
         </tr>
-    
-    @foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Course.Department)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Course.CourseNumber)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Course.CourseName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Course.CreditHours)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Course.InstructorName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Course.ClassLocation)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Course.MaxCapacity)
-        </td>
-        <td>
-            @*@Html.ActionLink("Edit", "Edit", new { id = item.EnrollmentId }) |
-            @Html.ActionLink("Details", "Details", new { id = item.EnrollmentId }) |*@
-            @Html.ActionLink("Delete", "Delete", new { id = item.EnrollmentId })
-        </td>
-    </tr>
-    }
-    
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Course.Department)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Course.CourseNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Course.CourseName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Course.CreditHours)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Course.InstructorName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Course.ClassLocation)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Course.MaxCapacity)
+                </td>
+                <td>
+                    @*@Html.ActionLink("Edit", "Edit", new { id = item.EnrollmentId }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.EnrollmentId }) |*@
+                    @Html.ActionLink("Delete", "Delete", new { id = item.EnrollmentId })
+                </td>
+            </tr>
+        }
     </table>
+
+    <div class="row">
+        <div class="col-sm-6" style="text-align: right">Credit Hours:      @ViewBag.TotalCreditHours</div>
+        <div class="col-sm-6" style="text-align: right">Price:     @ViewBag.TotalFormattedCost</div>
+    </div>
+
 </body>
 </html>

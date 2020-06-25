@@ -116,6 +116,13 @@ namespace MackTechGroupProject.Controllers
             // gets a list of enrollments for current student
             var currentEnrollments = context.Enrollments.Include(x => x.Student).Include(c => c.Course).Where(s => s.Student.Id == userId).ToList();
 
+            var totalCreditHours = currentEnrollments.Sum(x => x.Course.CreditHours);
+            var totalCost = totalCreditHours * 240;
+            var formattedCost = totalCost.ToString("C0");
+
+            ViewBag.TotalCreditHours = totalCreditHours;
+            ViewBag.TotalFormattedCost = formattedCost;
+
             return View(currentEnrollments);
         }
 
