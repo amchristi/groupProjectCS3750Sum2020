@@ -310,6 +310,7 @@
     <Content Include="Views\Misc\Calendar.cshtml" />
     <Content Include="Views\Misc\NewEvent.cshtml" />
     <Content Include="Views\Courses\CourseRegistration.cshtml" />
+    <Content Include="Views\Courses\StudentAccount.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -7,6 +7,7 @@ using System.Web;
 using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
+using System.Data.Entity;
 
 namespace MackTechGroupProject.Controllers
 {
@@ -61,7 +62,9 @@ namespace MackTechGroupProject.Controllers
         {
             var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
 
-            return View(context.Courses.ToList());
+            var allCourses = context.Courses.ToList();
+
+            return View(allCourses);
         }
 
         public ActionResult RegisterForCourse(int id)
@@ -82,7 +85,19 @@ namespace MackTechGroupProject.Controllers
             context.Enrollments.Add(studentEnrollment);
             context.SaveChanges();
 
-            return RedirectToAction("Account", "Misc");
+            return RedirectToAction("StudentAccount", "Courses");
+        }
+
+        public ActionResult StudentAccount()
+        {
+            String userId = User.Identity.GetUserId();
+
+            var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
+
+            // gets a list of enrollments for current student
+            var currentEnrollments = context.Enrollments.Include(x => x.Student).Include(c => c.Course).Where(s => s.Student.Id == userId).ToList();
+
+            return View(currentEnrollments);
         }
 
         // GET: Courses

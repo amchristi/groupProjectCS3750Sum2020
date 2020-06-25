@@ -25,14 +25,15 @@
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Dashboard", "Index", "Home")</li>
                     @*<li>@Html.ActionLink("Registration", "Registration", "Misc")</li>
-                    <li>@Html.ActionLink("Add Course", "AddCourse", "Courses")</li>
-                    <li>@Html.ActionLink("Account", "Account", "Misc")</li>*@
+        <li>@Html.ActionLink("Add Course", "AddCourse", "Courses")</li>
+        <li>@Html.ActionLink("Account", "Account", "Misc")</li>*@
                     @if (Request.IsAuthenticated)
                     {
                         if (this.User.IsInRole("Student"))
                         {
                             <li>@Html.ActionLink("Profile", "ProfileInfoDetails", "Account")</li>
                             <li>@Html.ActionLink("Registration", "CourseRegistration", "Courses")</li>
+                            <li>@Html.ActionLink("Student Account", "StudentAccount", "Courses")</li>
                         }
                         if (this.User.IsInRole("Instructor"))
                         {
