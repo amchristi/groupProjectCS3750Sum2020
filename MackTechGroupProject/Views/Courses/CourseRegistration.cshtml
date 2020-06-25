@@ -68,7 +68,7 @@
             @Html.DisplayFor(modelItem => item.MaxCapacity)
         </td>
         <td>
-            @Html.ActionLink("Register", "RegisterForCourse")
+            @Html.ActionLink("Register", "RegisterForCourse", new { id = item.CourseID })
         </td>
     </tr>
     }

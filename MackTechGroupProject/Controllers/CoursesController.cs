@@ -64,6 +64,27 @@ namespace MackTechGroupProject.Controllers
             return View(context.Courses.ToList());
         }
 
+        public ActionResult RegisterForCourse(int id)
+        {
+            String userId = User.Identity.GetUserId();
+            var selectedCourseId = id;
+
+            var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
+            var currentStudent = context.Users.Where(x => x.Id == userId).FirstOrDefault();
+            var selectedCourse = context.Courses.Where(x => x.CourseID == selectedCourseId).FirstOrDefault();
+
+            var studentEnrollment = new Enrollment
+            {
+                Course = selectedCourse,
+                Student = currentStudent
+            };
+
+            context.Enrollments.Add(studentEnrollment);
+            context.SaveChanges();
+
+            return RedirectToAction("Account", "Misc");
+        }
+
         // GET: Courses
         public ActionResult CS3620()
         {
