@@ -1,70 +1,60 @@
-﻿@{
+﻿@model IEnumerable<MackTechGroupProject.Models.Enrollment>
+
+@{
     ViewBag.Title = "Home Page";
 }
 
-    <div class="jumbotron">
-        <h1>MACK Tech "Canvas"</h1>
-        <p class="lead">Select your class below to view more detail.</p>
-    </div>
+<div class="jumbotron">
+    <h1>MACK Tech "Canvas"</h1>
+    <p class="lead">Select your class below to view more detail.</p>
+</div>
 
 <main class="col-md-8">
     <section class="Sec-ClassCard">
         <h2 class="ClassCardHeader">Current Enrollments</h2>
+
+        @*<tr>
+            <td>
+                <div class="classCard">
+                    <h2>CS 3750</h2>
+                    <p>
+                        Schedule: T/Th 7:30a - 9:00a
+                    </p>
+                    <p><a class="btn btn-default" href="@Url.Action("CS3750", "Courses")">Class Details &raquo;</a></p>
+                </div>
+            </td>
+            <td>
+                <div class="classCard">
+                    <h2>CS 3620</h2>
+                    <p>
+                        Schedule: M/W 7:30a - 9:00a
+                    </p>
+                    <p><a class="btn btn-default" href="@Url.Action("CS3620", "Courses")">Class Details &raquo;</a></p>
+                </div>
+            </td>
+        </tr>*@
+
+
         <table class="classListTable">
-            <tr>
-                <td>
-                    <div class="classCard">
-                        <h2>CS 3750</h2>
-                        <p>
-                            Schedule: T/Th 7:30a - 9:00a
-                        </p>
-                        <p><a class="btn btn-default" href="@Url.Action("CS3750", "Courses")">Class Details &raquo;</a></p>
-                    </div>
-                </td>
-                <td>
-                    <div class="classCard">
-                        <h2>CS 3620</h2>
-                        <p>
-                            Schedule: M/W 7:30a - 9:00a
-                        </p>
-                        <p><a class="btn btn-default" href="@Url.Action("CS3620", "Courses")">Class Details &raquo;</a></p>
-                    </div>
-                </td>
-            </tr>
-
-            <tr>
-                <td>
-                    <div class="classCard">
-                        <h2>Math 1220</h2>
-                        <p>
-                            Schedule: Online, group meeting TH 7:30p
-                        </p>
-                        <p><a class="btn btn-default" href="@Url.Action("MATH1220", "Courses")">Class Details &raquo;</a></p>
-                    </div>
-                </td>
-
-                <td>
-                    <div class="classCard">
-
-                        <h2>Phys 2120</h2>
-                        <p>
-                            Schedule: M,W,F 10:30a - 12:00p
-                        </p>
-                        <p>
-                            Lab: TH: 2:30p - 4:30p
-                        </p>
-                        <p><a class="btn btn-default" href="@Url.Action("PHYS2120", "Courses")">Class Details &raquo;</a></p>
-                    </div>
-                </td>
-
-            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        <div class="classCard">
+                            @Html.DisplayFor(modelItem => item.Course.Department)
+                            @Html.DisplayFor(modelItem => item.Course.CourseNumber)
+                        </div>
+                    </td>
+                </tr>
+            }
         </table>
     </section>
 
     <section class="Sec-ToDoList">
         <div class="ToDoHeader">
-        <h2>To Do</h2></div>
-        <hr style="height:3px;border-width:0;color:#5900B3;background-color:#5900B3"/>
+            <h2>To Do</h2>
+        </div>
+        <hr style="height:3px;border-width:0;color:#5900B3;background-color:#5900B3" />
         <table class="ToDoItems">
             <tr class="ToDoItems">
                 <td class="ToDoItems">
@@ -169,7 +159,7 @@
 
 <aside class="col-md-4">
 
-     <!--
+    <!--
     <section class="homePageCalendar">
         <h2 class="CalendarHeader">Calendar</h2>
         <table class="CalendarTable">
@@ -339,9 +329,9 @@
                 </td>
             </tr>
         </table>
-        
+
     </section>
-    
+
     <section class="homeClassPageMenu">
         <div class="homeClassMenuButton">
             <a href="@Url.Action("Calendar", "Misc")">
@@ -356,3 +346,54 @@
 
     </section>
 </aside>
+
+
+@*SAVE THIS INFORMATION -- STATIC COURSES
+
+<tr>
+    <td>
+        <div class="classCard">
+            <h2>CS 3750</h2>
+            <p>
+                Schedule: T/Th 7:30a - 9:00a
+            </p>
+            <p><a class="btn btn-default" href="@Url.Action("CS3750", "Courses")">Class Details &raquo;</a></p>
+        </div>
+    </td>
+    <td>
+        <div class="classCard">
+            <h2>CS 3620</h2>
+            <p>
+                Schedule: M/W 7:30a - 9:00a
+            </p>
+            <p><a class="btn btn-default" href="@Url.Action("CS3620", "Courses")">Class Details &raquo;</a></p>
+        </div>
+    </td>
+</tr>
+
+<tr>
+    <td>
+        <div class="classCard">
+            <h2>Math 1220</h2>
+            <p>
+                Schedule: Online, group meeting TH 7:30p
+            </p>
+            <p><a class="btn btn-default" href="@Url.Action("MATH1220", "Courses")">Class Details &raquo;</a></p>
+        </div>
+    </td>
+
+    <td>
+        <div class="classCard">
+
+            <h2>Phys 2120</h2>
+            <p>
+                Schedule: M,W,F 10:30a - 12:00p
+            </p>
+            <p>
+                Lab: TH: 2:30p - 4:30p
+            </p>
+            <p><a class="btn btn-default" href="@Url.Action("PHYS2120", "Courses")">Class Details &raquo;</a></p>
+        </div>
+    </td>
+
+</tr>*@

@@ -5,6 +5,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.Owin;
+using System.Data.Entity;
 
 namespace MackTechGroupProject.Controllers
 {
@@ -13,7 +15,14 @@ namespace MackTechGroupProject.Controllers
         [Authorize]
         public ActionResult Index()
         {
-            return View();
+            String userId = User.Identity.GetUserId();
+
+            var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
+            var currentUser = context.Users.Where(x => x.Id == userId).FirstOrDefault();
+
+            var currentEnrollments = context.Enrollments.Where(x => x.Student.Id == userId).Include(x => x.Student).Include(x => x.Course).ToList();
+
+            return View(currentEnrollments);
         }
 
         public ActionResult About()
