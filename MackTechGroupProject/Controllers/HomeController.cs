@@ -18,7 +18,6 @@ namespace MackTechGroupProject.Controllers
             String userId = User.Identity.GetUserId();
 
             var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
-            var currentUser = context.Users.Where(x => x.Id == userId).FirstOrDefault();
 
             var currentEnrollments = context.Enrollments.Where(x => x.Student.Id == userId).Include(x => x.Student).Include(x => x.Course).ToList();
 
