@@ -1,26 +1,12 @@
-﻿using MackTechGroupProject.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.Owin;
-using System.Data.Entity;
+﻿using System.Web.Mvc;
 
 namespace MackTechGroupProject.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
         [Authorize]
         public ActionResult Index()
         {
-            String userId = User.Identity.GetUserId();
-
-            var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
-
-            var currentEnrollments = context.Enrollments.Where(x => x.Student.Id == userId).Include(x => x.Student).Include(x => x.Course).ToList();
-
             return View(currentEnrollments);
         }
 

@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace MackTechGroupProject.Controllers
 {
-    public class AssignmentsController : Controller
+    public class AssignmentsController : BaseController
     {
         // GET: Assignments
         public ActionResult Assignment1()

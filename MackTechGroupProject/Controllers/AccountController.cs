@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Globalization;
 using System.Linq;
-using System.Security.Claims;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
@@ -9,14 +7,12 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using MackTechGroupProject.Models;
-using MackTechGroupProject.Extensions;
 using System.IO;
-using Microsoft.Ajax.Utilities;
 
 namespace MackTechGroupProject.Controllers
 {
     [Authorize]
-    public class AccountController : Controller
+    public class AccountController : BaseController
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
@@ -75,6 +71,8 @@ namespace MackTechGroupProject.Controllers
             {
                 return View(model);
             }
+
+            GetCurrentEnrollments(model.Email);
 
             // This doesn't count login failures towards account lockout
             // To enable password failures to trigger account lockout, change to shouldLockout: true
