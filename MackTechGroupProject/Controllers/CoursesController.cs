@@ -120,15 +120,21 @@ namespace MackTechGroupProject.Controllers
         public ActionResult DeleteCourseFromEnrollments(int id)
         {
             String userId = User.Identity.GetUserId();
-            var selectedCourseId = id;
+            var selectedEnrollmentId = id;
 
             var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
 
             // query current enrollments list and delete selected course where the selectedCourseId == x.Course.CourseI
-
+            var currentEnrollmentList = currentEnrollments.Where(x => x.EnrollmentId == selectedEnrollmentId).FirstOrDefault();
+            
             //currentEnrollments.Remove(selectedCourse);
+            currentEnrollments.Remove(currentEnrollmentList);
 
             //DELETE from database as well
+            var currentEnrollmentDB = context.Enrollments.Include(u => u.User).Include(c => c.Course).Where(x => x.EnrollmentId == selectedEnrollmentId).FirstOrDefault();
+            context.Enrollments.Remove(currentEnrollmentDB);
+            context.SaveChanges();
+            
 
             return RedirectToAction("StudentAccount", "Courses");
         }
