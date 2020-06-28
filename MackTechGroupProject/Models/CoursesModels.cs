@@ -67,7 +67,7 @@ namespace MackTechGroupProject.Models
     public class Enrollment
     {
         public int EnrollmentId { get; set; }
-        public ApplicationUser Student { get; set; }
+        public ApplicationUser User { get; set; }
         public Course Course { get; set; }
     }
 }

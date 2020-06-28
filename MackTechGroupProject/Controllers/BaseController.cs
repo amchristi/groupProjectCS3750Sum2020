@@ -17,7 +17,7 @@ namespace MackTechGroupProject.Controllers
         {
             var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
 
-            currentEnrollments = context.Enrollments.Where(x => x.Student.Email == userEmail).Include(x => x.Student).Include(x => x.Course).ToList();
+            currentEnrollments = context.Enrollments.Where(x => x.User.Email == userEmail).Include(x => x.User).Include(x => x.Course).ToList();
         }
     }
 }

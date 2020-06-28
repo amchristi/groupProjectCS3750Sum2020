@@ -227,6 +227,10 @@
     <Compile Include="Migrations\202006240509269_course_model_update.Designer.cs">
       <DependentUpon>202006240509269_course_model_update.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202006282032043_Instructor_added_to_Enrollments.cs" />
+    <Compile Include="Migrations\202006282032043_Instructor_added_to_Enrollments.Designer.cs">
+      <DependentUpon>202006282032043_Instructor_added_to_Enrollments.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\CoursesModels.cs" />
@@ -355,6 +359,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202006240509269_course_model_update.resx">
       <DependentUpon>202006240509269_course_model_update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006282032043_Instructor_added_to_Enrollments.resx">
+      <DependentUpon>202006282032043_Instructor_added_to_Enrollments.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

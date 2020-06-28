@@ -47,8 +47,17 @@ namespace MackTechGroupProject.Controllers
                     MaxCapacity = model.MaxCapacity
                 };
 
+                var instructorEnrollment = new Enrollment
+                {
+                    Course = course,
+                    User = currentInstructor
+                };
+
                 context.Courses.Add(course);
+                context.Enrollments.Add(instructorEnrollment);
                 context.SaveChanges();
+
+                currentEnrollments.Add(instructorEnrollment);
 
                 return RedirectToAction("Index", "Home");
             }
@@ -80,10 +89,10 @@ namespace MackTechGroupProject.Controllers
                 var studentEnrollment = new Enrollment
                 {
                     Course = selectedCourse,
-                    Student = currentStudent
+                    User = currentStudent
                 };
 
-                var currentEnrollments = context.Enrollments.Include(x => x.Student).Include(c => c.Course).Where(s => s.Student.Id == userId).ToList();
+                //var currentEnrollments = context.Enrollments.Include(x => x.User).Include(c => c.Course).Where(s => s.User.Id == userId).ToList();
 
                 //check to see if the course already exists in student's currentEnrollments
                 bool hasCourse = currentEnrollments.Any(x => x.Course.CourseID == id);
@@ -92,6 +101,8 @@ namespace MackTechGroupProject.Controllers
                 {
                     context.Enrollments.Add(studentEnrollment);
                     context.SaveChanges();
+
+                    currentEnrollments.Add(studentEnrollment);
 
                     return RedirectToAction("StudentAccount", "Courses");
                 }
@@ -106,6 +117,22 @@ namespace MackTechGroupProject.Controllers
             return RedirectToAction("CourseRegistration", "Courses");
         }
 
+        public ActionResult DeleteCourseFromEnrollments(int id)
+        {
+            String userId = User.Identity.GetUserId();
+            var selectedCourseId = id;
+
+            var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
+
+            // query current enrollments list and delete selected course where the selectedCourseId == x.Course.CourseI
+
+            //currentEnrollments.Remove(selectedCourse);
+
+            //DELETE from database as well
+
+            return RedirectToAction("StudentAccount", "Courses");
+        }
+
         public ActionResult StudentAccount()
         {
             String userId = User.Identity.GetUserId();
@@ -113,7 +140,7 @@ namespace MackTechGroupProject.Controllers
             var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
 
             // gets a list of enrollments for current student
-            var currentEnrollments = context.Enrollments.Include(x => x.Student).Include(c => c.Course).Where(s => s.Student.Id == userId).ToList();
+            var currentEnrollments = context.Enrollments.Include(x => x.User).Include(c => c.Course).Where(s => s.User.Id == userId).ToList();
 
             var totalCreditHours = currentEnrollments.Sum(x => x.Course.CreditHours);
             var totalCost = totalCreditHours * 240;
