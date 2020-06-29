@@ -131,7 +131,7 @@ namespace MackTechGroupProject.Controllers
             currentEnrollments.Remove(currentEnrollmentList);
 
             //DELETE from database as well
-            var currentEnrollmentDB = context.Enrollments.Include(u => u.User).Include(c => c.Course).Where(x => x.EnrollmentId == selectedEnrollmentId).FirstOrDefault();
+            var currentEnrollmentDB = context.Enrollments.Where(x => x.EnrollmentId == selectedEnrollmentId).FirstOrDefault();
             context.Enrollments.Remove(currentEnrollmentDB);
             context.SaveChanges();
             
