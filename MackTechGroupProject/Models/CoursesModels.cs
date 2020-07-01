@@ -10,7 +10,7 @@ namespace MackTechGroupProject.Models
     public class Course
     {
         [Display(Name = "Course ID")]
-        public int CourseID { get; set; }
+        public int CourseId { get; set; }
 
         public Guid CRN { get; set; }
 

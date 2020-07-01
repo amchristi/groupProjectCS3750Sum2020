@@ -35,7 +35,7 @@ namespace MackTechGroupProject.Controllers
             {
                 var course = new Course
                 {
-                    CourseID = model.CourseID,
+                    CourseId = model.CourseId,
                     CRN = model.CRN,
                     Department = model.Department,
                     CourseNumber = model.CourseNumber,
@@ -82,7 +82,7 @@ namespace MackTechGroupProject.Controllers
 
             var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
             var currentStudent = context.Users.Where(x => x.Id == userId).FirstOrDefault();
-            var selectedCourse = context.Courses.Where(x => x.CourseID == selectedCourseId).FirstOrDefault();
+            var selectedCourse = context.Courses.Where(x => x.CourseId == selectedCourseId).FirstOrDefault();
 
             if (ModelState.IsValid)
             {
@@ -95,7 +95,7 @@ namespace MackTechGroupProject.Controllers
                 //var currentEnrollments = context.Enrollments.Include(x => x.User).Include(c => c.Course).Where(s => s.User.Id == userId).ToList();
 
                 //check to see if the course already exists in student's currentEnrollments
-                bool hasCourse = currentEnrollments.Any(x => x.Course.CourseID == id);
+                bool hasCourse = currentEnrollments.Any(x => x.Course.CourseId == id);
 
                 if (!hasCourse)
                 {

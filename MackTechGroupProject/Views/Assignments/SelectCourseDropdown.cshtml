@@ -1,0 +1,47 @@
+﻿@model MackTechGroupProject.Models.AddAssignmentViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>SelectCourse</title>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        
+    <div class="form-horizontal">
+        <h4>AddAssignmentViewModel</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.SelectedCourseId, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.LabelFor(m => m.SelectedCourseId)
+                @Html.DropDownListFor(m => m.SelectedCourseId, Model.InstructorCourses)
+                @Html.ValidationMessageFor(model => model.SelectedCourseId, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Selected Course: ")
+            <div class="col-md-10">
+                @ViewBag.SelectedCourse
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Select Course" class="btn btn-default" onclick="location.href='@Url.Action("AddAssignment", "Assignments")'" />
+            </div>
+        </div>
+    </div>
+    }
+</body>
+</html>

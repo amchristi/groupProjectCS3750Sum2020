@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 
 namespace MackTechGroupProject.Models
 {
@@ -38,5 +40,13 @@ namespace MackTechGroupProject.Models
         [DataType(DataType.Text)]
         [Display(Name = "What type of Submission: ")]
         public string SubmissionType { get; set; }
+    }
+
+    public class AddAssignmentViewModel
+    {
+        // Display Attribute will appear in the Html.LabelFor
+        [Display(Name = "User Role")]
+        public int SelectedCourseId { get; set; }
+        public IEnumerable<SelectListItem> InstructorCourses { get; set; }
     }
 }
