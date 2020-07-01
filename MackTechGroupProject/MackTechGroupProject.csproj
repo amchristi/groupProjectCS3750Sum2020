@@ -231,8 +231,21 @@
     <Compile Include="Migrations\202006282032043_Instructor_added_to_Enrollments.Designer.cs">
       <DependentUpon>202006282032043_Instructor_added_to_Enrollments.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202007010350202_Assignment_Table_Added.cs" />
+    <Compile Include="Migrations\202007010350202_Assignment_Table_Added.Designer.cs">
+      <DependentUpon>202007010350202_Assignment_Table_Added.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007010422160_Enrollments-Added-To-Assignments.cs" />
+    <Compile Include="Migrations\202007010422160_Enrollments-Added-To-Assignments.Designer.cs">
+      <DependentUpon>202007010422160_Enrollments-Added-To-Assignments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007010557324_Redefined_AssignmentsModel.cs" />
+    <Compile Include="Migrations\202007010557324_Redefined_AssignmentsModel.Designer.cs">
+      <DependentUpon>202007010557324_Redefined_AssignmentsModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\AssignmentsModels.cs" />
     <Compile Include="Models\CoursesModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -316,6 +329,8 @@
     <Content Include="Views\Misc\NewEvent.cshtml" />
     <Content Include="Views\Courses\CourseRegistration.cshtml" />
     <Content Include="Views\Courses\StudentAccount.cshtml" />
+    <Content Include="Views\Assignments\TestAddAssignment.cshtml" />
+    <Content Include="Views\Assignments\View.cshtml" />
     <Content Include="Views\Assignments\AddAssignment.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -363,6 +378,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202006282032043_Instructor_added_to_Enrollments.resx">
       <DependentUpon>202006282032043_Instructor_added_to_Enrollments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007010350202_Assignment_Table_Added.resx">
+      <DependentUpon>202007010350202_Assignment_Table_Added.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007010422160_Enrollments-Added-To-Assignments.resx">
+      <DependentUpon>202007010422160_Enrollments-Added-To-Assignments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007010557324_Redefined_AssignmentsModel.resx">
+      <DependentUpon>202007010557324_Redefined_AssignmentsModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

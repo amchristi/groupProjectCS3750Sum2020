@@ -24,6 +24,7 @@ namespace MackTechGroupProject.Models
         public byte[] ProfileImage { get; set; }
 
         public ICollection<Enrollment> Enrollments { get; set; }
+        public ICollection<Assignment> Assignments { get; set; }
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {

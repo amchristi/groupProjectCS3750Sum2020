@@ -1,63 +1,86 @@
-@using Microsoft.AspNet.Identity
+﻿@model MackTechGroupProject.Models.Assignment
 
-
-
-@model MackTechGroupProject.Models.Assignment
 @{
     ViewBag.Title = "AddAssignment";
 }
 
-<h2>Add Assignment</h2>
+<!DOCTYPE html>
 
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AddAssignment</title>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        
+    <div class="form-horizontal">
+        <h4>Assignment</h4>
+        <hr />
 
-@Html.AntiForgeryToken()
-<h4>Add a new Assignment.</h4>
-<hr />
-@Html.ValidationSummary("", new { @class = "text-danger" })
-<div class="form-group">
-    @Html.LabelFor(m => m.CourseId, new { @class = "col-md-2 control-label" })
-    <div class="col-md-10">
-        @Html.TextBoxFor(m => m.CourseId, new { @class = "form-control" })
-    </div>
-</div>
-<div class="form-group">
-    @Html.LabelFor(m => m.Points, new { @class = "col-md-2 control-label" })
-    <div class="col-md-10">
-        @Html.TextBoxFor(m => m.Points, new { @class = "form-control" })
-    </div>
-</div>
-<div class="form-group">
-    @Html.LabelFor(m => m.AssignmentTitle, new { @class = "col-md-2 control-label" })
-    <div class="col-md-10">
-        @Html.TextBoxFor(m => m.AssignmentTitle, new { @class = "form-control" })
-    </div>
-</div>
-<div class="form-group">
-    @Html.LabelFor(m => m.AssignmentDescription, new { @class = "col-md-2 control-label" })
-    <div class="col-md-10">
-        @Html.TextBoxFor(m => m.AssignmentDescription, new { @class = "form-control" })
-    </div>
-</div>
-<div class="form-group">
-    @Html.LabelFor(m => m.DueDate, new { @class = "col-md-2 control-label" })
-    <div class="col-md-10">
-        @Html.TextBoxFor(m => m.DueDate, new { @class = "form-control" })
-    </div>
-</div>
-<div class="form-group">
-    <div class="col-md-offset-2 col-md-10">
-        <div class="radio-button">
-            @Html.RadioButtonFor(m => m.SubmissionType, "Text-Submission")
-            @Html.RadioButtonFor(m => m.SubmissionType, "File-Upload")
-            @Html.LabelFor(m => m.SubmissionType)
+        <div class="form-group">
+            @Html.LabelFor(model => model.Course.CourseID, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Course.CourseID, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Course.CourseID, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Points, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Points, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Points, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.AssignmentTitle, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.AssignmentTitle, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.AssignmentTitle, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.AssignmentDescription, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.AssignmentDescription, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.AssignmentDescription, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DueDate, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DueDate, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.DueDate, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.SubmissionType, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.RadioButtonFor(m => m.SubmissionType, "Text-Submission")
+                @Html.Label("Text")
+                @Html.RadioButtonFor(m => m.SubmissionType, "File-Upload")
+                @Html.Label("File")
+                @Html.ValidationMessageFor(model => model.SubmissionType, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
         </div>
     </div>
-</div>
-
-<div class="form-group">
-    <div class="col-md-offset-2 col-md-10">
-        <input type="submit" class="btn btn-default" value="Add Assignment" />
+    }
+    
+    <div>
+        @Html.ActionLink("Back to List", "Index")
     </div>
-</div>
-
-
+</body>
+</html>

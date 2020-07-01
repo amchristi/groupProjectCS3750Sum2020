@@ -34,18 +34,13 @@ namespace MackTechGroupProject.Controllers
         {
             return View();
         }
-
-
         
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
         public ActionResult AddAssignment(Assignment model)
         {      
-
             var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
-
-           
 
             if (ModelState.IsValid)
             {
@@ -58,12 +53,11 @@ namespace MackTechGroupProject.Controllers
                     AssignmentDescription = model.AssignmentDescription,
                     DueDate = model.DueDate,
                     SubmissionType = model.SubmissionType                    
-                    
                 };
 
                 context.Assignments.Add(assignment);
-
                 context.SaveChanges();
+
                 return RedirectToAction("Index", "Home");
             }
 
