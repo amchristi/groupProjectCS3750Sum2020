@@ -1,682 +1,848 @@
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\MackTechGroupProject.dll.config
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\MackTechGroupProject.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\MackTechGroupProject.pdb
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\roslyn\csc.exe
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\roslyn\csc.exe.config
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\roslyn\csc.rsp
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\roslyn\csi.exe
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\roslyn\csi.exe.config
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\roslyn\csi.rsp
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\roslyn\Microsoft.CodeAnalysis.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\roslyn\Microsoft.CSharp.Core.targets
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\roslyn\Microsoft.Managed.Core.targets
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\roslyn\Microsoft.VisualBasic.Core.targets
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\roslyn\System.AppContext.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\roslyn\System.Collections.Immutable.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\roslyn\System.Console.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\roslyn\System.Diagnostics.StackTrace.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\roslyn\System.IO.Compression.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\roslyn\System.IO.FileSystem.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\roslyn\System.IO.FileSystem.Primitives.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\roslyn\System.IO.Pipes.AccessControl.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\roslyn\System.IO.Pipes.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\roslyn\System.Reflection.Metadata.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\roslyn\System.Security.AccessControl.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\roslyn\System.Security.Claims.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\roslyn\System.Security.Cryptography.Algorithms.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\roslyn\System.Security.Cryptography.Encoding.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\roslyn\System.Security.Cryptography.Primitives.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\roslyn\System.Security.Principal.Windows.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\roslyn\System.Text.Encoding.CodePages.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\roslyn\System.ValueTuple.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\roslyn\System.Xml.ReaderWriter.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\roslyn\System.Xml.XmlDocument.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\roslyn\System.Xml.XPath.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\roslyn\System.Xml.XPath.XDocument.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\roslyn\vbc.exe
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\roslyn\vbc.exe.config
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\roslyn\vbc.rsp
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\roslyn\VBCSCompiler.exe
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\Antlr3.Runtime.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\EntityFramework.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\EntityFramework.SqlServer.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\Microsoft.AspNet.Identity.Core.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\Microsoft.AspNet.Identity.EntityFramework.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\Microsoft.AspNet.Identity.Owin.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\Microsoft.Owin.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\Microsoft.Owin.Host.SystemWeb.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\Microsoft.Owin.Security.Cookies.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\Microsoft.Owin.Security.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\Microsoft.Owin.Security.Facebook.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\Microsoft.Owin.Security.Google.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\Microsoft.Owin.Security.OAuth.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\Microsoft.Owin.Security.Twitter.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\Newtonsoft.Json.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\Owin.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\System.Web.Helpers.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\System.Web.Mvc.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\System.Web.Optimization.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\System.Web.Razor.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\System.Web.WebPages.Deployment.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\System.Web.WebPages.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\System.Web.WebPages.Razor.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\WebGrease.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\System.Web.Helpers.xml
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\System.Web.Mvc.xml
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\System.Web.Optimization.xml
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\System.Web.Razor.xml
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\System.Web.WebPages.xml
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\System.Web.WebPages.Deployment.xml
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\System.Web.WebPages.Razor.xml
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\Newtonsoft.Json.xml
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\Antlr3.Runtime.pdb
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\EntityFramework.xml
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\EntityFramework.SqlServer.xml
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\Microsoft.AspNet.Identity.Core.xml
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\Microsoft.AspNet.Identity.Owin.xml
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\Microsoft.Owin.xml
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\Microsoft.Owin.Host.SystemWeb.xml
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\Microsoft.Owin.Security.xml
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\Microsoft.Owin.Security.Facebook.xml
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\Microsoft.Owin.Security.Cookies.xml
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\Microsoft.Owin.Security.Google.xml
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\Microsoft.Owin.Security.Twitter.xml
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\Microsoft.Owin.Security.OAuth.xml
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\obj\Debug\MackTechGroupProject.csprojAssemblyReference.cache
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\obj\Debug\MackTechGroupProject.csproj.CoreCompileInputs.cache
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\obj\Debug\MackTechGroupProject.csproj.CopyComplete
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\obj\Debug\MackTechGroupProject.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\MackTechGroupProject\obj\Debug\MackTechGroupProject.pdb
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\MackTechGroupProject.dll.config
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\MackTechGroupProject.dll
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\MackTechGroupProject.pdb
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\csc.exe
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\csc.exe.config
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\csc.rsp
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\csi.exe
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\csi.exe.config
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\csi.rsp
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\Microsoft.CodeAnalysis.dll
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\Microsoft.CSharp.Core.targets
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\Microsoft.Managed.Core.targets
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\Microsoft.VisualBasic.Core.targets
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.AppContext.dll
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Collections.Immutable.dll
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Console.dll
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Diagnostics.StackTrace.dll
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.IO.Compression.dll
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.IO.FileSystem.dll
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.IO.FileSystem.Primitives.dll
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.IO.Pipes.AccessControl.dll
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.IO.Pipes.dll
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Reflection.Metadata.dll
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Security.AccessControl.dll
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Security.Claims.dll
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Security.Cryptography.Algorithms.dll
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Security.Cryptography.Encoding.dll
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Security.Cryptography.Primitives.dll
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Security.Principal.Windows.dll
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Text.Encoding.CodePages.dll
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.ValueTuple.dll
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Xml.ReaderWriter.dll
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Xml.XmlDocument.dll
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Xml.XPath.dll
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Xml.XPath.XDocument.dll
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\vbc.exe
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\vbc.exe.config
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\vbc.rsp
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\VBCSCompiler.exe
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Antlr3.Runtime.dll
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\EntityFramework.dll
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\EntityFramework.SqlServer.dll
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.AspNet.Identity.Core.dll
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.AspNet.Identity.EntityFramework.dll
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.AspNet.Identity.Owin.dll
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.dll
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Host.SystemWeb.dll
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.Cookies.dll
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.dll
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.Facebook.dll
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.Google.dll
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.OAuth.dll
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.Twitter.dll
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Newtonsoft.Json.dll
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Owin.dll
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.Helpers.dll
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.Mvc.dll
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.Optimization.dll
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.Razor.dll
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.WebPages.Deployment.dll
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.WebPages.dll
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.WebPages.Razor.dll
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\WebGrease.dll
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.Helpers.xml
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.Mvc.xml
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.Optimization.xml
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.Razor.xml
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.WebPages.xml
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.WebPages.Deployment.xml
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.WebPages.Razor.xml
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Newtonsoft.Json.xml
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Antlr3.Runtime.pdb
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\EntityFramework.xml
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\EntityFramework.SqlServer.xml
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.AspNet.Identity.Core.xml
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.AspNet.Identity.Owin.xml
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.xml
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Host.SystemWeb.xml
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.xml
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.Facebook.xml
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.Cookies.xml
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.Google.xml
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.Twitter.xml
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.OAuth.xml
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.csproj.CopyComplete
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.dll
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.pdb
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\MackTechGroupProject.dll.config
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\MackTechGroupProject.dll
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\MackTechGroupProject.pdb
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\csc.exe
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\csc.exe.config
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\csc.rsp
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\csi.exe
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\csi.exe.config
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\csi.rsp
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\Microsoft.CodeAnalysis.dll
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\Microsoft.CSharp.Core.targets
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\Microsoft.Managed.Core.targets
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\Microsoft.VisualBasic.Core.targets
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.AppContext.dll
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Collections.Immutable.dll
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Console.dll
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Diagnostics.StackTrace.dll
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.IO.Compression.dll
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.IO.FileSystem.dll
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.IO.FileSystem.Primitives.dll
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.IO.Pipes.AccessControl.dll
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.IO.Pipes.dll
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Reflection.Metadata.dll
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Security.AccessControl.dll
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Security.Claims.dll
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Security.Cryptography.Algorithms.dll
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Security.Cryptography.Encoding.dll
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Security.Cryptography.Primitives.dll
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Security.Principal.Windows.dll
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Text.Encoding.CodePages.dll
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.ValueTuple.dll
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Xml.ReaderWriter.dll
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Xml.XmlDocument.dll
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Xml.XPath.dll
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Xml.XPath.XDocument.dll
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\vbc.exe
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\vbc.exe.config
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\vbc.rsp
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\VBCSCompiler.exe
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\VBCSCompiler.exe.config
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Antlr3.Runtime.dll
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\EntityFramework.dll
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\EntityFramework.SqlServer.dll
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.AspNet.Identity.Core.dll
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.AspNet.Identity.EntityFramework.dll
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.AspNet.Identity.Owin.dll
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.dll
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Host.SystemWeb.dll
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.Cookies.dll
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.dll
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.Facebook.dll
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.Google.dll
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.OAuth.dll
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.Twitter.dll
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Web.Infrastructure.dll
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Newtonsoft.Json.dll
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Owin.dll
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.Helpers.dll
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.Mvc.dll
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.Optimization.dll
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.Razor.dll
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.WebPages.Deployment.dll
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.WebPages.dll
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.WebPages.Razor.dll
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\WebGrease.dll
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.Helpers.xml
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.Mvc.xml
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.Optimization.xml
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.Razor.xml
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.WebPages.xml
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.WebPages.Deployment.xml
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.WebPages.Razor.xml
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Newtonsoft.Json.xml
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Antlr3.Runtime.pdb
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\EntityFramework.xml
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\EntityFramework.SqlServer.xml
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.AspNet.Identity.Core.xml
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.AspNet.Identity.Owin.xml
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.xml
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Host.SystemWeb.xml
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.xml
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.Facebook.xml
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.Cookies.xml
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.Google.xml
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.Twitter.xml
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.OAuth.xml
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.csprojAssemblyReference.cache
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.csproj.CoreCompileInputs.cache
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.csproj.CopyComplete
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.dll
-D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.pdb
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\MackTechGroupProject.dll.config
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\MackTechGroupProject.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\MackTechGroupProject.pdb
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\csc.exe
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\csc.exe.config
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\csc.rsp
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\csi.exe
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\csi.exe.config
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\csi.rsp
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\Microsoft.CodeAnalysis.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\Microsoft.CSharp.Core.targets
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\Microsoft.Managed.Core.targets
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\Microsoft.VisualBasic.Core.targets
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.AppContext.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Collections.Immutable.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Console.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Diagnostics.StackTrace.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.IO.Compression.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.IO.FileSystem.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.IO.FileSystem.Primitives.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.IO.Pipes.AccessControl.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.IO.Pipes.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Reflection.Metadata.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Security.AccessControl.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Security.Claims.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Security.Cryptography.Algorithms.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Security.Cryptography.Encoding.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Security.Cryptography.Primitives.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Security.Principal.Windows.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Text.Encoding.CodePages.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.ValueTuple.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Xml.ReaderWriter.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Xml.XmlDocument.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Xml.XPath.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Xml.XPath.XDocument.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\vbc.exe
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\vbc.exe.config
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\vbc.rsp
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\VBCSCompiler.exe
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Antlr3.Runtime.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\EntityFramework.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\EntityFramework.SqlServer.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.AspNet.Identity.Core.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.AspNet.Identity.EntityFramework.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.AspNet.Identity.Owin.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Host.SystemWeb.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.Cookies.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.Facebook.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.Google.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.OAuth.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.Twitter.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Newtonsoft.Json.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Owin.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.Helpers.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.Mvc.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.Optimization.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.Razor.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.WebPages.Deployment.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.WebPages.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.WebPages.Razor.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\WebGrease.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.Helpers.xml
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.Mvc.xml
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.Optimization.xml
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.Razor.xml
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.WebPages.xml
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.WebPages.Deployment.xml
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.WebPages.Razor.xml
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Newtonsoft.Json.xml
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Antlr3.Runtime.pdb
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\EntityFramework.xml
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\EntityFramework.SqlServer.xml
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.AspNet.Identity.Core.xml
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.AspNet.Identity.Owin.xml
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.xml
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Host.SystemWeb.xml
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.xml
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.Facebook.xml
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.Cookies.xml
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.Google.xml
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.Twitter.xml
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.OAuth.xml
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.csprojAssemblyReference.cache
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.csproj.CoreCompileInputs.cache
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.csproj.CopyComplete
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.dll
-C:\Users\KEVIN-PC\source\repos\MackTechGroupProject\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.pdb
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\MackTechGroupProject.dll.config
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\MackTechGroupProject.dll
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\MackTechGroupProject.pdb
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Antlr3.Runtime.dll
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\EntityFramework.dll
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\EntityFramework.SqlServer.dll
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.AspNet.Identity.Core.dll
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.AspNet.Identity.EntityFramework.dll
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.AspNet.Identity.Owin.dll
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.dll
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Host.SystemWeb.dll
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.Cookies.dll
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.dll
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.Facebook.dll
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.Google.dll
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.OAuth.dll
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.Twitter.dll
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Newtonsoft.Json.dll
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Owin.dll
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.Helpers.dll
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.Mvc.dll
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.Optimization.dll
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.Razor.dll
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.WebPages.Deployment.dll
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.WebPages.dll
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.WebPages.Razor.dll
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\WebGrease.dll
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.Helpers.xml
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.Mvc.xml
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.Optimization.xml
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.Razor.xml
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.WebPages.xml
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.WebPages.Deployment.xml
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.WebPages.Razor.xml
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Newtonsoft.Json.xml
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Antlr3.Runtime.pdb
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\EntityFramework.xml
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\EntityFramework.SqlServer.xml
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.AspNet.Identity.Core.xml
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.AspNet.Identity.Owin.xml
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.xml
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Host.SystemWeb.xml
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.xml
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.Facebook.xml
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.Cookies.xml
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.Google.xml
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.Twitter.xml
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.OAuth.xml
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.csproj.CoreCompileInputs.cache
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.csproj.CopyComplete
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.dll
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.pdb
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.csprojAssemblyReference.cache
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.csproj.GenerateResource.cache
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Bcl.AsyncInterfaces.dll
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Stripe.net.dll
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Runtime.CompilerServices.Unsafe.dll
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Threading.Tasks.Extensions.dll
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Bcl.AsyncInterfaces.xml
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Stripe.net.pdb
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Stripe.net.xml
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Runtime.CompilerServices.Unsafe.xml
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Threading.Tasks.Extensions.xml
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Bcl.AsyncInterfaces.dll
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Stripe.net.dll
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Runtime.CompilerServices.Unsafe.dll
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Threading.Tasks.Extensions.dll
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Bcl.AsyncInterfaces.xml
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Stripe.net.pdb
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Stripe.net.xml
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Runtime.CompilerServices.Unsafe.xml
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Threading.Tasks.Extensions.xml
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.Migrations.Added_Course_Table.resources
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.csproj.GenerateResource.cache
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\MackTechGroupProject.dll.config
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\MackTechGroupProject.dll
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\MackTechGroupProject.pdb
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\csc.exe
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\csc.exe.config
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\csc.rsp
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\csi.exe
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\csi.exe.config
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\csi.rsp
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\Microsoft.CodeAnalysis.dll
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\Microsoft.CSharp.Core.targets
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\Microsoft.Managed.Core.targets
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\Microsoft.VisualBasic.Core.targets
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.AppContext.dll
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Collections.Immutable.dll
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Console.dll
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Diagnostics.StackTrace.dll
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.IO.Compression.dll
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.IO.FileSystem.dll
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.IO.FileSystem.Primitives.dll
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.IO.Pipes.AccessControl.dll
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.IO.Pipes.dll
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Reflection.Metadata.dll
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Security.AccessControl.dll
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Security.Claims.dll
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Security.Cryptography.Algorithms.dll
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Security.Cryptography.Encoding.dll
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Security.Cryptography.Primitives.dll
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Security.Principal.Windows.dll
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Text.Encoding.CodePages.dll
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.ValueTuple.dll
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Xml.ReaderWriter.dll
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Xml.XmlDocument.dll
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Xml.XPath.dll
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Xml.XPath.XDocument.dll
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\vbc.exe
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\vbc.exe.config
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\vbc.rsp
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\VBCSCompiler.exe
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Antlr3.Runtime.dll
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\EntityFramework.dll
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\EntityFramework.SqlServer.dll
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.AspNet.Identity.Core.dll
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.AspNet.Identity.EntityFramework.dll
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.AspNet.Identity.Owin.dll
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Bcl.AsyncInterfaces.dll
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.dll
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Host.SystemWeb.dll
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.Cookies.dll
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.dll
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.Facebook.dll
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.Google.dll
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.OAuth.dll
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.Twitter.dll
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Newtonsoft.Json.dll
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Owin.dll
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Stripe.net.dll
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Runtime.CompilerServices.Unsafe.dll
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Threading.Tasks.Extensions.dll
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.Helpers.dll
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.Mvc.dll
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.Optimization.dll
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.Razor.dll
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.WebPages.Deployment.dll
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.WebPages.dll
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.WebPages.Razor.dll
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\WebGrease.dll
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Bcl.AsyncInterfaces.xml
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Stripe.net.pdb
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Stripe.net.xml
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Runtime.CompilerServices.Unsafe.xml
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Threading.Tasks.Extensions.xml
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.Helpers.xml
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.Mvc.xml
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.Optimization.xml
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.Razor.xml
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.WebPages.xml
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.WebPages.Deployment.xml
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Web.WebPages.Razor.xml
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Newtonsoft.Json.xml
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Antlr3.Runtime.pdb
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\EntityFramework.xml
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\EntityFramework.SqlServer.xml
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.AspNet.Identity.Core.xml
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.AspNet.Identity.Owin.xml
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.xml
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Host.SystemWeb.xml
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.xml
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.Facebook.xml
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.Cookies.xml
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.Google.xml
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.Twitter.xml
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.Owin.Security.OAuth.xml
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.csprojAssemblyReference.cache
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.Migrations.Added_Course_Table.resources
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.csproj.GenerateResource.cache
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.csproj.CopyComplete
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.dll
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.pdb
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.Migrations.Added_Enrollment_Table.resources
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.Migrations.Added_Enrollment_Table.resources
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.Migrations.Added_Course_Table.resources
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.Migrations.Added_Enrollment_Table.resources
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.csprojAssemblyReference.cache
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\csc.exe
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\csc.exe.config
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\csc.rsp
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\csi.exe
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\csi.exe.config
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\csi.rsp
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\Microsoft.CodeAnalysis.dll
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\Microsoft.CSharp.Core.targets
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\Microsoft.Managed.Core.targets
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\Microsoft.VisualBasic.Core.targets
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.AppContext.dll
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Collections.Immutable.dll
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Console.dll
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Diagnostics.StackTrace.dll
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.IO.Compression.dll
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.IO.FileSystem.dll
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.IO.FileSystem.Primitives.dll
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.IO.Pipes.AccessControl.dll
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.IO.Pipes.dll
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Reflection.Metadata.dll
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Security.AccessControl.dll
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Security.Claims.dll
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Security.Cryptography.Algorithms.dll
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Security.Cryptography.Encoding.dll
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Security.Cryptography.Primitives.dll
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Security.Principal.Windows.dll
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Text.Encoding.CodePages.dll
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.ValueTuple.dll
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Xml.ReaderWriter.dll
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Xml.XmlDocument.dll
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Xml.XPath.dll
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\System.Xml.XPath.XDocument.dll
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\vbc.exe
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\vbc.exe.config
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\vbc.rsp
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\VBCSCompiler.exe
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.Migrations.One_PhoneNumber_Column.resources
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.Migrations.One_PhoneNumber_Column.resources
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.csproj.CoreCompileInputs.cache
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.Migrations.Instructor_ID_Courses.resources
-C:\Users\kjr\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.Migrations.Course_Database_Change.resources
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.Migrations.Instructor_ID_Courses.resources
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.Migrations.Course_Database_Change.resources
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.Migrations.guid_course.resources
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.Migrations.Instructor_Name_Courses.resources
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.Migrations.course_model_update.resources
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.Migrations.Instructor_added_to_Enrollments.resources
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.Migrations.One_PhoneNumber_Column.resources
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.Migrations.Instructor_ID_Courses.resources
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.Migrations.Course_Database_Change.resources
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.Migrations.guid_course.resources
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.Migrations.Instructor_Name_Courses.resources
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.Migrations.course_model_update.resources
-C:\Users\Montana\Source\Repos\amchristi\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.Migrations.Instructor_added_to_Enrollments.resources
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/MackTechGroupProject.dll.config
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/MackTechGroupProject.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/MackTechGroupProject.pdb
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/roslyn/csc.exe
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/roslyn/csc.exe.config
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/roslyn/csc.rsp
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/roslyn/csi.exe
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/roslyn/csi.exe.config
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/roslyn/csi.rsp
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/roslyn/Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/roslyn/Microsoft.CodeAnalysis.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/roslyn/Microsoft.CodeAnalysis.Scripting.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/roslyn/Microsoft.CSharp.Core.targets
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/roslyn/Microsoft.DiaSymReader.Native.x86.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/roslyn/Microsoft.Managed.Core.targets
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/roslyn/Microsoft.VisualBasic.Core.targets
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/roslyn/System.AppContext.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/roslyn/System.Collections.Immutable.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/roslyn/System.Console.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/roslyn/System.Diagnostics.FileVersionInfo.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/roslyn/System.Diagnostics.StackTrace.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/roslyn/System.IO.Compression.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/roslyn/System.IO.FileSystem.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/roslyn/System.IO.FileSystem.Primitives.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/roslyn/System.IO.Pipes.AccessControl.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/roslyn/System.IO.Pipes.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/roslyn/System.Reflection.Metadata.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/roslyn/System.Security.AccessControl.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/roslyn/System.Security.Claims.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/roslyn/System.Security.Cryptography.Algorithms.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/roslyn/System.Security.Cryptography.Encoding.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/roslyn/System.Security.Cryptography.Primitives.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/roslyn/System.Security.Cryptography.X509Certificates.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/roslyn/System.Security.Principal.Windows.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/roslyn/System.Text.Encoding.CodePages.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/roslyn/System.ValueTuple.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/roslyn/System.Xml.ReaderWriter.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/roslyn/System.Xml.XmlDocument.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/roslyn/System.Xml.XPath.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/roslyn/System.Xml.XPath.XDocument.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/roslyn/vbc.exe
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/roslyn/vbc.exe.config
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/roslyn/vbc.rsp
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/roslyn/VBCSCompiler.exe
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/roslyn/VBCSCompiler.exe.config
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/Antlr3.Runtime.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/EntityFramework.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/EntityFramework.SqlServer.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/Microsoft.AspNet.Identity.Core.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/Microsoft.AspNet.Identity.EntityFramework.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/Microsoft.AspNet.Identity.Owin.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/Microsoft.Owin.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/Microsoft.Owin.Host.SystemWeb.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/Microsoft.Owin.Security.Cookies.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/Microsoft.Owin.Security.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/Microsoft.Owin.Security.Facebook.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/Microsoft.Owin.Security.Google.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/Microsoft.Owin.Security.MicrosoftAccount.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/Microsoft.Owin.Security.OAuth.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/Microsoft.Owin.Security.Twitter.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/Microsoft.Web.Infrastructure.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/Newtonsoft.Json.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/Owin.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/System.Web.Helpers.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/System.Web.Mvc.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/System.Web.Optimization.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/System.Web.Razor.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/System.Web.WebPages.Deployment.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/System.Web.WebPages.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/System.Web.WebPages.Razor.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/WebGrease.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/System.Web.Helpers.xml
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/System.Web.Mvc.xml
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/System.Web.Optimization.xml
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/System.Web.Razor.xml
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/System.Web.WebPages.xml
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/System.Web.WebPages.Deployment.xml
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/System.Web.WebPages.Razor.xml
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/Newtonsoft.Json.xml
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/Antlr3.Runtime.pdb
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/EntityFramework.xml
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/EntityFramework.SqlServer.xml
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/Microsoft.AspNet.Identity.Core.xml
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/Microsoft.AspNet.Identity.Owin.xml
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/Microsoft.AspNet.Identity.EntityFramework.xml
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/Microsoft.Owin.xml
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/Microsoft.Owin.Host.SystemWeb.xml
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/Microsoft.Owin.Security.xml
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/Microsoft.Owin.Security.Facebook.xml
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/Microsoft.Owin.Security.Cookies.xml
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/Microsoft.Owin.Security.Google.xml
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/Microsoft.Owin.Security.Twitter.xml
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/Microsoft.Owin.Security.MicrosoftAccount.xml
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/Microsoft.Owin.Security.OAuth.xml
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/obj/Debug/MackTechGroupProject.csprojAssemblyReference.cache
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/obj/Debug/MackTechGroupProject.csproj.CoreCompileInputs.cache
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/obj/Debug/MackTechGroupProject.csproj.CopyComplete
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/obj/Debug/MackTechGroupProject.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/MackTechGroupProject/obj/Debug/MackTechGroupProject.pdb
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/MackTechGroupProject.dll.config
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/MackTechGroupProject.dll
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/MackTechGroupProject.pdb
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/csc.exe
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/csc.exe.config
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/csc.rsp
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/csi.exe
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/csi.exe.config
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/csi.rsp
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.CodeAnalysis.dll
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.CodeAnalysis.Scripting.dll
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.CSharp.Core.targets
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.DiaSymReader.Native.x86.dll
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.Managed.Core.targets
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.VisualBasic.Core.targets
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.AppContext.dll
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Collections.Immutable.dll
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Console.dll
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Diagnostics.FileVersionInfo.dll
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Diagnostics.StackTrace.dll
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.IO.Compression.dll
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.IO.FileSystem.dll
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.IO.FileSystem.Primitives.dll
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.IO.Pipes.AccessControl.dll
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.IO.Pipes.dll
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Reflection.Metadata.dll
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Security.AccessControl.dll
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Security.Claims.dll
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Security.Cryptography.Algorithms.dll
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Security.Cryptography.Encoding.dll
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Security.Cryptography.Primitives.dll
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Security.Cryptography.X509Certificates.dll
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Security.Principal.Windows.dll
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Text.Encoding.CodePages.dll
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.ValueTuple.dll
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Xml.ReaderWriter.dll
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Xml.XmlDocument.dll
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Xml.XPath.dll
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Xml.XPath.XDocument.dll
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/vbc.exe
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/vbc.exe.config
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/vbc.rsp
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/VBCSCompiler.exe
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/VBCSCompiler.exe.config
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Antlr3.Runtime.dll
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/EntityFramework.dll
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/EntityFramework.SqlServer.dll
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.AspNet.Identity.Core.dll
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.AspNet.Identity.EntityFramework.dll
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.AspNet.Identity.Owin.dll
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.dll
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Host.SystemWeb.dll
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.Cookies.dll
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.dll
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.Facebook.dll
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.Google.dll
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.MicrosoftAccount.dll
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.OAuth.dll
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.Twitter.dll
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Web.Infrastructure.dll
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Newtonsoft.Json.dll
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Owin.dll
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.Helpers.dll
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.Mvc.dll
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.Optimization.dll
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.Razor.dll
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.WebPages.Deployment.dll
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.WebPages.dll
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.WebPages.Razor.dll
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/WebGrease.dll
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.Helpers.xml
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.Mvc.xml
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.Optimization.xml
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.Razor.xml
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.WebPages.xml
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.WebPages.Deployment.xml
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.WebPages.Razor.xml
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Newtonsoft.Json.xml
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Antlr3.Runtime.pdb
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/EntityFramework.xml
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/EntityFramework.SqlServer.xml
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.AspNet.Identity.Core.xml
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.AspNet.Identity.Owin.xml
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.AspNet.Identity.EntityFramework.xml
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.xml
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Host.SystemWeb.xml
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.xml
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.Facebook.xml
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.Cookies.xml
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.Google.xml
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.Twitter.xml
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.MicrosoftAccount.xml
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.OAuth.xml
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.csproj.CopyComplete
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.dll
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.pdb
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/MackTechGroupProject.dll.config
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/MackTechGroupProject.dll
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/MackTechGroupProject.pdb
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/csc.exe
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/csc.exe.config
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/csc.rsp
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/csi.exe
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/csi.exe.config
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/csi.rsp
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.CodeAnalysis.dll
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.CodeAnalysis.Scripting.dll
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.CSharp.Core.targets
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.DiaSymReader.Native.x86.dll
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.Managed.Core.targets
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.VisualBasic.Core.targets
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.AppContext.dll
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Collections.Immutable.dll
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Console.dll
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Diagnostics.FileVersionInfo.dll
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Diagnostics.StackTrace.dll
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.IO.Compression.dll
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.IO.FileSystem.dll
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.IO.FileSystem.Primitives.dll
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.IO.Pipes.AccessControl.dll
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.IO.Pipes.dll
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Reflection.Metadata.dll
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Security.AccessControl.dll
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Security.Claims.dll
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Security.Cryptography.Algorithms.dll
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Security.Cryptography.Encoding.dll
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Security.Cryptography.Primitives.dll
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Security.Cryptography.X509Certificates.dll
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Security.Principal.Windows.dll
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Text.Encoding.CodePages.dll
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.ValueTuple.dll
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Xml.ReaderWriter.dll
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Xml.XmlDocument.dll
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Xml.XPath.dll
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Xml.XPath.XDocument.dll
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/vbc.exe
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/vbc.exe.config
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/vbc.rsp
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/VBCSCompiler.exe
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/VBCSCompiler.exe.config
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Antlr3.Runtime.dll
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/EntityFramework.dll
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/EntityFramework.SqlServer.dll
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.AspNet.Identity.Core.dll
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.AspNet.Identity.EntityFramework.dll
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.AspNet.Identity.Owin.dll
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.dll
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Host.SystemWeb.dll
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.Cookies.dll
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.dll
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.Facebook.dll
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.Google.dll
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.MicrosoftAccount.dll
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.OAuth.dll
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.Twitter.dll
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Web.Infrastructure.dll
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Newtonsoft.Json.dll
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Owin.dll
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.Helpers.dll
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.Mvc.dll
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.Optimization.dll
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.Razor.dll
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.WebPages.Deployment.dll
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.WebPages.dll
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.WebPages.Razor.dll
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/WebGrease.dll
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.Helpers.xml
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.Mvc.xml
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.Optimization.xml
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.Razor.xml
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.WebPages.xml
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.WebPages.Deployment.xml
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.WebPages.Razor.xml
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Newtonsoft.Json.xml
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Antlr3.Runtime.pdb
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/EntityFramework.xml
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/EntityFramework.SqlServer.xml
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.AspNet.Identity.Core.xml
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.AspNet.Identity.Owin.xml
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.AspNet.Identity.EntityFramework.xml
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.xml
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Host.SystemWeb.xml
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.xml
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.Facebook.xml
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.Cookies.xml
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.Google.xml
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.Twitter.xml
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.MicrosoftAccount.xml
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.OAuth.xml
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.csprojAssemblyReference.cache
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.csproj.CoreCompileInputs.cache
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.csproj.CopyComplete
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.dll
+D:/MagicStuff/Weber State University/cs3750 Software Engineering 2/teamProjectCS3750/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.pdb
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/MackTechGroupProject.dll.config
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/MackTechGroupProject.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/MackTechGroupProject.pdb
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/csc.exe
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/csc.exe.config
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/csc.rsp
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/csi.exe
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/csi.exe.config
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/csi.rsp
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.CodeAnalysis.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.CodeAnalysis.Scripting.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.CSharp.Core.targets
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.DiaSymReader.Native.x86.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.Managed.Core.targets
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.VisualBasic.Core.targets
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.AppContext.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Collections.Immutable.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Console.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Diagnostics.FileVersionInfo.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Diagnostics.StackTrace.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.IO.Compression.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.IO.FileSystem.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.IO.FileSystem.Primitives.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.IO.Pipes.AccessControl.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.IO.Pipes.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Reflection.Metadata.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Security.AccessControl.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Security.Claims.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Security.Cryptography.Algorithms.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Security.Cryptography.Encoding.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Security.Cryptography.Primitives.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Security.Cryptography.X509Certificates.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Security.Principal.Windows.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Text.Encoding.CodePages.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.ValueTuple.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Xml.ReaderWriter.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Xml.XmlDocument.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Xml.XPath.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Xml.XPath.XDocument.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/vbc.exe
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/vbc.exe.config
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/vbc.rsp
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/VBCSCompiler.exe
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/VBCSCompiler.exe.config
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Antlr3.Runtime.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/EntityFramework.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/EntityFramework.SqlServer.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.AspNet.Identity.Core.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.AspNet.Identity.EntityFramework.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.AspNet.Identity.Owin.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Host.SystemWeb.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.Cookies.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.Facebook.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.Google.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.MicrosoftAccount.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.OAuth.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.Twitter.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Web.Infrastructure.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Newtonsoft.Json.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Owin.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.Helpers.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.Mvc.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.Optimization.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.Razor.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.WebPages.Deployment.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.WebPages.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.WebPages.Razor.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/WebGrease.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.Helpers.xml
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.Mvc.xml
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.Optimization.xml
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.Razor.xml
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.WebPages.xml
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.WebPages.Deployment.xml
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.WebPages.Razor.xml
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Newtonsoft.Json.xml
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Antlr3.Runtime.pdb
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/EntityFramework.xml
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/EntityFramework.SqlServer.xml
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.AspNet.Identity.Core.xml
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.AspNet.Identity.Owin.xml
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.AspNet.Identity.EntityFramework.xml
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.xml
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Host.SystemWeb.xml
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.xml
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.Facebook.xml
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.Cookies.xml
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.Google.xml
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.Twitter.xml
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.MicrosoftAccount.xml
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.OAuth.xml
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.csprojAssemblyReference.cache
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.csproj.CoreCompileInputs.cache
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.csproj.CopyComplete
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.dll
+C:/Users/KEVIN-PC/source/repos/MackTechGroupProject/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.pdb
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/MackTechGroupProject.dll.config
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/MackTechGroupProject.dll
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/MackTechGroupProject.pdb
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Antlr3.Runtime.dll
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/EntityFramework.dll
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/EntityFramework.SqlServer.dll
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.AspNet.Identity.Core.dll
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.AspNet.Identity.EntityFramework.dll
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.AspNet.Identity.Owin.dll
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.dll
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Host.SystemWeb.dll
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.Cookies.dll
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.dll
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.Facebook.dll
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.Google.dll
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.MicrosoftAccount.dll
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.OAuth.dll
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.Twitter.dll
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Web.Infrastructure.dll
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Newtonsoft.Json.dll
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Owin.dll
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.Helpers.dll
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.Mvc.dll
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.Optimization.dll
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.Razor.dll
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.WebPages.Deployment.dll
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.WebPages.dll
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.WebPages.Razor.dll
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/WebGrease.dll
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.Helpers.xml
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.Mvc.xml
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.Optimization.xml
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.Razor.xml
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.WebPages.xml
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.WebPages.Deployment.xml
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.WebPages.Razor.xml
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Newtonsoft.Json.xml
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Antlr3.Runtime.pdb
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/EntityFramework.xml
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/EntityFramework.SqlServer.xml
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.AspNet.Identity.Core.xml
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.AspNet.Identity.Owin.xml
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.AspNet.Identity.EntityFramework.xml
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.xml
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Host.SystemWeb.xml
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.xml
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.Facebook.xml
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.Cookies.xml
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.Google.xml
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.Twitter.xml
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.MicrosoftAccount.xml
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.OAuth.xml
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.csproj.CoreCompileInputs.cache
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.csproj.CopyComplete
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.dll
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.pdb
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.csprojAssemblyReference.cache
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.csproj.GenerateResource.cache
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Bcl.AsyncInterfaces.dll
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Stripe.net.dll
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Runtime.CompilerServices.Unsafe.dll
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Threading.Tasks.Extensions.dll
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Bcl.AsyncInterfaces.xml
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Stripe.net.pdb
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Stripe.net.xml
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Runtime.CompilerServices.Unsafe.xml
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Threading.Tasks.Extensions.xml
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Bcl.AsyncInterfaces.dll
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Stripe.net.dll
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Runtime.CompilerServices.Unsafe.dll
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Threading.Tasks.Extensions.dll
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Bcl.AsyncInterfaces.xml
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Stripe.net.pdb
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Stripe.net.xml
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Runtime.CompilerServices.Unsafe.xml
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Threading.Tasks.Extensions.xml
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.Migrations.Added_Course_Table.resources
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.csproj.GenerateResource.cache
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/MackTechGroupProject.dll.config
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/MackTechGroupProject.dll
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/MackTechGroupProject.pdb
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/csc.exe
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/csc.exe.config
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/csc.rsp
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/csi.exe
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/csi.exe.config
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/csi.rsp
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.CodeAnalysis.dll
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.CodeAnalysis.Scripting.dll
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.CSharp.Core.targets
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.DiaSymReader.Native.x86.dll
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.Managed.Core.targets
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.VisualBasic.Core.targets
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.AppContext.dll
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Collections.Immutable.dll
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Console.dll
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Diagnostics.FileVersionInfo.dll
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Diagnostics.StackTrace.dll
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.IO.Compression.dll
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.IO.FileSystem.dll
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.IO.FileSystem.Primitives.dll
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.IO.Pipes.AccessControl.dll
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.IO.Pipes.dll
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Reflection.Metadata.dll
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Security.AccessControl.dll
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Security.Claims.dll
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Security.Cryptography.Algorithms.dll
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Security.Cryptography.Encoding.dll
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Security.Cryptography.Primitives.dll
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Security.Cryptography.X509Certificates.dll
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Security.Principal.Windows.dll
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Text.Encoding.CodePages.dll
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.ValueTuple.dll
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Xml.ReaderWriter.dll
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Xml.XmlDocument.dll
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Xml.XPath.dll
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Xml.XPath.XDocument.dll
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/vbc.exe
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/vbc.exe.config
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/vbc.rsp
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/VBCSCompiler.exe
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/VBCSCompiler.exe.config
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Antlr3.Runtime.dll
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/EntityFramework.dll
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/EntityFramework.SqlServer.dll
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.AspNet.Identity.Core.dll
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.AspNet.Identity.EntityFramework.dll
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.AspNet.Identity.Owin.dll
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Bcl.AsyncInterfaces.dll
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.dll
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Host.SystemWeb.dll
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.Cookies.dll
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.dll
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.Facebook.dll
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.Google.dll
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.MicrosoftAccount.dll
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.OAuth.dll
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.Twitter.dll
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Web.Infrastructure.dll
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Newtonsoft.Json.dll
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Owin.dll
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Stripe.net.dll
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Runtime.CompilerServices.Unsafe.dll
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Threading.Tasks.Extensions.dll
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.Helpers.dll
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.Mvc.dll
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.Optimization.dll
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.Razor.dll
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.WebPages.Deployment.dll
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.WebPages.dll
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.WebPages.Razor.dll
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/WebGrease.dll
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Bcl.AsyncInterfaces.xml
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Stripe.net.pdb
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Stripe.net.xml
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Runtime.CompilerServices.Unsafe.xml
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Threading.Tasks.Extensions.xml
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.Helpers.xml
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.Mvc.xml
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.Optimization.xml
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.Razor.xml
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.WebPages.xml
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.WebPages.Deployment.xml
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.WebPages.Razor.xml
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Newtonsoft.Json.xml
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Antlr3.Runtime.pdb
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/EntityFramework.xml
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/EntityFramework.SqlServer.xml
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.AspNet.Identity.Core.xml
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.AspNet.Identity.Owin.xml
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.AspNet.Identity.EntityFramework.xml
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.xml
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Host.SystemWeb.xml
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.xml
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.Facebook.xml
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.Cookies.xml
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.Google.xml
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.Twitter.xml
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.MicrosoftAccount.xml
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.OAuth.xml
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.csprojAssemblyReference.cache
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.Migrations.Added_Course_Table.resources
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.csproj.GenerateResource.cache
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.csproj.CopyComplete
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.dll
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.pdb
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.Migrations.Added_Enrollment_Table.resources
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.Migrations.Added_Enrollment_Table.resources
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.Migrations.Added_Course_Table.resources
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.Migrations.Added_Enrollment_Table.resources
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.csprojAssemblyReference.cache
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/csc.exe
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/csc.exe.config
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/csc.rsp
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/csi.exe
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/csi.exe.config
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/csi.rsp
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.CodeAnalysis.dll
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.CodeAnalysis.Scripting.dll
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.CSharp.Core.targets
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.DiaSymReader.Native.x86.dll
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.Managed.Core.targets
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.VisualBasic.Core.targets
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.AppContext.dll
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Collections.Immutable.dll
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Console.dll
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Diagnostics.FileVersionInfo.dll
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Diagnostics.StackTrace.dll
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.IO.Compression.dll
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.IO.FileSystem.dll
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.IO.FileSystem.Primitives.dll
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.IO.Pipes.AccessControl.dll
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.IO.Pipes.dll
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Reflection.Metadata.dll
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Security.AccessControl.dll
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Security.Claims.dll
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Security.Cryptography.Algorithms.dll
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Security.Cryptography.Encoding.dll
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Security.Cryptography.Primitives.dll
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Security.Cryptography.X509Certificates.dll
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Security.Principal.Windows.dll
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Text.Encoding.CodePages.dll
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.ValueTuple.dll
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Xml.ReaderWriter.dll
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Xml.XmlDocument.dll
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Xml.XPath.dll
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Xml.XPath.XDocument.dll
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/vbc.exe
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/vbc.exe.config
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/vbc.rsp
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/VBCSCompiler.exe
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/VBCSCompiler.exe.config
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.Migrations.One_PhoneNumber_Column.resources
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.Migrations.One_PhoneNumber_Column.resources
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.csproj.CoreCompileInputs.cache
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.Migrations.Instructor_ID_Courses.resources
+C:/Users/kjr/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.Migrations.Course_Database_Change.resources
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.Migrations.Instructor_ID_Courses.resources
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.Migrations.Course_Database_Change.resources
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.Migrations.guid_course.resources
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.Migrations.Instructor_Name_Courses.resources
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.Migrations.course_model_update.resources
+C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.Migrations.Instructor_added_to_Enrollments.resources
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.Migrations.One_PhoneNumber_Column.resources
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.Migrations.Instructor_ID_Courses.resources
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.Migrations.Course_Database_Change.resources
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.Migrations.guid_course.resources
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.Migrations.Instructor_Name_Courses.resources
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.Migrations.course_model_update.resources
+C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.Migrations.Instructor_added_to_Enrollments.resources
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/MackTechGroupProject.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/MackTechGroupProject.pdb
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/csc.exe
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/csc.exe.config
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/csc.rsp
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/csi.exe
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/csi.exe.config
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/csi.rsp
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.CodeAnalysis.CSharp.Scripting.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.CodeAnalysis.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.CodeAnalysis.Scripting.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.CSharp.Core.targets
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.DiaSymReader.Native.x86.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.Managed.Core.targets
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.VisualBasic.Core.targets
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.AppContext.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Collections.Immutable.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Console.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Diagnostics.FileVersionInfo.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Diagnostics.StackTrace.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.IO.Compression.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.IO.FileSystem.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.IO.FileSystem.Primitives.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.IO.Pipes.AccessControl.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.IO.Pipes.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Reflection.Metadata.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Security.AccessControl.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Security.Claims.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Security.Cryptography.Algorithms.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Security.Cryptography.Encoding.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Security.Cryptography.Primitives.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Security.Cryptography.X509Certificates.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Security.Principal.Windows.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Text.Encoding.CodePages.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.ValueTuple.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Xml.ReaderWriter.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Xml.XmlDocument.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Xml.XPath.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Xml.XPath.XDocument.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/vbc.exe
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/vbc.exe.config
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/vbc.rsp
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/VBCSCompiler.exe
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/VBCSCompiler.exe.config
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Antlr3.Runtime.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/EntityFramework.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/EntityFramework.SqlServer.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.AspNet.Identity.Core.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.AspNet.Identity.EntityFramework.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.AspNet.Identity.Owin.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Bcl.AsyncInterfaces.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Host.SystemWeb.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.Cookies.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.Facebook.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.Google.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.MicrosoftAccount.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.OAuth.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.Twitter.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Web.Infrastructure.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Newtonsoft.Json.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Owin.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Stripe.net.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Runtime.CompilerServices.Unsafe.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Runtime.InteropServices.RuntimeInformation.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Threading.Tasks.Extensions.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.Helpers.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.Mvc.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.Optimization.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.Razor.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.WebPages.Deployment.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.WebPages.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.WebPages.Razor.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/WebGrease.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Bcl.AsyncInterfaces.xml
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Stripe.net.pdb
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Stripe.net.xml
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Runtime.CompilerServices.Unsafe.xml
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Threading.Tasks.Extensions.xml
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.Helpers.xml
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.Mvc.xml
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.Optimization.xml
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.Razor.xml
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.WebPages.xml
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.WebPages.Deployment.xml
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/System.Web.WebPages.Razor.xml
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Newtonsoft.Json.xml
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Antlr3.Runtime.pdb
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/EntityFramework.xml
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/EntityFramework.SqlServer.xml
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.AspNet.Identity.Core.xml
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.AspNet.Identity.Owin.xml
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.AspNet.Identity.EntityFramework.xml
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.xml
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Host.SystemWeb.xml
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.xml
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.Facebook.xml
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.Cookies.xml
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.Google.xml
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.Twitter.xml
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.MicrosoftAccount.xml
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.OAuth.xml
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.csprojAssemblyReference.cache
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.Migrations.Added_Course_Table.resources
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.Migrations.Added_Enrollment_Table.resources
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.Migrations.One_PhoneNumber_Column.resources
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.Migrations.Instructor_ID_Courses.resources
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.Migrations.Course_Database_Change.resources
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.Migrations.guid_course.resources
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.Migrations.Instructor_Name_Courses.resources
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.Migrations.course_model_update.resources
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.Migrations.Instructor_added_to_Enrollments.resources
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.csproj.GenerateResource.cache
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.csproj.CoreCompileInputs.cache
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.csproj.CopyComplete
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.pdb
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/csc 2.exe
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/csc 2.rsp
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/csc.exe 2.config
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/csi 2.exe
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/csi 2.rsp
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/csi.exe 2.config
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis 2.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.CodeAnalysis 2.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.CodeAnalysis.CSharp.Scripting 2.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.CodeAnalysis.Scripting 2.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.CSharp.Core 2.targets
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.DiaSymReader.Native.amd64 2.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.DiaSymReader.Native.x86 2.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.Managed.Core 2.targets
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.VisualBasic.Core 2.targets
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.AppContext 2.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Collections.Immutable 2.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Console 2.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Diagnostics.FileVersionInfo 2.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Diagnostics.StackTrace 2.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.IO.Compression 2.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.IO.FileSystem.Primitives 2.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.IO.Pipes 2.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.IO.Pipes.AccessControl 2.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Reflection.Metadata 2.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Security.AccessControl 2.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Security.Claims 2.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Security.Cryptography.Algorithms 2.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Security.Cryptography.Encoding 2.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Security.Cryptography.Primitives 2.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Security.Cryptography.X509Certificates 2.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Security.Principal.Windows 2.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.ValueTuple 2.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Xml.ReaderWriter 2.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Xml.XmlDocument 2.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Xml.XPath 2.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Xml.XPath.XDocument 2.dll
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/vbc 2.exe
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/vbc 2.rsp
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/vbc.exe 2.config
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/VBCSCompiler 2.exe
+/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/VBCSCompiler.exe 2.config

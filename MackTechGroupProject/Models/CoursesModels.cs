@@ -62,6 +62,7 @@ namespace MackTechGroupProject.Models
         */
 
         public ICollection<Enrollment> Enrollments { get; set; }
+        public ICollection<Assignment> Assignments { get; set; }
     }
 
     public class Enrollment
@@ -70,4 +71,43 @@ namespace MackTechGroupProject.Models
         public ApplicationUser User { get; set; }
         public Course Course { get; set; }
     }
+
+    public class Assignment
+    {
+        public int AssignmentId { get; set; }
+
+        [Required]
+        [DataType(DataType.Text)]
+        public Course Course { get; set; }
+
+        [Required]
+        [DataType(DataType.Text)]
+        public int Points { get; set; }
+
+        
+        [DataType(DataType.Text)]
+        public int Score { get; set; }
+
+        [Required]
+        [DataType(DataType.Text)]
+        [Display(Name = "Assignment Title")]
+        public string AssignmentTitle { get; set; }
+
+        [Required]
+        [DataType(DataType.Text)]
+        [Display(Name = "Assignment Description")]
+        public string AssignmentDescription { get; set; }
+
+        [Required]
+        [DataType(DataType.DateTime)]
+        [Display(Name = "Due Date")]
+        public DateTime DueDate { get; set; }
+
+        [Required]
+        [DataType(DataType.Text)]   
+        [Display(Name = "What type of Submission: ")]
+        public string SubmissionType { get; set; }
+
+    }
+
 }

@@ -6817,37 +6817,31 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Montana\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "/Users/AndrewHammon/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Montana\\Source\\Repos\\amchristi\\groupProjectCS3750Sum2020\\MackTechGroupProject.Tests\\MackTechGroupProject.Tests.csproj",
+      "projectUniqueName": "/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject.Tests/MackTechGroupProject.Tests.csproj",
       "projectName": "MackTechGroupProject.Tests",
-      "projectPath": "C:\\Users\\Montana\\Source\\Repos\\amchristi\\groupProjectCS3750Sum2020\\MackTechGroupProject.Tests\\MackTechGroupProject.Tests.csproj",
-      "packagesPath": "C:\\Users\\Montana\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Montana\\Source\\Repos\\amchristi\\groupProjectCS3750Sum2020\\MackTechGroupProject.Tests\\obj\\",
+      "projectPath": "/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject.Tests/MackTechGroupProject.Tests.csproj",
+      "packagesPath": "/Users/AndrewHammon/.nuget/packages/",
+      "outputPath": "/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject.Tests/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Montana\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/AndrewHammon/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\Montana\\Source\\Repos\\amchristi\\groupProjectCS3750Sum2020\\MackTechGroupProject\\MackTechGroupProject.csproj": {
-              "projectPath": "C:\\Users\\Montana\\Source\\Repos\\amchristi\\groupProjectCS3750Sum2020\\MackTechGroupProject\\MackTechGroupProject.csproj"
+            "/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/MackTechGroupProject.csproj": {
+              "projectPath": "/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/MackTechGroupProject.csproj"
             }
           }
         }
@@ -6893,7 +6887,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.300/RuntimeIdentifierGraph.json"
       }
     }
   }

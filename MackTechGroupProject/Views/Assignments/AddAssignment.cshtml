@@ -1,0 +1,63 @@
+@using Microsoft.AspNet.Identity
+
+
+
+@model MackTechGroupProject.Models.Assignment
+@{
+    ViewBag.Title = "AddAssignment";
+}
+
+<h2>Add Assignment</h2>
+
+
+@Html.AntiForgeryToken()
+<h4>Add a new Assignment.</h4>
+<hr />
+@Html.ValidationSummary("", new { @class = "text-danger" })
+<div class="form-group">
+    @Html.LabelFor(m => m.CourseId, new { @class = "col-md-2 control-label" })
+    <div class="col-md-10">
+        @Html.TextBoxFor(m => m.CourseId, new { @class = "form-control" })
+    </div>
+</div>
+<div class="form-group">
+    @Html.LabelFor(m => m.Points, new { @class = "col-md-2 control-label" })
+    <div class="col-md-10">
+        @Html.TextBoxFor(m => m.Points, new { @class = "form-control" })
+    </div>
+</div>
+<div class="form-group">
+    @Html.LabelFor(m => m.AssignmentTitle, new { @class = "col-md-2 control-label" })
+    <div class="col-md-10">
+        @Html.TextBoxFor(m => m.AssignmentTitle, new { @class = "form-control" })
+    </div>
+</div>
+<div class="form-group">
+    @Html.LabelFor(m => m.AssignmentDescription, new { @class = "col-md-2 control-label" })
+    <div class="col-md-10">
+        @Html.TextBoxFor(m => m.AssignmentDescription, new { @class = "form-control" })
+    </div>
+</div>
+<div class="form-group">
+    @Html.LabelFor(m => m.DueDate, new { @class = "col-md-2 control-label" })
+    <div class="col-md-10">
+        @Html.TextBoxFor(m => m.DueDate, new { @class = "form-control" })
+    </div>
+</div>
+<div class="form-group">
+    <div class="col-md-offset-2 col-md-10">
+        <div class="radio-button">
+            @Html.RadioButtonFor(m => m.SubmissionType, "Text-Submission")
+            @Html.RadioButtonFor(m => m.SubmissionType, "File-Upload")
+            @Html.LabelFor(m => m.SubmissionType)
+        </div>
+    </div>
+</div>
+
+<div class="form-group">
+    <div class="col-md-offset-2 col-md-10">
+        <input type="submit" class="btn btn-default" value="Add Assignment" />
+    </div>
+</div>
+
+
