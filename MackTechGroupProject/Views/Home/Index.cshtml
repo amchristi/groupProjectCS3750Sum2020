@@ -4,16 +4,364 @@
     ViewBag.Title = "Home Page";
 }
 
+
 <div class="jumbotron">
     <h1>MACK Tech "Canvas"</h1>
     <p class="lead">Select your class below to view more detail.</p>
 </div>
 
-<main class="col-md-8">
-    <section class="Sec-ClassCard">
-        <h2 class="ClassCardHeader">Current Enrollments</h2>
+@if (this.User.IsInRole("Student"))
+{
+    <main class="col-md-8">
+        <section class="Sec-ClassCard">
+            <h2 class="ClassCardHeader">Current Enrollments</h2>
 
-        @*<tr>
+            @*<tr>
+                    <td>
+                        <div class="classCard">
+                            <h2>CS 3750</h2>
+                            <p>
+                                Schedule: T/Th 7:30a - 9:00a
+                            </p>
+                            <p><a class="btn btn-default" href="@Url.Action("CS3750", "Courses")">Class Details &raquo;</a></p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="classCard">
+                            <h2>CS 3620</h2>
+                            <p>
+                                Schedule: M/W 7:30a - 9:00a
+                            </p>
+                            <p><a class="btn btn-default" href="@Url.Action("CS3620", "Courses")">Class Details &raquo;</a></p>
+                        </div>
+                    </td>
+                </tr>*@
+
+
+            <table class="classListTable">
+
+                @if (Model.Any())
+                {
+                    foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                <a class="ToDoItemTaskLink" href="@Url.Action("CourseDetail", "Courses")" target="_blank">
+                                    <div class="classCard">
+                                        @Html.DisplayFor(modelItem => item.Course.Department)
+                                        @Html.DisplayFor(modelItem => item.Course.CourseNumber)
+                                    </div>
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                }
+            </table>
+            <p><a class="btn btn-default" href="@Url.Action("ViewAllAssignments", "Assignments")">View All Assignments</a></p>
+
+        </section>
+
+        <section class="Sec-ToDoList">
+            <div class="ToDoHeader">
+                <h2>To Do</h2>
+            </div>
+            <hr style="height:3px;border-width:0;color:#5900B3;background-color:#5900B3" />
+            <table class="ToDoItems">
+                <tr class="ToDoItems">
+                    <td class="ToDoItems">
+                        <div class="ToDoCol1">
+                            FRIDAY<br />
+                            June 5th, 2020
+                        </div>
+                    </td>
+                    <td class="ToDoItems">
+                        <div class="ToDoCol2Class">
+                            Phys 2120<br />
+                        </div>
+                        <div class="ToDoCol2Task">
+                            <a class="ToDoItemTaskLink" href="@Url.Action("Assignment1", "Assignments")" target="_blank">Assignment 1</a>
+                        </div>
+                    </td>
+                    <td class="ToDoItems">
+                        <div class="ToDoCol3Points">
+                            100 PTS<br />
+                        </div>
+                        <div class="ToDoCol3DueDate">
+                            DUE: 11:59 PM
+                        </div>
+                    </td>
+                </tr>
+                <tr class="ToDoItems">
+                    <td class="ToDoItems">
+                        <div class="ToDoCol1">
+                            SATURDAY<br />
+                            June 6th, 2020
+                        </div>
+                    </td>
+                    <td class="ToDoItems">
+                        <div class="ToDoCol2Class">
+                            CS 3750<br />
+                        </div>
+                        <div class="ToDoCol2Task">
+                            <a class="ToDoItemTaskLink" href="@Url.Action("Assignment3", "Assignments")" target="_blank">Assignment 3</a>
+                        </div>
+                    </td>
+                    <td class="ToDoItems">
+                        <div class="ToDoCol3Points">
+                            200 PTS<br />
+                        </div>
+                        <div class="ToDoCol3DueDate">
+                            DUE: 11:59 PM
+                        </div>
+                    </td>
+                </tr>
+                <tr class="ToDoItems">
+                    <td class="ToDoItems">
+                        <div class="ToDoCol1">
+                            SUNDAY<br />
+                            June 7th, 2020
+                        </div>
+                    </td>
+                    <td class="ToDoItems">
+                        <div class="ToDoCol2Class">
+                            CS 3620<br />
+                        </div>
+                        <div class="ToDoCol2Task">
+                            <a class="ToDoItemTaskLink" href="@Url.Action("Discussion", "Assignments")" target="_blank">Discussion</a>
+                        </div>
+                    </td>
+                    <td class="ToDoItems">
+                        <div class="ToDoCol3Points">
+                            10 PTS<br />
+                        </div>
+                        <div class="ToDoCol3DueDate">
+                            DUE: 11:59 PM
+                        </div>
+                    </td>
+                </tr>
+                <tr class="ToDoItems">
+                    <td class="ToDoItems">
+                        <div class="ToDoCol1">
+                            MONDAY<br />
+                            June 8th, 2020
+                        </div>
+                    </td>
+                    <td class="ToDoItems">
+                        <div class="ToDoCol2Class">
+                            Math 1220<br />
+                        </div>
+                        <div class="ToDoCol2Task">
+                            <a class="ToDoItemTaskLink" href="@Url.Action("Assignment2", "Assignments")" target="_blank">Assignment 2</a>
+                        </div>
+                    </td>
+                    <td class="ToDoItems">
+                        <div class="ToDoCol3Points">
+                            100 PTS<br />
+                        </div>
+                        <div class="ToDoCol3DueDate">
+                            DUE: 11:59 PM
+                        </div>
+                    </td>
+                </tr>
+
+            </table>
+        </section>
+    </main>
+
+    <aside class="col-md-4">
+
+        <!--
+        <section class="homePageCalendar">
+            <h2 class="CalendarHeader">Calendar</h2>
+            <table class="CalendarTable">
+                <tr class="CalendarRow1">
+                    <td class="CalendarBlock">
+                        1
+                    </td>
+                    <td class="CalendarBlock">
+                        2
+                    </td>
+                    <td class="CalendarBlock">
+                        3
+                    </td>
+                    <td class="CalendarBlock">
+                        4
+                    </td>
+                    <td class="CalendarBlock">
+                        5
+                    </td>
+                    <td class="CalendarBlock">
+                        6
+                    </td>
+                    <td class="CalendarBlock">
+                        7
+                    </td>
+                </tr>
+                <tr class="CalendarRow2">
+                    <td class="CalendarBlock">
+                        8
+                    </td>
+                    <td class="CalendarBlock">
+                        9
+                    </td>
+                    <td class="CalendarBlock">
+                        10
+                    </td>
+                    <td class="CalendarBlock">
+                        11
+                    </td>
+                    <td class="CalendarBlock">
+                        12
+                    </td>
+                    <td class="CalendarBlock">
+                        13
+                    </td>
+                    <td class="CalendarBlock">
+                        14
+                    </td>
+                </tr>
+                <tr class="CalendarRow3">
+                    <td class="CalendarBlock">
+                        15
+                    </td>
+                    <td class="CalendarBlock">
+                        16
+                    </td>
+                    <td class="CalendarBlock">
+                        17
+                    </td>
+                    <td class="CalendarBlock">
+                        18
+                    </td>
+                    <td class="CalendarBlock">
+                        19
+                    </td>
+                    <td class="CalendarBlock">
+                        20
+                    </td>
+                    <td class="CalendarBlock">
+                        21
+                    </td>
+                </tr>
+                <tr class="CalendarRow4">
+                    <td class="CalendarBlock">
+                        22
+                    </td>
+                    <td class="CalendarBlock">
+                        23
+                    </td>
+                    <td class="CalendarBlock">
+                        24
+                    </td>
+                    <td class="CalendarBlock">
+                        25
+                    </td>
+                    <td class="CalendarBlock">
+                        26
+                    </td>
+                    <td class="CalendarBlock">
+                        27
+                    </td>
+                    <td class="CalendarBlock">
+                        28
+                    </td>
+                </tr>
+                <tr class="CalendarRow5">
+                    <td class="CalendarBlock">
+                        29
+                    </td>
+                    <td class="CalendarBlock">
+                        30
+                    </td>
+                    <td class="CalendarBlock">
+                        31
+                    </td>
+                </tr>
+            </table>
+        </section>
+        -->
+        <section class="homePageNotifications">
+            <h2>Notifications</h2>
+            <table class="Notifications">
+                <tr class="noteRow">
+                    <td class="noteCol1">
+                        6/4/20
+                    </td>
+                    <td class="noteCol2">
+                        Math <br /> 1220
+                    </td>
+                    <td class="noteCol3">
+                        Quiz 4
+                    </td>
+                    <td class="NoteScore">
+                        100%
+                    </td>
+                </tr>
+                <tr class="noteRow">
+                    <td class="noteCol1">
+                        6/1/20
+                    </td>
+                    <td class="noteCol2">
+                        Math <br /> 1220
+                    </td>
+                    <td class="noteCol3">
+                        Quiz 3
+                    </td>
+                    <td class="NoteScore">
+                        95%
+                    </td>
+                </tr>
+                <tr class="noteRow">
+                    <td class="noteCol1">
+                        5/28/20
+                    </td>
+                    <td class="noteCol2">
+                        CS <br /> 3750
+                    </td>
+                    <td class="noteCol3">
+                        Project Management
+                    </td>
+                    <td class="NoteScore">
+                        85%
+                    </td>
+                </tr>
+                <tr class="noteRow">
+                    <td class="noteCol1">
+                        6/4/20
+                    </td>
+                    <td class="noteCol2">
+                        Phys <br /> 2120
+                    </td>
+                    <td class="noteCol3">
+                        Lab 5
+                    </td>
+                    <td class="NoteScore">
+                        95%
+                    </td>
+                </tr>
+            </table>
+
+        </section>
+
+        <section class="homeClassPageMenu">
+            <div class="homeClassMenuButton">
+                <a href="@Url.Action("Calendar", "Misc")">
+                    <h2>Calendar</h2>
+                </a>
+            </div>
+            <div class="homeClassMenuButton">
+                <a href="@Url.Action("Grades", "Courses")">
+                    <h2>Grades</h2>
+                </a>
+            </div>
+
+        </section>
+    </aside>
+
+
+    @*SAVE THIS INFORMATION -- STATIC COURSES
+
+        <tr>
             <td>
                 <div class="classCard">
                     <h2>CS 3750</h2>
@@ -32,372 +380,412 @@
                     <p><a class="btn btn-default" href="@Url.Action("CS3620", "Courses")">Class Details &raquo;</a></p>
                 </div>
             </td>
+        </tr>
+
+        <tr>
+            <td>
+                <div class="classCard">
+                    <h2>Math 1220</h2>
+                    <p>
+                        Schedule: Online, group meeting TH 7:30p
+                    </p>
+                    <p><a class="btn btn-default" href="@Url.Action("MATH1220", "Courses")">Class Details &raquo;</a></p>
+                </div>
+            </td>
+
+            <td>
+                <div class="classCard">
+
+                    <h2>Phys 2120</h2>
+                    <p>
+                        Schedule: M,W,F 10:30a - 12:00p
+                    </p>
+                    <p>
+                        Lab: TH: 2:30p - 4:30p
+                    </p>
+                    <p><a class="btn btn-default" href="@Url.Action("PHYS2120", "Courses")">Class Details &raquo;</a></p>
+                </div>
+            </td>
+
         </tr>*@
 
+}
 
-        <table class="classListTable">
-            @foreach (var item in Model)
-            {
-                <tr>
-                    <td>
-                        <a class="ToDoItemTaskLink" href="@Url.Action("CourseDetail", "Courses")" target="_blank">
-                            <div class="classCard">
-                                @Html.DisplayFor(modelItem => item.Course.Department)
-                                @Html.DisplayFor(modelItem => item.Course.CourseNumber)                                
-                            </div>
-                        </a>
+@if (this.User.IsInRole("Instructor"))
+{
+
+    <main class="col-md-8">
+        <section class="Sec-ClassCard">
+            <h2 class="ClassCardHeader">Current Class List</h2>
+
+            <table class="classListTable">
+
+                @if (Model.Any())
+                {
+                    foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                <a class="ToDoItemTaskLink" href="@Url.Action("CourseDetail", "Courses")" target="_blank">
+                                    <div class="classCard">
+                                        @Html.DisplayFor(modelItem => item.Course.Department)
+                                        @Html.DisplayFor(modelItem => item.Course.CourseNumber)
+                                    </div>
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                }
+            </table>
+            <p><a class="btn btn-default" href="@Url.Action("ViewAllAssignments", "Assignments")">View All Assignments</a></p>
+
+        </section>
+
+        <section class="Sec-ToDoList">
+            <div class="ToDoHeader">
+                <h2>To Do</h2>
+            </div>
+            <hr style="height:3px;border-width:0;color:#5900B3;background-color:#5900B3" />
+            <table class="ToDoItems">
+                <tr class="ToDoItems">
+                    <td class="ToDoItems">
+                        <div class="ToDoCol1">
+                            FRIDAY<br />
+                            June 5th, 2020
+                        </div>
+                    </td>
+                    <td class="ToDoItems">
+                        <div class="ToDoCol2Class">
+                            Phys 2120<br />
+                        </div>
+                        <div class="ToDoCol2Task">
+                            <a class="ToDoItemTaskLink" href="@Url.Action("Assignment1", "Assignments")" target="_blank">Assignment 1</a>
+                        </div>
+                    </td>
+                    <td class="ToDoItems">
+                        <div class="ToDoCol3Points">
+                            100 PTS<br />
+                        </div>
+                        <div class="ToDoCol3DueDate">
+                            DUE: 11:59 PM
+                        </div>
                     </td>
                 </tr>
-            }
-        </table>
-        <p><a class="btn btn-default" href="@Url.Action("ViewAllAssignments", "Assignments")">View All Assignments</a></p>
+                <tr class="ToDoItems">
+                    <td class="ToDoItems">
+                        <div class="ToDoCol1">
+                            SATURDAY<br />
+                            June 6th, 2020
+                        </div>
+                    </td>
+                    <td class="ToDoItems">
+                        <div class="ToDoCol2Class">
+                            CS 3750<br />
+                        </div>
+                        <div class="ToDoCol2Task">
+                            <a class="ToDoItemTaskLink" href="@Url.Action("Assignment3", "Assignments")" target="_blank">Assignment 3</a>
+                        </div>
+                    </td>
+                    <td class="ToDoItems">
+                        <div class="ToDoCol3Points">
+                            200 PTS<br />
+                        </div>
+                        <div class="ToDoCol3DueDate">
+                            DUE: 11:59 PM
+                        </div>
+                    </td>
+                </tr>
+                <tr class="ToDoItems">
+                    <td class="ToDoItems">
+                        <div class="ToDoCol1">
+                            SUNDAY<br />
+                            June 7th, 2020
+                        </div>
+                    </td>
+                    <td class="ToDoItems">
+                        <div class="ToDoCol2Class">
+                            CS 3620<br />
+                        </div>
+                        <div class="ToDoCol2Task">
+                            <a class="ToDoItemTaskLink" href="@Url.Action("Discussion", "Assignments")" target="_blank">Discussion</a>
+                        </div>
+                    </td>
+                    <td class="ToDoItems">
+                        <div class="ToDoCol3Points">
+                            10 PTS<br />
+                        </div>
+                        <div class="ToDoCol3DueDate">
+                            DUE: 11:59 PM
+                        </div>
+                    </td>
+                </tr>
+                <tr class="ToDoItems">
+                    <td class="ToDoItems">
+                        <div class="ToDoCol1">
+                            MONDAY<br />
+                            June 8th, 2020
+                        </div>
+                    </td>
+                    <td class="ToDoItems">
+                        <div class="ToDoCol2Class">
+                            Math 1220<br />
+                        </div>
+                        <div class="ToDoCol2Task">
+                            <a class="ToDoItemTaskLink" href="@Url.Action("Assignment2", "Assignments")" target="_blank">Assignment 2</a>
+                        </div>
+                    </td>
+                    <td class="ToDoItems">
+                        <div class="ToDoCol3Points">
+                            100 PTS<br />
+                        </div>
+                        <div class="ToDoCol3DueDate">
+                            DUE: 11:59 PM
+                        </div>
+                    </td>
+                </tr>
 
-    </section>
+            </table>
+        </section>
+    </main>
 
-    <section class="Sec-ToDoList">
-        <div class="ToDoHeader">
-            <h2>To Do</h2>
-        </div>
-        <hr style="height:3px;border-width:0;color:#5900B3;background-color:#5900B3" />
-        <table class="ToDoItems">
-            <tr class="ToDoItems">
-                <td class="ToDoItems">
-                    <div class="ToDoCol1">
-                        FRIDAY<br />
-                        June 5th, 2020
-                    </div>
-                </td>
-                <td class="ToDoItems">
-                    <div class="ToDoCol2Class">
-                        Phys 2120<br />
-                    </div>
-                    <div class="ToDoCol2Task">
-                        <a class="ToDoItemTaskLink" href="@Url.Action("Assignment1", "Assignments")" target="_blank">Assignment 1</a>
-                    </div>
-                </td>
-                <td class="ToDoItems">
-                    <div class="ToDoCol3Points">
-                        100 PTS<br />
-                    </div>
-                    <div class="ToDoCol3DueDate">
-                        DUE: 11:59 PM
-                    </div>
-                </td>
-            </tr>
-            <tr class="ToDoItems">
-                <td class="ToDoItems">
-                    <div class="ToDoCol1">
-                        SATURDAY<br />
-                        June 6th, 2020
-                    </div>
-                </td>
-                <td class="ToDoItems">
-                    <div class="ToDoCol2Class">
-                        CS 3750<br />
-                    </div>
-                    <div class="ToDoCol2Task">
-                        <a class="ToDoItemTaskLink" href="@Url.Action("Assignment3", "Assignments")" target="_blank">Assignment 3</a>
-                    </div>
-                </td>
-                <td class="ToDoItems">
-                    <div class="ToDoCol3Points">
-                        200 PTS<br />
-                    </div>
-                    <div class="ToDoCol3DueDate">
-                        DUE: 11:59 PM
-                    </div>
-                </td>
-            </tr>
-            <tr class="ToDoItems">
-                <td class="ToDoItems">
-                    <div class="ToDoCol1">
-                        SUNDAY<br />
-                        June 7th, 2020
-                    </div>
-                </td>
-                <td class="ToDoItems">
-                    <div class="ToDoCol2Class">
-                        CS 3620<br />
-                    </div>
-                    <div class="ToDoCol2Task">
-                        <a class="ToDoItemTaskLink" href="@Url.Action("Discussion", "Assignments")" target="_blank">Discussion</a>
-                    </div>
-                </td>
-                <td class="ToDoItems">
-                    <div class="ToDoCol3Points">
-                        10 PTS<br />
-                    </div>
-                    <div class="ToDoCol3DueDate">
-                        DUE: 11:59 PM
-                    </div>
-                </td>
-            </tr>
-            <tr class="ToDoItems">
-                <td class="ToDoItems">
-                    <div class="ToDoCol1">
-                        MONDAY<br />
-                        June 8th, 2020
-                    </div>
-                </td>
-                <td class="ToDoItems">
-                    <div class="ToDoCol2Class">
-                        Math 1220<br />
-                    </div>
-                    <div class="ToDoCol2Task">
-                        <a class="ToDoItemTaskLink" href="@Url.Action("Assignment2", "Assignments")" target="_blank">Assignment 2</a>
-                    </div>
-                </td>
-                <td class="ToDoItems">
-                    <div class="ToDoCol3Points">
-                        100 PTS<br />
-                    </div>
-                    <div class="ToDoCol3DueDate">
-                        DUE: 11:59 PM
-                    </div>
-                </td>
-            </tr>
+    <aside class="col-md-4">
 
-        </table>
-    </section>
-</main>
+        <!--
+        <section class="homePageCalendar">
+            <h2 class="CalendarHeader">Calendar</h2>
+            <table class="CalendarTable">
+                <tr class="CalendarRow1">
+                    <td class="CalendarBlock">
+                        1
+                    </td>
+                    <td class="CalendarBlock">
+                        2
+                    </td>
+                    <td class="CalendarBlock">
+                        3
+                    </td>
+                    <td class="CalendarBlock">
+                        4
+                    </td>
+                    <td class="CalendarBlock">
+                        5
+                    </td>
+                    <td class="CalendarBlock">
+                        6
+                    </td>
+                    <td class="CalendarBlock">
+                        7
+                    </td>
+                </tr>
+                <tr class="CalendarRow2">
+                    <td class="CalendarBlock">
+                        8
+                    </td>
+                    <td class="CalendarBlock">
+                        9
+                    </td>
+                    <td class="CalendarBlock">
+                        10
+                    </td>
+                    <td class="CalendarBlock">
+                        11
+                    </td>
+                    <td class="CalendarBlock">
+                        12
+                    </td>
+                    <td class="CalendarBlock">
+                        13
+                    </td>
+                    <td class="CalendarBlock">
+                        14
+                    </td>
+                </tr>
+                <tr class="CalendarRow3">
+                    <td class="CalendarBlock">
+                        15
+                    </td>
+                    <td class="CalendarBlock">
+                        16
+                    </td>
+                    <td class="CalendarBlock">
+                        17
+                    </td>
+                    <td class="CalendarBlock">
+                        18
+                    </td>
+                    <td class="CalendarBlock">
+                        19
+                    </td>
+                    <td class="CalendarBlock">
+                        20
+                    </td>
+                    <td class="CalendarBlock">
+                        21
+                    </td>
+                </tr>
+                <tr class="CalendarRow4">
+                    <td class="CalendarBlock">
+                        22
+                    </td>
+                    <td class="CalendarBlock">
+                        23
+                    </td>
+                    <td class="CalendarBlock">
+                        24
+                    </td>
+                    <td class="CalendarBlock">
+                        25
+                    </td>
+                    <td class="CalendarBlock">
+                        26
+                    </td>
+                    <td class="CalendarBlock">
+                        27
+                    </td>
+                    <td class="CalendarBlock">
+                        28
+                    </td>
+                </tr>
+                <tr class="CalendarRow5">
+                    <td class="CalendarBlock">
+                        29
+                    </td>
+                    <td class="CalendarBlock">
+                        30
+                    </td>
+                    <td class="CalendarBlock">
+                        31
+                    </td>
+                </tr>
+            </table>
+        </section>
+        -->
+        <section class="homePageNotifications">
+            <h2>Notifications</h2>
+            <table class="Notifications">
+                <tr class="noteRow">
+                    <td class="noteCol1">
+                        6/4/20
+                    </td>
+                    <td class="noteCol2">
+                        Math <br /> 1220
+                    </td>
+                    <td class="noteCol3">
+                        Quiz 4
+                    </td>
+                    <td class="NoteScore">
+                        100%
+                    </td>
+                </tr>
+                <tr class="noteRow">
+                    <td class="noteCol1">
+                        6/1/20
+                    </td>
+                    <td class="noteCol2">
+                        Math <br /> 1220
+                    </td>
+                    <td class="noteCol3">
+                        Quiz 3
+                    </td>
+                    <td class="NoteScore">
+                        95%
+                    </td>
+                </tr>
+                <tr class="noteRow">
+                    <td class="noteCol1">
+                        5/28/20
+                    </td>
+                    <td class="noteCol2">
+                        CS <br /> 3750
+                    </td>
+                    <td class="noteCol3">
+                        Project Management
+                    </td>
+                    <td class="NoteScore">
+                        85%
+                    </td>
+                </tr>
+                <tr class="noteRow">
+                    <td class="noteCol1">
+                        6/4/20
+                    </td>
+                    <td class="noteCol2">
+                        Phys <br /> 2120
+                    </td>
+                    <td class="noteCol3">
+                        Lab 5
+                    </td>
+                    <td class="NoteScore">
+                        95%
+                    </td>
+                </tr>
+            </table>
 
-<aside class="col-md-4">
+        </section>
 
-    <!--
-    <section class="homePageCalendar">
-        <h2 class="CalendarHeader">Calendar</h2>
-        <table class="CalendarTable">
-            <tr class="CalendarRow1">
-                <td class="CalendarBlock">
-                    1
-                </td>
-                <td class="CalendarBlock">
-                    2
-                </td>
-                <td class="CalendarBlock">
-                    3
-                </td>
-                <td class="CalendarBlock">
-                    4
-                </td>
-                <td class="CalendarBlock">
-                    5
-                </td>
-                <td class="CalendarBlock">
-                    6
-                </td>
-                <td class="CalendarBlock">
-                    7
-                </td>
-            </tr>
-            <tr class="CalendarRow2">
-                <td class="CalendarBlock">
-                    8
-                </td>
-                <td class="CalendarBlock">
-                    9
-                </td>
-                <td class="CalendarBlock">
-                    10
-                </td>
-                <td class="CalendarBlock">
-                    11
-                </td>
-                <td class="CalendarBlock">
-                    12
-                </td>
-                <td class="CalendarBlock">
-                    13
-                </td>
-                <td class="CalendarBlock">
-                    14
-                </td>
-            </tr>
-            <tr class="CalendarRow3">
-                <td class="CalendarBlock">
-                    15
-                </td>
-                <td class="CalendarBlock">
-                    16
-                </td>
-                <td class="CalendarBlock">
-                    17
-                </td>
-                <td class="CalendarBlock">
-                    18
-                </td>
-                <td class="CalendarBlock">
-                    19
-                </td>
-                <td class="CalendarBlock">
-                    20
-                </td>
-                <td class="CalendarBlock">
-                    21
-                </td>
-            </tr>
-            <tr class="CalendarRow4">
-                <td class="CalendarBlock">
-                    22
-                </td>
-                <td class="CalendarBlock">
-                    23
-                </td>
-                <td class="CalendarBlock">
-                    24
-                </td>
-                <td class="CalendarBlock">
-                    25
-                </td>
-                <td class="CalendarBlock">
-                    26
-                </td>
-                <td class="CalendarBlock">
-                    27
-                </td>
-                <td class="CalendarBlock">
-                    28
-                </td>
-            </tr>
-            <tr class="CalendarRow5">
-                <td class="CalendarBlock">
-                    29
-                </td>
-                <td class="CalendarBlock">
-                    30
-                </td>
-                <td class="CalendarBlock">
-                    31
-                </td>
-            </tr>
-        </table>
-    </section>
-    -->
-    <section class="homePageNotifications">
-        <h2>Notifications</h2>
-        <table class="Notifications">
-            <tr class="noteRow">
-                <td class="noteCol1">
-                    6/4/20
-                </td>
-                <td class="noteCol2">
-                    Math <br /> 1220
-                </td>
-                <td class="noteCol3">
-                    Quiz 4
-                </td>
-                <td class="NoteScore">
-                    100%
-                </td>
-            </tr>
-            <tr class="noteRow">
-                <td class="noteCol1">
-                    6/1/20
-                </td>
-                <td class="noteCol2">
-                    Math <br /> 1220
-                </td>
-                <td class="noteCol3">
-                    Quiz 3
-                </td>
-                <td class="NoteScore">
-                    95%
-                </td>
-            </tr>
-            <tr class="noteRow">
-                <td class="noteCol1">
-                    5/28/20
-                </td>
-                <td class="noteCol2">
-                    CS <br /> 3750
-                </td>
-                <td class="noteCol3">
-                    Project Management
-                </td>
-                <td class="NoteScore">
-                    85%
-                </td>
-            </tr>
-            <tr class="noteRow">
-                <td class="noteCol1">
-                    6/4/20
-                </td>
-                <td class="noteCol2">
-                    Phys <br /> 2120
-                </td>
-                <td class="noteCol3">
-                    Lab 5
-                </td>
-                <td class="NoteScore">
-                    95%
-                </td>
-            </tr>
-        </table>
+        <section class="homeClassPageMenu">
+            <div class="homeClassMenuButton">
+                <a href="@Url.Action("Calendar", "Misc")">
+                    <h2>Calendar</h2>
+                </a>
+            </div>
+            <div class="homeClassMenuButton">
+                <a href="@Url.Action("Grades", "Courses")">
+                    <h2>Grade Assignments</h2>
+                </a>
+            </div>
 
-    </section>
-
-    <section class="homeClassPageMenu">
-        <div class="homeClassMenuButton">
-            <a href="@Url.Action("Calendar", "Misc")">
-                <h2>Calendar</h2>
-            </a>
-        </div>
-        <div class="homeClassMenuButton">
-            <a href="@Url.Action("Grades", "Courses")">
-                <h2>Grades</h2>
-            </a>
-        </div>
-
-    </section>
-</aside>
+        </section>
+    </aside>
 
 
-@*SAVE THIS INFORMATION -- STATIC COURSES
+    @*SAVE THIS INFORMATION -- STATIC COURSES
 
-<tr>
-    <td>
-        <div class="classCard">
-            <h2>CS 3750</h2>
-            <p>
-                Schedule: T/Th 7:30a - 9:00a
-            </p>
-            <p><a class="btn btn-default" href="@Url.Action("CS3750", "Courses")">Class Details &raquo;</a></p>
-        </div>
-    </td>
-    <td>
-        <div class="classCard">
-            <h2>CS 3620</h2>
-            <p>
-                Schedule: M/W 7:30a - 9:00a
-            </p>
-            <p><a class="btn btn-default" href="@Url.Action("CS3620", "Courses")">Class Details &raquo;</a></p>
-        </div>
-    </td>
-</tr>
+        <tr>
+            <td>
+                <div class="classCard">
+                    <h2>CS 3750</h2>
+                    <p>
+                        Schedule: T/Th 7:30a - 9:00a
+                    </p>
+                    <p><a class="btn btn-default" href="@Url.Action("CS3750", "Courses")">Class Details &raquo;</a></p>
+                </div>
+            </td>
+            <td>
+                <div class="classCard">
+                    <h2>CS 3620</h2>
+                    <p>
+                        Schedule: M/W 7:30a - 9:00a
+                    </p>
+                    <p><a class="btn btn-default" href="@Url.Action("CS3620", "Courses")">Class Details &raquo;</a></p>
+                </div>
+            </td>
+        </tr>
 
-<tr>
-    <td>
-        <div class="classCard">
-            <h2>Math 1220</h2>
-            <p>
-                Schedule: Online, group meeting TH 7:30p
-            </p>
-            <p><a class="btn btn-default" href="@Url.Action("MATH1220", "Courses")">Class Details &raquo;</a></p>
-        </div>
-    </td>
+        <tr>
+            <td>
+                <div class="classCard">
+                    <h2>Math 1220</h2>
+                    <p>
+                        Schedule: Online, group meeting TH 7:30p
+                    </p>
+                    <p><a class="btn btn-default" href="@Url.Action("MATH1220", "Courses")">Class Details &raquo;</a></p>
+                </div>
+            </td>
 
-    <td>
-        <div class="classCard">
+            <td>
+                <div class="classCard">
 
-            <h2>Phys 2120</h2>
-            <p>
-                Schedule: M,W,F 10:30a - 12:00p
-            </p>
-            <p>
-                Lab: TH: 2:30p - 4:30p
-            </p>
-            <p><a class="btn btn-default" href="@Url.Action("PHYS2120", "Courses")">Class Details &raquo;</a></p>
-        </div>
-    </td>
+                    <h2>Phys 2120</h2>
+                    <p>
+                        Schedule: M,W,F 10:30a - 12:00p
+                    </p>
+                    <p>
+                        Lab: TH: 2:30p - 4:30p
+                    </p>
+                    <p><a class="btn btn-default" href="@Url.Action("PHYS2120", "Courses")">Class Details &raquo;</a></p>
+                </div>
+            </td>
 
-</tr>*@
+        </tr>*@
+}
