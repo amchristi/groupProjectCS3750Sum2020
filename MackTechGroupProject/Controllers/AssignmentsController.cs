@@ -94,5 +94,16 @@ namespace MackTechGroupProject.Controllers
             // If we got this far, something failed, redisplay form
             return View(model);
         }
+
+        public ActionResult ViewAllAssignments()
+        {
+            var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
+            var currentAssignments = context.Assignments.Select(a => a.AssignmentId).ToList();
+            return View(currentAssignments);
+        }
     }
+
+
+
+
 }

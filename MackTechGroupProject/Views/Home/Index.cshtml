@@ -40,14 +40,18 @@
             {
                 <tr>
                     <td>
-                        <div class="classCard">
-                            @Html.DisplayFor(modelItem => item.Course.Department)
-                            @Html.DisplayFor(modelItem => item.Course.CourseNumber)
-                        </div>
+                        <a class="ToDoItemTaskLink" href="@Url.Action("CourseDetail", "Courses")" target="_blank">
+                            <div class="classCard">
+                                @Html.DisplayFor(modelItem => item.Course.Department)
+                                @Html.DisplayFor(modelItem => item.Course.CourseNumber)                                
+                            </div>
+                        </a>
                     </td>
                 </tr>
             }
         </table>
+        <p><a class="btn btn-default" href="@Url.Action("ViewAllAssignments", "Assignments")">View All Assignments</a></p>
+
     </section>
 
     <section class="Sec-ToDoList">

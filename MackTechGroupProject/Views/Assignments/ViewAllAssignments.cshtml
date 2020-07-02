@@ -1,0 +1,65 @@
+
+@model IEnumerable<MackTechGroupProject.Models.Assignment>
+@{
+    ViewBag.Title = "View All Assignments";
+}
+
+<h1>Current Assignments</h1>
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Current Assignments</title>
+</head>
+<body>    
+    <table class="table">
+        <tr>
+            @*<th></th>*@
+            <th>
+                @Html.DisplayNameFor(model => Model.AssignmentTitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AssignmentDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Points)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DueDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SubmissionType)
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                @*<td>
+                        @Html.ActionLink("Details", "Details", new { id = item.CourseID })
+                    </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.AssignmentTitle)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AssignmentDescription)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Points)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DueDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SubmissionType)
+                </td>    
+
+            </tr>
+        }
+    </table>
+
+</body>
+</html>

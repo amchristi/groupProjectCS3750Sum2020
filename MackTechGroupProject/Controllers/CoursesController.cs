@@ -185,5 +185,11 @@ namespace MackTechGroupProject.Controllers
         {
             return View();
         }
+
+        public ActionResult CourseDetail()
+        {
+            return View();
+        }
+
     }
 }
