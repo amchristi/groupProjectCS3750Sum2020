@@ -251,6 +251,10 @@
     <Compile Include="Migrations\202007010810257_Added_NotMapped_Fields_to_AssignmentsModels.Designer.cs">
       <DependentUpon>202007010810257_Added_NotMapped_Fields_to_AssignmentsModels.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202007021728149_fix bad migration.cs" />
+    <Compile Include="Migrations\202007021728149_fix bad migration.Designer.cs">
+      <DependentUpon>202007021728149_fix bad migration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AssignmentsModels.cs" />
@@ -403,6 +407,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202007010810257_Added_NotMapped_Fields_to_AssignmentsModels.resx">
       <DependentUpon>202007010810257_Added_NotMapped_Fields_to_AssignmentsModels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007021728149_fix bad migration.resx">
+      <DependentUpon>202007021728149_fix bad migration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
