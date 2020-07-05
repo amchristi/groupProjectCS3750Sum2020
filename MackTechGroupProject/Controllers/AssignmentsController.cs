@@ -31,23 +31,6 @@ namespace MackTechGroupProject.Controllers
             return View();
         }
 
-        //private IEnumerable<SelectListItem> GetCourses()
-        //{
-        //    String userId = User.Identity.GetUserId();
-
-        //    var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
-
-        //    var currentInstructorEnrollments = context.Enrollments.Include(x => x.User).Include(c => c.Course).Where(s => s.User.Id == userId).ToList();
-
-        //    var instructorCourses = currentEnrollments.Select(x => x.Course).Select(x => new SelectListItem
-        //                                                                                        {
-        //                                                                                            Value = x.CourseId.ToString(),
-        //                                                                                            Text = x.CourseName
-        //                                                                                        });
-
-        //    return new SelectList(instructorCourses, "Value", "Text");
-        //}
-
         public ActionResult SelectCourse()
         {
             String userId = User.Identity.GetUserId();
@@ -95,41 +78,31 @@ namespace MackTechGroupProject.Controllers
             return View(model);
         }
 
-        
-        //public ActionResult ViewAllAssignments()
-        //{
-        //    var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
-        //    var currentAssignments = context.Assignments.Select(a => a.AssignmentId).ToList();
-
-        //    return View(currentAssignments);
-        //}
-        
-
-        //public ActionResult ViewAllAssignments(int id, Assignment model)
-        //{
-        //    var selectedCourseId = id;
-        //    var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
-        //    var selectedCourse = context.Courses.Where(x => x.CourseId == selectedCourseId).FirstOrDefault();
-        //    var currentAssignments = context.Assignments.Where(x => x.Course == selectedCourse).ToList();
-            
-
-        //    return View(currentAssignments);
-        //}
-
-        public ActionResult ViewAllAssignments(Assignment model)
+        public ActionResult ViewAllAssignments(int id)
         {
+            var selectedCourseId = id;
             var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
+            var selectedCourse = context.Courses.Where(x => x.CourseId == selectedCourseId).Include(x => x.Assignments).FirstOrDefault();
+            var currentAssignments = context.Assignments.Where(x => x.Course.CourseId == selectedCourseId).ToList();
 
-            var allAssignments = context.Assignments.ToList();
-
-            return View(allAssignments);
+            return View(currentAssignments);
         }
 
+        //private IEnumerable<SelectListItem> GetCourses()
+        //{
+        //    String userId = User.Identity.GetUserId();
 
+        //    var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
 
+        //    var currentInstructorEnrollments = context.Enrollments.Include(x => x.User).Include(c => c.Course).Where(s => s.User.Id == userId).ToList();
+
+        //    var instructorCourses = currentEnrollments.Select(x => x.Course).Select(x => new SelectListItem
+        //                                                                                        {
+        //                                                                                            Value = x.CourseId.ToString(),
+        //                                                                                            Text = x.CourseName
+        //                                                                                        });
+
+        //    return new SelectList(instructorCourses, "Value", "Text");
+        //}
     }
-
-
-
-
 }
