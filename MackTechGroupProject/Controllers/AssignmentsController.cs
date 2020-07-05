@@ -95,12 +95,38 @@ namespace MackTechGroupProject.Controllers
             return View(model);
         }
 
-        public ActionResult ViewAllAssignments()
+        
+        //public ActionResult ViewAllAssignments()
+        //{
+        //    var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
+        //    var currentAssignments = context.Assignments.Select(a => a.AssignmentId).ToList();
+
+        //    return View(currentAssignments);
+        //}
+        
+
+        //public ActionResult ViewAllAssignments(int id, Assignment model)
+        //{
+        //    var selectedCourseId = id;
+        //    var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
+        //    var selectedCourse = context.Courses.Where(x => x.CourseId == selectedCourseId).FirstOrDefault();
+        //    var currentAssignments = context.Assignments.Where(x => x.Course == selectedCourse).ToList();
+            
+
+        //    return View(currentAssignments);
+        //}
+
+        public ActionResult ViewAllAssignments(Assignment model)
         {
             var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
-            var currentAssignments = context.Assignments.Select(a => a.AssignmentId).ToList();
-            return View(currentAssignments);
+
+            var allAssignments = context.Assignments.ToList();
+
+            return View(allAssignments);
         }
+
+
+
     }
 
 

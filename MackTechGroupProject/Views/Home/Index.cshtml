@@ -50,6 +50,11 @@
                                     <div class="classCard">
                                         @Html.DisplayFor(modelItem => item.Course.Department)
                                         @Html.DisplayFor(modelItem => item.Course.CourseNumber)
+                                        
+                                       @*Add button to class card for viewing all assignemnts*@
+                                        <p>
+                                            <a class="btn btn-default" href="@Url.Action("ViewAllAssignments", "Assignments")">View All Assignments</a>
+                                        </p>
                                     </div>
                                 </a>
                             </td>
@@ -57,8 +62,10 @@
                     }
                 }
             </table>
+            @*Moved the view all assignments button into the class card div*@
+            @*
             <p><a class="btn btn-default" href="@Url.Action("ViewAllAssignments", "Assignments")">View All Assignments</a></p>
-
+            *@
         </section>
 
         <section class="Sec-ToDoList">
@@ -426,19 +433,33 @@
                     {
                         <tr>
                             <td>
-                                <a class="ToDoItemTaskLink" href="@Url.Action("CourseDetail", "Courses")" target="_blank">
-                                    <div class="classCard">
+                                
+                                <div class="classCard">
+                                    <h3>
+                                    <a class="ToDoItemTaskLink" href="@Url.Action("CourseDetail", "Courses")" target="_blank">
                                         @Html.DisplayFor(modelItem => item.Course.Department)
                                         @Html.DisplayFor(modelItem => item.Course.CourseNumber)
-                                    </div>
-                                </a>
+                                    </a>
+                                    </h3>
+                                    @*Add button to class card to add a new assignemnt, instructor view only*@
+                                    <p>
+                                        <a class="btn btn-default" href="@Url.Action("AddAssignment", "Assignments", new { id = item.Course.CourseId })">Add new Assignment</a>
+                                        @*@Html.ActionLink("AddAssignment", "Assignments", new { id = item.Course.CourseId })*@
+                                    </p>
+                                    @*Add button to class card for viewing all assignemnts*@
+                                    <p>
+                                        <a class="btn btn-default" href="@Url.Action("ViewAllAssignments", "Assignments", new { id = item.Course.CourseId })">View All Assignments</a>
+                                    </p>
+                                </div>                              
                             </td>
                         </tr>
                     }
                 }
             </table>
+            @*Moved the view all assignments button into the class card div*@
+            
             <p><a class="btn btn-default" href="@Url.Action("ViewAllAssignments", "Assignments")">View All Assignments</a></p>
-
+            
         </section>
 
         <section class="Sec-ToDoList">

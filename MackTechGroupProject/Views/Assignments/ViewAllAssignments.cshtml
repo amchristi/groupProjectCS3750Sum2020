@@ -1,5 +1,6 @@
 
 @model IEnumerable<MackTechGroupProject.Models.Assignment>
+
 @{
     ViewBag.Title = "View All Assignments";
 }
@@ -14,12 +15,19 @@
     <meta name="viewport" content="width=device-width" />
     <title>Current Assignments</title>
 </head>
-<body>    
+<body>
+
+
     <table class="table">
         <tr>
-            @*<th></th>*@
             <th>
-                @Html.DisplayNameFor(model => Model.AssignmentTitle)
+                @Html.DisplayNameFor(model => model.Course.Department)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Course.CourseNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AssignmentTitle)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.AssignmentDescription)
@@ -34,32 +42,42 @@
                 @Html.DisplayNameFor(model => model.SubmissionType)
             </th>
         </tr>
-
+    
+        
         @foreach (var item in Model)
         {
-            <tr>
-                @*<td>
-                        @Html.ActionLink("Details", "Details", new { id = item.CourseID })
-                    </td>*@
-                <td>
-                    @Html.DisplayFor(modelItem => item.AssignmentTitle)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.AssignmentDescription)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Points)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.DueDate)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.SubmissionType)
-                </td>    
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => model.Course.Department)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => model.Course.CourseNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AssignmentTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AssignmentDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Points)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DueDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SubmissionType)
+            </td>
 
-            </tr>
+        </tr>
         }
+     
     </table>
+ 
+
+
+    
 
 </body>
 </html>
+

@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "hN1HO8RTLCAHVuKIJCQQhyNFnris1AkRPQ/07LPb1bZaJ4noZJRpTPg+gnMK4YpWSiWmRMamhiBrGsSSFOek+Q==",
+  "dgSpecHash": "krjSdpCp1JS4kAk7QcAGpikiE6KbG/6p01+3rFbT1nA43X+VB/65nlKu6UUrk8hNOp+KHtLeZ//frV4jl4z+Gw==",
   "success": true,
   "projectFilePath": "/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject.Tests/MackTechGroupProject.Tests.csproj",
   "expectedPackageFiles": [
     "/Users/AndrewHammon/.nuget/packages/coverlet.collector/1.0.1/coverlet.collector.1.0.1.nupkg.sha512",
+    "/Users/AndrewHammon/.nuget/packages/microsoft.aspnet.mvc/5.2.4/microsoft.aspnet.mvc.5.2.4.nupkg.sha512",
+    "/Users/AndrewHammon/.nuget/packages/microsoft.aspnet.razor/3.2.4/microsoft.aspnet.razor.3.2.4.nupkg.sha512",
+    "/Users/AndrewHammon/.nuget/packages/microsoft.aspnet.webpages/3.2.4/microsoft.aspnet.webpages.3.2.4.nupkg.sha512",
     "/Users/AndrewHammon/.nuget/packages/microsoft.codecoverage/16.2.0/microsoft.codecoverage.16.2.0.nupkg.sha512",
     "/Users/AndrewHammon/.nuget/packages/microsoft.csharp/4.0.1/microsoft.csharp.4.0.1.nupkg.sha512",
     "/Users/AndrewHammon/.nuget/packages/microsoft.net.test.sdk/16.2.0/microsoft.net.test.sdk.16.2.0.nupkg.sha512",
@@ -12,6 +15,7 @@
     "/Users/AndrewHammon/.nuget/packages/microsoft.netcore.targets/1.1.0/microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "/Users/AndrewHammon/.nuget/packages/microsoft.testplatform.objectmodel/16.2.0/microsoft.testplatform.objectmodel.16.2.0.nupkg.sha512",
     "/Users/AndrewHammon/.nuget/packages/microsoft.testplatform.testhost/16.2.0/microsoft.testplatform.testhost.16.2.0.nupkg.sha512",
+    "/Users/AndrewHammon/.nuget/packages/microsoft.web.infrastructure/1.0.0/microsoft.web.infrastructure.1.0.0.nupkg.sha512",
     "/Users/AndrewHammon/.nuget/packages/microsoft.win32.primitives/4.3.0/microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "/Users/AndrewHammon/.nuget/packages/microsoft.win32.registry/4.0.0/microsoft.win32.registry.4.0.0.nupkg.sha512",
     "/Users/AndrewHammon/.nuget/packages/mstest.testadapter/2.0.0/mstest.testadapter.2.0.0.nupkg.sha512",
@@ -110,5 +114,46 @@
     "/Users/AndrewHammon/.nuget/packages/system.xml.xpath/4.0.1/system.xml.xpath.4.0.1.nupkg.sha512",
     "/Users/AndrewHammon/.nuget/packages/system.xml.xpath.xmldocument/4.0.1/system.xml.xpath.xmldocument.4.0.1.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.AspNet.Mvc 5.2.4' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.AspNet.Mvc",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.AspNet.Razor 3.2.4' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.AspNet.Razor",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.AspNet.WebPages 3.2.4' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.AspNet.WebPages",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.Web.Infrastructure 1.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.Web.Infrastructure",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
 }
