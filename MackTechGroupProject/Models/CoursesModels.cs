@@ -72,4 +72,7 @@ namespace MackTechGroupProject.Models
         public ApplicationUser User { get; set; }
         public Course Course { get; set; }
     }
+
+    
+
 }

@@ -158,6 +158,12 @@ namespace MackTechGroupProject.Controllers
             return View(currentEnrollments);
         }
 
+
+        public ActionResult TuitionPayment()
+        {
+            return View();
+        }
+
         // GET: Courses
         public ActionResult CS3620()
         {
