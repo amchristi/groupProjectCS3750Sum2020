@@ -556,13 +556,6 @@ C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupP
 C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.Migrations.Instructor_Name_Courses.resources
 C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.Migrations.course_model_update.resources
 C:/Users/Montana/Source/Repos/amchristi/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.Migrations.Instructor_added_to_Enrollments.resources
-C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll
-C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.CodeAnalysis.dll
-C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll
-C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll
-C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Collections.Immutable.dll
-C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Reflection.Metadata.dll
-C:/Users/KEVIN-PC/source/repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/VBCSCompiler.exe
 /Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/MackTechGroupProject.dll
 /Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/MackTechGroupProject.pdb
 /Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/csc.exe
@@ -951,3 +944,4 @@ C:\Users\Montana\Source\Repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj
 C:\Users\Montana\Source\Repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.dll
 C:\Users\Montana\Source\Repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.pdb
 C:\Users\Montana\Source\Repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.csprojAssemblyReference.cache
+C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.csprojAssemblyReference.cache

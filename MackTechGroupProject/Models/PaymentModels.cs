@@ -18,11 +18,11 @@ namespace MackTechGroupProject.Models
             [DataType(DataType.CreditCard)]
             [RegularExpression(@"^([1-9]{16})$", ErrorMessage = "Invalid Credit Card Number")]   
             [Display(Name = "Credit Card Number")]
-            public int CreditCardNumber { get; set; }
+            public string CreditCardNumber { get; set; }
 
             [Required]
             [DataType(DataType.Text)]
-            [RegularExpression(@"^(0[1-9]|1[012])$", ErrorMessage = "Invalid Month")]
+            [RegularExpression(@"^([1-9]|1[012])$", ErrorMessage = "Invalid Month")]
             [Display(Name = "Expiration Month (MM)")]
             public int ExpirationMonth { get; set; }
 
@@ -41,7 +41,7 @@ namespace MackTechGroupProject.Models
             [Required]
             [DataType(DataType.Text)]
             [Display(Name = "Payment Amount $")]
-            public int PaymentAmount { get; set; }
+            public decimal PaymentAmount { get; set; }
 
 
     }

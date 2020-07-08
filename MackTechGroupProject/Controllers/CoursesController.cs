@@ -7,6 +7,11 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using System.Data.Entity;
+using System.Threading.Tasks;
+using System.Net.Http.Headers;
+using System.Net.Http;
+using Newtonsoft.Json.Linq;
+using Stripe;
 
 namespace MackTechGroupProject.Controllers
 {
@@ -158,10 +163,99 @@ namespace MackTechGroupProject.Controllers
             return View(currentEnrollments);
         }
 
-
         public ActionResult TuitionPayment()
         {
             return View();
+        }
+
+        [HttpPost]
+        [AllowAnonymous]
+        // GET: Payment
+        public async Task<ActionResult> TuitionPayment(PaymentInfo model)
+        {
+            if (ModelState.IsValid)
+            {
+                var paymentInfo = new PaymentInfo
+                {
+                    FullName = model.FullName,
+                    CreditCardNumber = model.CreditCardNumber,
+                    ExpirationMonth = model.ExpirationMonth,
+                    ExpirationYear = model.ExpirationYear,
+                    CVC = model.CVC,
+                    PaymentAmount = model.PaymentAmount 
+                };
+
+                // STRIPE API
+                var url = "https://api.stripe.com/";
+                var stripeTokenUrl = url + "v1/tokens";
+                var stripeChargesUrl = url + "v1/charges";
+
+                //used to store stripe response as object
+                dynamic tokenData = null;
+                dynamic chargesData = null;
+
+                var stripeAmount = paymentInfo.PaymentAmount;
+
+                // used to store test credit card information
+                var ccparams = new Dictionary<string, string>();
+                // set ccparams
+                ccparams.Add("card[number]", "4242424242424242");
+                ccparams.Add("card[exp_month]", "7");
+                ccparams.Add("card[exp_year]", "2021");
+                ccparams.Add("card[cvc]", "314");
+
+                // used to store charge information
+                var chrgparams = new Dictionary<string, string>();
+                // set chrgparams
+                chrgparams.Add("amount", stripeAmount.ToString("0.00").Replace(".",string.Empty));
+                chrgparams.Add("currency", "usd");
+                chrgparams.Add("source", "tok_visa");
+                chrgparams.Add("description", "Tuition Payment Testing");
+
+                // First POST to Stripe
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", STRIPE_KEY);
+                var request = new HttpRequestMessage(HttpMethod.Post, stripeTokenUrl) { Content = new FormUrlEncodedContent(ccparams) };
+                var response = await client.SendAsync(request);
+                string result = response.Content.ReadAsStringAsync().Result;
+
+                if (response.IsSuccessStatusCode)
+                {
+                    //deserialize json
+                    tokenData = JObject.Parse(result);
+                }
+                else
+                {
+                    TempData["ErrorMessage"] = "Error: Cannot connect with Stripe API";
+                    return RedirectToAction("TuitionPayment", "Courses");
+                }
+
+                // Second POST to Stripe
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", SECRET_KEY);
+                request = new HttpRequestMessage(HttpMethod.Post, stripeChargesUrl) { Content = new FormUrlEncodedContent(chrgparams) };
+                response = await client.SendAsync(request);
+                result = response.Content.ReadAsStringAsync().Result;
+
+                if (response.IsSuccessStatusCode)
+                {
+                    //deserialize json
+                    chargesData = JObject.Parse(result);
+
+                    TempData["SuccessMessage"] = "Payment has been posted!";
+                    return RedirectToAction("TuitionPayment", "Courses");
+                }
+                else
+                {
+                    TempData["Message"] = "Error: Cannot connect with Stripe API";
+                    return RedirectToAction("TuitionPayment", "Courses");
+                }
+
+
+                //var content = new FormUrlEncodedContent(ccparams);
+                //var response = client.PostAsync(stripeCardUrl, content).Result;
+            }
+
+            // If we got this far, something failed, redisplay form
+            return RedirectToAction("TuitionPayment", "Courses");
         }
 
         // GET: Courses
