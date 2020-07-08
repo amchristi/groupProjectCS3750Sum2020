@@ -78,7 +78,7 @@ namespace MackTechGroupProject.Controllers
             return View(model);
         }
 
-        public ActionResult ViewAllAssignments(int id)
+        public ActionResult ViewAssignments(int id)
         {
             var selectedCourseId = id;
             var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
@@ -86,6 +86,18 @@ namespace MackTechGroupProject.Controllers
             var currentAssignments = context.Assignments.Where(x => x.Course.CourseId == selectedCourseId).ToList();
 
             return View(currentAssignments);
+        }
+
+
+
+        public ActionResult ViewAllAssignments(int id)
+        {
+            var selectedCourseId = id;
+            var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
+            var selectedCourse = context.Courses.Where(x => x.CourseId == selectedCourseId).Include(x => x.Assignments).FirstOrDefault();
+            var currentAssignments = context.Assignments.Where(x => x.Course.CourseId == selectedCourseId).ToList();
+
+            return View();
         }
 
         //private IEnumerable<SelectListItem> GetCourses()
