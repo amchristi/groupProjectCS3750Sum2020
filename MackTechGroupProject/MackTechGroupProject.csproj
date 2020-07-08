@@ -346,8 +346,9 @@
     <Content Include="Views\Assignments\SelectCourseDropdown.cshtml" />
     <Content Include="Views\Assignments\SelectCourse.cshtml" />
     <Content Include="Views\Courses\CourseDetail.cshtml" />
-    <Content Include="Views\Assignments\ViewAllAssignments.cshtml" />
+    <Content Include="Views\Assignments\ViewAssignments.cshtml" />
     <Content Include="Views\Courses\TuitionPayment.cshtml" />
+    <Content Include="Views\Assignments\ViewAllAssignments.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
