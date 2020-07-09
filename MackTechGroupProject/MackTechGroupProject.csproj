@@ -263,6 +263,10 @@
     <Compile Include="Migrations\202007090409284_Accounting_Table_Updated.Designer.cs">
       <DependentUpon>202007090409284_Accounting_Table_Updated.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202007091704398_TotalCreditHours_to_Accounting.cs" />
+    <Compile Include="Migrations\202007091704398_TotalCreditHours_to_Accounting.Designer.cs">
+      <DependentUpon>202007091704398_TotalCreditHours_to_Accounting.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -429,6 +433,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202007090409284_Accounting_Table_Updated.resx">
       <DependentUpon>202007090409284_Accounting_Table_Updated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007091704398_TotalCreditHours_to_Accounting.resx">
+      <DependentUpon>202007091704398_TotalCreditHours_to_Accounting.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

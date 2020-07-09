@@ -147,26 +147,77 @@ namespace MackTechGroupProject.Controllers
         public ActionResult StudentAccount()
         {
             String userId = User.Identity.GetUserId();
-
             var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
+
+            decimal CREDIT_HOUR_COST = 240;
 
             // gets a list of enrollments for current student
             var currentEnrollments = context.Enrollments.Include(x => x.User).Include(c => c.Course).Where(s => s.User.Id == userId).ToList();
+            // get currentStudent
             var currentStudent = context.Users.Where(x => x.Id == userId).FirstOrDefault();
 
+            // gets sum of all credit hours enrolled in
             var totalCreditHours = currentEnrollments.Sum(x => x.Course.CreditHours);
-            var totalCost = totalCreditHours * 240;
-            var formattedCost = totalCost.ToString("C0");
-
             ViewBag.TotalCreditHours = totalCreditHours;
-            ViewBag.TotalFormattedCost = formattedCost;
 
-            var accounting = new Accounting()
+            var totalCostofCreditHours = totalCreditHours * CREDIT_HOUR_COST;
+
+            // if the student already exists in the accounting table
+            if (context.Accounting.Any(x => x.User.Id == userId))
             {
-                User = currentStudent,
-                PaymentDate = DateTime.Now,
-                TotalBalance = totalCost
-            };
+                // gets current student account from Accounting table
+                var currentStudentAccount = context.Accounting.Where(x => x.User.Id == userId).FirstOrDefault();
+                
+                // get the difference in credit hours
+                var diffInCreditHours = (totalCreditHours - currentStudentAccount.TotalCreditHours);
+
+                // get new cost needed to be added or subtracted to account
+                decimal newCreditCosts = (diffInCreditHours * CREDIT_HOUR_COST);
+
+                // if student has more credithours than shown in account
+                if (currentStudentAccount.TotalCreditHours > totalCreditHours)
+                {
+                    var newTotalBalance = (currentStudentAccount.TotalBalance - newCreditCosts);
+                    // update total cost in database
+                    currentStudentAccount.TotalBalance = newTotalBalance;
+
+                    // update credit hours in database
+                    currentStudentAccount.TotalCreditHours = totalCreditHours;
+                    context.SaveChanges();
+                }
+                // if student has less credithours than shown in account
+                if (currentStudentAccount.TotalCreditHours < totalCreditHours)
+                {
+                    var newTotalBalance = (currentStudentAccount.TotalBalance + newCreditCosts);
+                    // update total cost in database
+                    currentStudentAccount.TotalBalance = newTotalBalance;
+
+                    // update credit hours in database
+                    currentStudentAccount.TotalCreditHours = totalCreditHours;
+                    context.SaveChanges();
+                }
+
+                // the user already exists, get their balance
+                var formattedCost = String.Format("{0:C2}", currentStudentAccount.TotalBalance);
+
+                ViewBag.TotalFormattedCost = formattedCost;
+            }
+            else
+            {
+                var accounting = new Accounting()
+                {
+                    User = currentStudent,
+                    PaymentDate = DateTime.Now,
+                    TotalCreditHours = totalCreditHours,
+                    TotalBalance = totalCostofCreditHours
+                };
+                var formattedCost = String.Format("{0:C2}", accounting.TotalBalance);
+
+                context.Accounting.Add(accounting);
+                context.SaveChanges();
+
+                ViewBag.TotalFormattedCost = formattedCost;
+            }
 
             return View(currentEnrollments);
         }
@@ -181,6 +232,9 @@ namespace MackTechGroupProject.Controllers
         // GET: Payment
         public async Task<ActionResult> TuitionPayment(PaymentInfo model)
         {
+            var userId = User.Identity.GetUserId();
+            var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
+
             if (ModelState.IsValid)
             {
                 var paymentInfo = new PaymentInfo
@@ -248,7 +302,16 @@ namespace MackTechGroupProject.Controllers
                     //deserialize json
                     chargesData = JObject.Parse(result);
 
-                    TempData["SuccessMessage"] = "Payment has been posted!";
+                    // update totalcost in accounting table
+                    // get the student account using context then save total cost
+                    var currentStudentAccount = context.Accounting.Where(x => x.User.Id == userId).FirstOrDefault();
+                    var totalBalance = currentStudentAccount.TotalBalance;
+                    var newTotalBalance = totalBalance - paymentInfo.PaymentAmount;
+
+                    currentStudentAccount.TotalBalance = newTotalBalance;
+                    context.SaveChanges();
+
+                    TempData["SuccessMessage"] = "Payment has been posted! Check your account balance.";
                     return RedirectToAction("TuitionPayment", "Courses");
                 }
                 else
@@ -256,10 +319,6 @@ namespace MackTechGroupProject.Controllers
                     TempData["Message"] = "Error: Cannot connect with Stripe API";
                     return RedirectToAction("TuitionPayment", "Courses");
                 }
-
-
-                //var content = new FormUrlEncodedContent(ccparams);
-                //var response = client.PostAsync(stripeCardUrl, content).Result;
             }
 
             // If we got this far, something failed, redisplay form

@@ -10,6 +10,7 @@ namespace MackTechGroupProject.Models
         public int id { get; set; }
         public ApplicationUser User { get; set; }
         public DateTime PaymentDate { get; set; }
+        public int TotalCreditHours { get; set; }
         public decimal TotalBalance { get; set; }
     }
 }
