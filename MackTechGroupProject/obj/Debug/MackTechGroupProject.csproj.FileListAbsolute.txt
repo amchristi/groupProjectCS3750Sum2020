@@ -262,3 +262,4 @@ C:\Users\Montana\Source\Repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj
 C:\Users\Montana\Source\Repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.pdb
 C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.csprojAssemblyReference.cache
 C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.Migrations.TotalCreditHours_to_Accounting.resources
+C:\Users\Montana\Source\Repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.Migrations.TotalCreditHours_to_Accounting.resources

@@ -108,9 +108,21 @@ namespace MackTechGroupProject.Controllers
             return View(allAssignmentsViewModel);
         }
 
-        public ActionResult AssignmentSubmission()
+        public ActionResult AssignmentSubmission(int assignmentId)
         {
-            return View();
+            
+            var selectedAssignmentId = assignmentId;
+            var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
+            var currentAssignment = context.Assignments.Where(x => x.AssignmentId == selectedAssignmentId).FirstOrDefault();
+
+            var submitAssignmentModel = new SubmitAssignmentModel()
+            {
+                currentAssignment = currentAssignment,
+                SubmssionText = ""
+                
+            };
+
+            return View(submitAssignmentModel);
         }
 
         //private IEnumerable<SelectListItem> GetCourses()

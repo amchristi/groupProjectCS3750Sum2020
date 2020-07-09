@@ -18,16 +18,16 @@
     <hr style="height:1px;border-width:0;color:#5900B3;background-color:#5900B3" />
     <div class="row">
         <div class="SubmitAssignment">
-            <div class="col-sm-4" style="text-align:left">Due: May 9 by 11:59 PM </div>
-            <div class="col-sm-4" style="text-align:left">Submitting: a text upload </div>
-            <div class="col-sm-4" style="text-align:left">Available: until May 16 by 11:59 PM</div>
+            <div class="col-sm-4" style="text-align:left">Due:  @Html.DisplayFor(modelItem => Model.currentAssignment.DueDate) </div>
+            <div class="col-sm-4" style="text-align:left">Submitting: @Html.DisplayFor(modelItem => Model.currentAssignment.SubmissionType) </div>
+            <div class="col-sm-4" style="text-align:left">Available: until @Html.DisplayFor(modelItem => Model.currentAssignment.DueDate)</div>
         </div>
     </div>
     <hr style="height:1px;border-width:0;color:#5900B3;background-color:#5900B3" />
 
-    <div class="assignmentInstructions">
+    
         <h4>Instructions:</h4>
-    </div>
+ 
 
  
         <p>

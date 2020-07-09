@@ -34,6 +34,7 @@ namespace MackTechGroupProject.Models
         [Required]
         [DataType(DataType.DateTime)]
         [Display(Name = "Due Date")]
+        [DisplayFormat(DataFormatString="{0:MM/dd/yyyy}", ApplyFormatInEditMode =true)]
         public DateTime DueDate { get; set; }
 
         [Required]
@@ -55,12 +56,15 @@ namespace MackTechGroupProject.Models
         [Display(Name = "Text Submission")]
         [DataType(DataType.MultilineText)]
         public string SubmssionText { get; set; }
+
+        public Assignment currentAssignment { get; set; }
+
     }
 
     public class ToDoListViewModel
     {
-        public List<Enrollment> currentEnrollments { get; set; }
-        public List<Assignment> currentAssignments { get; set; }
+        public List<Enrollment> currentEnrollmentsView { get; set; }
+        public List<Assignment> currentAssignmentsView { get; set; }
     }
 
     public class AllAssignmentsViewModel

@@ -1,4 +1,10 @@
-﻿using System.Web.Mvc;
+﻿using MackTechGroupProject.Models;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.Owin;
+using System.Data.Entity;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
 
 namespace MackTechGroupProject.Controllers
 {
@@ -7,7 +13,20 @@ namespace MackTechGroupProject.Controllers
         [Authorize]
         public ActionResult Index()
         {
-            return View(currentEnrollments);
+
+            var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
+            var userId = User.Identity.GetUserId();
+
+            var currentEnrollmentsWithAssignments = context.Enrollments.Where(x => x.User.Id == userId).Include(x => x.User).Include(x => x.Course).Include("Course.Assignments").ToList();
+            var allAssignments = currentEnrollmentsWithAssignments.Select(x => x.Course).SelectMany(y => y.Assignments).ToList();
+
+            var toDoListViewModel = new ToDoListViewModel()
+            {
+                currentAssignmentsView = allAssignments,
+                currentEnrollmentsView = currentEnrollmentsWithAssignments
+            };
+
+            return View(toDoListViewModel);
         }
 
         public ActionResult About()
