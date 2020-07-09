@@ -49,4 +49,11 @@ namespace MackTechGroupProject.Models
         public int SelectedCourseId { get; set; }
         public IEnumerable<SelectListItem> InstructorCourses { get; set; }
     }
+
+    public class SubmitAssignmentModel
+    {
+        [Display(Name = "Text Submission")]
+        [DataType(DataType.MultilineText)]
+        public string SubmssionText { get; set; }
+    }
 }

@@ -1,0 +1,74 @@
+﻿
+@model MackTechGroupProject.Models.SubmitAssignmentModel
+
+@{
+    ViewBag.Title = "Submit Assignment";
+}
+
+
+
+<h1 style="text-align:left;">
+    Submit Assignment
+    <span style="float:right; color:red">
+        50 points
+    </span>
+</h1>
+
+<main class="col-md-12">
+    <hr style="height:1px;border-width:0;color:#5900B3;background-color:#5900B3" />
+    <div class="row">
+        <div class="SubmitAssignment">
+            <div class="col-sm-4" style="text-align:left">Due: May 9 by 11:59 PM </div>
+            <div class="col-sm-4" style="text-align:left">Submitting: a text upload </div>
+            <div class="col-sm-4" style="text-align:left">Available: until May 16 by 11:59 PM</div>
+        </div>
+    </div>
+    <hr style="height:1px;border-width:0;color:#5900B3;background-color:#5900B3" />
+
+    <div class="assignmentInstructions">
+        <h4>Instructions:</h4>
+    </div>
+
+ 
+        <p>
+
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam velit tortor, venenatis id leo ut, laoreet dictum mauris. Suspendisse porta 
+            nisl commodo tortor interdum, quis suscipit justo maximus. Integer et ultricies libero, vel congue magna. Morbi id diam vel lacus sodales
+            mattis in et augue. Vestibulum malesuada, justo non posuere tempus, lectus velit lobortis nunc, quis varius lacus dolor ac justo. Phasellus 
+            et pretium ipsum. Nam a nulla suscipit, consequat nibh vel, condimentum mi. Maecenas ornare placerat blandit. In enim mauris, 
+            vestibulum quis lectus id, feugiat gravida mauris.
+        </p>
+        <p>
+            Phasellus vitae tempor enim. Aliquam mattis nunc at ipsum aliquet, eu pharetra arcu semper. Curabitur cursus eros ut augue placerat 
+            rhoncus. Donec bibendum odio interdum libero convallis mattis. Mauris sollicitudin tincidunt mauris non gravida. Praesent eget 
+            arcu imperdiet, hendrerit nisl sed, malesuada justo. Ut vitae urna at ex gravida suscipit eget a velit. Maecenas id tellus eget 
+            tellus sollicitudin sagittis. Suspendisse consectetur felis eu mi vehicula congue. Vestibulum convallis imperdiet diam sodales 
+            efficitur. Fusce porta felis nec feugiat pulvinar. Nullam ultrices ante non mollis sollicitudin. Vivamus rutrum leo tortor, 
+            vitae pretium felis placerat ac.
+        </p>
+
+    <br />
+
+
+
+    @using (Html.BeginForm("AssignmentSubmission", "Assignments", FormMethod.Post, new { @class = "form-horizontal", role = "form", enctype = "multipart/form-data" }))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            <div class="form-group">
+                @Html.LabelFor(model => model.SubmssionText, htmlAttributes: new { @class = "col-md-12" })
+
+                    @Html.EditorFor(model => model.SubmssionText, new { htmlAttributes = new { @class = "col-md-offset-1 col-md-11", style = "max-width:900px; height:300px" } })
+                    @Html.ValidationMessageFor(model => model.SubmssionText, "", new { @class = "text-danger" })
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-10 col-md-2">
+                    <input type="submit" value="Submit" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    }
+</main>

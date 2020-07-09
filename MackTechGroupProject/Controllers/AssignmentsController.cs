@@ -100,6 +100,11 @@ namespace MackTechGroupProject.Controllers
             return View();
         }
 
+        public ActionResult AssignmentSubmission()
+        {
+            return View();
+        }
+
         //private IEnumerable<SelectListItem> GetCourses()
         //{
         //    String userId = User.Identity.GetUserId();

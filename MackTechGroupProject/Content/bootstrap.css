@@ -115,7 +115,7 @@ select,
 textarea {
   margin: 0;
   font: inherit;
-  color: inherit;
+  color: inherit; 
 }
 button {
   overflow: visible;
@@ -6919,14 +6919,27 @@ div.ToDoCheckBox {
 }
 
 
-
-
-/***************************        Nick's edits for the Calendar            *************************/
+/***************************        Montana's edits for the assignment submission         *************************/
 /*
     light purple:#F2E6FF
     Dark Purple: #5900B3
 */
 
+
+.width800 {
+    width: 800px;
+}
+
+div.assignmentInstructions {
+    font-weight: bold; 
+    padding: 50px;
+    margin: 50px
+}
+/***************************        Nick's edits for the Calendar            *************************/
+/*
+    light purple:#F2E6FF
+    Dark Purple: #5900B3
+*/
 h2.CalendarHeader {
     text-align: left;
 }
