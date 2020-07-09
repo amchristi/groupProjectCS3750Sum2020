@@ -174,28 +174,14 @@ namespace MackTechGroupProject.Controllers
                 // get new cost needed to be added or subtracted to account
                 decimal newCreditCosts = (diffInCreditHours * CREDIT_HOUR_COST);
 
-                // if student has more credithours than shown in account
-                if (currentStudentAccount.TotalCreditHours > totalCreditHours)
-                {
-                    var newTotalBalance = (currentStudentAccount.TotalBalance - newCreditCosts);
-                    // update total cost in database
-                    currentStudentAccount.TotalBalance = newTotalBalance;
+                var newTotalBalance = (currentStudentAccount.TotalBalance + newCreditCosts);
+                // update total cost in database
+                currentStudentAccount.TotalBalance = newTotalBalance;
 
-                    // update credit hours in database
-                    currentStudentAccount.TotalCreditHours = totalCreditHours;
-                    context.SaveChanges();
-                }
-                // if student has less credithours than shown in account
-                if (currentStudentAccount.TotalCreditHours < totalCreditHours)
-                {
-                    var newTotalBalance = (currentStudentAccount.TotalBalance + newCreditCosts);
-                    // update total cost in database
-                    currentStudentAccount.TotalBalance = newTotalBalance;
+                // update credit hours in database
+                currentStudentAccount.TotalCreditHours = totalCreditHours;
+                context.SaveChanges();
 
-                    // update credit hours in database
-                    currentStudentAccount.TotalCreditHours = totalCreditHours;
-                    context.SaveChanges();
-                }
 
                 // the user already exists, get their balance
                 var formattedCost = String.Format("{0:C2}", currentStudentAccount.TotalBalance);
