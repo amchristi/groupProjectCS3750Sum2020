@@ -152,6 +152,7 @@ namespace MackTechGroupProject.Controllers
 
             // gets a list of enrollments for current student
             var currentEnrollments = context.Enrollments.Include(x => x.User).Include(c => c.Course).Where(s => s.User.Id == userId).ToList();
+            var currentStudent = context.Users.Where(x => x.Id == userId).FirstOrDefault();
 
             var totalCreditHours = currentEnrollments.Sum(x => x.Course.CreditHours);
             var totalCost = totalCreditHours * 240;
@@ -159,6 +160,13 @@ namespace MackTechGroupProject.Controllers
 
             ViewBag.TotalCreditHours = totalCreditHours;
             ViewBag.TotalFormattedCost = formattedCost;
+
+            var accounting = new Accounting()
+            {
+                User = currentStudent,
+                PaymentDate = DateTime.Now,
+                TotalBalance = totalCost
+            };
 
             return View(currentEnrollments);
         }

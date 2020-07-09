@@ -42,7 +42,5 @@ namespace MackTechGroupProject.Models
             [DataType(DataType.Text)]
             [Display(Name = "Payment Amount $")]
             public decimal PaymentAmount { get; set; }
-
-
     }
 }

@@ -24,7 +24,6 @@ namespace MackTechGroupProject.Models
         public byte[] ProfileImage { get; set; }
 
         public ICollection<Enrollment> Enrollments { get; set; }
-        public ICollection<Assignment> Assignments { get; set; }
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {
@@ -58,6 +57,7 @@ namespace MackTechGroupProject.Models
         public DbSet<Course> Courses { get; set; }
         public DbSet<Enrollment> Enrollments { get; set; }
         public DbSet<Assignment> Assignments { get; set; }
+        public DbSet<Accounting> Accounting { get; set; }
 
         public static ApplicationDbContext Create()
         {

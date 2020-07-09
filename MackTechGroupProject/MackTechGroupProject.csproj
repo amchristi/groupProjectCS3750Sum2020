@@ -255,7 +255,16 @@
     <Compile Include="Migrations\202007021728149_fix bad migration.Designer.cs">
       <DependentUpon>202007021728149_fix bad migration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202007090406482_Accounting_Table_Added.cs" />
+    <Compile Include="Migrations\202007090406482_Accounting_Table_Added.Designer.cs">
+      <DependentUpon>202007090406482_Accounting_Table_Added.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007090409284_Accounting_Table_Updated.cs" />
+    <Compile Include="Migrations\202007090409284_Accounting_Table_Updated.Designer.cs">
+      <DependentUpon>202007090409284_Accounting_Table_Updated.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\AccountingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AssignmentsModels.cs" />
     <Compile Include="Models\CoursesModels.cs" />
@@ -414,6 +423,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202007021728149_fix bad migration.resx">
       <DependentUpon>202007021728149_fix bad migration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007090406482_Accounting_Table_Added.resx">
+      <DependentUpon>202007090406482_Accounting_Table_Added.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007090409284_Accounting_Table_Updated.resx">
+      <DependentUpon>202007090409284_Accounting_Table_Updated.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
