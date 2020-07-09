@@ -90,14 +90,41 @@ namespace MackTechGroupProject.Controllers
 
 
 
-        public ActionResult ViewAllAssignments(int id)
+        public ActionResult ViewAllAssignments()
         {
-            var selectedCourseId = id;
-            var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
-            var selectedCourse = context.Courses.Where(x => x.CourseId == selectedCourseId).Include(x => x.Assignments).FirstOrDefault();
-            var currentAssignments = context.Assignments.Where(x => x.Course.CourseId == selectedCourseId).ToList();
+            //var selectedCourseId = id;
+            //var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
+            //var selectedCourse = context.Courses.Where(x => x.CourseId == selectedCourseId).Include(x => x.Assignments).FirstOrDefault();
+            // var currentAssignments = context.Assignments.Where(x => x.Course.CourseId == selectedCourseId).ToList();
 
-            return View();
+            var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
+            var allEnrollments = context.Enrollments.Include(x => x.User).ToList();
+            //var allCourses = context.Courses.Include(x => x.Assignments).Include(x => x.Enrollments).Include(x => x.Users).ToList();
+            //var currentCourses = allCourses.Where(x => x.In)
+
+            var currentAssignments = new List<Assignment>();
+
+
+
+            /*
+            foreach (Enrollment e in currentEnrollments)
+            {
+                currentCourses.Add(e.Course);
+            }
+
+            foreach (Course c in currentCourses)
+            {
+
+                Assignment a = context.Assignments.Where(x => x.Course.CourseId == c.CourseId).FirstOrDefault();
+                if (a != null)
+                {
+                    currentAssignments.Add(a);
+                }
+            }
+            */
+
+
+            return View(currentAssignments);
         }
 
         public ActionResult AssignmentSubmission()

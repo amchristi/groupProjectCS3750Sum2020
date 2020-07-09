@@ -6929,23 +6929,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\KEVIN-PC\\.nuget\\packages\\": {},
+    "C:\\Users\\Montana\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\KEVIN-PC\\source\\repos\\groupProjectCS3750Sum2020\\MackTechGroupProject.Tests\\MackTechGroupProject.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\Montana\\Source\\Repos\\groupProjectCS3750Sum2020\\MackTechGroupProject.Tests\\MackTechGroupProject.Tests.csproj",
       "projectName": "MackTechGroupProject.Tests",
-      "projectPath": "C:\\Users\\KEVIN-PC\\source\\repos\\groupProjectCS3750Sum2020\\MackTechGroupProject.Tests\\MackTechGroupProject.Tests.csproj",
-      "packagesPath": "C:\\Users\\KEVIN-PC\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\KEVIN-PC\\source\\repos\\groupProjectCS3750Sum2020\\MackTechGroupProject.Tests\\obj\\",
+      "projectPath": "C:\\Users\\Montana\\Source\\Repos\\groupProjectCS3750Sum2020\\MackTechGroupProject.Tests\\MackTechGroupProject.Tests.csproj",
+      "packagesPath": "C:\\Users\\Montana\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Montana\\Source\\Repos\\groupProjectCS3750Sum2020\\MackTechGroupProject.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\KEVIN-PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Montana\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6958,8 +6958,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\KEVIN-PC\\source\\repos\\groupProjectCS3750Sum2020\\MackTechGroupProject\\MackTechGroupProject.csproj": {
-              "projectPath": "C:\\Users\\KEVIN-PC\\source\\repos\\groupProjectCS3750Sum2020\\MackTechGroupProject\\MackTechGroupProject.csproj"
+            "C:\\Users\\Montana\\Source\\Repos\\groupProjectCS3750Sum2020\\MackTechGroupProject\\MackTechGroupProject.csproj": {
+              "projectPath": "C:\\Users\\Montana\\Source\\Repos\\groupProjectCS3750Sum2020\\MackTechGroupProject\\MackTechGroupProject.csproj"
             }
           }
         }
@@ -7009,7 +7009,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
       }
     }
   },

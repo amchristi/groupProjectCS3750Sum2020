@@ -56,4 +56,11 @@ namespace MackTechGroupProject.Models
         [DataType(DataType.MultilineText)]
         public string SubmssionText { get; set; }
     }
+
+    public class ToDoListViewModel
+    {
+        public List<Enrollment> currentEnrollments { get; set; }
+        public List<Assignment> currentAssignments { get; set; }
+    }
+
 }
