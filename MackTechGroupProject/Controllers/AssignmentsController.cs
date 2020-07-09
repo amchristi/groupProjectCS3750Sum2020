@@ -88,43 +88,24 @@ namespace MackTechGroupProject.Controllers
             return View(currentAssignments);
         }
 
-
-
         public ActionResult ViewAllAssignments()
         {
-            //var selectedCourseId = id;
-            //var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
-            //var selectedCourse = context.Courses.Where(x => x.CourseId == selectedCourseId).Include(x => x.Assignments).FirstOrDefault();
-            // var currentAssignments = context.Assignments.Where(x => x.Course.CourseId == selectedCourseId).ToList();
-
             var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
-            var allEnrollments = context.Enrollments.Include(x => x.User).ToList();
-            //var allCourses = context.Courses.Include(x => x.Assignments).Include(x => x.Enrollments).Include(x => x.Users).ToList();
-            //var currentCourses = allCourses.Where(x => x.In)
+            var userId = User.Identity.GetUserId();
 
-            var currentAssignments = new List<Assignment>();
+            // query enrollments for a list of all enrollments and include assignments
+            var currentEnrollmentsWithAssignments = context.Enrollments.Where(x => x.User.Id == userId).Include(x => x.User).Include(x => x.Course).Include("Course.Assignments").ToList();
+            
+            // get allAssignments in a list to pass to AllAssignmentsViewModel
+            var allAssignments = currentEnrollmentsWithAssignments.Select(x => x.Course).SelectMany(y => y.Assignments).ToList();
 
-
-
-            /*
-            foreach (Enrollment e in currentEnrollments)
+            // set ViewModel list to defined list above
+            var allAssignmentsViewModel = new AllAssignmentsViewModel()
             {
-                currentCourses.Add(e.Course);
-            }
+                AllAssignments = allAssignments
+            };
 
-            foreach (Course c in currentCourses)
-            {
-
-                Assignment a = context.Assignments.Where(x => x.Course.CourseId == c.CourseId).FirstOrDefault();
-                if (a != null)
-                {
-                    currentAssignments.Add(a);
-                }
-            }
-            */
-
-
-            return View(currentAssignments);
+            return View(allAssignmentsViewModel);
         }
 
         public ActionResult AssignmentSubmission()

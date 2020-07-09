@@ -1,5 +1,5 @@
 
-@model IEnumerable<MackTechGroupProject.Models.Assignment>
+@model MackTechGroupProject.Models.AllAssignmentsViewModel
 
 @{
     ViewBag.Title = "View All Assignments";
@@ -19,54 +19,56 @@
 
     <p>Assignment list goes here</p>
 
-    
+
     <table class="table">
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.AssignmentTitle)
+                @Html.DisplayNameFor(model => model.AllAssignments.FirstOrDefault().AssignmentTitle)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.AssignmentDescription)
+                @Html.DisplayNameFor(model => model.AllAssignments.FirstOrDefault().AssignmentDescription)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Points)
+                @Html.DisplayNameFor(model => model.AllAssignments.FirstOrDefault().Points)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.DueDate)
+                @Html.DisplayNameFor(model => model.AllAssignments.FirstOrDefault().DueDate)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.SubmissionType)
+                @Html.DisplayNameFor(model => model.AllAssignments.FirstOrDefault().SubmissionType)
             </th>
         </tr>
-    
-        
-        @foreach (var item in Model)
+
+
+        @foreach (var item in Model.AllAssignments)
         {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.AssignmentTitle)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.AssignmentDescription)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Points)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DueDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SubmissionType)
-            </td>
-
-        </tr>
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AssignmentTitle)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AssignmentDescription)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Points)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DueDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SubmissionType)
+                </td>
+                @*<td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Course.CourseId })
+                </td>*@
+            </tr>
         }
-     
+
     </table>
- 
 
 
-    
+
+
 
 </body>
 </html>

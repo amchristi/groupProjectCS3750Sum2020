@@ -63,4 +63,8 @@ namespace MackTechGroupProject.Models
         public List<Assignment> currentAssignments { get; set; }
     }
 
+    public class AllAssignmentsViewModel
+    {
+        public List<Assignment> AllAssignments { get; set; }
+    }
 }
