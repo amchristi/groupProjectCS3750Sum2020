@@ -1,6 +1,7 @@
 ﻿using MackTechGroupProject.Models;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
+using System;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
@@ -19,10 +20,12 @@ namespace MackTechGroupProject.Controllers
 
             var currentEnrollmentsWithAssignments = context.Enrollments.Where(x => x.User.Id == userId).Include(x => x.User).Include(x => x.Course).Include("Course.Assignments").ToList();
             var allAssignments = currentEnrollmentsWithAssignments.Select(x => x.Course).SelectMany(y => y.Assignments).ToList();
+            var allRelevantAssignments = allAssignments.Where(x => x.DueDate > DateTime.Now.Date).ToList();
+            var allAssignmentsSorted = allRelevantAssignments.OrderBy(x => x.DueDate).ToList();
 
             var toDoListViewModel = new ToDoListViewModel()
             {
-                currentAssignmentsView = allAssignments,
+                currentAssignmentsView = allAssignmentsSorted,
                 currentEnrollmentsView = currentEnrollmentsWithAssignments
             };
 
