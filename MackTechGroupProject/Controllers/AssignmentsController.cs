@@ -108,19 +108,32 @@ namespace MackTechGroupProject.Controllers
             return View(allAssignmentsViewModel);
         }
 
-        public ActionResult AssignmentSubmission(int assignmentId)
+        public ActionResult AssignmentSubmission(int assignmentId, SubmitAssignmentModel model)
         {
-            
+            var userID = User.Identity.GetUserId();
             var selectedAssignmentId = assignmentId;
             var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
+            var currentStudent = context.Users.Where(x => x.Id == userID).FirstOrDefault();
             var currentAssignment = context.Assignments.Where(x => x.AssignmentId == selectedAssignmentId).FirstOrDefault();
 
             var submitAssignmentModel = new SubmitAssignmentModel()
             {
                 currentAssignment = currentAssignment,
-                SubmssionText = ""
-                
+                SubmssionText = model.SubmssionText
             };
+
+            SubmissionGrades submissionGrade = new SubmissionGrades()
+            {
+                User = currentStudent,
+                Assignment = currentAssignment,
+                SubmissionDate = DateTime.Now,
+                TextSubmission = model.SubmssionText,
+                FileSubmission = null,
+                Grade = null
+            };
+
+            context.SubmissionGrades.Add(submissionGrade);
+            context.SaveChanges();
 
             return View(submitAssignmentModel);
         }

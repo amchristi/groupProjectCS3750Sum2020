@@ -397,3 +397,4 @@ D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS
 D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.dll
 D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.pdb
 D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.Migrations.added_SubmissionGrades.resources
+D:\MagicStuff\Weber State University\cs3750 Software Engineering 2\teamProjectCS3750\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.Migrations.Stupid_null_is_stupid.resources

@@ -80,6 +80,6 @@ namespace MackTechGroupProject.Models
         public DateTime SubmissionDate { get; set; }
         public string TextSubmission { get; set; }
         public byte[] FileSubmission { get; set; }
-        public double Grade { get; set; }
+        public double? Grade { get; set; }
     }
 }
