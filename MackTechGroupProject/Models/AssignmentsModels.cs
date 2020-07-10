@@ -71,4 +71,15 @@ namespace MackTechGroupProject.Models
     {
         public List<Assignment> AllAssignments { get; set; }
     }
+
+    public class SubmissionGrades
+    {
+        public int ID { get; set; }
+        public ApplicationUser User { get; set; }
+        public Assignment Assignment { get; set; }
+        public DateTime SubmissionDate { get; set; }
+        public string TextSubmission { get; set; }
+        public byte[] FileSubmission { get; set; }
+        public double Grade { get; set; }
+    }
 }

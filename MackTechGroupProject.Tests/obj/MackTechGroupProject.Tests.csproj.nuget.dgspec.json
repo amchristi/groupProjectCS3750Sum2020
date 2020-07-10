@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Montana\\Source\\Repos\\groupProjectCS3750Sum2020\\MackTechGroupProject.Tests\\MackTechGroupProject.Tests.csproj": {}
+    "D:\\MagicStuff\\Weber State University\\cs3750 Software Engineering 2\\teamProjectCS3750\\groupProjectCS3750Sum2020\\MackTechGroupProject.Tests\\MackTechGroupProject.Tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Montana\\Source\\Repos\\groupProjectCS3750Sum2020\\MackTechGroupProject.Tests\\MackTechGroupProject.Tests.csproj": {
+    "D:\\MagicStuff\\Weber State University\\cs3750 Software Engineering 2\\teamProjectCS3750\\groupProjectCS3750Sum2020\\MackTechGroupProject.Tests\\MackTechGroupProject.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Montana\\Source\\Repos\\groupProjectCS3750Sum2020\\MackTechGroupProject.Tests\\MackTechGroupProject.Tests.csproj",
+        "projectUniqueName": "D:\\MagicStuff\\Weber State University\\cs3750 Software Engineering 2\\teamProjectCS3750\\groupProjectCS3750Sum2020\\MackTechGroupProject.Tests\\MackTechGroupProject.Tests.csproj",
         "projectName": "MackTechGroupProject.Tests",
-        "projectPath": "C:\\Users\\Montana\\Source\\Repos\\groupProjectCS3750Sum2020\\MackTechGroupProject.Tests\\MackTechGroupProject.Tests.csproj",
-        "packagesPath": "C:\\Users\\Montana\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Montana\\Source\\Repos\\groupProjectCS3750Sum2020\\MackTechGroupProject.Tests\\obj\\",
+        "projectPath": "D:\\MagicStuff\\Weber State University\\cs3750 Software Engineering 2\\teamProjectCS3750\\groupProjectCS3750Sum2020\\MackTechGroupProject.Tests\\MackTechGroupProject.Tests.csproj",
+        "packagesPath": "C:\\Users\\nickb\\.nuget\\packages\\",
+        "outputPath": "D:\\MagicStuff\\Weber State University\\cs3750 Software Engineering 2\\teamProjectCS3750\\groupProjectCS3750Sum2020\\MackTechGroupProject.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Montana\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nickb\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -30,8 +30,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\Montana\\Source\\Repos\\groupProjectCS3750Sum2020\\MackTechGroupProject\\MackTechGroupProject.csproj": {
-                "projectPath": "C:\\Users\\Montana\\Source\\Repos\\groupProjectCS3750Sum2020\\MackTechGroupProject\\MackTechGroupProject.csproj"
+              "D:\\MagicStuff\\Weber State University\\cs3750 Software Engineering 2\\teamProjectCS3750\\groupProjectCS3750Sum2020\\MackTechGroupProject\\MackTechGroupProject.csproj": {
+                "projectPath": "D:\\MagicStuff\\Weber State University\\cs3750 Software Engineering 2\\teamProjectCS3750\\groupProjectCS3750Sum2020\\MackTechGroupProject\\MackTechGroupProject.csproj"
               }
             }
           }
@@ -76,21 +76,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.2, 3.1.2]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Montana\\Source\\Repos\\groupProjectCS3750Sum2020\\MackTechGroupProject\\MackTechGroupProject.csproj": {
-      "version": "1.0.0",
+    "D:\\MagicStuff\\Weber State University\\cs3750 Software Engineering 2\\teamProjectCS3750\\groupProjectCS3750Sum2020\\MackTechGroupProject\\MackTechGroupProject.csproj": {
       "restore": {
-        "projectUniqueName": "C:\\Users\\Montana\\Source\\Repos\\groupProjectCS3750Sum2020\\MackTechGroupProject\\MackTechGroupProject.csproj",
+        "projectUniqueName": "D:\\MagicStuff\\Weber State University\\cs3750 Software Engineering 2\\teamProjectCS3750\\groupProjectCS3750Sum2020\\MackTechGroupProject\\MackTechGroupProject.csproj",
         "projectName": "MackTechGroupProject",
-        "projectPath": "C:\\Users\\Montana\\Source\\Repos\\groupProjectCS3750Sum2020\\MackTechGroupProject\\MackTechGroupProject.csproj"
+        "projectPath": "D:\\MagicStuff\\Weber State University\\cs3750 Software Engineering 2\\teamProjectCS3750\\groupProjectCS3750Sum2020\\MackTechGroupProject\\MackTechGroupProject.csproj"
       },
       "frameworks": {
         "net472": {}

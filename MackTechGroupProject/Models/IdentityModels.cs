@@ -59,7 +59,7 @@ namespace MackTechGroupProject.Models
         public DbSet<Enrollment> Enrollments { get; set; }
         public DbSet<Assignment> Assignments { get; set; }
         public DbSet<Accounting> Accounting { get; set; }
-
+        public DbSet<SubmissionGrades> SubmissionGrades { get; set; }
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();

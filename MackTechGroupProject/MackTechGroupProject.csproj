@@ -267,6 +267,10 @@
     <Compile Include="Migrations\202007091704398_TotalCreditHours_to_Accounting.Designer.cs">
       <DependentUpon>202007091704398_TotalCreditHours_to_Accounting.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202007100205186_added_SubmissionGrades.cs" />
+    <Compile Include="Migrations\202007100205186_added_SubmissionGrades.Designer.cs">
+      <DependentUpon>202007100205186_added_SubmissionGrades.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -436,6 +440,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202007091704398_TotalCreditHours_to_Accounting.resx">
       <DependentUpon>202007091704398_TotalCreditHours_to_Accounting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007100205186_added_SubmissionGrades.resx">
+      <DependentUpon>202007100205186_added_SubmissionGrades.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
