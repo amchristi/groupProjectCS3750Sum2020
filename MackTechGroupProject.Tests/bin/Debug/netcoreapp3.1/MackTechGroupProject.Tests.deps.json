@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v3.1": {
       "MackTechGroupProject.Tests/1.0.0": {
         "dependencies": {
+          "EntityFramework": "6.2.0",
           "MSTest.TestAdapter": "2.0.0",
           "MSTest.TestFramework": "2.0.0",
           "MackTechGroupProject": "1.0.0",
@@ -20,6 +21,18 @@
         }
       },
       "coverlet.collector/1.0.1": {},
+      "EntityFramework/6.2.0": {
+        "runtime": {
+          "lib/net45/EntityFramework.SqlServer.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.2.61023.0"
+          },
+          "lib/net45/EntityFramework.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.2.61023.0"
+          }
+        }
+      },
       "Microsoft.AspNet.Mvc/5.2.4": {
         "dependencies": {
           "Microsoft.AspNet.Razor": "3.2.4",
@@ -1439,14 +1452,6 @@
           }
         }
       },
-      "EntityFramework/6.0.0.0": {
-        "runtime": {
-          "EntityFramework.dll": {
-            "assemblyVersion": "6.0.0.0",
-            "fileVersion": "6.2.61023.0"
-          }
-        }
-      },
       "Microsoft.Owin.Security.Cookies/4.0.0.0": {
         "runtime": {
           "Microsoft.Owin.Security.Cookies.dll": {
@@ -1477,6 +1482,13 @@
       "sha512": "sha512-RAuno8s7DBGo2IdV/1d8YSnXMd/728K3PBT5R6/kfGx1yunBZmavlaFQfhGe7Q7N2nUMkvVET+7ITn3+KSg+Uw==",
       "path": "coverlet.collector/1.0.1",
       "hashPath": "coverlet.collector.1.0.1.nupkg.sha512"
+    },
+    "EntityFramework/6.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ptGyXOf26qLrtn+2doAmylIlCxOnBJANwlyyLrXDmqIk9O18IzLWHyxDwwAyhgXkxmbiaA0WNpRy67WRReInBw==",
+      "path": "entityframework/6.2.0",
+      "hashPath": "entityframework.6.2.0.nupkg.sha512"
     },
     "Microsoft.AspNet.Mvc/5.2.4": {
       "type": "package",
@@ -2270,11 +2282,6 @@
       "sha512": ""
     },
     "Microsoft.AspNet.Identity.EntityFramework/2.0.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "EntityFramework/6.0.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""

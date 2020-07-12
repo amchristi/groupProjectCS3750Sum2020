@@ -108,6 +108,23 @@ namespace MackTechGroupProject.Controllers
             return View(allAssignmentsViewModel);
         }
 
+        [HttpPost]
+        public ActionResult AssignmentSubmission(SubmitAssignmentModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
+            byte[] uploadedFile = new byte[model.File.InputStream.Length];
+            model.File.InputStream.Read(uploadedFile, 0, uploadedFile.Length);
+
+            // now you could pass the byte array to your model and store wherever 
+            // you intended to store it
+
+            return RedirectToAction("Index", "Home");
+        }
+
         public ActionResult AssignmentSubmission(int assignmentId, SubmitAssignmentModel model)
         {
             var userID = User.Identity.GetUserId();

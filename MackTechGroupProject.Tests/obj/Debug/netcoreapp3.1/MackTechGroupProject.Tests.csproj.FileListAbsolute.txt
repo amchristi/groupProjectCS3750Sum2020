@@ -361,7 +361,6 @@ C:\Users\Montana\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject.Tes
 C:\Users\Montana\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject.Tests\bin\Debug\netcoreapp3.1\Microsoft.AspNet.Identity.Owin.xml
 C:\Users\Montana\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject.Tests\bin\Debug\netcoreapp3.1\Microsoft.Owin.Security.xml
 C:\Users\Montana\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject.Tests\bin\Debug\netcoreapp3.1\Microsoft.AspNet.Identity.EntityFramework.xml
-C:\Users\Montana\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject.Tests\bin\Debug\netcoreapp3.1\EntityFramework.xml
 C:\Users\Montana\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject.Tests\bin\Debug\netcoreapp3.1\Microsoft.Owin.Security.Cookies.xml
 C:\Users\Montana\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject.Tests\bin\Debug\netcoreapp3.1\Microsoft.Owin.Host.SystemWeb.xml
 C:\Users\Montana\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject.Tests\obj\Debug\netcoreapp3.1\MackTechGroupProject.Tests.csprojAssemblyReference.cache
@@ -371,3 +370,5 @@ C:\Users\Montana\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject.Tes
 C:\Users\Montana\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject.Tests\obj\Debug\netcoreapp3.1\MackTechGroupProject.Tests.dll
 C:\Users\Montana\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject.Tests\obj\Debug\netcoreapp3.1\MackTechGroupProject.Tests.pdb
 C:\Users\Montana\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject.Tests\bin\Debug\netcoreapp3.1\System.Web.Helpers.dll
+C:\Users\Montana\Source\Repos\groupProjectCS3750Sum2020\MackTechGroupProject.Tests\bin\Debug\netcoreapp3.1\EntityFramework.SqlServer.dll
+C:\Users\Montana\Source\Repos\groupProjectCS3750Sum2020\MackTechGroupProject.Tests\bin\Debug\netcoreapp3.1\MackTechGroupProject.Tests.dll.config

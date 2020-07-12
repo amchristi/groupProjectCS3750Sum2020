@@ -64,5 +64,6 @@ namespace MackTechGroupProject.Models
         {
             return new ApplicationDbContext();
         }
+
     }
 }

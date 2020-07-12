@@ -1,5 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MackTechGroupProject.Controllers;
+using System.Linq;
 
 namespace MackTechGroupProject.Tests
 {
@@ -9,6 +10,10 @@ namespace MackTechGroupProject.Tests
         [TestMethod]
         public void TestStudentRegisterAndDropThirdCourse() //using StudentRegTwoCourses@test.com
         {
+
+            var _context = new MackTechGroupProject.Models.ApplicationDbContext();
+
+            var course = _context.Assignments.Where(x => x.Score == 100);
 
             //get student user that is currently enrolled in two courses
             var controller = new CoursesController();

@@ -10,7 +10,7 @@
 <h1 style="text-align:left;">
     Submit Assignment
     <span style="float:right; color:red">
-        50 points
+        @Html.DisplayFor(modelItem => Model.currentAssignment.Points) points
     </span>
 </h1>
 
@@ -25,50 +25,75 @@
     </div>
     <hr style="height:1px;border-width:0;color:#5900B3;background-color:#5900B3" />
 
-    
-        <h4>Instructions:</h4>
- 
 
- 
-        <p>
+    <h4>Instructions:</h4>
 
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam velit tortor, venenatis id leo ut, laoreet dictum mauris. Suspendisse porta 
-            nisl commodo tortor interdum, quis suscipit justo maximus. Integer et ultricies libero, vel congue magna. Morbi id diam vel lacus sodales
-            mattis in et augue. Vestibulum malesuada, justo non posuere tempus, lectus velit lobortis nunc, quis varius lacus dolor ac justo. Phasellus 
-            et pretium ipsum. Nam a nulla suscipit, consequat nibh vel, condimentum mi. Maecenas ornare placerat blandit. In enim mauris, 
-            vestibulum quis lectus id, feugiat gravida mauris.
-        </p>
-        <p>
-            Phasellus vitae tempor enim. Aliquam mattis nunc at ipsum aliquet, eu pharetra arcu semper. Curabitur cursus eros ut augue placerat 
-            rhoncus. Donec bibendum odio interdum libero convallis mattis. Mauris sollicitudin tincidunt mauris non gravida. Praesent eget 
-            arcu imperdiet, hendrerit nisl sed, malesuada justo. Ut vitae urna at ex gravida suscipit eget a velit. Maecenas id tellus eget 
-            tellus sollicitudin sagittis. Suspendisse consectetur felis eu mi vehicula congue. Vestibulum convallis imperdiet diam sodales 
-            efficitur. Fusce porta felis nec feugiat pulvinar. Nullam ultrices ante non mollis sollicitudin. Vivamus rutrum leo tortor, 
-            vitae pretium felis placerat ac.
-        </p>
+
+
+    <p>
+
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam velit tortor, venenatis id leo ut, laoreet dictum mauris. Suspendisse porta
+        nisl commodo tortor interdum, quis suscipit justo maximus. Integer et ultricies libero, vel congue magna. Morbi id diam vel lacus sodales
+        mattis in et augue. Vestibulum malesuada, justo non posuere tempus, lectus velit lobortis nunc, quis varius lacus dolor ac justo. Phasellus
+        et pretium ipsum. Nam a nulla suscipit, consequat nibh vel, condimentum mi. Maecenas ornare placerat blandit. In enim mauris,
+        vestibulum quis lectus id, feugiat gravida mauris.
+    </p>
+    <p>
+        Phasellus vitae tempor enim. Aliquam mattis nunc at ipsum aliquet, eu pharetra arcu semper. Curabitur cursus eros ut augue placerat
+        rhoncus. Donec bibendum odio interdum libero convallis mattis. Mauris sollicitudin tincidunt mauris non gravida. Praesent eget
+        arcu imperdiet, hendrerit nisl sed, malesuada justo. Ut vitae urna at ex gravida suscipit eget a velit. Maecenas id tellus eget
+        tellus sollicitudin sagittis. Suspendisse consectetur felis eu mi vehicula congue. Vestibulum convallis imperdiet diam sodales
+        efficitur. Fusce porta felis nec feugiat pulvinar. Nullam ultrices ante non mollis sollicitudin. Vivamus rutrum leo tortor,
+        vitae pretium felis placerat ac.
+    </p>
 
     <br />
 
 
-
-    @using (Html.BeginForm("AssignmentSubmission", "Assignments", FormMethod.Post, new { @class = "form-horizontal", role = "form", enctype = "multipart/form-data" }))
+    @if (Model.currentAssignment.SubmissionType == "Text-Submission")
     {
-        @Html.AntiForgeryToken()
+        using (Html.BeginForm("AssignmentSubmission", "Assignments", FormMethod.Post, new { @class = "form-horizontal", role = "form", enctype = "multipart/form-data" }))
+        {
+            @Html.AntiForgeryToken()
 
-        <div class="form-horizontal">
-            <div class="form-group">
-                @Html.LabelFor(model => model.SubmssionText, htmlAttributes: new { @class = "col-md-12" })
+            <div class="form-horizontal">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.SubmssionText, htmlAttributes: new { @class = "col-md-12" })
 
                     @Html.EditorFor(model => model.SubmssionText, new { htmlAttributes = new { @class = "col-md-offset-1 col-md-11", style = "max-width:900px; height:300px" } })
                     @Html.ValidationMessageFor(model => model.SubmssionText, "", new { @class = "text-danger" })
 
-            </div>
+                </div>
 
-            <div class="form-group">
-                <div class="col-md-offset-10 col-md-2">
-                    <input type="submit" value="Submit" class="btn btn-default" />
+                <div class="form-group">
+                    <div class="col-md-offset-10 col-md-2">
+                        <input type="submit" value="Submit" class="btn btn-default" />
+                    </div>
                 </div>
             </div>
-        </div>
+        }
+    }
+    @if (Model.currentAssignment.SubmissionType == "File-Upload")
+    {
+        using (Html.BeginForm("AssignmentSubmission", "Assignments", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <div>
+                <br />
+                @Html.LabelFor(x => x.File)
+                <br />
+                <br />
+                @Html.TextBoxFor(x => x.File, new { type = "file" })
+                <br />
+                @Html.ValidationMessageFor(x => x.File)
+            </div>
+            <br />
+
+            <button class="" col-md-offset-1 col-md-11" type="submit">Upload</button>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+        }
     }
 </main>

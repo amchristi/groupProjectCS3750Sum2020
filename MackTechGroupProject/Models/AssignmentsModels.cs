@@ -59,6 +59,9 @@ namespace MackTechGroupProject.Models
 
         public Assignment currentAssignment { get; set; }
 
+        [Display(Name = "File Submission")]
+        public HttpPostedFileBase File { get; set; }
+
     }
 
     public class ToDoListViewModel

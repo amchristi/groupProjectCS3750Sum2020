@@ -8,6 +8,17 @@
           "build/netstandard1.0/coverlet.collector.targets": {}
         }
       },
+      "EntityFramework/6.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net45/EntityFramework.SqlServer.dll": {},
+          "lib/net45/EntityFramework.dll": {}
+        },
+        "runtime": {
+          "lib/net45/EntityFramework.SqlServer.dll": {},
+          "lib/net45/EntityFramework.dll": {}
+        }
+      },
       "Microsoft.AspNet.Mvc/5.2.4": {
         "type": "package",
         "dependencies": {
@@ -2117,6 +2128,36 @@
         "build/netstandard1.0/coverlet.core.pdb",
         "coverlet.collector.1.0.1.nupkg.sha512",
         "coverlet.collector.nuspec"
+      ]
+    },
+    "EntityFramework/6.2.0": {
+      "sha512": "ptGyXOf26qLrtn+2doAmylIlCxOnBJANwlyyLrXDmqIk9O18IzLWHyxDwwAyhgXkxmbiaA0WNpRy67WRReInBw==",
+      "type": "package",
+      "path": "entityframework/6.2.0",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "content/net40/App.config.transform",
+        "content/net40/Web.config.transform",
+        "entityframework.6.2.0.nupkg.sha512",
+        "entityframework.nuspec",
+        "lib/net40/EntityFramework.SqlServer.dll",
+        "lib/net40/EntityFramework.SqlServer.xml",
+        "lib/net40/EntityFramework.dll",
+        "lib/net40/EntityFramework.xml",
+        "lib/net45/EntityFramework.SqlServer.dll",
+        "lib/net45/EntityFramework.SqlServer.xml",
+        "lib/net45/EntityFramework.dll",
+        "lib/net45/EntityFramework.xml",
+        "tools/EntityFramework.PowerShell.Utility.dll",
+        "tools/EntityFramework.PowerShell.dll",
+        "tools/EntityFramework.psd1",
+        "tools/EntityFramework.psm1",
+        "tools/about_EntityFramework.help.txt",
+        "tools/init.ps1",
+        "tools/install.ps1",
+        "tools/migrate.exe"
       ]
     },
     "Microsoft.AspNet.Mvc/5.2.4": {
@@ -6920,6 +6961,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "EntityFramework >= 6.2.0",
       "MSTest.TestAdapter >= 2.0.0",
       "MSTest.TestFramework >= 2.0.0",
       "MackTechGroupProject >= 1.0.0",
@@ -6929,23 +6971,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\nickb\\.nuget\\packages\\": {},
+    "C:\\Users\\Montana\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\MagicStuff\\Weber State University\\cs3750 Software Engineering 2\\teamProjectCS3750\\groupProjectCS3750Sum2020\\MackTechGroupProject.Tests\\MackTechGroupProject.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\Montana\\Source\\Repos\\groupProjectCS3750Sum2020\\MackTechGroupProject.Tests\\MackTechGroupProject.Tests.csproj",
       "projectName": "MackTechGroupProject.Tests",
-      "projectPath": "D:\\MagicStuff\\Weber State University\\cs3750 Software Engineering 2\\teamProjectCS3750\\groupProjectCS3750Sum2020\\MackTechGroupProject.Tests\\MackTechGroupProject.Tests.csproj",
-      "packagesPath": "C:\\Users\\nickb\\.nuget\\packages\\",
-      "outputPath": "D:\\MagicStuff\\Weber State University\\cs3750 Software Engineering 2\\teamProjectCS3750\\groupProjectCS3750Sum2020\\MackTechGroupProject.Tests\\obj\\",
+      "projectPath": "C:\\Users\\Montana\\Source\\Repos\\groupProjectCS3750Sum2020\\MackTechGroupProject.Tests\\MackTechGroupProject.Tests.csproj",
+      "packagesPath": "C:\\Users\\Montana\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Montana\\Source\\Repos\\groupProjectCS3750Sum2020\\MackTechGroupProject.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\nickb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Montana\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6958,8 +7000,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "D:\\MagicStuff\\Weber State University\\cs3750 Software Engineering 2\\teamProjectCS3750\\groupProjectCS3750Sum2020\\MackTechGroupProject\\MackTechGroupProject.csproj": {
-              "projectPath": "D:\\MagicStuff\\Weber State University\\cs3750 Software Engineering 2\\teamProjectCS3750\\groupProjectCS3750Sum2020\\MackTechGroupProject\\MackTechGroupProject.csproj"
+            "C:\\Users\\Montana\\Source\\Repos\\groupProjectCS3750Sum2020\\MackTechGroupProject\\MackTechGroupProject.csproj": {
+              "projectPath": "C:\\Users\\Montana\\Source\\Repos\\groupProjectCS3750Sum2020\\MackTechGroupProject\\MackTechGroupProject.csproj"
             }
           }
         }
@@ -6973,6 +7015,10 @@
     "frameworks": {
       "netcoreapp3.1": {
         "dependencies": {
+          "EntityFramework": {
+            "target": "Package",
+            "version": "[6.2.0, )"
+          },
           "MSTest.TestAdapter": {
             "target": "Package",
             "version": "[2.0.0, )"
@@ -7004,22 +7050,26 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[3.1.2, 3.1.2]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
       }
     }
   },
   "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'EntityFramework 6.2.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "EntityFramework",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
     {
       "code": "NU1701",
       "level": "Warning",
