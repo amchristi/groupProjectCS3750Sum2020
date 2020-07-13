@@ -178,10 +178,10 @@ namespace MackTechGroupProject.Controllers
             var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
 
             //Select the specific assignment from assignments Table
-            var selectedAssignment = context.Assignments.Where(x => x.AssignmentId == selectedAssignmentId).FirstOrDefault();
-
-            //Get a list of submitted assignments from the SubmissionGrades Table
-            var submittedAssignments = context.SubmissionGrades.Where(x => x.Assignment == selectedAssignment).ToList();
+            var selectedAssignment = context.Assignments.Where(x => x.AssignmentId == selectedAssignmentId).Include(x => x.Course).FirstOrDefault();
+            
+            //Get a list of submitted assignments from the SubmissionGrades Table based on the specific assignment
+            List<SubmissionGrades> submittedAssignments = context.SubmissionGrades.Where(x => x.Assignment == selectedAssignment).ToList();
 
             //set ViewModel list to defined list above
             var gradeSubmittedAssignmentsViewModel = new gradeSubmittedAssignmentsViewModel()
@@ -189,9 +189,29 @@ namespace MackTechGroupProject.Controllers
                 SubmittedAssignments = submittedAssignments,
             };
 
-            return View(gradeSubmittedAssignmentsViewModel);
+            return View(submittedAssignments);
 
         }
+
+        //public ActionResult blah()
+        //{
+        //    var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
+        //    var userId = User.Identity.GetUserId();
+
+        //    // query enrollments for a list of all enrollments and include assignments
+        //    var currentEnrollmentsWithAssignments = context.Enrollments.Where(x => x.User.Id == userId).Include(x => x.User).Include(x => x.Course).Include("Course.Assignments").ToList();
+
+        //    // get allAssignments in a list to pass to AllAssignmentsViewModel
+        //    var allAssignments = currentEnrollmentsWithAssignments.Select(x => x.Course).SelectMany(y => y.Assignments).ToList();
+
+        //    // set ViewModel list to defined list above
+        //    var allAssignmentsViewModel = new AllAssignmentsViewModel()
+        //    {
+        //        AllAssignments = allAssignments
+        //    };
+
+        //    return View(allAssignmentsViewModel);
+        //}
 
 
     }

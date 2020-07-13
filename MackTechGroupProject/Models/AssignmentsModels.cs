@@ -88,6 +88,6 @@ namespace MackTechGroupProject.Models
 
     public class gradeSubmittedAssignmentsViewModel
     {
-        public IEnumerable<SubmissionGrades> SubmittedAssignments { get; set; }
+        public List<SubmissionGrades> SubmittedAssignments { get; set; }
     }
 }
