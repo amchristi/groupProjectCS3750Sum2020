@@ -5,7 +5,7 @@
     ViewBag.Title = "View All Assignments";
 }
 
-<h1>Current Assignments</h1>
+<h1>Current Assignments </h1>
 
 
 <!DOCTYPE html>
@@ -16,8 +16,6 @@
     <title>Current Assignments</title>
 </head>
 <body>
-
-    <p>Assignment list goes here</p>
 
 
     <table class="table">
@@ -37,31 +35,50 @@
             <th>
                 @Html.DisplayNameFor(model => model.AllAssignments.FirstOrDefault().SubmissionType)
             </th>
+            <th>
+                @*Place holder for grade or submit assignment button*@
+            </th>
         </tr>
 
 
         @foreach (var item in Model.AllAssignments)
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.AssignmentTitle)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.AssignmentDescription)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Points)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.DueDate)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.SubmissionType)
-                </td>
-                @*<td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.Course.CourseId })
-                </td>*@
-            </tr>
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AssignmentTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AssignmentDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Points)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DueDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SubmissionType)
+        </td>
+        @*<td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.Course.CourseId })
+        </td>*@
+        @if (this.User.IsInRole("Student"))
+        {
+            <td>
+                <a class="btn btn-default" href="@Url.Action("AssignmentSubmission", "Assignments", new { assignmentId = item.AssignmentId })" target="_blank">
+                    Submit Assignment
+                </a>
+            </td>
+        }
+        @if (this.User.IsInRole("Instructor"))
+        {
+            <td>
+                <a class="btn btn-default" href="@Url.Action("GradeAssignment", "Assignments", new { id = item.AssignmentId })">
+                    Grade Assignment
+                </a>
+            </td>
+        }
+    </tr>
         }
 
     </table>

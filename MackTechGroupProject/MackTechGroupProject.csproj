@@ -371,6 +371,7 @@
     <Content Include="Views\Courses\TuitionPayment.cshtml" />
     <Content Include="Views\Assignments\ViewAllAssignments.cshtml" />
     <Content Include="Views\Assignments\AssignmentSubmission.cshtml" />
+    <Content Include="Views\Assignments\GradeAssignment.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

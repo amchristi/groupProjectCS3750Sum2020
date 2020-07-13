@@ -35,29 +35,49 @@
             <th>
                 @Html.DisplayNameFor(model => model.SubmissionType)
             </th>
+            <th>
+                @*Space Holder*@
+            </th>
+          
         </tr>
     
         
         @foreach (var item in Model)
         {
-        <tr>
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AssignmentTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AssignmentDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Points)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DueDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SubmissionType)
+        </td>
+        @if (this.User.IsInRole("Student"))
+        {
             <td>
-                @Html.DisplayFor(modelItem => item.AssignmentTitle)
+                <a class="btn btn-default" href="@Url.Action("AssignmentSubmission", "Assignments", new { assignmentId = item.AssignmentId })" target="_blank">
+                    Submit Assignment
+                </a>
             </td>
+        }
+        @if (this.User.IsInRole("Instructor"))
+        {
             <td>
-                @Html.DisplayFor(modelItem => item.AssignmentDescription)
+                <a class="btn btn-default" href="@Url.Action("GradeAssignment", "Assignments", new { id = item.AssignmentId })">
+                Grade Assignment
+                </a>
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Points)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DueDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SubmissionType)
-            </td>
+        }
 
-        </tr>
+    </tr>
         }
      
     </table>

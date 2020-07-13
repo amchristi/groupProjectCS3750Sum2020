@@ -1,0 +1,87 @@
+@model IEnumerable<MackTechGroupProject.Models.SubmissionGrades>
+
+@{
+    ViewBag.Title = "GradeAssignment";
+}
+
+<h1>Grade Assignment</h1>
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Current Assignments</title>
+</head>
+<body>
+    <table class="table">
+        <tr>
+            @*
+        <th>
+            @Html.DisplayNameFor(model => model.StudentFirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StudentLastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SubmissionDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Grade)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SubmissionType)
+        </th>
+            *@
+            <th>
+                @Html.DisplayNameFor(model => model.SubmissionDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TextSubmission)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FileSubmission)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Grade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AssignmentId)
+            </th>
+
+
+
+        </tr>
+
+        @*
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AssignmentTitle)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AssignmentDescription)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Points)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DueDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SubmissionType)
+                </td>
+       
+
+            </tr>
+        }
+        *@
+
+    </table>
+
+
+</body>
+</html>
+

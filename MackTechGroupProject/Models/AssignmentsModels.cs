@@ -85,4 +85,9 @@ namespace MackTechGroupProject.Models
         public byte[] FileSubmission { get; set; }
         public double? Grade { get; set; }
     }
+
+    public class gradeSubmittedAssignmentsViewModel
+    {
+        public IEnumerable<SubmissionGrades> SubmittedAssignments { get; set; }
+    }
 }
