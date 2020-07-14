@@ -6930,10 +6930,20 @@ div.ToDoCheckBox {
     width: 800px;
 }
 
-div.assignmentInstructions {
-    font-weight: bold; 
-    padding: 50px;
-    margin: 50px
+div.assignmentTitle {
+    padding-top: 25px;
+    padding-bottom: 15px;
+}
+
+div.assignmentDescription {
+    padding-bottom: 25px;
+}
+
+div.assignmentHeader {
+    border-top: solid 1px #5900B3;
+    border-bottom: solid 1px #5900B3;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 /***************************        Nick's edits for the Calendar            *************************/
 /*
