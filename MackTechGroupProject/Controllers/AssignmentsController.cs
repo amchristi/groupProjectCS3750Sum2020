@@ -172,6 +172,7 @@ namespace MackTechGroupProject.Controllers
         //    return new SelectList(instructorCourses, "Value", "Text");
         //}
 
+
         public ActionResult GradeAssignment(int id)
         {
             var selectedAssignmentId = id;
@@ -179,39 +180,40 @@ namespace MackTechGroupProject.Controllers
 
             //Select the specific assignment from assignments Table
             var selectedAssignment = context.Assignments.Where(x => x.AssignmentId == selectedAssignmentId).Include(x => x.Course).FirstOrDefault();
-            
+
             //Get a list of submitted assignments from the SubmissionGrades Table based on the specific assignment
-            List<SubmissionGrades> submittedAssignments = context.SubmissionGrades.Where(x => x.Assignment == selectedAssignment).ToList();
+            //List<SubmissionGrades> submittedAssignments = context.SubmissionGrades.Where(x => x.Assignment == selectedAssignment).Include(x => x.User.Id).ToList();
+            var allSubmissionGrades = context.SubmissionGrades.Include(x => x.Assignment).Include(x => x.User).Include(x => x.User).ToList();
+
+            var allSubmissionsOfSelected = allSubmissionGrades.Where(x => x.Assignment == selectedAssignment).ToList();
 
             //set ViewModel list to defined list above
             var gradeSubmittedAssignmentsViewModel = new gradeSubmittedAssignmentsViewModel()
             {
-                SubmittedAssignments = submittedAssignments,
+                SubmittedAssignments = allSubmissionsOfSelected,
             };
 
-            return View(submittedAssignments);
+            return View(gradeSubmittedAssignmentsViewModel);
 
         }
 
-        //public ActionResult blah()
-        //{
-        //    var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
-        //    var userId = User.Identity.GetUserId();
+        public ActionResult StudentSubmission(int id)
+        {
+            var selectedSubmissionId = id;
+            var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
 
-        //    // query enrollments for a list of all enrollments and include assignments
-        //    var currentEnrollmentsWithAssignments = context.Enrollments.Where(x => x.User.Id == userId).Include(x => x.User).Include(x => x.Course).Include("Course.Assignments").ToList();
+            //Select the specific submission from submissions Table
+            var selectedSubmission = context.SubmissionGrades.Where(x => x.ID == selectedSubmissionId).Include(x => x.Assignment).Include(x => x.User).ToList();
 
-        //    // get allAssignments in a list to pass to AllAssignmentsViewModel
-        //    var allAssignments = currentEnrollmentsWithAssignments.Select(x => x.Course).SelectMany(y => y.Assignments).ToList();
+            var StudentSubmissionViewModel = new StudentSubmissionViewModel()
+            {
+                SelectedStudentSubmission = selectedSubmission,
+            };
 
-        //    // set ViewModel list to defined list above
-        //    var allAssignmentsViewModel = new AllAssignmentsViewModel()
-        //    {
-        //        AllAssignments = allAssignments
-        //    };
+            return View(StudentSubmissionViewModel);
 
-        //    return View(allAssignmentsViewModel);
-        //}
+        }
+
 
 
     }

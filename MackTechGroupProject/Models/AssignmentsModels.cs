@@ -90,4 +90,9 @@ namespace MackTechGroupProject.Models
     {
         public List<SubmissionGrades> SubmittedAssignments { get; set; }
     }
+
+    public class StudentSubmissionViewModel
+    {
+        public List<SubmissionGrades> SelectedStudentSubmission { get; set; }
+    }
 }

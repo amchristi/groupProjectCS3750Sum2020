@@ -1,0 +1,31 @@
+@model MackTechGroupProject.Models.StudentSubmissionViewModel
+
+
+@{
+    ViewBag.Title = "GradeAssignment";
+}
+
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Student Submission</title>
+</head>
+
+<h1>
+    @Html.DisplayFor(model => model.SelectedStudentSubmission.FirstOrDefault().User.FirstName)
+    @Html.DisplayFor(model => model.SelectedStudentSubmission.FirstOrDefault().User.LastName)
+    
+</h1>
+<h2>
+    @Html.DisplayFor(model => model.SelectedStudentSubmission.FirstOrDefault().Assignment.AssignmentTitle)
+</h2>
+<body>
+    
+</body>
+</html>
+

@@ -1,12 +1,11 @@
-
-@model MackTechGroupProject.Models.gradeSubmittedAssignmentsViewModel
+@model MackTechGroupProject.Models.gradeSubmittedAssignmentsViewModel 
 
 
 @{
     ViewBag.Title = "GradeAssignment";
 }
 
-<h1>Grade Assignment</h1>
+
 
 
 <!DOCTYPE html>
@@ -16,70 +15,65 @@
     <meta name="viewport" content="width=device-width" />
     <title>Current Assignments</title>
 </head>
+
+<h1>@Html.DisplayFor(model => model.SubmittedAssignments.FirstOrDefault().Assignment.AssignmentTitle)</h1>
 <body>
     <table class="table">
         <tr>
             @*
-                <th>
-                    @Html.DisplayNameFor(model => model.StudentFirstName)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.StudentLastName)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.SubmissionDate)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Grade)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.SubmissionType)
-                </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SubmittedAssignments.FirstOrDefault().User.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SubmittedAssignments.FirstOrDefault().User.LastName)
+        </th>
             *@
             <th>
-                @Html.DisplayNameFor(model => model.SubmissionDate)
+                Student Name
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.TextSubmission)
+                @Html.DisplayNameFor(model => model.SubmittedAssignments.FirstOrDefault().SubmissionDate)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.FileSubmission)
+                @Html.DisplayNameFor(model => model.SubmittedAssignments.FirstOrDefault().Grade)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Grade)
+                @Html.DisplayNameFor(model => model.SubmittedAssignments.FirstOrDefault().Assignment.Points)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.AssignmentId)
+                @*Space holder for view button*@
             </th>
-
 
 
         </tr>
 
-        @*
-            @foreach (var item in Model)
+        
+            @foreach (var item in Model.SubmittedAssignments)
             {
                 <tr>
                     <td>
-                        @Html.DisplayFor(modelItem => item.AssignmentTitle)
+                        @Html.DisplayFor(modelItem => item.User.FirstName)
+                        @Html.DisplayFor(modelItem => item.User.LastName)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.AssignmentDescription)
+                        @Html.DisplayFor(modelItem => item.SubmissionDate)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.Points)
+                        @Html.DisplayFor(modelItem => item.Grade)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.DueDate)
+                        @Html.DisplayFor(modelItem => item.Assignment.Points)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.SubmissionType)
+                        <a class="btn btn-default" href="@Url.Action("StudentSubmission", "Assignments", new { id = item.ID })">
+                            View Submission
+                        </a>
                     </td>
 
 
                 </tr>
             }
-        *@
+        
 
     </table>
 
