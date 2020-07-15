@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Montana\\Source\\Repos\\groupProjectCS3750Sum2020\\MackTechGroupProject.Tests\\MackTechGroupProject.Tests.csproj": {}
+    "C:\\Users\\Montana\\source\\repos\\groupProjectCS3750Sum2020\\MackTechGroupProject.Tests\\MackTechGroupProject.Tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Montana\\Source\\Repos\\groupProjectCS3750Sum2020\\MackTechGroupProject.Tests\\MackTechGroupProject.Tests.csproj": {
+    "C:\\Users\\Montana\\source\\repos\\groupProjectCS3750Sum2020\\MackTechGroupProject.Tests\\MackTechGroupProject.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Montana\\Source\\Repos\\groupProjectCS3750Sum2020\\MackTechGroupProject.Tests\\MackTechGroupProject.Tests.csproj",
+        "projectUniqueName": "C:\\Users\\Montana\\source\\repos\\groupProjectCS3750Sum2020\\MackTechGroupProject.Tests\\MackTechGroupProject.Tests.csproj",
         "projectName": "MackTechGroupProject.Tests",
-        "projectPath": "C:\\Users\\Montana\\Source\\Repos\\groupProjectCS3750Sum2020\\MackTechGroupProject.Tests\\MackTechGroupProject.Tests.csproj",
+        "projectPath": "C:\\Users\\Montana\\source\\repos\\groupProjectCS3750Sum2020\\MackTechGroupProject.Tests\\MackTechGroupProject.Tests.csproj",
         "packagesPath": "C:\\Users\\Montana\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Montana\\Source\\Repos\\groupProjectCS3750Sum2020\\MackTechGroupProject.Tests\\obj\\",
+        "outputPath": "C:\\Users\\Montana\\source\\repos\\groupProjectCS3750Sum2020\\MackTechGroupProject.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -30,8 +30,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\Montana\\Source\\Repos\\groupProjectCS3750Sum2020\\MackTechGroupProject\\MackTechGroupProject.csproj": {
-                "projectPath": "C:\\Users\\Montana\\Source\\Repos\\groupProjectCS3750Sum2020\\MackTechGroupProject\\MackTechGroupProject.csproj"
+              "C:\\Users\\Montana\\source\\repos\\groupProjectCS3750Sum2020\\MackTechGroupProject\\MackTechGroupProject.csproj": {
+                "projectPath": "C:\\Users\\Montana\\source\\repos\\groupProjectCS3750Sum2020\\MackTechGroupProject\\MackTechGroupProject.csproj"
               }
             }
           }
@@ -89,12 +89,12 @@
         }
       }
     },
-    "C:\\Users\\Montana\\Source\\Repos\\groupProjectCS3750Sum2020\\MackTechGroupProject\\MackTechGroupProject.csproj": {
+    "C:\\Users\\Montana\\source\\repos\\groupProjectCS3750Sum2020\\MackTechGroupProject\\MackTechGroupProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Montana\\Source\\Repos\\groupProjectCS3750Sum2020\\MackTechGroupProject\\MackTechGroupProject.csproj",
+        "projectUniqueName": "C:\\Users\\Montana\\source\\repos\\groupProjectCS3750Sum2020\\MackTechGroupProject\\MackTechGroupProject.csproj",
         "projectName": "MackTechGroupProject",
-        "projectPath": "C:\\Users\\Montana\\Source\\Repos\\groupProjectCS3750Sum2020\\MackTechGroupProject\\MackTechGroupProject.csproj"
+        "projectPath": "C:\\Users\\Montana\\source\\repos\\groupProjectCS3750Sum2020\\MackTechGroupProject\\MackTechGroupProject.csproj"
       },
       "frameworks": {
         "net472": {}

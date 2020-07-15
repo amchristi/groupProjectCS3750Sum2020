@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MackTechGroupProject", "MackTechGroupProject\MackTechGroupProject.csproj", "{68BB2547-5AC6-47D1-9037-103D8041AE7B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MackTechGroupProject.Tests", "MackTechGroupProject.Tests\MackTechGroupProject.Tests.csproj", "{333869A2-E5F8-46C2-9076-87AB05792423}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MackTechTests", "MackTechTests\MackTechTests.csproj", "{F7FC5EBA-AB3A-4928-84A2-7EBADD4D3AAC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{68BB2547-5AC6-47D1-9037-103D8041AE7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68BB2547-5AC6-47D1-9037-103D8041AE7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68BB2547-5AC6-47D1-9037-103D8041AE7B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{333869A2-E5F8-46C2-9076-87AB05792423}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{333869A2-E5F8-46C2-9076-87AB05792423}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{333869A2-E5F8-46C2-9076-87AB05792423}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{333869A2-E5F8-46C2-9076-87AB05792423}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7FC5EBA-AB3A-4928-84A2-7EBADD4D3AAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7FC5EBA-AB3A-4928-84A2-7EBADD4D3AAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7FC5EBA-AB3A-4928-84A2-7EBADD4D3AAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7FC5EBA-AB3A-4928-84A2-7EBADD4D3AAC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
