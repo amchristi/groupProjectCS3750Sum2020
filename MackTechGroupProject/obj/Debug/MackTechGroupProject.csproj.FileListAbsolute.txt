@@ -554,3 +554,4 @@ C:\Users\Montana\Source\Repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj
 C:\Users\Montana\Source\Repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.csproj.CopyComplete
 C:\Users\Montana\Source\Repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.dll
 C:\Users\Montana\Source\Repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.pdb
+C:\Users\Montana\Source\Repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.csprojAssemblyReference.cache

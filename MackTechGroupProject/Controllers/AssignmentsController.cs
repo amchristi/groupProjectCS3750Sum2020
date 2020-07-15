@@ -7,7 +7,7 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using System.Data.Entity;
-
+using System.IO;
 
 namespace MackTechGroupProject.Controllers
 {
@@ -109,18 +109,19 @@ namespace MackTechGroupProject.Controllers
         }
 
         [HttpPost]
-        public ActionResult AssignmentSubmission(SubmitAssignmentModel model)
+        public ActionResult AssignmentSubmission(HttpPostedFileBase File)
         {
-            if (!ModelState.IsValid)
+
+            if(File != null)
             {
-                return View(model);
+                string path = Server.MapPath("~/Content/fileAssignments/");
+                if(!Directory.Exists(path))
+                {
+                    Directory.CreateDirectory(path);
+                }
+                File.SaveAs(path + Path.GetFileName(File.FileName));
+                ViewBag.Message = "File uploaded successfully";
             }
-
-            byte[] uploadedFile = new byte[model.File.InputStream.Length];
-            model.File.InputStream.Read(uploadedFile, 0, uploadedFile.Length);
-
-            // now you could pass the byte array to your model and store wherever 
-            // you intended to store it
 
             return RedirectToAction("Index", "Home");
         }
