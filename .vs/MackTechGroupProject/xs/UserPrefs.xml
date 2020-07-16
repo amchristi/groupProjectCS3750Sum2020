@@ -1,17 +1,19 @@
 ﻿<Properties StartupConfiguration="{68BB2547-5AC6-47D1-9037-103D8041AE7B}|">
   <MonoDevelop.Ide.ItemProperties.MackTechGroupProject PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="MackTechGroupProject/Views/Assignments/GradeAssignment.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MackTechGroupProject/Views/Assignments/StudentSubmission.cshtml">
     <Files>
       <File FileName="MackTechGroupProject/Views/Assignments/ViewAllAssignments.cshtml" Line="76" Column="1" IsPinned="True" />
       <File FileName="MackTechGroupProject/Controllers/AssignmentsController.cs" Line="211" Column="1" IsPinned="True" />
-      <File FileName="MackTechGroupProject/Views/Assignments/GradeAssignment.cshtml" Line="8" Column="1" />
+      <File FileName="MackTechGroupProject/Views/Assignments/StudentSubmission.cshtml" Line="6" Column="2" />
+      <File FileName="MackTechGroupProject/Views/Assignments/GradeAssignment.cshtml" Line="56" Column="17" />
       <File FileName="MackTechGroupProject/Models/AssignmentsModels.cs" Line="92" Column="6" />
-      <File FileName="MackTechGroupProject/Views/Assignments/AddAssignment.cshtml" />
-      <File FileName="MackTechGroupProject/Views/Courses/CourseDetail.cshtml" />
+      <File FileName="MackTechGroupProject/Views/Assignments/AddAssignment.cshtml" Line="1" Column="1" />
+      <File FileName="MackTechGroupProject/Views/Courses/CourseDetail.cshtml" Line="1" Column="1" />
       <File FileName="MackTechGroupProject/Views/Assignments/ViewAssignments.cshtml" Line="81" Column="18" />
-      <File FileName="MackTechGroupProject/Views/Assignments/Assignment1.cshtml" />
+      <File FileName="MackTechGroupProject/Views/Assignments/Assignment1.cshtml" Line="1" Column="1" />
       <File FileName="MackTechGroupProject/Controllers/CoursesController.cs" Line="1" Column="1" />
-      <File FileName="MackTechGroupProject/Views/Assignments/StudentSubmission.cshtml" Line="1" Column="1" />
+      <File FileName="MackTechGroupProject/Views/Account/ProfileInfoEdit.cshtml" Line="31" Column="1" />
+      <File FileName="MackTechGroupProject/Views/Account/Register.cshtml" Line="55" Column="15" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -22,8 +24,9 @@
               <Node name="Controllers" expanded="True" />
               <Node name="Models" expanded="True" />
               <Node name="Views" expanded="True">
+                <Node name="Account" expanded="True" />
                 <Node name="Assignments" expanded="True">
-                  <Node name="GradeAssignment.cshtml" selected="True" />
+                  <Node name="StudentSubmission.cshtml" selected="True" />
                 </Node>
                 <Node name="Courses" expanded="True" />
                 <Node name="Home" expanded="True" />

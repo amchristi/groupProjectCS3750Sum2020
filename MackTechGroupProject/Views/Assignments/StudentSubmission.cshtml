@@ -5,9 +5,6 @@
     ViewBag.Title = "GradeAssignment";
 }
 
-
-
-
 <!DOCTYPE html>
 
 <html>
@@ -25,6 +22,16 @@
     @Html.DisplayFor(model => model.SelectedStudentSubmission.FirstOrDefault().Assignment.AssignmentTitle)
 </h2>
 <body>
+    <table>
+        <tr>
+            <th> Score:  </th>
+            <th>@Html.DisplayFor(model => model.SelectedStudentSubmission.FirstOrDefault().Grade) / @Html.DisplayFor(model => model.SelectedStudentSubmission.FirstOrDefault().Assignment.Points)</th>
+        </tr>
+    </table>
+
+    <h3>Student Text Submission</h3>
+
+        @Html.DisplayFor(model => model.SelectedStudentSubmission.FirstOrDefault().TextSubmission)
     
 </body>
 </html>

@@ -20,14 +20,7 @@
 <body>
     <table class="table">
         <tr>
-            @*
-        <th>
-            @Html.DisplayNameFor(model => model.SubmittedAssignments.FirstOrDefault().User.FirstName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.SubmittedAssignments.FirstOrDefault().User.LastName)
-        </th>
-            *@
+
             <th>
                 Student Name
             </th>
@@ -50,28 +43,41 @@
         
             @foreach (var item in Model.SubmittedAssignments)
             {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.User.FirstName)
-                        @Html.DisplayFor(modelItem => item.User.LastName)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.SubmissionDate)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Grade)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Assignment.Points)
-                    </td>
-                    <td>
-                        <a class="btn btn-default" href="@Url.Action("StudentSubmission", "Assignments", new { id = item.ID })">
-                            View Submission
-                        </a>
-                    </td>
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.User.FirstName)
+            @Html.DisplayFor(modelItem => item.User.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SubmissionDate)
+        </td>
+        @if (item.Grade != null)
+        {
+            <td>
+                @Html.DisplayFor(modelItem => item.Grade)
+            </td>
+        }
+        @if (item.Grade == null)
+        {
+    <td>
+        @using (Html.BeginForm("GradeAssignment", "Assignment", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+        {
+            @Html.TextBoxFor(m => item.Grade, new { @class = "form-control" })
+        }
+    </td>
+        }
+
+        <td>
+            @Html.DisplayFor(modelItem => item.Assignment.Points)
+        </td>
+        <td>
+            <a class="btn btn-default" href="@Url.Action("StudentSubmission", "Assignments", new { id = item.ID })">
+                View Submission
+            </a>
+        </td>
 
 
-                </tr>
+    </tr>
             }
         
 
