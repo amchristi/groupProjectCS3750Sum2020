@@ -12,6 +12,7 @@ using System.Net.Http.Headers;
 using System.Net.Http;
 using Newtonsoft.Json.Linq;
 using Stripe;
+using MackTechGroupProject.BusinessLogic;
 
 namespace MackTechGroupProject.Controllers
 {
@@ -82,33 +83,17 @@ namespace MackTechGroupProject.Controllers
 
         public ActionResult RegisterForCourse(int id)
         {
-            String userId = User.Identity.GetUserId();
-            var selectedCourseId = id;
-
-            var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
-            var currentStudent = context.Users.Where(x => x.Id == userId).FirstOrDefault();
-            var selectedCourse = context.Courses.Where(x => x.CourseId == selectedCourseId).FirstOrDefault();
-
             if (ModelState.IsValid)
             {
-                var studentEnrollment = new Enrollment
+
+                String userId = User.Identity.GetUserId();
+                var selectedCourseId = id;
+                var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
+
+                Boolean result = RegistrationService.AddCourseService(userId, selectedCourseId, currentEnrollments, context);
+
+                if (result)
                 {
-                    Course = selectedCourse,
-                    User = currentStudent
-                };
-
-                //var currentEnrollments = context.Enrollments.Include(x => x.User).Include(c => c.Course).Where(s => s.User.Id == userId).ToList();
-
-                //check to see if the course already exists in student's currentEnrollments
-                bool hasCourse = currentEnrollments.Any(x => x.Course.CourseId == id);
-
-                if (!hasCourse)
-                {
-                    context.Enrollments.Add(studentEnrollment);
-                    context.SaveChanges();
-
-                    currentEnrollments.Add(studentEnrollment);
-
                     return RedirectToAction("StudentAccount", "Courses");
                 }
                 else
@@ -129,17 +114,7 @@ namespace MackTechGroupProject.Controllers
 
             var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
 
-            // query current enrollments list and delete selected course where the selectedCourseId == x.Course.CourseI
-            var currentEnrollmentList = currentEnrollments.Where(x => x.EnrollmentId == selectedEnrollmentId).FirstOrDefault();
-            
-            //currentEnrollments.Remove(selectedCourse);
-            currentEnrollments.Remove(currentEnrollmentList);
-
-            //DELETE from database as well
-            var currentEnrollmentDB = context.Enrollments.Where(x => x.EnrollmentId == selectedEnrollmentId).FirstOrDefault();
-            context.Enrollments.Remove(currentEnrollmentDB);
-            context.SaveChanges();
-            
+            RegistrationService.DeleteCourseService(selectedEnrollmentId, currentEnrollments, context);
 
             return RedirectToAction("StudentAccount", "Courses");
         }

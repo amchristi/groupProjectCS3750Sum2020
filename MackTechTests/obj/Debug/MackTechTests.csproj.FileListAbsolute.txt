@@ -99,3 +99,11 @@ C:\Users\Montana\source\repos\groupProjectCS3750Sum2020\MackTechTests\obj\Debug\
 C:\Users\Montana\source\repos\groupProjectCS3750Sum2020\MackTechTests\obj\Debug\MackTechTests.csproj.CopyComplete
 C:\Users\Montana\source\repos\groupProjectCS3750Sum2020\MackTechTests\obj\Debug\MackTechTests.dll
 C:\Users\Montana\source\repos\groupProjectCS3750Sum2020\MackTechTests\obj\Debug\MackTechTests.pdb
+C:\Users\Montana\Source\Repos\groupProjectCS3750Sum2020\MackTechTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Montana\Source\Repos\groupProjectCS3750Sum2020\MackTechTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Montana\Source\Repos\groupProjectCS3750Sum2020\MackTechTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Montana\Source\Repos\groupProjectCS3750Sum2020\MackTechTests\bin\Debug\WebGrease.dll
+C:\Users\Montana\Source\Repos\groupProjectCS3750Sum2020\MackTechTests\bin\Debug\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Montana\Source\Repos\groupProjectCS3750Sum2020\MackTechTests\bin\Debug\Antlr3.Runtime.dll
+C:\Users\Montana\Source\Repos\groupProjectCS3750Sum2020\MackTechTests\bin\Debug\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Montana\Source\Repos\groupProjectCS3750Sum2020\MackTechTests\bin\Debug\Antlr3.Runtime.pdb
