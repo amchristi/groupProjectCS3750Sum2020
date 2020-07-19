@@ -18,6 +18,7 @@ namespace MackTechGroupProject.Models
         [DataType(DataType.Text)]
         public int Points { get; set; }
 
+        //get rid if this
         [DataType(DataType.Text)]
         public int Score { get; set; }
 

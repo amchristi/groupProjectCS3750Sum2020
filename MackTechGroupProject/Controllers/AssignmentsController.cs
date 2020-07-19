@@ -191,11 +191,10 @@ namespace MackTechGroupProject.Controllers
             //set ViewModel list to defined list above
             var gradeSubmittedAssignmentsViewModel = new gradeSubmittedAssignmentsViewModel()
             {
-                SubmittedAssignments = allSubmissionsOfSelected,
+                SubmittedAssignments = allSubmissionsOfSelected
             };
 
             return View(gradeSubmittedAssignmentsViewModel);
-
         }
 
         public ActionResult StudentSubmission(int id)
@@ -212,10 +211,29 @@ namespace MackTechGroupProject.Controllers
             };
 
             return View(StudentSubmissionViewModel);
-
         }
 
+        public ActionResult SubmitStudentGrade(int id, double grade)
+        {
+            var newGrade = grade;
+            var selectedSubmissionId = id;
+            var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
 
+            var selectedSubmission = context.SubmissionGrades.Where(x => x.ID == selectedSubmissionId).Include(x => x.Assignment).Include(x => x.User).ToList();
+            var assignmentId = selectedSubmission.FirstOrDefault().Assignment.AssignmentId;
 
+            // if the submission exists in the database
+            if (context.SubmissionGrades.Any(x => x.ID == selectedSubmissionId))
+            {
+                // set the grade to what the instructor types
+                var submissionGrades = new SubmissionGrades()
+                {
+                    Grade = newGrade
+                };
+                context.SaveChanges();
+            }
+
+            return RedirectToAction("GradeAssignment", "Assignment", new { id = assignmentId });
+        }
     }
 }
