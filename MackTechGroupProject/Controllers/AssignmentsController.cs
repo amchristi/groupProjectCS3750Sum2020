@@ -213,6 +213,33 @@ namespace MackTechGroupProject.Controllers
             return View(StudentSubmissionViewModel);
         }
 
+
+
+        [AcceptVerbs(HttpVerbs.Post)]
+        public ActionResult StudentSubmission(int id, FormCollection formValues)
+        {
+            var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
+
+            //Get the current StudentSubmission for the instructor to grade
+            var selectedSubmissionId = id;
+            var selectedSubmission = context.SubmissionGrades.Where(x => x.ID == selectedSubmissionId).Include(x => x.Assignment).Include(x => x.User).ToList();
+
+            //Do we need the assignment Id?
+            //var assignmentId = selectedSubmission.FirstOrDefault().Assignment.AssignmentId;
+
+
+            //Update selected Submission with new grade
+            selectedSubmission.FirstOrDefault().Grade = Convert.ToDouble(Request.Form["Grade"]);
+
+            //save changes to database
+            context.SaveChanges();
+
+            //changed redirect to land on the list of students to grade, rather than the same assignemnt
+            return RedirectToAction("GradeAssignment", new { id = selectedSubmission.FirstOrDefault().Assignment.AssignmentId });
+        }
+
+
+
         public ActionResult SubmitStudentGrade(int id, double grade)
         {
             var newGrade = grade;
@@ -235,5 +262,6 @@ namespace MackTechGroupProject.Controllers
 
             return RedirectToAction("GradeAssignment", "Assignment", new { id = assignmentId });
         }
+
     }
 }

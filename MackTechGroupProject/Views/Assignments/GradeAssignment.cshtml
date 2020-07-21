@@ -73,6 +73,17 @@
             </tr>
            }
     </table>
+
+
+    @*Button for convience purposes. Redirect the instructor back to the assignments list, not working, needs to be able to query the current course Id*@
+    @*
+    <p>
+        <a class="btn btn-default" href="@Url.Action("ViewAssignments", "Assignments",
+                                        new { id = @Html.DisplayNameFor(model => model.SubmittedAssignments.FirstOrDefault().Assignment.Course) })">
+            Back to Assignments List
+        </a>
+    </p>
+    *@
 </body>
 </html>
 

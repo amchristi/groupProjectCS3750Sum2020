@@ -22,45 +22,39 @@
     @Html.DisplayFor(model => model.SelectedStudentSubmission.FirstOrDefault().Assignment.AssignmentTitle)
 </h2>
 <body>
-    <table>
-        <tr>
-            <th>
-                Score:
-            </th>
-            @if (Model.SelectedStudentSubmission.FirstOrDefault().Grade != null)
-            {
-                <th>
-                    @Html.DisplayFor(model => model.SelectedStudentSubmission.FirstOrDefault().Grade) /
-                    @Html.DisplayFor(model => model.SelectedStudentSubmission.FirstOrDefault().Assignment.Points)
-                </th>
-            }
-            @if (Model.SelectedStudentSubmission.FirstOrDefault().Grade == null)
-            {
-                <th>
-                    @using (Html.BeginForm("GradeAssignment", "Assignment", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
-                    {
-                        @Html.TextBoxFor(model => model.SelectedStudentSubmission.FirstOrDefault().Grade, new { @class = "form-control" })
-                    }
-                </th>
-                <th>
-                    Points Possible:
-                </th>
-                <th>
-                    @Html.DisplayFor(model => model.SelectedStudentSubmission.FirstOrDefault().Assignment.Points)
-                </th>
-                <th>
-                    <a class="btn btn-default" href="@Url.Action("SubmitStudentGrade", "Assignments", new { id = Model.SelectedStudentSubmission.FirstOrDefault().Assignment.AssignmentId })" target="_blank">
-                        Submit Grade
-                    </a>
-                </th>
-            }
-        </tr>
-    </table>
+
+    @using (Html.BeginForm())
+    {
+        <fieldset>
+            <table>
+                <tr>
+                    <th>
+                        Points Earned: 
+                    </th>
+                    <th>
+                        @Html.TextBox("Grade")
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        Points Possible:
+                    </th>
+                    <th>
+                        @Html.DisplayFor(model => model.SelectedStudentSubmission.FirstOrDefault().Assignment.Points)
+                    </th>
+                </tr>
+            </table>
+            
+            <p>
+                <input type="submit" value="Save" />
+            </p>
+        </fieldset>
+    }
 
     <h3>
         Student Text Submission
     </h3>
-        @Html.DisplayFor(model => model.SelectedStudentSubmission.FirstOrDefault().TextSubmission)
+    @Html.DisplayFor(model => model.SelectedStudentSubmission.FirstOrDefault().TextSubmission)
 </body>
 </html>
 
