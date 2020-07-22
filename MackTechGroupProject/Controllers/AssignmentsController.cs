@@ -109,10 +109,13 @@ namespace MackTechGroupProject.Controllers
         }
 
         [HttpPost]
-        public ActionResult AssignmentSubmission(HttpPostedFileBase File)
+        public ActionResult AssignmentSubmission(HttpPostedFileBase File, SubmitAssignmentModel model)
         {
+            var userID = User.Identity.GetUserId();
+            var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
+            var currentStudent = context.Users.Where(x => x.Id == userID).FirstOrDefault();
 
-            if(File != null)
+            if (File != null)
             {
                 string path = Server.MapPath("~/Content/fileAssignments/");
                 if(!Directory.Exists(path))
@@ -123,56 +126,39 @@ namespace MackTechGroupProject.Controllers
                 ViewBag.Message = "File uploaded successfully";
             }
 
+            if (model.SubmissionText != null)
+            {
+                SubmissionGrades submissionGrade = new SubmissionGrades()
+                {
+                    User = currentStudent,
+                    Assignment = model.currentAssignment,
+                    SubmissionDate = DateTime.Now,
+                    TextSubmission = model.SubmissionText,
+                    FileSubmission = null,
+                    Grade = null
+                };
+
+                context.SubmissionGrades.Add(submissionGrade);
+                context.SaveChanges();
+            }
+
             return RedirectToAction("Index", "Home");
         }
 
-        public ActionResult AssignmentSubmission(int assignmentId, SubmitAssignmentModel model)
+        public ActionResult AssignmentSubmission(int assignmentId)
         {
-            var userID = User.Identity.GetUserId();
             var selectedAssignmentId = assignmentId;
             var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
-            var currentStudent = context.Users.Where(x => x.Id == userID).FirstOrDefault();
             var currentAssignment = context.Assignments.Where(x => x.AssignmentId == selectedAssignmentId).FirstOrDefault();
 
             var submitAssignmentModel = new SubmitAssignmentModel()
             {
                 currentAssignment = currentAssignment,
-                SubmssionText = model.SubmssionText
+                SubmissionText = ""
             };
-
-            SubmissionGrades submissionGrade = new SubmissionGrades()
-            {
-                User = currentStudent,
-                Assignment = currentAssignment,
-                SubmissionDate = DateTime.Now,
-                TextSubmission = model.SubmssionText,
-                FileSubmission = null,
-                Grade = null
-            };
-
-            context.SubmissionGrades.Add(submissionGrade);
-            context.SaveChanges();
 
             return View(submitAssignmentModel);
         }
-
-        //private IEnumerable<SelectListItem> GetCourses()
-        //{
-        //    String userId = User.Identity.GetUserId();
-
-        //    var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
-
-        //    var currentInstructorEnrollments = context.Enrollments.Include(x => x.User).Include(c => c.Course).Where(s => s.User.Id == userId).ToList();
-
-        //    var instructorCourses = currentEnrollments.Select(x => x.Course).Select(x => new SelectListItem
-        //                                                                                        {
-        //                                                                                            Value = x.CourseId.ToString(),
-        //                                                                                            Text = x.CourseName
-        //                                                                                        });
-
-        //    return new SelectList(instructorCourses, "Value", "Text");
-        //}
-
 
         public ActionResult GradeAssignment(int id)
         {
@@ -213,8 +199,6 @@ namespace MackTechGroupProject.Controllers
             return View(StudentSubmissionViewModel);
         }
 
-
-
         [AcceptVerbs(HttpVerbs.Post)]
         public ActionResult StudentSubmission(int id, FormCollection formValues)
         {
@@ -237,8 +221,6 @@ namespace MackTechGroupProject.Controllers
             //changed redirect to land on the list of students to grade, rather than the same assignemnt
             return RedirectToAction("GradeAssignment", new { id = selectedSubmission.FirstOrDefault().Assignment.AssignmentId });
         }
-
-
 
         public ActionResult SubmitStudentGrade(int id, double grade)
         {
@@ -263,11 +245,6 @@ namespace MackTechGroupProject.Controllers
             return RedirectToAction("GradeAssignment", "Assignment", new { id = assignmentId });
         }
 
-
-
-
-
-
         public ActionResult DownloadSubmittedAssignemnt(string filePath)
         {
             string fullName = Server.MapPath("~" + filePath);
@@ -286,6 +263,26 @@ namespace MackTechGroupProject.Controllers
                 throw new System.IO.IOException(s);
             return data;
         }
+
+        #region UnusedCode
+
+        //private IEnumerable<SelectListItem> GetCourses()
+        //{
+        //    String userId = User.Identity.GetUserId();
+
+        //    var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
+
+        //    var currentInstructorEnrollments = context.Enrollments.Include(x => x.User).Include(c => c.Course).Where(s => s.User.Id == userId).ToList();
+
+        //    var instructorCourses = currentEnrollments.Select(x => x.Course).Select(x => new SelectListItem
+        //                                                                                        {
+        //                                                                                            Value = x.CourseId.ToString(),
+        //                                                                                            Text = x.CourseName
+        //                                                                                        });
+
+        //    return new SelectList(instructorCourses, "Value", "Text");
+        //}
+        #endregion
 
     }
 }

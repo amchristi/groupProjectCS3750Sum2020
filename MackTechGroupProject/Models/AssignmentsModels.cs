@@ -56,7 +56,7 @@ namespace MackTechGroupProject.Models
     {
         [Display(Name = "Text Submission")]
         [DataType(DataType.MultilineText)]
-        public string SubmssionText { get; set; }
+        public string SubmissionText { get; set; }
 
         public Assignment currentAssignment { get; set; }
 
@@ -83,7 +83,7 @@ namespace MackTechGroupProject.Models
         public Assignment Assignment { get; set; }
         public DateTime SubmissionDate { get; set; }
         public string TextSubmission { get; set; }
-        public byte[] FileSubmission { get; set; }
+        public string FileSubmission { get; set; }
         public double? Grade { get; set; }
     }
 

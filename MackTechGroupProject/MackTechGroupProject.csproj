@@ -276,6 +276,10 @@
     <Compile Include="Migrations\202007100230268_Stupid_null_is_stupid.Designer.cs">
       <DependentUpon>202007100230268_Stupid_null_is_stupid.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202007220227348_SubmissionGrades_File_Submission.cs" />
+    <Compile Include="Migrations\202007220227348_SubmissionGrades_File_Submission.Designer.cs">
+      <DependentUpon>202007220227348_SubmissionGrades_File_Submission.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -454,6 +458,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202007100230268_Stupid_null_is_stupid.resx">
       <DependentUpon>202007100230268_Stupid_null_is_stupid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007220227348_SubmissionGrades_File_Submission.resx">
+      <DependentUpon>202007220227348_SubmissionGrades_File_Submission.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
