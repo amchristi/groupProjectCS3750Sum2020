@@ -122,8 +122,22 @@ namespace MackTechGroupProject.Controllers
                 {
                     Directory.CreateDirectory(path);
                 }
-                File.SaveAs(path + Path.GetFileName(File.FileName));
-                ViewBag.Message = "File uploaded successfully";
+                Guid g = Guid.NewGuid();
+                String fileSubmissionPath = path + g;
+                File.SaveAs(fileSubmissionPath);
+
+                SubmissionGrades submissionGrade = new SubmissionGrades()
+                {
+                    User = currentStudent,
+                    Assignment = model.currentAssignment,
+                    SubmissionDate = DateTime.Now,
+                    TextSubmission = null,
+                    FileSubmission = g + "",
+                    Grade = null
+                };
+
+                context.SubmissionGrades.Add(submissionGrade);
+                context.SaveChanges();
             }
 
             if (model.SubmissionText != null)
