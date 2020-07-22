@@ -13,15 +13,18 @@
     <title>Student Submission</title>
 </head>
 
-<h1>
-    @Html.DisplayFor(model => model.SelectedStudentSubmission.FirstOrDefault().User.FirstName)
-    @Html.DisplayFor(model => model.SelectedStudentSubmission.FirstOrDefault().User.LastName)
-    
-</h1>
-<h2>
-    @Html.DisplayFor(model => model.SelectedStudentSubmission.FirstOrDefault().Assignment.AssignmentTitle)
-</h2>
+
 <body>
+    <h1>
+        @Html.DisplayFor(model => model.SelectedStudentSubmission.FirstOrDefault().User.FirstName)
+        @Html.DisplayFor(model => model.SelectedStudentSubmission.FirstOrDefault().User.LastName)
+
+    </h1>
+    <h2>
+        @Html.DisplayFor(model => model.SelectedStudentSubmission.FirstOrDefault().Assignment.AssignmentTitle)
+    </h2>
+
+    <hr />
 
     @using (Html.BeginForm())
     {
@@ -29,10 +32,10 @@
             <table>
                 <tr>
                     <th>
-                        Points Earned: 
+                        Points Earned:
                     </th>
                     <th>
-                        @Html.TextBox("Grade")
+                        @Html.TextBox("Grade", Model.SelectedStudentSubmission.FirstOrDefault().Grade)
                     </th>
                 </tr>
                 <tr>
@@ -44,17 +47,39 @@
                     </th>
                 </tr>
             </table>
-            
+
             <p>
-                <input type="submit" value="Save" />
+                <input type="submit" value="Update Grade" />
             </p>
         </fieldset>
     }
 
-    <h3>
-        Student Text Submission
-    </h3>
-    @Html.DisplayFor(model => model.SelectedStudentSubmission.FirstOrDefault().TextSubmission)
+
+    @if (Model.SelectedStudentSubmission.FirstOrDefault().Assignment.SubmissionType == "Text-Submission")
+    {
+
+        <h3>
+            Student Text Submission
+        </h3>
+        @Html.DisplayFor(model => model.SelectedStudentSubmission.FirstOrDefault().TextSubmission)
+
+    }
+
+
+    @if (Model.SelectedStudentSubmission.FirstOrDefault().Assignment.SubmissionType == "File-Upload")
+    {
+        <h3>
+            Student File Submission
+        </h3>
+
+
+        <a class="btn btn-default" href="@Url.Action("DownloadSubmittedAssignemnt", "Assignments",
+                                        new { id = Model.SelectedStudentSubmission.FirstOrDefault().FileSubmission })">
+            Download
+        </a>
+
+    }
+
 </body>
 </html>
 
