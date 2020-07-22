@@ -64,7 +64,7 @@ namespace MackTechGroupProject.Controllers
                     Points = model.Points,
                     AssignmentTitle = model.AssignmentTitle,
                     AssignmentDescription = model.AssignmentDescription,
-                    DueDate = model.DueDate,
+                    DueDate = model.DueDate.AddHours(23).AddMinutes(59),
                     SubmissionType = model.SubmissionType
                 };
 

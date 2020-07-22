@@ -2,8 +2,68 @@
 @{
     ViewBag.Title = "Calendar";
 }
+
+@section scripts {
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var events = [];
+            $.ajax({
+                type: "GET",
+                url: "/Misc/GetEvents",
+                success: function (data) {
+                    $.each(data, function (i, v) {
+                        events.push({
+                            title: v.Department + " " + v.CourseNumber + " " + v.AssignmentTitle,
+                            description: v.AssignmentDescription,
+                            start: moment(v.DueDate),
+                            end: moment(v.DueDate)
+                        });
+                    })
+
+                    GenerateCalendar(events);
+                },
+                error: function (error) {
+                    alert('failed');
+                }
+            })
+
+            function GenerateCalendar(events) {
+                $('#calendar').fullCalendar('destroy');
+                $('#calendar').fullCalendar({
+                    theme: true,
+                    header: {
+                        left: 'prev,next today',
+                        center: 'title',
+                        right: 'month,agendaWeek,agendaDay'
+                    },
+                    timeFormat: 'h(:mm)a',
+                    defaultView: 'month',
+                    editable: true,
+                    allDaySlot: false,
+                    selectable: true,
+                    eventColor: '#378006',
+                    eventLimit: true,
+                    events: events
+                });
+            }
+        });
+    </script>
+    }
+
+<div class="jumbotron">
+    <h1>Calendar</h1>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div id="calendar"></div>
+    </div>
+</div>
+
+@*
     <main class="col-md-8">
         <h1>Calendar</h1>
+
 
         <section class="homePageCalendar">
             <h2> June </h2>
@@ -135,16 +195,21 @@
                 </tr>
             </table>
         </section>
+
     </main>
 
-    <aside class="col-md-4">
-        <section class="addCalendarEvent">
-            <div class="addEventButton">
-                <a  href="@Url.Action("NewEvent", "Misc")">
-                    <h2 class="addCalLink">New Event</h2>
-                </a>
-            </div>
-        </section>
-    </aside>
+
+
+<aside class="col-md-4">
+    <section class="addCalendarEvent">
+        <div class="addEventButton">
+            <a href="@Url.Action("NewEvent", "Misc")">
+                <h2 class="addCalLink">New Event</h2>
+            </a>
+        </div>
+    </section>
+</aside>
+
+        *@
 
 

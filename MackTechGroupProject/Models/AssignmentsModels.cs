@@ -65,6 +65,15 @@ namespace MackTechGroupProject.Models
 
     }
 
+    public class CalendarEventViewModel
+    {
+        public string AssignmentTitle { get; set; }
+        public string AssignmentDescription { get; set; }
+        public DateTime DueDate { get; set; }
+        public string Department { get; set; }
+        public int CourseNumber { get; set; }
+    }
+
     public class ToDoListViewModel
     {
         public List<Enrollment> currentEnrollmentsView { get; set; }
