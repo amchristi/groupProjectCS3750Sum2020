@@ -1,37 +1,24 @@
 ﻿<Properties StartupConfiguration="{68BB2547-5AC6-47D1-9037-103D8041AE7B}|">
   <MonoDevelop.Ide.ItemProperties.MackTechGroupProject PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="MackTechGroupProject/Views/Home/Index.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MackTechGroupProject/Models/AssignmentsModels.cs">
     <Files>
-      <File FileName="MackTechGroupProject/Views/Assignments/ViewAllAssignments.cshtml" Line="76" Column="1" IsPinned="True" />
-      <File FileName="MackTechGroupProject/Controllers/AssignmentsController.cs" Line="268" Column="1" IsPinned="True" />
-      <File FileName="MackTechGroupProject/Views/Assignments/StudentSubmission.cshtml" Line="78" Column="113" />
+      <File FileName="MackTechGroupProject/Controllers/AssignmentsController.cs" Line="170" Column="45" />
+      <File FileName="MackTechGroupProject/Views/Assignments/StudentSubmission.cshtml" Line="1" Column="1" />
       <File FileName="MackTechGroupProject/Views/Assignments/GradeAssignment.cshtml" Line="69" Column="1" />
-      <File FileName="MackTechGroupProject/Models/AssignmentsModels.cs" Line="92" Column="6" />
-      <File FileName="MackTechGroupProject/Views/Assignments/AddAssignment.cshtml" Line="1" Column="1" />
-      <File FileName="MackTechGroupProject/Views/Courses/CourseDetail.cshtml" Line="13" Column="1" />
-      <File FileName="MackTechGroupProject/Views/Assignments/ViewAssignments.cshtml" Line="81" Column="18" />
-      <File FileName="MackTechGroupProject/Controllers/CoursesController.cs" />
-      <File FileName="MackTechGroupProject/Views/Account/ProfileInfoEdit.cshtml" />
-      <File FileName="MackTechGroupProject/Views/Account/Register.cshtml" />
-      <File FileName="MackTechGroupProject/Views/Assignments/AssignmentSubmission.cshtml" Line="36" Column="1" />
-      <File FileName="MackTechGroupProject/Views/Home/Index.cshtml" Line="1" Column="1" />
+      <File FileName="MackTechGroupProject/Views/Assignments/AssignmentSubmission.cshtml" Line="58" Column="1" />
+      <File FileName="MackTechGroupProject/Models/AssignmentsModels.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="MackTechGroupProject" expanded="True">
             <Node name="MackTechGroupProject" expanded="True">
-              <Node name="App_Start" expanded="True" />
               <Node name="Controllers" expanded="True" />
-              <Node name="Models" expanded="True" />
+              <Node name="Models" expanded="True">
+                <Node name="AssignmentsModels.cs" selected="True" />
+              </Node>
               <Node name="Views" expanded="True">
-                <Node name="Account" expanded="True" />
                 <Node name="Assignments" expanded="True" />
-                <Node name="Courses" expanded="True" />
-                <Node name="Home" expanded="True">
-                  <Node name="Index.cshtml" selected="True" />
-                </Node>
-                <Node name="Shared" expanded="True" />
               </Node>
             </Node>
           </Node>
@@ -44,6 +31,7 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/andrewhammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/Views/Assignments/SelectCourse.cshtml" relfile="MackTechGroupProject/Views/Assignments/SelectCourse.cshtml" line="77" column="1" />
+      <Breakpoint file="/Users/andrewhammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/Controllers/AssignmentsController.cs" relfile="MackTechGroupProject/Controllers/AssignmentsController.cs" line="114" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />

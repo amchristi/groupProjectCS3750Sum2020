@@ -47,12 +47,21 @@
 
                 </div>
 
+                @*
+                <a class="btn btn-default" href="@Url.Action("AssignmentSubmission", "Assignments", new { id = Model.assignmentID })">
+                    Submit Assignment
+                </a>
+                 *@
+                
+                @Html.Hidden("asID", Model.currentAssignment.AssignmentId)
+                
                 <div class="form-group">
                     <div class="col-md-offset-10 col-md-2">
                         <input type="submit" value="Submit" class="btn btn-default" />
                     </div>
                 </div>
             </div>
+            
         }
     }
     @if (Model.currentAssignment.SubmissionType == "File-Upload")
@@ -69,12 +78,21 @@
             </div>
             <br />
 
+            @Html.Hidden("asID", Model.currentAssignment.AssignmentId)
+
+            @*
+            <a class="btn btn-default" href="@Url.Action("AssignmentSubmission", "Assignments", new { id = Model.currentAssignment.AssignmentId })">
+                Submit Assignment
+            </a>
+            *@
+
             <button class="" col-md-offset-1 col-md-11" type="submit">Submit</button>
             <br />
             <br />
             <br />
             <br />
             <br />
+
         }
     }
 </main>

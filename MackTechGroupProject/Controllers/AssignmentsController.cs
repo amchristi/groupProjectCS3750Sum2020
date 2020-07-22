@@ -108,12 +108,20 @@ namespace MackTechGroupProject.Controllers
             return View(allAssignmentsViewModel);
         }
 
-        [HttpPost]
-        public ActionResult AssignmentSubmission(HttpPostedFileBase File, SubmitAssignmentModel model)
+        [AcceptVerbs(HttpVerbs.Post)]
+        public ActionResult AssignmentSubmission(SubmitAssignmentModel model)
         {
             var userID = User.Identity.GetUserId();
+            var File = model.File;
             var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
             var currentStudent = context.Users.Where(x => x.Id == userID).FirstOrDefault();
+
+            
+            var selectedAssignmentId = Convert.ToInt64(Request.Form["asID"]);
+
+
+            var currentAssignment = context.Assignments.Where(x => x.AssignmentId == selectedAssignmentId).FirstOrDefault();
+
 
             if (File != null)
             {
@@ -129,7 +137,7 @@ namespace MackTechGroupProject.Controllers
                 SubmissionGrades submissionGrade = new SubmissionGrades()
                 {
                     User = currentStudent,
-                    Assignment = model.currentAssignment,
+                    Assignment = currentAssignment,
                     SubmissionDate = DateTime.Now,
                     TextSubmission = null,
                     FileSubmission = g + "",
@@ -145,7 +153,7 @@ namespace MackTechGroupProject.Controllers
                 SubmissionGrades submissionGrade = new SubmissionGrades()
                 {
                     User = currentStudent,
-                    Assignment = model.currentAssignment,
+                    Assignment = currentAssignment,
                     SubmissionDate = DateTime.Now,
                     TextSubmission = model.SubmissionText,
                     FileSubmission = null,
@@ -159,6 +167,8 @@ namespace MackTechGroupProject.Controllers
             return RedirectToAction("Index", "Home");
         }
 
+
+        //New method passes a null assignment id to submission
         public ActionResult AssignmentSubmission(int assignmentId)
         {
             var selectedAssignmentId = assignmentId;
@@ -167,12 +177,14 @@ namespace MackTechGroupProject.Controllers
 
             var submitAssignmentModel = new SubmitAssignmentModel()
             {
+                assignmentID = selectedAssignmentId,
                 currentAssignment = currentAssignment,
                 SubmissionText = ""
             };
 
             return View(submitAssignmentModel);
         }
+
 
         public ActionResult GradeAssignment(int id)
         {

@@ -63,6 +63,8 @@ namespace MackTechGroupProject.Models
         [Display(Name = "File Submission")]
         public HttpPostedFileBase File { get; set; }
 
+        public int assignmentID { get; set; }
+
     }
 
     public class CalendarEventViewModel
