@@ -200,10 +200,12 @@ namespace MackTechGroupProject.Controllers
 
             var allSubmissionsOfSelected = allSubmissionGrades.Where(x => x.Assignment == selectedAssignment).ToList();
 
+            var mostRecentSubmissionPerStudent = allSubmissionsOfSelected.GroupBy(x => x.User).Select(x => x.FirstOrDefault(y => y.ID == x.Max(z => z.ID))).OrderBy(x => x.User.Id).ToList();
+
             //set ViewModel list to defined list above
             var gradeSubmittedAssignmentsViewModel = new gradeSubmittedAssignmentsViewModel()
             {
-                SubmittedAssignments = allSubmissionsOfSelected
+                SubmittedAssignments = mostRecentSubmissionPerStudent
             };
 
             return View(gradeSubmittedAssignmentsViewModel);
