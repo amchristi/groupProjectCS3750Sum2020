@@ -6945,6 +6945,10 @@ div.assignmentHeader {
     padding-top: 10px;
     padding-bottom: 10px;
 }
+
+div.noAssignments {
+    padding: 50px;
+}
 /***************************        Nick's edits for the Calendar            *************************/
 /*
     light purple:#F2E6FF

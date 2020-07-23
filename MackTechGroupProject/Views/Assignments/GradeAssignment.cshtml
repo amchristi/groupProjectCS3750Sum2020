@@ -16,6 +16,8 @@
     <title>Current Assignments</title>
 </head>
 
+@if (Model.SubmittedAssignments.Any())
+{
 <body>
     <div class="container">
         <div class="row">
@@ -97,5 +99,12 @@
         </p>
     *@
 </body>
+} 
+@if(!Model.SubmittedAssignments.Any())
+{
+<div class="col-sm-12 noAssignments" style="text-align:center">
+    <p>No submissions yet. </p>
+</div>
+}
 </html>
 
