@@ -1,37 +1,17 @@
 ﻿<Properties StartupConfiguration="{68BB2547-5AC6-47D1-9037-103D8041AE7B}|">
   <MonoDevelop.Ide.ItemProperties.MackTechGroupProject PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="MackTechGroupProject/Models/AssignmentsModels.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MackTechGroupProject/Views/Assignments/StudentSubmission.cshtml">
     <Files>
-      <File FileName="MackTechGroupProject/Controllers/AssignmentsController.cs" Line="170" Column="45" />
+      <File FileName="MackTechGroupProject/Controllers/AssignmentsController.cs" Line="323" Column="1" />
+      <File FileName="MackTechGroupProject/Views/Assignments/AssignmentSubmission.cshtml" Line="76" Column="71" />
       <File FileName="MackTechGroupProject/Views/Assignments/StudentSubmission.cshtml" Line="1" Column="1" />
-      <File FileName="MackTechGroupProject/Views/Assignments/GradeAssignment.cshtml" Line="69" Column="1" />
-      <File FileName="MackTechGroupProject/Views/Assignments/AssignmentSubmission.cshtml" Line="58" Column="1" />
-      <File FileName="MackTechGroupProject/Models/AssignmentsModels.cs" Line="1" Column="1" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="MackTechGroupProject" expanded="True">
-            <Node name="MackTechGroupProject" expanded="True">
-              <Node name="Controllers" expanded="True" />
-              <Node name="Models" expanded="True">
-                <Node name="AssignmentsModels.cs" selected="True" />
-              </Node>
-              <Node name="Views" expanded="True">
-                <Node name="Assignments" expanded="True" />
-              </Node>
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/andrewhammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/Views/Assignments/SelectCourse.cshtml" relfile="MackTechGroupProject/Views/Assignments/SelectCourse.cshtml" line="77" column="1" />
-      <Breakpoint file="/Users/andrewhammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/Controllers/AssignmentsController.cs" relfile="MackTechGroupProject/Controllers/AssignmentsController.cs" line="114" column="1" />
+      <Breakpoint file="/Users/andrewhammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/Controllers/AssignmentsController.cs" relfile="MackTechGroupProject/Controllers/AssignmentsController.cs" line="321" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />

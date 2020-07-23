@@ -317,13 +317,33 @@ namespace MackTechGroupProject.Controllers
             return RedirectToAction("GradeAssignment", "Assignment", new { id = assignmentId });
         }
 
+
+        
         public ActionResult DownloadSubmittedAssignemnt(string filePath)
         {
-            string fullName = Server.MapPath("~" + filePath);
+            ////Hopefully will be useful to preserve origial file name and type
+   
+            //var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
+            //var currentStudent = context.Users.Where(x => x.Id == userID).FirstOrDefault();
+
+            
+            //var selectedSubmissionId = Convert.ToInt64(Request.Form["asID"]);
+
+            //var currentAssignment = context.SubmissionGrades.Where(x => x.ID == selectedSubmissionId).FirstOrDefault();
+
+            //var name = currentAssignment.FileSubmission
+
+            ////end
+
+
+            string fullName = Server.MapPath("~/Content/fileAssignments/" + filePath);
 
             byte[] fileBytes = GetFile(fullName);
+
+            
             return File(
                 fileBytes, System.Net.Mime.MediaTypeNames.Application.Octet, filePath);
+
         }
 
         byte[] GetFile(string s)
