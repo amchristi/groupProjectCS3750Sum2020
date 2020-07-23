@@ -16,8 +16,20 @@
     <title>Current Assignments</title>
 </head>
 
-<h1>@Html.DisplayFor(model => model.SubmittedAssignments.FirstOrDefault().Assignment.AssignmentTitle)</h1>
 <body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h1>@Html.DisplayFor(model => model.SubmittedAssignments.FirstOrDefault().Assignment.AssignmentTitle)</h1>
+            </div>
+            <div class="col-md-4" style="padding-top: 20px">
+                <a class="btn btn-default" style="float: right" href="@Url.Action("StudentStatistics", "Assignments", new { id = Model.SubmittedAssignments.FirstOrDefault().Assignment.AssignmentId })">
+                    Statistics
+                </a>
+            </div>
+        </div>
+    </div>
+
     <table class="table">
         <tr>
 
@@ -38,7 +50,7 @@
             </th>
         </tr>
 
-        
+
         @foreach (var item in Model.SubmittedAssignments)
         {
             <tr>
@@ -57,9 +69,9 @@
                 }
                 @if (item.Grade == null)
                 {
-                <td>
-                    --
-                </td>
+                    <td>
+                        --
+                    </td>
                 }
 
                 <td>
@@ -71,18 +83,18 @@
                     </a>
                 </td>
             </tr>
-           }
+        }
     </table>
 
 
     @*Button for convience purposes. Redirect the instructor back to the assignments list, not working, needs to be able to query the current course Id*@
     @*
-    <p>
-        <a class="btn btn-default" href="@Url.Action("ViewAssignments", "Assignments",
-                                        new { id = @Html.DisplayNameFor(model => model.SubmittedAssignments.FirstOrDefault().Assignment.Course) })">
-            Back to Assignments List
-        </a>
-    </p>
+        <p>
+            <a class="btn btn-default" href="@Url.Action("ViewAssignments", "Assignments",
+                                            new { id = @Html.DisplayNameFor(model => model.SubmittedAssignments.FirstOrDefault().Assignment.Course) })">
+                Back to Assignments List
+            </a>
+        </p>
     *@
 </body>
 </html>

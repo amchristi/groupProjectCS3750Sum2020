@@ -96,6 +96,9 @@ namespace MackTechGroupProject.Models
         public string TextSubmission { get; set; }
         public string FileSubmission { get; set; }
         public double? Grade { get; set; }
+        
+        [NotMapped]
+        public decimal? Percentage { get; set; }
     }
 
     public class gradeSubmittedAssignmentsViewModel
