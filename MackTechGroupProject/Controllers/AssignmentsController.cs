@@ -126,7 +126,8 @@ namespace MackTechGroupProject.Controllers
                     Directory.CreateDirectory(path);
                 }
                 Guid g = Guid.NewGuid();
-                String fileSubmissionPath = path + g;
+                String filename = System.IO.Path.GetFileName(File.FileName);
+                String fileSubmissionPath = path + filename + "$" + g;
                 File.SaveAs(fileSubmissionPath);
 
                 SubmissionGrades submissionGrade = new SubmissionGrades()
@@ -135,7 +136,7 @@ namespace MackTechGroupProject.Controllers
                     Assignment = currentAssignment,
                     SubmissionDate = DateTime.Now,
                     TextSubmission = null,
-                    FileSubmission = g + "",
+                    FileSubmission = filename + "$" + g,
                     Grade = null
                 };
 
@@ -278,6 +279,11 @@ namespace MackTechGroupProject.Controllers
                 SelectedStudentSubmission = selectedSubmission,
             };
 
+            string filePathOriginal = selectedSubmission.Select(x => x.FileSubmission).FirstOrDefault();
+            string[] words = filePathOriginal.Split('$');
+            string fileDisplayName = words[0];
+            ViewBag.displayFile = fileDisplayName;
+
             return View(StudentSubmissionViewModel);
         }
 
@@ -350,9 +356,13 @@ namespace MackTechGroupProject.Controllers
 
             byte[] fileBytes = GetFile(fullName);
 
-            
+            string filePathOriginal = filePath;
+            string[] words = filePathOriginal.Split('$');
+            string fileDisplayName = words[0];
+
+
             return File(
-                fileBytes, System.Net.Mime.MediaTypeNames.Application.Octet, filePath);
+                fileBytes, System.Net.Mime.MediaTypeNames.Application.Octet, fileDisplayName);
 
         }
 

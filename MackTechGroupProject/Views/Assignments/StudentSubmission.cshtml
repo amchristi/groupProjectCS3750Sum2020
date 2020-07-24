@@ -73,9 +73,9 @@
         </h3>
 
 
-        <a class="btn btn-default" href="@Url.Action("DownloadSubmittedAssignemnt", "Assignments",
+        <a href="@Url.Action("DownloadSubmittedAssignemnt", "Assignments",
                                         new { filePath = Model.SelectedStudentSubmission.FirstOrDefault().FileSubmission })">
-            Download
+            Download @ViewBag.displayFile
         </a>
 
     }
