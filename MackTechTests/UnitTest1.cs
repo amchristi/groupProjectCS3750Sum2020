@@ -3,6 +3,7 @@ using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MackTechGroupProject.BusinessLogic;
 using System.Data.Entity;
+using MackTechGroupProject.Models;
 
 namespace MackTechTests
 {
@@ -65,6 +66,37 @@ namespace MackTechTests
             var y = _context.Enrollments.Where(x => x.User.Email == sUserEmail);
             System.Diagnostics.Debug.WriteLine(y.Count());
             Assert.IsTrue(y.Count() == 2);
+        }
+
+        [TestMethod]
+        public void AddAssignment() //uses studentregtwocourses@test.com
+        {
+            //Q: can we add the first course?
+
+            //prep
+            var _context = new MackTechGroupProject.Models.ApplicationDbContext();
+            int courseId = 6;
+            var selectedCourse = _context.Courses.Where(x => x.CourseId == courseId).FirstOrDefault();
+
+            var assignment = new Assignment
+            {
+                Course = selectedCourse,
+                Points = 100,
+                AssignmentTitle = "Unit Test",
+                AssignmentDescription = "Unit Test added course",
+                DueDate = DateTime.Now,
+                SubmissionType = "Text-Submission"
+            };
+
+            //perform operations
+            Boolean result = AssignmentService.AddAssignmentService(courseId, assignment, _context);
+
+            //verify and interpret results
+            Assert.IsTrue(result);
+
+            var y = _context.Assignments.Where(x => x.AssignmentId == assignment.AssignmentId);
+            System.Diagnostics.Debug.WriteLine(y.Count());
+            Assert.IsTrue(y.Count() == 1);
         }
     }
 }

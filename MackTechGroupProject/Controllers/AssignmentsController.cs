@@ -9,6 +9,7 @@ using Microsoft.AspNet.Identity.Owin;
 using System.Data.Entity;
 using System.IO;
 using Newtonsoft.Json;
+using MackTechGroupProject.BusinessLogic;
 
 namespace MackTechGroupProject.Controllers
 {
@@ -23,7 +24,6 @@ namespace MackTechGroupProject.Controllers
         public ActionResult SelectCourse()
         {
             String userId = User.Identity.GetUserId();
-
             var currentInstructorEnrollments = currentEnrollments.Select(c => c.Course).ToList();
 
             return View(currentInstructorEnrollments);
@@ -39,13 +39,13 @@ namespace MackTechGroupProject.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult AddAssignment(int id, Assignment model)
         {
-            var selectedCourseId = id;
-
-            var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
-            var selectedCourse = context.Courses.Where(x => x.CourseId == selectedCourseId).FirstOrDefault();
-
             if (ModelState.IsValid)
             {
+                var selectedCourseId = id;
+                var Assignment = new Assignment();
+                var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
+                var selectedCourse = context.Courses.Where(x => x.CourseId == selectedCourseId).FirstOrDefault();
+
                 var assignment = new Assignment
                 {
                     AssignmentId = model.AssignmentId,
@@ -57,10 +57,16 @@ namespace MackTechGroupProject.Controllers
                     SubmissionType = model.SubmissionType
                 };
 
-                context.Assignments.Add(assignment);
-                context.SaveChanges();
+                Boolean result = AssignmentService.AddAssignmentService(selectedCourseId, assignment, context);
 
-                return RedirectToAction("Index", "Home");
+                if (result)
+                {
+                    return RedirectToAction("Index", "Home");
+                }
+                else
+                {
+                    return RedirectToAction("Index", "Home");
+                }
             }
 
             // If we got this far, something failed, redisplay form
@@ -174,7 +180,6 @@ namespace MackTechGroupProject.Controllers
             return View(submitAssignmentModel);
         }
 
-
         public ActionResult GradeAssignment(int id)
         {
             var selectedAssignmentId = id;
@@ -213,6 +218,7 @@ namespace MackTechGroupProject.Controllers
 
             var allSubmissionsOfSelected = allSubmissionGrades.Where(x => x.Assignment == selectedAssignment).ToList();
 
+            // get most recent submission per student 
             var mostRecentSubmissionPerStudent = allSubmissionsOfSelected.Where(w => w.Grade != null).GroupBy(x => x.User).Select(x => x.FirstOrDefault(y => y.ID == x.Max(z => z.ID))).OrderBy(x => x.User.Id).ToList();
 
             // used for calculating percentages
@@ -222,18 +228,21 @@ namespace MackTechGroupProject.Controllers
             // set percentages per user
             foreach (var userId in userIds)
             {
+                // get user's grade based off userId
                 var userGrade = mostRecentSubmissionPerStudent.Where(x => x.User.Id == userId).FirstOrDefault().Grade;
 
+                // set Percentage of user using usergrade
                 mostRecentSubmissionPerStudent.Where(x => x.User.Id == userId).FirstOrDefault().Percentage = Convert.ToDecimal(userGrade) / assignmentPointTotal;
             }
 
-            //List of all scores using mostRecentSubmissions including count of student that received scored 0-59, 60-69, etc.
+            // list of all scores using mostRecentSubmissions including count of student that received scored 0-59, 60-69, etc.
             var zeroToSixty = mostRecentSubmissionPerStudent.Where(x=> x.Percentage < Convert.ToDecimal(.6)).Count();
             var sixtyToSeventy = mostRecentSubmissionPerStudent.Where(x => x.Percentage >= Convert.ToDecimal(.6) && x.Percentage < Convert.ToDecimal(.7)).Count();
             var seventyToEighty = mostRecentSubmissionPerStudent.Where(x => x.Percentage >= Convert.ToDecimal(.7) && x.Percentage < Convert.ToDecimal(.8)).Count();
             var eightyToNinety = mostRecentSubmissionPerStudent.Where(x => x.Percentage >= Convert.ToDecimal(.8) && x.Percentage < Convert.ToDecimal(.9)).Count();
             var ninetyToOneHundred = mostRecentSubmissionPerStudent.Where(x => x.Percentage >= Convert.ToDecimal(.9)).Count();
 
+            // save object for x and y values of chart/graph
             List<DataPoint> dataPoints = new List<DataPoint>
             {
                 //(range, count of students within range)
@@ -244,6 +253,7 @@ namespace MackTechGroupProject.Controllers
                 new DataPoint( "90-100%", ninetyToOneHundred)
             };
 
+            // pass the data to canvasJS via Json
             ViewBag.DataPoints = JsonConvert.SerializeObject(dataPoints);
 
             //set ViewModel list to defined list above
