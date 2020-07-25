@@ -279,10 +279,13 @@ namespace MackTechGroupProject.Controllers
                 SelectedStudentSubmission = selectedSubmission,
             };
 
-            string filePathOriginal = selectedSubmission.Select(x => x.FileSubmission).FirstOrDefault();
-            string[] words = filePathOriginal.Split('$');
-            string fileDisplayName = words[0];
-            ViewBag.displayFile = fileDisplayName;
+            var submissionType = selectedSubmission.Select(x => x.Assignment.SubmissionType).ToList();
+            if (submissionType.Equals("File-Upload")) {
+                string filePathOriginal = selectedSubmission.Select(x => x.FileSubmission).FirstOrDefault();
+                string[] words = filePathOriginal.Split('$');
+                string fileDisplayName = words[0];
+                ViewBag.displayFile = fileDisplayName;
+            }
 
             return View(StudentSubmissionViewModel);
         }
@@ -302,6 +305,7 @@ namespace MackTechGroupProject.Controllers
 
             //Update selected Submission with new grade
             selectedSubmission.FirstOrDefault().Grade = Convert.ToDouble(Request.Form["Grade"]);
+            selectedSubmission.FirstOrDefault().GradeAddedOn = DateTime.Now;
 
             //save changes to database
             context.SaveChanges();

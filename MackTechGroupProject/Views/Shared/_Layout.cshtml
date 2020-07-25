@@ -15,6 +15,11 @@
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
+                <span class="noti glyphicon glyphicon-bell"><span class="count">&nbsp;</span></span>
+                <div class="noti-content">
+                    <div class="noti-top-arrow"></div>
+                    <ul id="noticontent"></ul>
+                </div>
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -42,6 +47,13 @@
                             <li>@Html.ActionLink("Profile", "ProfileInfoDetails", "Account")</li>
                             <li>@Html.ActionLink("Add Course", "AddCourse", "Courses")</li>
                             <li>@Html.ActionLink("Add Assignment", "SelectCourse", "Assignments")</li>
+                            <li>
+                                <span class="noti glyphicon glyphicon-bell"><span class="count">&nbsp;</span></span>
+                                <div class="noti-content">
+                                    <div class="noti-top-arrow"></div>
+                                    <ul id="noticontent"></ul>
+                                </div>
+                            </li>
                         }
                     }
                     @*<li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
@@ -62,5 +74,124 @@
     @Scripts.Render("~/bundles/fullcalendarjs")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+
+    @* Add jquery Library*@
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/jquery.signalR-2.4.1.min.js"></script>
+    <script src="~/signalr/hubs"></script>
+    <script src="~/Scripts/boostrap.min.js"></script>
+    <link href="~/Content/boostrap.min.css" rel="stylesheet" />
+    <style type="text/css">
+
+        .noti-content {
+            position: fixed;
+            right: 100px;
+            background: #e5e5e5;
+            border-radius: 4px;
+            top: 47px;
+            width: 250px;
+            display: none;
+            border: 1px solid #9E988B;
+        }
+
+        ul#noticontent {
+            max-height: 200px;
+            overflow: auto;
+            padding: 0px;
+            margin: 0px;
+            padding-left: 20px;
+        }
+
+            ul#noticontent li {
+                margin: 3px;
+                padding: 6px;
+                background: #fff;
+            }
+
+        .noti-top-arrow {
+            border-color: transparent;
+            border-bottom-color: #F5DEB3;
+            border-style: dashed dashed solid;
+            border-width: 0 8.5px 8.5px;
+            position: absolute;
+            right: 32px;
+            top: -8px;
+        }
+
+        span.noti {
+            color: #FF2323;
+            margin: 15px;
+            position: fixed;
+            right: 100px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        span.count {
+            position: relative;
+            top: -3px;
+        }
+    </style>
+
+    @* Add jquery code for Get Notification & setup signalr *@
+    <script type="text/javascript">
+        $(function () {
+            // Click on notification icon for show notification
+            $('span.noti').click(function (e) {
+                e.stopPropagation();
+                $('.noti-content').show();
+                var count = 0;
+                count = parseInt($('span.count').html()) || 0;
+                //only load notification if not already loaded
+                if (count > 0) {
+                    updateNotification();
+                }
+                $('span.count', this).html('&nbsp;');
+            })
+            // hide notifications
+            $('html').click(function () {
+                $('.noti-content').hide();
+            })
+            // update notification
+            function updateNotification() {
+                $('#noticontent').empty();
+                $('#noticontent').append($('<li>Loading...</li>'));
+                $.ajax({
+                    type: 'GET',
+                    url: '/home/GetNotificationGradedAssignments',
+                    success: function (response) {
+                        $('#noticontent').empty();
+                        if (response.length == 0) {
+                            $('#noticontent').append($('<li>No data available</li>'));
+                        }
+                        $.each(response, function (index, value) {
+                            $('#noticontent').append($('<li>New grade : ' + value.Grade + ' (' + value.Grade + ') added</li>'));
+                        });
+                    },
+                    error: function (error) {
+                        console.log(error);
+                    }
+                })
+            }
+            // update notification count
+            function updateNotificationCount() {
+                var count = 0;
+                count = parseInt($('span.count').html()) || 0;
+                count++;
+                $('span.count').html(count);
+            }
+            // signalr js code for start hub and send receive notification
+            var notificationHub = $.connection.notificationHub;
+            $.connection.hub.start().done(function () {
+                console.log('Notification hub started');
+            });
+            //signalr method for push server message to client
+            notificationHub.client.notify = function (message) {
+                if (message && message.toLowerCase() == "added") {
+                    updateNotificationCount();
+                }
+            }
+        })
+    </script>
 </body>
 </html>
