@@ -553,3 +553,5 @@ C:\Users\Montana\Source\Repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin
 C:\Users\Montana\Source\Repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
 C:\Users\Montana\Source\Repos\groupProjectCS3750Sum2020\MackTechGroupProject\bin\System.Data.SqlClient.xml
 C:\Users\Montana\Source\Repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.Migrations.Add_GradeAddedOn.resources
+C:\Users\Montana\Source\Repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.csprojAssemblyReference.cache
+C:\Users\Montana\Source\Repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.Migrations.Add_AssignmentAddedOn_column.resources

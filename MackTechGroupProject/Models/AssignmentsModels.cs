@@ -42,6 +42,8 @@ namespace MackTechGroupProject.Models
         [DataType(DataType.Text)]
         [Display(Name = "What type of Submission: ")]
         public string SubmissionType { get; set; }
+
+        public DateTime? AssignmentAddedOn { get; set; }
     }
 
     public class AddAssignmentViewModel
@@ -117,5 +119,14 @@ namespace MackTechGroupProject.Models
         public string AssignmentTitle { get; set; }
         public double Grade { get; set; }
         public int Points { get; set; }
+    }
+
+    public class NewAssignmentNotificationViewModel
+    {
+        public string AssignmentTitle { get; set; }
+        public int Points { get; set; }
+        public DateTime DueDate { get; set; }
+        public string Department { get; set; }
+        public int CourseNumber { get; set; }
     }
 }

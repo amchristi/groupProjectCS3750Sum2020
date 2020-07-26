@@ -143,10 +143,13 @@
                 var count = 0;
                 count = parseInt($('span.count').html()) || 0;
                 //only load notification if not already loaded
+
                 if (count > -1) {
                     
                     updatedGradesNotification();
+                    addedAssignment();
                 }
+
                 $('span.count', this).html('&nbsp;');
             })
             // hide notifications
@@ -167,6 +170,27 @@
                         }
                         $.each(response, function (index, value) {
                             $('#noticontent').append($('<li>New grade: ' + value.Grade + ' / ' + value.Points + ' <br>' + value.AssignmentTitle +  '</li>'));
+                        });
+                    },
+                    error: function (error) {
+                        console.log(error);
+                    }
+                })
+            }
+            // update notification for new assignment
+            function addedAssignment() {
+                $('#noticontent').empty();
+                $('#noticontent').append($('<li>Loading...</li>'));
+                $.ajax({
+                    type: 'GET',
+                    url: '/home/GetNotificationNewAssignments',
+                    success: function (response) {
+                        $('#noticontent').empty();
+                        if (response.length == 0) {
+                            $('#noticontent').append($('<li>No new notifications</li>'));
+                        }
+                        $.each(response, function (index, value) {
+                            $('#noticontent').append($('<li>New Assignment: <br>' + value.AssignmentTitle + ' <br>' + value.CourseNumber + ' ' + value.Department +  '<br>Points: ' + value.Points + ' <br>Due: ' + value.DueDate + '</li>'));
                         });
                     },
                     error: function (error) {

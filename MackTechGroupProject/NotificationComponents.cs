@@ -50,7 +50,7 @@ namespace MackTechGroupProject
 
                 //from here we will send message to client
                 var notificationHub = GlobalHost.ConnectionManager.GetHubContext<NotificationHub>();
-                notificationHub.Clients.All.notify("added");
+                notificationHub.Clients.All.Notify("added");
 
                 //re-register notifcation
                 RegisterNotification(DateTime.Now);
@@ -82,6 +82,39 @@ namespace MackTechGroupProject
                 return result;
             }
             
-        } 
+        }
+
+        public List<NewAssignmentNotificationViewModel> GetNewAssignments(DateTime afterDate, string userId)
+        {
+
+            using (ApplicationDbContext context = new ApplicationDbContext())
+            {
+
+                List<NewAssignmentNotificationViewModel> result = new List<NewAssignmentNotificationViewModel>();
+                var currentEnrollmentsWithAssignments = context.Enrollments.Where(x => x.User.Id == userId).Include(x => x.User).Include(x => x.Course).Include("Course.Assignments").ToList();
+
+                // get allAssignments in a list to pass to AllAssignmentsViewModel
+                var allAssignments = currentEnrollmentsWithAssignments.Select(x => x.Course).SelectMany(y => y.Assignments).ToList();
+
+                var recentlyAddedAssignments = allAssignments.Where(x => x.AssignmentAddedOn > afterDate).ToList();
+
+                foreach (Assignment a in recentlyAddedAssignments)
+                {
+                        NewAssignmentNotificationViewModel newAssignment = new NewAssignmentNotificationViewModel()
+                        {
+                            AssignmentTitle = a.AssignmentTitle,
+                            Points = a.Points,
+                            DueDate = a.DueDate,
+                            Department =  a.Course.Department,
+                            CourseNumber =  a.Course.CourseNumber
+                        };
+                        result.Add(newAssignment);
+                    
+                }
+
+                return result;
+            }
+
+        }
     }
 }

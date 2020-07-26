@@ -54,7 +54,8 @@ namespace MackTechGroupProject.Controllers
                     AssignmentTitle = model.AssignmentTitle,
                     AssignmentDescription = model.AssignmentDescription,
                     DueDate = model.DueDate.AddHours(23).AddMinutes(59),
-                    SubmissionType = model.SubmissionType
+                    SubmissionType = model.SubmissionType,
+                    AssignmentAddedOn = DateTime.Now
                 };
 
                 Boolean result = AssignmentService.AddAssignmentService(selectedCourseId, assignment, context);
