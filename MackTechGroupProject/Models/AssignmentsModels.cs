@@ -114,18 +114,12 @@ namespace MackTechGroupProject.Models
         public List<SubmissionGrades> SelectedStudentSubmission { get; set; }
     }
 
-    public class GradedAssignmentViewModel
+    public class StudentNotificationViewModel
     {
         public string AssignmentTitle { get; set; }
         public double Grade { get; set; }
         public int Points { get; set; }
-    }
-
-    public class NewAssignmentNotificationViewModel
-    {
-        public string AssignmentTitle { get; set; }
-        public int Points { get; set; }
-        public DateTime DueDate { get; set; }
+        public DateTime? DueDate { get; set; }
         public string Department { get; set; }
         public int CourseNumber { get; set; }
     }

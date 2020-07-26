@@ -32,29 +32,18 @@ namespace MackTechGroupProject.Controllers
             return View(toDoListViewModel);
         }
 
-        public JsonResult GetNotificationGradedAssignments()
+        public JsonResult GetNotifications()
         {
             var userID = User.Identity.GetUserId();
             var notificationRegisterTime = Session["LastUpdated"] != null ? Convert.ToDateTime(Session["LastUpdated"]) : DateTime.Now;
             NotificationComponents NC = new NotificationComponents();
-            var list = NC.GetGradedAssignments(notificationRegisterTime, userID);
+            var list = NC.GetNotificationData(notificationRegisterTime, userID);
             //update session here for get only newly graded assignments (notification)
             Session["Lastupdate"] = DateTime.Now;
             return new JsonResult { Data = list, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
         }
 
-        public JsonResult GetNotificationNewAssignments()
-        {
-            var userID = User.Identity.GetUserId();
-            var notificationRegisterTime = Session["LastUpdated"] != null ? Convert.ToDateTime(Session["LastUpdated"]) : DateTime.Now;
-            NotificationComponents NC = new NotificationComponents();
-            var list = NC.GetNewAssignments(notificationRegisterTime, userID);
-            //update session here for get only newly graded assignments (notification)
-            Session["Lastupdate"] = DateTime.Now;
-            return new JsonResult { Data = list, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
-
-
-        }
+  
 
         public ActionResult About()
         {

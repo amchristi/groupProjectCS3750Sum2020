@@ -77,6 +77,8 @@
 
     @* Add jquery Library*@
     <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+
+    <script src="~/Scripts/jquery.dateFormat-1.0.js"></script>
     <script src="~/Scripts/jquery.signalR-2.4.1.min.js"></script>
     <script src="~/signalr/hubs"></script>
     <script src="~/Scripts/boostrap.min.js"></script>
@@ -86,7 +88,7 @@
         .noti-content {
             position: fixed;
             right: 325px;
-            background: #F2E6FF;
+            background: #FFFFFF;
             border-radius: 4px;
             top: 47px;
             width: 250px;
@@ -94,12 +96,19 @@
             border: 1px solid #9E988B;
         }
 
+        div.noticontenttitle {
+            font-weight: bold;
+
+        }
+
+
         ul#noticontent {
-            max-height: 200px;
+            max-height: 400px;
             overflow: auto;
             padding: 0px;
             margin: 0px;
-            padding-left: 20px;
+            padding: 3px;
+            list-style-type: none;
         }
 
             ul#noticontent li {
@@ -130,81 +139,17 @@
         span.count {
             position: relative;
             top: -3px;
+            color: red;
         }
+
+        
+
     </style>
 
     @* Add jquery code for Get Notification & setup signalr *@
     <script type="text/javascript">
         $(function () {
-            // Click on notification icon for show notification
-            $('span.noti').click(function (e) {
-                e.stopPropagation();
-                $('.noti-content').show();
-                var count = 0;
-                count = parseInt($('span.count').html()) || 0;
-                //only load notification if not already loaded
 
-                if (count > -1) {
-                    
-                    updatedGradesNotification();
-                    addedAssignment();
-                }
-
-                $('span.count', this).html('&nbsp;');
-            })
-            // hide notifications
-            $('html').click(function () {
-                $('.noti-content').hide();
-            })
-            // update notification for grade changed
-            function updatedGradesNotification() {
-                $('#noticontent').empty();
-                $('#noticontent').append($('<li>Loading...</li>'));
-                $.ajax({
-                    type: 'GET',
-                    url: '/home/GetNotificationGradedAssignments',
-                    success: function (response) {
-                        $('#noticontent').empty();
-                        if (response.length == 0) {
-                            $('#noticontent').append($('<li>No new notifications</li>'));
-                        }
-                        $.each(response, function (index, value) {
-                            $('#noticontent').append($('<li>New grade: ' + value.Grade + ' / ' + value.Points + ' <br>' + value.AssignmentTitle +  '</li>'));
-                        });
-                    },
-                    error: function (error) {
-                        console.log(error);
-                    }
-                })
-            }
-            // update notification for new assignment
-            function addedAssignment() {
-                $('#noticontent').empty();
-                $('#noticontent').append($('<li>Loading...</li>'));
-                $.ajax({
-                    type: 'GET',
-                    url: '/home/GetNotificationNewAssignments',
-                    success: function (response) {
-                        $('#noticontent').empty();
-                        if (response.length == 0) {
-                            $('#noticontent').append($('<li>No new notifications</li>'));
-                        }
-                        $.each(response, function (index, value) {
-                            $('#noticontent').append($('<li>New Assignment: <br>' + value.AssignmentTitle + ' <br>' + value.CourseNumber + ' ' + value.Department +  '<br>Points: ' + value.Points + ' <br>Due: ' + value.DueDate + '</li>'));
-                        });
-                    },
-                    error: function (error) {
-                        console.log(error);
-                    }
-                })
-            }
-            // update notification count
-            function updateNotificationCount() {
-                var count = 0;
-                count = parseInt($('span.count').html()) || 0;
-                count++;
-                $('span.count').html(count);
-            }
             // signalr js code for start hub and send receive notification
             var notificationHub = $.connection.notificationHub;
             $.connection.hub.start().done(function () {
@@ -216,6 +161,74 @@
                     updateNotificationCount();
                 }
             }
+
+            // Click on notification icon for show notification
+            $('span.noti').click(function (e) {
+                e.stopPropagation();
+                $('#noticontent').empty();
+                $('.noti-content').show();
+                var count = 0;
+                count = parseInt($('span.count').html()) || 0;
+                //only load notification if not already loaded
+
+                if (count > -1) {
+
+                    getNotifications();
+                    //addedAssignmentNotification();
+                }
+
+                $('span.count', this).html('&nbsp;');
+            })
+            // hide notifications
+            $('html').click(function () {
+                $('.noti-content').hide();
+            })
+            // update notification for grade changed
+
+            function getNotifications() {
+                $('#noticontent').append($('<li>Loading...</li>'));
+                $.ajax({
+                    type: 'GET',
+                    url: '/home/GetNotifications',
+                    success: function (response) {
+                        $('#noticontent').empty();
+                        if (response.length == 0) {
+                            $('#noticontent').append($('<li>No new notifications</li>'));
+                        }
+
+                        $.each(response, function (index, value) {
+                            //without horizontal line
+                            if (index == 0) {
+                                if (value.DueDate == null) {
+                                    $('#noticontent').append($('<li><div class=noticontenttitle>New grade </div>' + value.Grade + ' / ' + value.Points + ' <br>' + value.AssignmentTitle + '<br>' + value.Department + ' ' + value.CourseNumber + '</li>'));
+                                } else if (value.DueDate != null) {
+                                    var dueDate = new Date(value.DueDate);
+                                    $('#noticontent').append($('<li><div class=noticontenttitle>New Assignment </div>' + value.AssignmentTitle + ' <br>' + value.CourseNumber + ' ' + value.Department + '<br>' + value.Points + ' Points <br>Due: ' + dueDate + '</li>'));
+                                }
+                            //with horizontal line
+                            } else {
+                                //if graded assignment
+                                if (value.DueDate == null) {
+                                    $('#noticontent').append($('<hr style="margin-top:-3px;margin-bottom:-3px;height:1px;border-width:0;color:#5900B3;background-color:#5900B3" /><li><div class=noticontenttitle>New grade </div>' + value.Grade + ' / ' + value.Points + ' <br>' + value.AssignmentTitle + '<br>' + value.Department + ' ' + value.CourseNumber + '</li>'));
+                                }
+                                //if newly added assignment
+                                else if (value.DueDate != null) {
+                                    var dueDate = new Date(value.DueDate);
+                                    $('#noticontent').append($('<hr style="margin-top:-3px;margin-bottom:-3px;height:1px;border-width:0;color:#5900B3;background-color:#5900B3" /><li><div class=noticontenttitle>New Assignment </div>' + value.AssignmentTitle + ' <br>' + value.Department + ' ' + value.CourseNumber + '<br>' + value.Points + ' Points <br>Due: ' + dueDate + '</li>'));
+                                }
+                            }
+                        });
+                    }
+                });
+            }
+            // update notification count
+            function updateNotificationCount() {
+                var count = 0;
+                count = parseInt($('span.count').html()) || 0;
+                count++;
+                $('span.count').html(count);
+            }
+
         })
     </script>
 </body>

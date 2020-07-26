@@ -57,64 +57,61 @@ namespace MackTechGroupProject
             }
         }
         
-        public List<GradedAssignmentViewModel> GetGradedAssignments(DateTime afterDate, string userId)
+        public List<StudentNotificationViewModel> GetNotificationData(DateTime afterDate, string userId)
         {
             
             using (ApplicationDbContext context = new ApplicationDbContext())
             {
                 
-                List<GradedAssignmentViewModel> result = new List<GradedAssignmentViewModel>();
+                List<StudentNotificationViewModel> result = new List<StudentNotificationViewModel>();
+
+                //get newly graded submissions per user
                 var updatedSubmissions = context.SubmissionGrades.Where(x => x.GradeAddedOn > afterDate).Include(x => x.Assignment).Include(x => x.User).OrderByDescending(x => x.GradeAddedOn).ToList();
-                foreach(SubmissionGrades sg in updatedSubmissions)
+                var updatedSubmissionsForUser = updatedSubmissions.Where(x => x.User.Id == userId).ToList();
+
+                //get newly added assignements per user 
+                var currentEnrollmentsWithAssignments = context.Enrollments.Where(x => x.User.Id == userId).Include(x => x.User).Include(x => x.Course).Include("Course.Assignments").ToList();
+                var allAssignments = currentEnrollmentsWithAssignments.Select(x => x.Course).SelectMany(y => y.Assignments).ToList();
+                var recentlyAddedAssignments = allAssignments.Where(x => x.AssignmentAddedOn > afterDate).ToList();
+
+                //add newly graded submissions to the list
+                foreach (SubmissionGrades sg in updatedSubmissionsForUser)
                 {
-                    if(sg.User.Id == userId)
+
+                    StudentNotificationViewModel newGradedNotification = new StudentNotificationViewModel()
                     {
-                        GradedAssignmentViewModel newGraded = new GradedAssignmentViewModel()
-                        {
-                            AssignmentTitle = sg.Assignment.AssignmentTitle,
-                            Grade = (double) sg.Grade,
-                            Points = sg.Assignment.Points
-                        };
-                        result.Add(newGraded);
-                    }
+                        AssignmentTitle = sg.Assignment.AssignmentTitle,
+                        Grade = (double)sg.Grade,
+                        Points = sg.Assignment.Points,
+                        DueDate = null,
+                        Department = sg.Assignment.Course.Department,
+                        CourseNumber = sg.Assignment.Course.CourseNumber
+                    };
+                    result.Add(newGradedNotification);
+
                 }
 
+                //add newly added assignments to the same list
+                foreach (Assignment a in recentlyAddedAssignments)
+                {
+                    StudentNotificationViewModel newAddedAssignment = new StudentNotificationViewModel()
+                    {
+                        AssignmentTitle = a.AssignmentTitle,
+                        Grade = 0,
+                        Points = a.Points,
+                        DueDate = a.DueDate,
+                        Department = a.Course.Department,
+                        CourseNumber = a.Course.CourseNumber
+                    };
+                    result.Add(newAddedAssignment);
+
+                }
+
+                //return the list
                 return result;
             }
             
         }
 
-        public List<NewAssignmentNotificationViewModel> GetNewAssignments(DateTime afterDate, string userId)
-        {
-
-            using (ApplicationDbContext context = new ApplicationDbContext())
-            {
-
-                List<NewAssignmentNotificationViewModel> result = new List<NewAssignmentNotificationViewModel>();
-                var currentEnrollmentsWithAssignments = context.Enrollments.Where(x => x.User.Id == userId).Include(x => x.User).Include(x => x.Course).Include("Course.Assignments").ToList();
-
-                // get allAssignments in a list to pass to AllAssignmentsViewModel
-                var allAssignments = currentEnrollmentsWithAssignments.Select(x => x.Course).SelectMany(y => y.Assignments).ToList();
-
-                var recentlyAddedAssignments = allAssignments.Where(x => x.AssignmentAddedOn > afterDate).ToList();
-
-                foreach (Assignment a in recentlyAddedAssignments)
-                {
-                        NewAssignmentNotificationViewModel newAssignment = new NewAssignmentNotificationViewModel()
-                        {
-                            AssignmentTitle = a.AssignmentTitle,
-                            Points = a.Points,
-                            DueDate = a.DueDate,
-                            Department =  a.Course.Department,
-                            CourseNumber =  a.Course.CourseNumber
-                        };
-                        result.Add(newAssignment);
-                    
-                }
-
-                return result;
-            }
-
-        }
     }
 }
