@@ -111,4 +111,11 @@ namespace MackTechGroupProject.Models
     {
         public List<SubmissionGrades> SelectedStudentSubmission { get; set; }
     }
+
+    public class GradedAssignmentViewModel
+    {
+        public string AssignmentTitle { get; set; }
+        public double Grade { get; set; }
+        public int Points { get; set; }
+    }
 }

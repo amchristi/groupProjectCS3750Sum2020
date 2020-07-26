@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 using Microsoft.AspNet.SignalR;
 using MackTechGroupProject.Models;
 using Microsoft.AspNet.Identity.Owin;
-
+using System.Data.Entity;
 
 namespace MackTechGroupProject
 {
@@ -17,7 +17,10 @@ namespace MackTechGroupProject
         public void RegisterNotification(DateTime currentTime)
         {
             string conStr = ConfigurationManager.ConnectionStrings["TitanDbConnection"].ConnectionString;
-            string sqlCommand = @"SELECT [Grade] from [dbo].[SubmissionGrades] where [GradeAddedOn] > @GradeAddedOn";
+            //string sqlCommand = @"SELECT [Grade] from [dbo].[SubmissionGrades] where [GradeAddedOn] > @GradeAddedOn";
+            string sqlCommand = @"SELECT AssignmentTitle, Points, Grade from [dbo].[SubmissionGrades] sg INNER JOIN [dbo].[Assignments] a
+                                    ON sg.Assignment_AssignmentId = a.AssignmentId
+                                    where sg.GradeAddedOn > @GradeAddedOn";
             using (SqlConnection con = new SqlConnection(conStr))
             {
                 SqlCommand cmd = new SqlCommand(sqlCommand, con);
@@ -54,12 +57,29 @@ namespace MackTechGroupProject
             }
         }
         
-        public List<SubmissionGrades> GetGradedAssignments(DateTime afterDate)
+        public List<GradedAssignmentViewModel> GetGradedAssignments(DateTime afterDate, string userId)
         {
             
             using (ApplicationDbContext context = new ApplicationDbContext())
             {
-                return context.SubmissionGrades.Where(x => x.GradeAddedOn > afterDate).OrderByDescending(x => x.GradeAddedOn).ToList();
+                
+                List<GradedAssignmentViewModel> result = new List<GradedAssignmentViewModel>();
+                var updatedSubmissions = context.SubmissionGrades.Where(x => x.GradeAddedOn > afterDate).Include(x => x.Assignment).Include(x => x.User).OrderByDescending(x => x.GradeAddedOn).ToList();
+                foreach(SubmissionGrades sg in updatedSubmissions)
+                {
+                    if(sg.User.Id == userId)
+                    {
+                        GradedAssignmentViewModel newGraded = new GradedAssignmentViewModel()
+                        {
+                            AssignmentTitle = sg.Assignment.AssignmentTitle,
+                            Grade = (double) sg.Grade,
+                            Points = sg.Assignment.Points
+                        };
+                        result.Add(newGraded);
+                    }
+                }
+
+                return result;
             }
             
         } 

@@ -34,9 +34,10 @@ namespace MackTechGroupProject.Controllers
 
         public JsonResult GetNotificationGradedAssignments()
         {
+            var userID = User.Identity.GetUserId();
             var notificationRegisterTime = Session["LastUpdated"] != null ? Convert.ToDateTime(Session["LastUpdated"]) : DateTime.Now;
             NotificationComponents NC = new NotificationComponents();
-            var list = NC.GetGradedAssignments(notificationRegisterTime);
+            var list = NC.GetGradedAssignments(notificationRegisterTime, userID);
             //update session here for get only newly graded assignments (notification)
             Session["Lastupdate"] = DateTime.Now;
             return new JsonResult { Data = list, JsonRequestBehavior = JsonRequestBehavior.AllowGet };

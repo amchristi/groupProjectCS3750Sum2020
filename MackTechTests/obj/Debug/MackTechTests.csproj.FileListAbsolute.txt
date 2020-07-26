@@ -164,3 +164,6 @@ C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechTests\obj\Debug
 C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechTests\obj\Debug\MackTechTests.csproj.CopyComplete
 C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechTests\obj\Debug\MackTechTests.dll
 C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechTests\obj\Debug\MackTechTests.pdb
+C:\Users\Montana\Source\Repos\groupProjectCS3750Sum2020\MackTechTests\bin\Debug\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\Montana\Source\Repos\groupProjectCS3750Sum2020\MackTechTests\bin\Debug\Microsoft.AspNet.SignalR.Core.pdb
+C:\Users\Montana\Source\Repos\groupProjectCS3750Sum2020\MackTechTests\bin\Debug\Microsoft.AspNet.SignalR.Core.xml

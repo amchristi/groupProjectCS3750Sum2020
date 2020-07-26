@@ -85,8 +85,8 @@
 
         .noti-content {
             position: fixed;
-            right: 100px;
-            background: #e5e5e5;
+            right: 325px;
+            background: #F2E6FF;
             border-radius: 4px;
             top: 47px;
             width: 250px;
@@ -105,12 +105,12 @@
             ul#noticontent li {
                 margin: 3px;
                 padding: 6px;
-                background: #fff;
+                background: #ffffff;
             }
 
         .noti-top-arrow {
             border-color: transparent;
-            border-bottom-color: #F5DEB3;
+            border-bottom-color: #F2E6FF;
             border-style: dashed dashed solid;
             border-width: 0 8.5px 8.5px;
             position: absolute;
@@ -119,10 +119,10 @@
         }
 
         span.noti {
-            color: #FF2323;
+            color: #F2E6FF;
             margin: 15px;
             position: fixed;
-            right: 100px;
+            right: 325px;
             font-size: 18px;
             cursor: pointer;
         }
@@ -143,8 +143,9 @@
                 var count = 0;
                 count = parseInt($('span.count').html()) || 0;
                 //only load notification if not already loaded
-                if (count > 0) {
-                    updateNotification();
+                if (count > -1) {
+                    
+                    updatedGradesNotification();
                 }
                 $('span.count', this).html('&nbsp;');
             })
@@ -152,8 +153,8 @@
             $('html').click(function () {
                 $('.noti-content').hide();
             })
-            // update notification
-            function updateNotification() {
+            // update notification for grade changed
+            function updatedGradesNotification() {
                 $('#noticontent').empty();
                 $('#noticontent').append($('<li>Loading...</li>'));
                 $.ajax({
@@ -162,10 +163,10 @@
                     success: function (response) {
                         $('#noticontent').empty();
                         if (response.length == 0) {
-                            $('#noticontent').append($('<li>No data available</li>'));
+                            $('#noticontent').append($('<li>No new notifications</li>'));
                         }
                         $.each(response, function (index, value) {
-                            $('#noticontent').append($('<li>New grade : ' + value.Grade + ' (' + value.Grade + ') added</li>'));
+                            $('#noticontent').append($('<li>New grade: ' + value.Grade + ' / ' + value.Points + ' <br>' + value.AssignmentTitle +  '</li>'));
                         });
                     },
                     error: function (error) {
