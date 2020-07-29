@@ -1,18 +1,34 @@
 ﻿<Properties StartupConfiguration="{68BB2547-5AC6-47D1-9037-103D8041AE7B}|">
   <MonoDevelop.Ide.ItemProperties.MackTechGroupProject PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="MackTechGroupProject/Views/Assignments/StudentSubmission.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MackTechGroupProject/BusinessLogic/AssignmentService.cs">
     <Files>
-      <File FileName="MackTechGroupProject/Controllers/AssignmentsController.cs" Line="323" Column="1" />
-      <File FileName="MackTechGroupProject/Views/Assignments/AssignmentSubmission.cshtml" Line="76" Column="71" />
-      <File FileName="MackTechGroupProject/Views/Assignments/StudentSubmission.cshtml" Line="1" Column="1" />
+      <File FileName="MackTechGroupProject/Controllers/AssignmentsController.cs" Line="211" Column="1" />
+      <File FileName="MackTechGroupProject/Views/Home/Index.cshtml" Line="345" Column="2" />
+      <File FileName="MackTechTests/UnitTest1.cs" Line="61" Column="49" />
+      <File FileName="MackTechTests/Properties/AssemblyInfo.cs" Line="1" Column="1" />
+      <File FileName="MackTechGroupProject/BusinessLogic/AssignmentService.cs" Line="1" Column="1" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="MackTechGroupProject" expanded="True">
+            <Node name="MackTechGroupProject" expanded="True">
+              <Node name="BusinessLogic" expanded="True">
+                <Node name="AssignmentService.cs" selected="True" />
+              </Node>
+            </Node>
+            <Node name="MackTechTests" expanded="True">
+              <Node name="Properties" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/andrewhammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/Controllers/AssignmentsController.cs" relfile="MackTechGroupProject/Controllers/AssignmentsController.cs" line="321" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

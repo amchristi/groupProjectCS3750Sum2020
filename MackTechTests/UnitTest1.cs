@@ -98,5 +98,71 @@ namespace MackTechTests
             System.Diagnostics.Debug.WriteLine(y.Count());
             Assert.IsTrue(y.Count() == 1);
         }
+
+        [TestMethod]
+        public void updateStudentGrade()
+        {
+            //Q: can a teacher save or edit a grade?
+
+            //prep
+            var _context = new MackTechGroupProject.Models.ApplicationDbContext();
+            int selectedSubmissionId = 2;
+            double grade = 75;
+
+            //perform operations
+            Boolean result = AssignmentService.updateStudentGradeService(selectedSubmissionId, grade, _context);
+
+
+            //verify and interpret results
+            Assert.IsTrue(result);
+
+            var y = _context.SubmissionGrades.Where(x => x.ID == selectedSubmissionId);
+
+            Assert.IsTrue(y.Grade == 75);
+        }
+
+        [TestMethod]
+        public void submitTextAssignment()
+        {
+            //Q: can a student submit a text assignment?
+
+            //prep
+
+            var _context = new MackTechGroupProject.Models.ApplicationDbContext();
+            
+            var sUserId = "20e5366b-21de-48c0-ac56-c5d2629f76e9"; //briella stastics
+            var aAssignmentId = 24; //Phys 2210 - text submission assignment
+
+            currentAssignment = _context.Assignments.Where(x => x.AssignmentId == aAssignmentId);
+            currentStudent = _context.Users.Where(x => x.Id == sUserId);
+            string text = "This is a unit Test.";
+
+            //create a submissionGrade object
+            SubmissionGrades submissionGrade = new SubmissionGrades()
+            {
+                User = currentStudent,
+                Assignment = currentAssignment,
+                SubmissionDate = DateTime.Now,
+                TextSubmission = text,
+                FileSubmission = null,
+                Grade = null
+            };
+
+            
+
+            //perform operations
+            Boolean result = AssignmentService.submitTextAssignmentService(submissionGrade, _context);
+
+
+            //verify and interpret results
+            Assert.IsTrue(result);
+
+            var y = _context.SubmissionGrades.Where(x => x.User_Id == sUserId).FirstOrDefault();
+
+            Assert.IsTrue(y.TextSubmission.Equals(text));
+        }
+
+
+
     }
 }

@@ -144,7 +144,7 @@ namespace MackTechGroupProject.Controllers
                 context.SubmissionGrades.Add(submissionGrade);
                 context.SaveChanges();
             }
-
+            //method for unit testing
             if (model.SubmissionText != null)
             {
                 SubmissionGrades submissionGrade = new SubmissionGrades()
@@ -157,10 +157,27 @@ namespace MackTechGroupProject.Controllers
                     Grade = null
                 };
 
+                Boolean result = AssignmentService.submitTextAssignmentService(selectedAssignmentId, submissionGrade, context);
+
                 context.SubmissionGrades.Add(submissionGrade);
                 context.SaveChanges();
             }
 
+            //Working method
+            //if (model.SubmissionText != null)
+            //{
+            //    SubmissionGrades submissionGrade = new SubmissionGrades()
+            //    {
+            //        User = currentStudent,
+            //        Assignment = currentAssignment,
+            //        SubmissionDate = DateTime.Now,
+            //        TextSubmission = model.SubmissionText,
+            //        FileSubmission = null,
+            //        Grade = null
+            //    };
+            //    context.SubmissionGrades.Add(submissionGrade);
+            //    context.SaveChanges();
+            //}
             return RedirectToAction("Index", "Home");
         }
 
@@ -291,55 +308,98 @@ namespace MackTechGroupProject.Controllers
             return View(StudentSubmissionViewModel);
         }
 
+
+        //Current working method
+        //[AcceptVerbs(HttpVerbs.Post)]
+        //public ActionResult StudentSubmission(int id, FormCollection formValues)
+        //{
+        //    var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
+
+        //    //Get the current StudentSubmission for the instructor to grade
+        //    var selectedSubmissionId = id;
+        //    var selectedSubmission = context.SubmissionGrades.Where(x => x.ID == selectedSubmissionId).Include(x => x.Assignment).Include(x => x.User).ToList();
+
+        //    //Do we need the assignment Id?
+        //    //var assignmentId = selectedSubmission.FirstOrDefault().Assignment.AssignmentId;
+
+
+        //    //Update selected Submission with new grade
+            
+        //    selectedSubmission.FirstOrDefault().Grade = Convert.ToDouble(Request.Form["Grade"]);
+        //    selectedSubmission.FirstOrDefault().GradeAddedOn = DateTime.Now;
+
+        //    //save changes to database
+        //    context.SaveChanges();
+
+        //    //changed redirect to land on the list of students to grade, rather than the same assignemnt
+        //    return RedirectToAction("GradeAssignment", new { id = selectedSubmission.FirstOrDefault().Assignment.AssignmentId });
+        //}
+
+        //Editing method to create unit test
         [AcceptVerbs(HttpVerbs.Post)]
         public ActionResult StudentSubmission(int id, FormCollection formValues)
         {
-            var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
+            ApplicationDbContext context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
 
             //Get the current StudentSubmission for the instructor to grade
             var selectedSubmissionId = id;
-            var selectedSubmission = context.SubmissionGrades.Where(x => x.ID == selectedSubmissionId).Include(x => x.Assignment).Include(x => x.User).ToList();
-
-            //Do we need the assignment Id?
-            //var assignmentId = selectedSubmission.FirstOrDefault().Assignment.AssignmentId;
-
-
-            //Update selected Submission with new grade
-            selectedSubmission.FirstOrDefault().Grade = Convert.ToDouble(Request.Form["Grade"]);
-            selectedSubmission.FirstOrDefault().GradeAddedOn = DateTime.Now;
-
-            //save changes to database
-            context.SaveChanges();
-
-            //changed redirect to land on the list of students to grade, rather than the same assignemnt
-            return RedirectToAction("GradeAssignment", new { id = selectedSubmission.FirstOrDefault().Assignment.AssignmentId });
-        }
-
-        public ActionResult SubmitStudentGrade(int id, double grade)
-        {
-            var newGrade = grade;
-            var selectedSubmissionId = id;
-            var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
+            double grade = Convert.ToDouble(Request.Form["Grade"]);
 
             var selectedSubmission = context.SubmissionGrades.Where(x => x.ID == selectedSubmissionId).Include(x => x.Assignment).Include(x => x.User).ToList();
-            var assignmentId = selectedSubmission.FirstOrDefault().Assignment.AssignmentId;
 
-            // if the submission exists in the database
-            if (context.SubmissionGrades.Any(x => x.ID == selectedSubmissionId))
+            Boolean result = AssignmentService.updateStudentGradeService(selectedSubmissionId, grade, context);
+
+            if (result)
             {
-                // set the grade to what the instructor types
-                var submissionGrades = new SubmissionGrades()
-                {
-                    Grade = newGrade
-                };
-                context.SaveChanges();
+                return RedirectToAction("GradeAssignment", new { id = selectedSubmission.FirstOrDefault().Assignment.AssignmentId });
             }
-
-            return RedirectToAction("GradeAssignment", "Assignment", new { id = assignmentId });
+            else
+            {
+                return RedirectToAction("GradeAssignment", new { id = selectedSubmission.FirstOrDefault().Assignment.AssignmentId });
+            }
+            
         }
 
 
-        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //public ActionResult SubmitStudentGrade(int id, double grade)
+        //{
+        //    var newGrade = grade;
+        //    var selectedSubmissionId = id;
+        //    var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
+
+        //    var selectedSubmission = context.SubmissionGrades.Where(x => x.ID == selectedSubmissionId).Include(x => x.Assignment).Include(x => x.User).ToList();
+        //    var assignmentId = selectedSubmission.FirstOrDefault().Assignment.AssignmentId;
+
+        //    // if the submission exists in the database
+        //    if (context.SubmissionGrades.Any(x => x.ID == selectedSubmissionId))
+        //    {
+        //        // set the grade to what the instructor types
+        //        var submissionGrades = new SubmissionGrades()
+        //        {
+        //            Grade = newGrade
+        //        };
+        //        context.SaveChanges();
+        //    }
+
+        //    return RedirectToAction("GradeAssignment", "Assignment", new { id = assignmentId });
+        //}
+
+
+
         public ActionResult DownloadSubmittedAssignemnt(string filePath)
         {
             ////Hopefully will be useful to preserve origial file name and type
@@ -380,6 +440,20 @@ namespace MackTechGroupProject.Controllers
                 throw new System.IO.IOException(s);
             return data;
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         #region UnusedCode
 
