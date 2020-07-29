@@ -1,0 +1,67 @@
+﻿@model MackTechGroupProject.Models.StudentGradesViewModel
+
+@{
+    ViewBag.Title = "Grades";
+}
+
+<h2>Course Registration</h2>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>CourseRegistration</title>
+</head>
+<body>
+    <table class="table">
+        <tr>
+            @*<th></th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.StudentGrades.FirstOrDefault().Assignment.AssignmentTitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StudentGrades.FirstOrDefault().Assignment.DueDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StudentGrades.FirstOrDefault().Grade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StudentGrades.FirstOrDefault().Assignment.Points)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model.StudentGrades)
+        {
+            <tr>
+                @*<td>
+                        @Html.ActionLink("Details", "Details", new { id = item.CourseID })
+                    </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.Assignment.AssignmentTitle)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Assignment.DueDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Grade)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Assignment.Points)
+                </td>
+                <td>
+                    <a class="btn btn-default" style="float: right" href="@Url.Action("StudentsStatisticsStudent", "Assignments", new { id = Model.SubmittedAssignments.FirstOrDefault().Assignment.AssignmentId })">
+                        Statistics
+                    </a>
+                </td>
+            </tr>
+        }
+    </table>
+
+    <div class="row">
+        <div class="col-sm-12" style="text-align: right"> Total:      @ViewBag.Total</div>
+    </div>
+
+</body>
+</html>

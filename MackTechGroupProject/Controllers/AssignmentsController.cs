@@ -224,7 +224,29 @@ namespace MackTechGroupProject.Controllers
             return View(gradeSubmittedAssignmentsViewModel);
         }
 
-        public ActionResult StudentStatistics(int id)
+        public ActionResult ViewGrades(int id)
+        {
+            var userId = User.Identity.GetUserId();
+            var selectedCourseId = id;
+
+            var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
+
+            //TODO: change this to only get the most current submission's grade
+            var studentGrades = context.SubmissionGrades.Include(x => x.User).Include(x => x.Assignment).Include("Assignment.Course")
+                                        .Where(x => x.Assignment.Course.CourseId == selectedCourseId && x.User.Id == userId).ToList();
+
+            var studentGradesViewModel = new StudentGradesViewModel()
+            {
+                StudentGrades = studentGrades
+            };
+
+            //to calculate total get a sum off all score and divide by sum of all assignmnet.course.points
+            ViewBag.Total = 89.5;
+
+            return View(studentGradesViewModel);
+        }
+
+        public ActionResult StudentsStatisticsInstructor(int id)
         {
             var selectedAssignmentId = id;
             var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
@@ -256,6 +278,66 @@ namespace MackTechGroupProject.Controllers
 
             // list of all scores using mostRecentSubmissions including count of student that received scored 0-59, 60-69, etc.
             var zeroToSixty = mostRecentSubmissionPerStudent.Where(x=> x.Percentage < Convert.ToDecimal(.6)).Count();
+            var sixtyToSeventy = mostRecentSubmissionPerStudent.Where(x => x.Percentage >= Convert.ToDecimal(.6) && x.Percentage < Convert.ToDecimal(.7)).Count();
+            var seventyToEighty = mostRecentSubmissionPerStudent.Where(x => x.Percentage >= Convert.ToDecimal(.7) && x.Percentage < Convert.ToDecimal(.8)).Count();
+            var eightyToNinety = mostRecentSubmissionPerStudent.Where(x => x.Percentage >= Convert.ToDecimal(.8) && x.Percentage < Convert.ToDecimal(.9)).Count();
+            var ninetyToOneHundred = mostRecentSubmissionPerStudent.Where(x => x.Percentage >= Convert.ToDecimal(.9)).Count();
+
+            // save object for x and y values of chart/graph
+            List<DataPoint> dataPoints = new List<DataPoint>
+            {
+                //(range, count of students within range)
+                new DataPoint( "0-59%", zeroToSixty),
+                new DataPoint( "60-69%", sixtyToSeventy),
+                new DataPoint( "70-79%", seventyToEighty),
+                new DataPoint( "80-89%", eightyToNinety),
+                new DataPoint( "90-100%", ninetyToOneHundred)
+            };
+
+            // pass the data to canvasJS via Json
+            ViewBag.DataPoints = JsonConvert.SerializeObject(dataPoints);
+
+            //set ViewModel list to defined list above
+            var gradeSubmittedAssignmentsViewModel = new gradeSubmittedAssignmentsViewModel()
+            {
+                SubmittedAssignments = mostRecentSubmissionPerStudent
+            };
+
+            return View(gradeSubmittedAssignmentsViewModel);
+        }
+
+        public ActionResult StudentsStatisticsStudent(int id)
+        {
+            var selectedAssignmentId = id;
+            var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
+
+            //Select the specific assignment from assignments Table
+            var selectedAssignment = context.Assignments.Where(x => x.AssignmentId == selectedAssignmentId).Include(x => x.Course).FirstOrDefault();
+
+            //Get a list of submitted assignments from the SubmissionGrades Table based on the specific assignment
+            var allSubmissionGrades = context.SubmissionGrades.Include(x => x.Assignment).Include(x => x.User).Include(x => x.User).ToList();
+
+            var allSubmissionsOfSelected = allSubmissionGrades.Where(x => x.Assignment == selectedAssignment).ToList();
+
+            // get most recent submission per student 
+            var mostRecentSubmissionPerStudent = allSubmissionsOfSelected.Where(w => w.Grade != null).GroupBy(x => x.User).Select(x => x.FirstOrDefault(y => y.ID == x.Max(z => z.ID))).OrderBy(x => x.User.Id).ToList();
+
+            // used for calculating percentages
+            var assignmentPointTotal = mostRecentSubmissionPerStudent.FirstOrDefault().Assignment.Points;
+            var userIds = mostRecentSubmissionPerStudent.Select(x => x.User).Select(y => y.Id).ToList();
+
+            // set percentages per user
+            foreach (var userId in userIds)
+            {
+                // get user's grade based off userId
+                var userGrade = mostRecentSubmissionPerStudent.Where(x => x.User.Id == userId).FirstOrDefault().Grade;
+
+                // set Percentage of user using usergrade
+                mostRecentSubmissionPerStudent.Where(x => x.User.Id == userId).FirstOrDefault().Percentage = Convert.ToDecimal(userGrade) / assignmentPointTotal;
+            }
+
+            // list of all scores using mostRecentSubmissions including count of student that received scored 0-59, 60-69, etc.
+            var zeroToSixty = mostRecentSubmissionPerStudent.Where(x => x.Percentage < Convert.ToDecimal(.6)).Count();
             var sixtyToSeventy = mostRecentSubmissionPerStudent.Where(x => x.Percentage >= Convert.ToDecimal(.6) && x.Percentage < Convert.ToDecimal(.7)).Count();
             var seventyToEighty = mostRecentSubmissionPerStudent.Where(x => x.Percentage >= Convert.ToDecimal(.7) && x.Percentage < Convert.ToDecimal(.8)).Count();
             var eightyToNinety = mostRecentSubmissionPerStudent.Where(x => x.Percentage >= Convert.ToDecimal(.8) && x.Percentage < Convert.ToDecimal(.9)).Count();

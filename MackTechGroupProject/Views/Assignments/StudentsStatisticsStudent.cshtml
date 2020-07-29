@@ -1,7 +1,7 @@
 ﻿@model MackTechGroupProject.Models.gradeSubmittedAssignmentsViewModel
 
 @{
-    ViewBag.Title = "StudentStatistics";
+    ViewBag.Title = "StudentsStatistics";
 }
 
 <!DOCTYPE html>
@@ -30,7 +30,7 @@
             //],
             data: [
             {
-                type: "column",
+                type: "bar",
 
                 dataPoints: @Html.Raw(ViewBag.DataPoints),
 

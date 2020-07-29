@@ -1,0 +1,52 @@
+﻿@model MackTechGroupProject.Models.gradeSubmittedAssignmentsViewModel
+
+@{
+    ViewBag.Title = "StudentsStatistics";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Student Statistics</title>
+
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+    <script type="text/javascript">
+
+    $(function () {
+        var chart = new CanvasJS.Chart("chartContainer", {
+            theme: "light2",
+            zoomEnabled: true,
+            animationEnabled: true,
+            title: {
+                text: "Student Statistics"
+            },
+            //subtitles: [
+            //    {
+            //        text: "Try Zooming and Panning"
+            //    }
+            //],
+            data: [
+            {
+                type: "column",
+
+                dataPoints: @Html.Raw(ViewBag.DataPoints),
+
+                //You can add dynamic data from the controller as shown below. Check the controller and uncomment the line which generates dataPoints.
+                //dataPoints: @Html.Raw(ViewBag.DataPoints),
+            }
+            ]
+        });
+        chart.render();
+    });
+    </script>
+</head>
+
+<body>
+    <h1>@Model.SubmittedAssignments.FirstOrDefault().Assignment.AssignmentTitle</h1>
+    <hr />
+    <div id="chartContainer"></div>
+</body>
+</html>

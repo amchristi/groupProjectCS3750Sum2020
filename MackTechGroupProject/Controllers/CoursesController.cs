@@ -286,6 +286,15 @@ namespace MackTechGroupProject.Controllers
             return RedirectToAction("TuitionPayment", "Courses");
         }
 
+        public ActionResult CourseDetail(int id)
+        {
+            var selectedCourseId = id;
+            var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
+            var selectedCourse = context.Courses.Where(x => x.CourseId == selectedCourseId).Include(x => x.Assignments).FirstOrDefault();
+
+            return View(selectedCourse);
+        }
+
         // GET: Courses
         public ActionResult CS3620()
         {
@@ -313,11 +322,5 @@ namespace MackTechGroupProject.Controllers
         {
             return View();
         }
-
-        public ActionResult CourseDetail()
-        {
-            return View();
-        }
-
     }
 }

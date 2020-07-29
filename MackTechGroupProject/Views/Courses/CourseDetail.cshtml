@@ -1,12 +1,18 @@
-@model IEnumerable<MackTechGroupProject.Models.Enrollment>
+@model MackTechGroupProject.Models.Course
 @{
     ViewBag.Title = "Course Detail View";
 }
 
-<h1>Welcome to Courses Detail View</h1>
+<h1>
+    Welcome to @Model.Department @Model.CourseNumber
+</h1>
 
-<p><a class="btn btn-default" href="@Url.Action("ViewAssignments", "Assignments")">View All Assignments</a></p>
+<p><a class="btn btn-default" href="@Url.Action("ViewAssignments", "Assignments", new { id = Model.CourseId })">View All Assignments</a></p>
 @if (this.User.IsInRole("Instructor"))
 {
-    <p><a class="btn btn-default" href="@Url.Action("SelectCourse", "Assignments")">Add New Assignment</a></p>
+    @*<p><a class="btn btn-default" href="@Url.Action("SelectCourse", "Assignments")">Add New Assignment</a></p>*@
+}
+@if (this.User.IsInRole("Student"))
+{
+    <p><a class="btn btn-default" href="@Url.Action("ViewGrades", "Assignments", new { id = Model.CourseId })">View Grades</a></p>
 }

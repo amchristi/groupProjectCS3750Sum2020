@@ -25,7 +25,7 @@
                 <h1>@Html.DisplayFor(model => model.SubmittedAssignments.FirstOrDefault().Assignment.AssignmentTitle)</h1>
             </div>
             <div class="col-md-4" style="padding-top: 20px">
-                <a class="btn btn-default" style="float: right" href="@Url.Action("StudentStatistics", "Assignments", new { id = Model.SubmittedAssignments.FirstOrDefault().Assignment.AssignmentId })">
+                <a class="btn btn-default" style="float: right" href="@Url.Action("StudentsStatisticsInstructor", "Assignments", new { id = Model.SubmittedAssignments.FirstOrDefault().Assignment.AssignmentId })">
                     Statistics
                 </a>
             </div>
