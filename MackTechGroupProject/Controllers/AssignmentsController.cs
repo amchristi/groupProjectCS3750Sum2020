@@ -224,6 +224,52 @@ namespace MackTechGroupProject.Controllers
             return View(gradeSubmittedAssignmentsViewModel);
         }
 
+
+
+        public ActionResult InstructorGradeBook(int id)
+        {
+            var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
+
+            //Get course based on course Id
+            var selectedCourseId = id;
+            var selectedCourse = context.Courses.Where(x => x.CourseId == selectedCourseId).FirstOrDefault();
+
+
+            //get list of student enrollments for class 
+            var courseEnrollments = context.Enrollments.Where(x => x.Course.CourseId == selectedCourseId).Include(x => x.User).ToList();
+
+            //get list of assignments for course
+            var courseAssignments = context.Assignments.Where(x => x.Course.CourseId == selectedCourseId).ToList();
+
+
+            //List of All student grades
+            var studentGrades = context.SubmissionGrades.Include(x => x.User).Include(x => x.Assignment).Include("Assignment.Course")
+                            .Where(x => x.Assignment.Course.CourseId == selectedCourseId).ToList();
+
+            ////only getting a list of submitted assignments
+            var mostRecentStudentGrades = studentGrades.GroupBy(x => x.User).Select(x => x.OrderByDescending(y => y.SubmissionDate).FirstOrDefault()).ToList();
+
+            var instructorGradeBookViewModel = new InstructorGradeBookViewModel()
+            {
+                ClassRoll = courseEnrollments,
+                CourseAssignments = courseAssignments,
+                StudentGrades = studentGrades
+            };
+
+            ////to calculate total get a sum off all score and divide by sum of all assignmnet.course.points
+            //var gradeTotal = mostRecentStudentGrades.Sum(x => x.Grade);
+            //var pointsTotal = mostRecentStudentGrades.Sum(x => x.Assignment.Points);
+
+            //var total = gradeTotal / pointsTotal;
+
+            //ViewBag.Total = total;
+
+            return View(instructorGradeBookViewModel);
+        }
+
+
+
+
         public ActionResult ViewGrades(int id)
         {
             var userId = User.Identity.GetUserId();

@@ -1,0 +1,126 @@
+﻿@model MackTechGroupProject.Models.InstructorGradeBookViewModel
+
+
+@{
+    ViewBag.Title = "GradeBook";
+
+}
+
+<h2>Grades for @Model.StudentGrades.FirstOrDefault().Assignment.Course.Department @Model.StudentGrades.FirstOrDefault().Assignment.Course.CourseNumber</h2>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Grade Book</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>
+                @*Space Holder*@
+            </th>
+            @foreach (var assignment in Model.CourseAssignments)
+            {
+                @*assignment Title*@
+                <th class="assName">
+                    @Html.DisplayFor(modelItem => assignment.AssignmentTitle)
+                </th>
+            }
+            <th>
+                @*Space Holder*@
+            </th>
+
+        </tr>
+        <tr>
+            <th>
+                Points Possible:
+            </th>
+            @foreach (var assignment in Model.CourseAssignments)
+            {
+                @*Assignment Points Possible*@
+                <th>
+                    @Html.DisplayFor(modelItem => assignment.Points)
+                </th>
+            }
+            <th>
+                Total Grade
+            </th>
+        </tr>
+        <tr>
+            <th>
+                Student Name:
+            </th>
+            @*Assignment Space Holder, create a blank row*@
+            @foreach (var assignment in Model.CourseAssignments)
+            {
+                <th>
+                </th>
+            }
+            <th>
+                @*Space Holder*@
+            </th>
+        </tr>
+        @foreach (var student in Model.ClassRoll)
+        {
+
+            <tr>
+                @*student name*@
+                <td>
+
+                    @Html.DisplayFor(modelItem => student.User.FirstName)
+                    @Html.DisplayFor(modelItem => student.User.LastName)
+                </td>
+                
+                @foreach (var assignment in Model.CourseAssignments)
+                {
+                    //ONLY ONE ENTRY PER ASSIGNMENT
+                    <td>
+                        @foreach (var grade in Model.StudentGrades)
+                        {
+                            //Is it this students assignment?
+                            if (student.User == grade.User)
+                            {
+                                //Is this the Assignment for this column
+                                if (assignment.AssignmentId == grade.Assignment.AssignmentId)
+                                {
+                                    //display the grade
+                                    if (grade.Grade != null)
+                                    {
+                                        @Html.DisplayFor(modelItem => grade.Grade)
+                                        break;
+                                    }
+                                    //display dashes if submitted and not graded
+                                    if (grade.Grade == null)
+                                    {
+                                        <p>--</p>
+                                        break;
+                                    }
+                                }
+                                else
+                                {
+                                    continue;
+                                }
+                            }
+                            else
+                            {
+                                continue;
+                            }
+                        }
+
+                    </td>
+                }
+                
+
+                <td>
+                    stuff
+                </td>
+
+            </tr>
+        }
+
+    </table>
+
+</body>
+</html>

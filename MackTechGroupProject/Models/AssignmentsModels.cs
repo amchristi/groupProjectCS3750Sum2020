@@ -119,6 +119,15 @@ namespace MackTechGroupProject.Models
         public List<Assignment> CourseAssignments { get; set; }
     }
 
+    public class InstructorGradeBookViewModel
+    {
+        public List<Enrollment> ClassRoll { get; set; }
+        public List<SubmissionGrades> StudentGrades { get; set; }
+        public List<Assignment> CourseAssignments { get; set; }
+    }
+
+
+
     public class StudentNotificationViewModel
     {
         public string AssignmentTitle { get; set; }
