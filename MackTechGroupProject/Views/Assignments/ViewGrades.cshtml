@@ -2,7 +2,6 @@
 
 @{
     ViewBag.Title = "Grades";
-    var written = false;
 }
 
 <h2>Grades for @Model.StudentGrades.FirstOrDefault().Assignment.Course.Department @Model.StudentGrades.FirstOrDefault().Assignment.Course.CourseNumber</h2>
@@ -72,7 +71,7 @@
             </td>
 
             <td>
-                <a class="btn btn-default" style="float: right" href="@Url.Action("StudentsStatisticsStudent", "Assignments", new { id = Model.StudentGrades.FirstOrDefault().Assignment.AssignmentId })">
+                <a class="btn btn-default" style="float: right" href="@Url.Action("StudentsStatisticsStudent", "Assignments", new { id = item.AssignmentId })">
                     Statistics
                 </a>
             </td>
@@ -81,7 +80,7 @@
     </table>
 
     <div class="row">
-        <div class="col-sm-12" style="text-align: right"> Total:      @ViewBag.Total</div>
+        <div class="col-sm-12" style="text-align: right"> <b>Total</b>:      @ViewBag.Total</div>
     </div>
 
 </body>
