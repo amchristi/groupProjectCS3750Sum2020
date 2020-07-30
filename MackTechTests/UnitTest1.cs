@@ -118,7 +118,7 @@ namespace MackTechTests
 
             var y = _context.SubmissionGrades.Where(x => x.ID == selectedSubmissionId);
 
-            Assert.IsTrue(y.Grade == 75);
+            Assert.IsTrue(y.FirstOrDefault().Grade == 75);
         }
 
         [TestMethod]
@@ -133,8 +133,8 @@ namespace MackTechTests
             var sUserId = "20e5366b-21de-48c0-ac56-c5d2629f76e9"; //briella stastics
             var aAssignmentId = 24; //Phys 2210 - text submission assignment
 
-            currentAssignment = _context.Assignments.Where(x => x.AssignmentId == aAssignmentId);
-            currentStudent = _context.Users.Where(x => x.Id == sUserId);
+            var currentAssignment = _context.Assignments.Where(x => x.AssignmentId == aAssignmentId).FirstOrDefault();
+            var currentStudent = _context.Users.Where(x => x.Id == sUserId).FirstOrDefault();
             string text = "This is a unit Test.";
 
             //create a submissionGrade object
@@ -151,18 +151,16 @@ namespace MackTechTests
             
 
             //perform operations
-            Boolean result = AssignmentService.submitTextAssignmentService(submissionGrade, _context);
+            Boolean result = AssignmentService.submitTextAssignmentService(aAssignmentId, submissionGrade, _context);
 
 
             //verify and interpret results
             Assert.IsTrue(result);
 
-            var y = _context.SubmissionGrades.Where(x => x.User_Id == sUserId).FirstOrDefault();
+            var y = _context.SubmissionGrades.Where(x => x.User.Id == sUserId).FirstOrDefault();
 
             Assert.IsTrue(y.TextSubmission.Equals(text));
         }
-
-
 
     }
 }
