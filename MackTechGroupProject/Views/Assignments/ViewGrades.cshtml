@@ -4,14 +4,14 @@
     ViewBag.Title = "Grades";
 }
 
-<h2>Course Registration</h2>
+    <h2>Grades for @Model.StudentGrades.FirstOrDefault().Assignment.Course.Department @Model.StudentGrades.FirstOrDefault().Assignment.Course.CourseNumber</h2>
 
 <!DOCTYPE html>
 
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>CourseRegistration</title>
+    <title>View Grades</title>
 </head>
 <body>
     <table class="table">
@@ -34,28 +34,37 @@
 
         @foreach (var item in Model.StudentGrades)
         {
-            <tr>
-                @*<td>
-                        @Html.ActionLink("Details", "Details", new { id = item.CourseID })
-                    </td>*@
+    <tr>
+        @*<td>
+            @Html.ActionLink("Details", "Details", new { id = item.CourseID })
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.Assignment.AssignmentTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Assignment.DueDate)
+        </td>
+        @if (item.Grade != null)
+        {
+            <td>
+                @Html.DisplayFor(modelItem => item.Grade)
+            </td>
+        }
+            @if (item.Grade == null)
+            {
                 <td>
-                    @Html.DisplayFor(modelItem => item.Assignment.AssignmentTitle)
+                    --
                 </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Assignment.DueDate)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Grade)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Assignment.Points)
-                </td>
-                <td>
-                    <a class="btn btn-default" style="float: right" href="@Url.Action("StudentsStatisticsStudent", "Assignments", new { id = Model.SubmittedAssignments.FirstOrDefault().Assignment.AssignmentId })">
-                        Statistics
-                    </a>
-                </td>
-            </tr>
+        }
+        <td>
+            @Html.DisplayFor(modelItem => item.Assignment.Points)
+        </td>
+        <td>
+            <a class="btn btn-default" style="float: right" href="@Url.Action("StudentsStatisticsStudent", "Assignments", new { id = Model.StudentGrades.FirstOrDefault().Assignment.AssignmentId })">
+                Statistics
+            </a>
+        </td>
+    </tr>
         }
     </table>
 

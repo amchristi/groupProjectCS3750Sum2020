@@ -144,3 +144,4 @@ C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\ob
 C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.dll
 C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.pdb
 C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.csprojAssemblyReference.cache
+C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechGroupProject\obj\Debug\MackTechGroupProject.Migrations.updated_assignment_model.resources

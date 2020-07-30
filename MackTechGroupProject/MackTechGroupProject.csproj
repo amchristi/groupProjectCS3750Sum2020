@@ -300,6 +300,10 @@
     <Compile Include="Migrations\202007260420521_Add_AssignmentAddedOn_column.Designer.cs">
       <DependentUpon>202007260420521_Add_AssignmentAddedOn_column.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202007300140256_updated_assignment_model.cs" />
+    <Compile Include="Migrations\202007300140256_updated_assignment_model.Designer.cs">
+      <DependentUpon>202007300140256_updated_assignment_model.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -599,6 +603,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202007260420521_Add_AssignmentAddedOn_column.resx">
       <DependentUpon>202007260420521_Add_AssignmentAddedOn_column.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007300140256_updated_assignment_model.resx">
+      <DependentUpon>202007300140256_updated_assignment_model.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

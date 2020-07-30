@@ -231,17 +231,26 @@ namespace MackTechGroupProject.Controllers
 
             var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
 
-            //TODO: change this to only get the most current submission's grade
+            var courseAssignments = context.Assignments.Where(x => x.Course.CourseId == selectedCourseId).ToList();
+
             var studentGrades = context.SubmissionGrades.Include(x => x.User).Include(x => x.Assignment).Include("Assignment.Course")
-                                        .Where(x => x.Assignment.Course.CourseId == selectedCourseId && x.User.Id == userId).ToList();
+                                        .Where(x => x.Assignment.Course.CourseId == selectedCourseId).ToList();
+
+            //only getting a list of submitted assignments
+            var mostRecentStudentGrades = studentGrades.GroupBy(x => x.Assignment.AssignmentId).Select(x => x.OrderByDescending(y => y.Assignment.DueDate).FirstOrDefault()).ToList();
 
             var studentGradesViewModel = new StudentGradesViewModel()
             {
-                StudentGrades = studentGrades
+                StudentGrades = mostRecentStudentGrades
             };
 
             //to calculate total get a sum off all score and divide by sum of all assignmnet.course.points
-            ViewBag.Total = 89.5;
+            var gradeTotal = mostRecentStudentGrades.Sum(x => x.Grade);
+            var pointsTotal = mostRecentStudentGrades.Sum(x => x.Assignment.Points);
+
+            var total = gradeTotal / pointsTotal;
+
+            ViewBag.Total = total;
 
             return View(studentGradesViewModel);
         }

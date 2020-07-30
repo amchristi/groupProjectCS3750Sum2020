@@ -18,10 +18,6 @@ namespace MackTechGroupProject.Models
         [DataType(DataType.Text)]
         public int Points { get; set; }
 
-        //get rid if this
-        [DataType(DataType.Text)]
-        public int Score { get; set; }
-
         [Required]
         [DataType(DataType.Text)]
         [Display(Name = "Assignment Title")]
@@ -44,6 +40,9 @@ namespace MackTechGroupProject.Models
         public string SubmissionType { get; set; }
 
         public DateTime? AssignmentAddedOn { get; set; }
+
+        [NotMapped]
+        public double? Score { get; set; }
     }
 
     public class AddAssignmentViewModel
