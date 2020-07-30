@@ -34,48 +34,63 @@
 
         @foreach (var item in Model.CourseAssignments)
         {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.AssignmentTitle)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DueDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Points)
-            </td>
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AssignmentTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DueDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Points)
+        </td>
 
-            <td>
-                @foreach (var grade in Model.StudentGrades)
+        <td>
+            @foreach (var grade in Model.StudentGrades)
+            {
+                //if it is not the assignment continue
+                if (grade.Assignment.AssignmentId != item.AssignmentId)
                 {
-                    //if it is not the assignment continue
-                    if (grade.Assignment.AssignmentId != item.AssignmentId)
+                    continue;
+                }
+                //if it is the assignment
+                else if (grade.Assignment.AssignmentId == item.AssignmentId)
+                {
+                    //display the grade
+                    if (grade.Grade != null)
                     {
-                        continue;
+                        @Html.DisplayFor(modelItem => grade.Grade)
                     }
-                    //if it is the assignment
-                    else if (grade.Assignment.AssignmentId == item.AssignmentId)
+                    //display dashes if submitted and not graded
+                    if (grade.Grade == null)
                     {
-                        //display the grade
-                        if (grade.Grade != null)
-                        {
-                            @Html.DisplayFor(modelItem => grade.Grade)
-                        }
-                        //display dashes if submitted and not graded
-                        if (grade.Grade == null)
-                        {
-                            <p>--</p>
-                        }
+                        <p>--</p>
                     }
                 }
-            </td>
-
-            <td>
-                <a class="btn btn-default" style="float: right" href="@Url.Action("StudentsStatisticsStudent", "Assignments", new { id = item.AssignmentId })">
-                    Statistics
-                </a>
-            </td>
-        </tr>
+            }
+        </td>
+        <td>
+            @foreach (var grade in Model.StudentGrades)
+            {
+                //if it is not the assignment continue
+                if (grade.Assignment.AssignmentId != item.AssignmentId)
+                {
+                    continue;
+                }
+                //if it is the assignment
+                else if (grade.Assignment.AssignmentId == item.AssignmentId)
+                {
+                    //display the grade
+                    if (grade.Grade != null)
+                    {
+                        <a class="btn btn-default" style="float: right" href="@Url.Action("StudentsStatisticsStudent", "Assignments", new { id = item.AssignmentId })">
+                            Statistics
+                        </a>
+                    }
+                }
+            }
+        </td>
+    </tr>
         }
     </table>
 
