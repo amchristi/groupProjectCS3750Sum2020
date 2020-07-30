@@ -2,9 +2,10 @@
 
 @{
     ViewBag.Title = "Grades";
+    var written = false;
 }
 
-    <h2>Grades for @Model.StudentGrades.FirstOrDefault().Assignment.Course.Department @Model.StudentGrades.FirstOrDefault().Assignment.Course.CourseNumber</h2>
+<h2>Grades for @Model.StudentGrades.FirstOrDefault().Assignment.Course.Department @Model.StudentGrades.FirstOrDefault().Assignment.Course.CourseNumber</h2>
 
 <!DOCTYPE html>
 
@@ -18,53 +19,64 @@
         <tr>
             @*<th></th>*@
             <th>
-                @Html.DisplayNameFor(model => model.StudentGrades.FirstOrDefault().Assignment.AssignmentTitle)
+                @Html.DisplayNameFor(model => model.CourseAssignments.FirstOrDefault().AssignmentTitle)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.StudentGrades.FirstOrDefault().Assignment.DueDate)
+                @Html.DisplayNameFor(model => model.CourseAssignments.FirstOrDefault().DueDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CourseAssignments.FirstOrDefault().Points)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.StudentGrades.FirstOrDefault().Grade)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.StudentGrades.FirstOrDefault().Assignment.Points)
-            </th>
             <th></th>
         </tr>
 
-        @foreach (var item in Model.StudentGrades)
+        @foreach (var item in Model.CourseAssignments)
         {
-    <tr>
-        @*<td>
-            @Html.ActionLink("Details", "Details", new { id = item.CourseID })
-        </td>*@
-        <td>
-            @Html.DisplayFor(modelItem => item.Assignment.AssignmentTitle)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Assignment.DueDate)
-        </td>
-        @if (item.Grade != null)
-        {
+        <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Grade)
+                @Html.DisplayFor(modelItem => item.AssignmentTitle)
             </td>
-        }
-            @if (item.Grade == null)
-            {
-                <td>
-                    --
-                </td>
-        }
-        <td>
-            @Html.DisplayFor(modelItem => item.Assignment.Points)
-        </td>
-        <td>
-            <a class="btn btn-default" style="float: right" href="@Url.Action("StudentsStatisticsStudent", "Assignments", new { id = Model.StudentGrades.FirstOrDefault().Assignment.AssignmentId })">
-                Statistics
-            </a>
-        </td>
-    </tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DueDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Points)
+            </td>
+
+            <td>
+                @foreach (var grade in Model.StudentGrades)
+                {
+                    //if it is not the assignment continue
+                    if (grade.Assignment.AssignmentId != item.AssignmentId)
+                    {
+                        continue;
+                    }
+                    //if it is the assignment
+                    else if (grade.Assignment.AssignmentId == item.AssignmentId)
+                    {
+                        //display the grade
+                        if (grade.Grade != null)
+                        {
+                            @Html.DisplayFor(modelItem => grade.Grade)
+                        }
+                        //display dashes if submitted and not graded
+                        if (grade.Grade == null)
+                        {
+                            <p>--</p>
+                        }
+                    }
+                }
+            </td>
+
+            <td>
+                <a class="btn btn-default" style="float: right" href="@Url.Action("StudentsStatisticsStudent", "Assignments", new { id = Model.StudentGrades.FirstOrDefault().Assignment.AssignmentId })">
+                    Statistics
+                </a>
+            </td>
+        </tr>
         }
     </table>
 

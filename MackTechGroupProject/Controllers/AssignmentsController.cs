@@ -241,7 +241,8 @@ namespace MackTechGroupProject.Controllers
 
             var studentGradesViewModel = new StudentGradesViewModel()
             {
-                StudentGrades = mostRecentStudentGrades
+                StudentGrades = mostRecentStudentGrades,
+                CourseAssignments = courseAssignments
             };
 
             //to calculate total get a sum off all score and divide by sum of all assignmnet.course.points
