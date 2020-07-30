@@ -514,6 +514,7 @@
     <Content Include="Views\Assignments\StudentsStatisticsInstructor.cshtml" />
     <Content Include="Views\Assignments\StudentsStatisticsStudent.cshtml" />
     <Content Include="Views\Assignments\ViewGrades.cshtml" />
+    <Content Include="Views\Assignments\InstructorGradeBook.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
