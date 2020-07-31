@@ -15,11 +15,7 @@
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                <span class="noti glyphicon glyphicon-bell"><span class="count">&nbsp;</span></span>
-                <div class="noti-content">
-                    <div class="noti-top-arrow"></div>
-                    <ul id="noticontent"></ul>
-                </div>
+
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -41,7 +37,15 @@
                             <li>@Html.ActionLink("Profile", "ProfileInfoDetails", "Account")</li>
                             <li>@Html.ActionLink("Registration", "CourseRegistration", "Courses")</li>
                             <li>@Html.ActionLink("Student Account", "StudentAccount", "Courses")</li>
+                            <li>
+                                <span class="noti glyphicon glyphicon-bell"><span class="count">&nbsp;</span></span>
+                                <div class="noti-content">
+                                    <div class="noti-top-arrow"></div>
+                                    <ul id="noticontent"></ul>
+                                </div>
+                            </li>
                         }
+
                         if (this.User.IsInRole("Instructor"))
                         {
                             <li>@Html.ActionLink("Profile", "ProfileInfoDetails", "Account")</li>
