@@ -160,8 +160,7 @@ namespace MackTechGroupProject.Controllers
 
                 Boolean result = AssignmentService.submitTextAssignmentService(selectedAssignmentId, submissionGrade, context);
 
-                context.SubmissionGrades.Add(submissionGrade);
-                context.SaveChanges();
+                
             }
 
             //Working method
