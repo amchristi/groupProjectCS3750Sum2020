@@ -75,6 +75,18 @@ namespace MackTechGroupProject.Controllers
             return View(model);
         }
 
+        public ActionResult DeleteAssignment(int id)
+        {
+            var userId = User.Identity.GetUserId();
+            var selectedAssignmentId = id;
+
+            var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
+
+            AssignmentService.DeleteAssignmentService(selectedAssignmentId, context);
+
+            return RedirectToAction("Index", "Home");
+        }
+
         public ActionResult ViewAssignments(int id)
         {
             var selectedCourseId = id;
@@ -376,7 +388,6 @@ namespace MackTechGroupProject.Controllers
             if (allSubmissionGradesOfAssignment.Any(x => x.User.Id == currentUserId && x.Assignment.AssignmentId == selectedAssignmentId))
             {
                 currentUserScore = Convert.ToDouble(mostRecentSubmissionsofAllStudents.Where(x => x.User.Id == currentUserId && x.Assignment.AssignmentId == selectedAssignmentId).FirstOrDefault().Grade);
-                var test = "test";
             }
             else
             {

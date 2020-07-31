@@ -28,7 +28,23 @@ namespace MackTechGroupProject.BusinessLogic
             }
         }
 
-        
+        public static Boolean DeleteAssignmentService(int selectedAssignmentId, ApplicationDbContext context)
+        {
+            //DELETE from database
+            var selectedAssignment = context.Assignments.Where(x => x.AssignmentId == selectedAssignmentId).FirstOrDefault();
+            context.Assignments.Remove(selectedAssignment);
+            int result = context.SaveChanges();
+            if (result > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+
         public static Boolean updateStudentGradeService(int selectedSubmissionId, double grade, ApplicationDbContext context)
         {
                         
@@ -74,7 +90,6 @@ namespace MackTechGroupProject.BusinessLogic
             }
 
         }
-
     }
 
 }

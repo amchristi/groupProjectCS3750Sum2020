@@ -515,6 +515,8 @@
     <Content Include="Views\Assignments\StudentsStatisticsStudent.cshtml" />
     <Content Include="Views\Assignments\ViewGrades.cshtml" />
     <Content Include="Views\Assignments\InstructorGradeBook.cshtml" />
+    <Content Include="Views\Assignments\Test.cshtml" />
+    <Content Include="Views\Assignments\DeleteAssignment.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
