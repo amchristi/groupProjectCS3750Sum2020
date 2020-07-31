@@ -162,5 +162,38 @@ namespace MackTechTests
             Assert.IsTrue(y.TextSubmission.Equals(text));
         }
 
+        [TestMethod]
+        public void testCalendarExists()
+        {
+            //Q: can a student or instructor see the calendar
+
+            //prep
+
+            var _context = new MackTechGroupProject.Models.ApplicationDbContext();
+
+            var sUserId = "20e5366b-21de-48c0-ac56-c5d2629f76e9"; //Hi there sonny
+            var currentStudent = _context.Users.Where(x => x.Id == sUserId).FirstOrDefault();
+            string text = "This is a unit Test.";
+
+            //create a submissionGrade object
+            Assignment assignment = new Assignment()
+            {
+
+            };
+
+
+
+            //perform operations
+            Boolean result = CalendarService.ChecklCalendarService(sUserId, assignment, _context);
+
+
+            //verify and interpret results
+            Assert.IsTrue(result);
+
+            var y = _context.SubmissionGrades.Where(x => x.User.Id == sUserId).FirstOrDefault();
+
+            Assert.IsTrue(y.TextSubmission.Equals(text));
+        }
+
     }
 }

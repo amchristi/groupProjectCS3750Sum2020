@@ -10,6 +10,7 @@
     <p class="lead">Select your class below to view more detail.</p>
 </div>
 
+@*Bug is here when loading the student profile. Tried to fix but a much more nested bug then I thought it was.*@
 @if (this.User.IsInRole("Student"))
 {
     <main class="col-md-8">
@@ -210,15 +211,15 @@
                                         <a class="btn btn-default" href="@Url.Action("ViewAssignments", "Assignments", new { id = item.Course.CourseId })">View Course Assignments</a>
                                     </p>
                                     @*Add button for instructor to view the grade book*@
-                                <p>
-                                    <a class="btn btn-default" href="@Url.Action("InstructorGradeBook", "Assignments", new { id = item.Course.CourseId })">View Grade Book</a>
-                                </p>
+                                    <p>
+                                        <a class="btn btn-default" href="@Url.Action("InstructorGradeBook", "Assignments", new { id = item.Course.CourseId })">View Grade Book</a>
+                                    </p>
                                 </div>
                             </td>
                         </tr>
                     }
                 }
-            </table>           
+            </table>
 
             <p><a class="btn btn-default" href="@Url.Action("ViewAllAssignments", "Assignments")">View All Assignments</a></p>
 
@@ -346,5 +347,5 @@
         </section>
     </aside>
 
-    
+
 }
