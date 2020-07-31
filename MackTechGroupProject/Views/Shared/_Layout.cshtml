@@ -27,9 +27,6 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Dashboard", "Index", "Home")</li>
-                    @*<li>@Html.ActionLink("Registration", "Registration", "Misc")</li>
-                        <li>@Html.ActionLink("Add Course", "AddCourse", "Courses")</li>
-                        <li>@Html.ActionLink("Account", "Account", "Misc")</li>*@
                     @if (Request.IsAuthenticated)
                     {
                         if (this.User.IsInRole("Student"))
@@ -91,7 +88,7 @@
 
         .noti-content {
             position: fixed;
-            right: 325px;
+            right: 310px;
             background: #FFFFFF;
             border-radius: 4px;
             top: 47px;
@@ -109,7 +106,6 @@
         ul#noticontent {
             max-height: 400px;
             overflow: auto;
-            padding: 0px;
             margin: 0px;
             padding: 3px;
             list-style-type: none;
@@ -127,7 +123,7 @@
             border-style: dashed dashed solid;
             border-width: 0 8.5px 8.5px;
             position: absolute;
-            right: 32px;
+            right: 47px;
             top: -8px;
         }
 
@@ -141,31 +137,17 @@
         }
 
         span.count {
-            
             position: relative;
-            top: -3px;
+            font-weight: bold;
+            top: -5px;
             color: red;
+            text-align: center;
         }
-
-        
-
     </style>
 
     @* Add jquery code for Get Notification & setup signalr *@
     <script type="text/javascript">
         $(function () {
-
-            // signalr js code for start hub and send receive notification
-            var notificationHub = $.connection.notificationHub;
-            $.connection.hub.start().done(function () {
-                console.log('Notification hub started');
-            });
-            //signalr method for push server message to client
-            notificationHub.client.notify = function (message) {
-                if (message && message.toLowerCase() == "added") {
-                    updateNotificationCount();
-                }
-            }
 
             // Click on notification icon for show notification
             $('span.noti').click(function (e) {
@@ -174,22 +156,21 @@
                 $('.noti-content').show();
                 var count = 0;
                 count = parseInt($('span.count').html()) || 0;
+
                 //only load notification if not already loaded
-
                 if (count > -1) {
-
                     getNotifications();
-                    //addedAssignmentNotification();
                 }
 
                 $('span.count', this).html('&nbsp;');
             })
+
             // hide notifications
             $('html').click(function () {
                 $('.noti-content').hide();
             })
-            // update notification for grade changed
 
+            // update notification for grade changed
             function getNotifications() {
                 $('#noticontent').append($('<li>Loading...</li>'));
                 $.ajax({
@@ -202,6 +183,7 @@
                         }
 
                         $.each(response, function (index, value) {
+
                             //without horizontal line
                             if (index == 0) {
                                 if (value.DueDate == null) {
@@ -210,12 +192,15 @@
                                     var dueDate = new Date(value.DueDate);
                                     $('#noticontent').append($('<li><div class=noticontenttitle>New Assignment </div>' + value.AssignmentTitle + ' <br>' + value.CourseNumber + ' ' + value.Department + '<br>' + value.Points + ' Points <br>Due: ' + dueDate + '</li>'));
                                 }
+
                             //with horizontal line
                             } else {
+
                                 //if graded assignment
                                 if (value.DueDate == null) {
                                     $('#noticontent').append($('<hr style="margin-top:-3px;margin-bottom:-3px;height:1px;border-width:0;color:#5900B3;background-color:#5900B3" /><li><div class=noticontenttitle>New grade </div>' + value.Grade + ' / ' + value.Points + ' <br>' + value.AssignmentTitle + '<br>' + value.Department + ' ' + value.CourseNumber + '</li>'));
                                 }
+
                                 //if newly added assignment
                                 else if (value.DueDate != null) {
                                     var dueDate = new Date(value.DueDate);
@@ -226,6 +211,7 @@
                     }
                 });
             }
+
             // update notification count
             function updateNotificationCount() {
                 var count = 0;
@@ -233,6 +219,20 @@
                 count++;
                 $('span.count').html(count);
             }
+                        
+            // signalr js code for start hub and send receive notification
+            var notificationHub = $.connection.notificationHub;
+            $.connection.hub.start().done(function () {
+                console.log('Notification hub started');
+            });
+
+            //signalr method for push server message to client
+            notificationHub.client.notify = function (message) {
+                if (message && message.toLowerCase() == "added") {
+                    updateNotificationCount();
+                }
+            }
+
 
         })
     </script>

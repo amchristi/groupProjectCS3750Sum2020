@@ -30,7 +30,8 @@ namespace MackTechGroupProject
             NotificationComponents NC = new NotificationComponents();
             var currentTime = DateTime.Now;
             HttpContext.Current.Session["LastUpdated"] = currentTime;
-            NC.RegisterNotification(currentTime);
+            NC.UpdatedAssignmentGradeNotification(currentTime);
+            NC.AddedAssignmentNotification(currentTime);
         }
 
         protected void Application_End()
