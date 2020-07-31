@@ -196,6 +196,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="BusinessLogic\AssignmentService.cs" />
+    <Compile Include="BusinessLogic\CalendarService.cs" />
+    <Compile Include="BusinessLogic\CalendarServices.cs" />
     <Compile Include="BusinessLogic\RegistrationService.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AssignmentsController.cs" />
@@ -515,7 +517,6 @@
     <Content Include="Views\Assignments\StudentsStatisticsStudent.cshtml" />
     <Content Include="Views\Assignments\ViewGrades.cshtml" />
     <Content Include="Views\Assignments\InstructorGradeBook.cshtml" />
-    <Content Include="Views\Assignments\Test.cshtml" />
     <Content Include="Views\Assignments\DeleteAssignment.cshtml" />
   </ItemGroup>
   <ItemGroup>
