@@ -124,6 +124,9 @@ namespace MackTechGroupProject.Models
         public List<Enrollment> ClassRoll { get; set; }
         public List<SubmissionGrades> StudentGrades { get; set; }
         public List<Assignment> CourseAssignments { get; set; }
+
+
+
     }
 
 

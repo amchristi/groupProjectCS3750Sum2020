@@ -1,35 +1,26 @@
 ﻿<Properties StartupConfiguration="{68BB2547-5AC6-47D1-9037-103D8041AE7B}|">
   <MonoDevelop.Ide.ItemProperties.MackTechGroupProject PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="MackTechGroupProject/Views/Shared/_Layout.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MackTechTests/UnitTest1.cs">
     <Files>
-      <File FileName="MackTechGroupProject/Controllers/AssignmentsController.cs" Line="244" Column="1" />
-      <File FileName="MackTechGroupProject/Views/Assignments/InstructorGradeBook.cshtml" />
-      <File FileName="MackTechGroupProject/Views/Assignments/ViewGrades.cshtml" />
-      <File FileName="MackTechGroupProject/Models/AssignmentsModels.cs" />
-      <File FileName="MackTechGroupProject/Views/Assignments/StudentSubmission.cshtml" />
+      <File FileName="MackTechGroupProject/Controllers/AssignmentsController.cs" Line="136" Column="26" />
+      <File FileName="MackTechGroupProject/Views/Assignments/InstructorGradeBook.cshtml" Line="79" Column="22" />
+      <File FileName="MackTechGroupProject/Views/Assignments/ViewGrades.cshtml" Line="86" Column="1" />
+      <File FileName="MackTechGroupProject/Models/AssignmentsModels.cs" Line="129" Column="1" />
+      <File FileName="MackTechGroupProject/Views/Assignments/StudentSubmission.cshtml" Line="6" Column="2" />
       <File FileName="MackTechGroupProject/Views/Home/Index.cshtml" />
-      <File FileName="MackTechGroupProject/Content/bootstrap.css" />
-      <File FileName="MackTechGroupProject/BusinessLogic/AssignmentService.cs" />
+      <File FileName="MackTechGroupProject/Content/bootstrap.css" Line="7091" Column="31" />
+      <File FileName="MackTechGroupProject/BusinessLogic/AssignmentService.cs" Line="96" Column="12" />
       <File FileName="MackTechGroupProject/Views/Shared/_Layout.cshtml" Line="1" Column="1" />
+      <File FileName="MackTechGroupProject/Controllers/CoursesController.cs" Line="1" Column="1" />
+      <File FileName="MackTechGroupProject/Views/Assignments/AssignmentSubmission.cshtml" Line="1" Column="1" />
+      <File FileName="MackTechTests/UnitTest1.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="MackTechGroupProject" expanded="True">
-            <Node name="MackTechGroupProject" expanded="True">
-              <Node name="BusinessLogic" expanded="True" />
-              <Node name="Controllers" expanded="True" />
-              <Node name="Models" expanded="True" />
-              <Node name="Views" expanded="True">
-                <Node name="Assignments" expanded="True" />
-                <Node name="Home" expanded="True" />
-                <Node name="Shared" expanded="True">
-                  <Node name="_Layout.cshtml" selected="True" />
-                </Node>
-              </Node>
-            </Node>
             <Node name="MackTechTests" expanded="True">
-              <Node name="Properties" expanded="True" />
+              <Node name="UnitTest1.cs" selected="True" />
             </Node>
           </Node>
         </State>
@@ -39,7 +30,9 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/Controllers/AssignmentsController.cs" relfile="MackTechGroupProject/Controllers/AssignmentsController.cs" line="287" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

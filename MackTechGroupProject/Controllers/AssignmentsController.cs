@@ -240,6 +240,9 @@ namespace MackTechGroupProject.Controllers
         {
             var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
 
+            //Get instructor Id
+            var userId = User.Identity.GetUserId();
+
             //Get course based on course Id
             var selectedCourseId = id;
             var selectedCourse = context.Courses.Where(x => x.CourseId == selectedCourseId).FirstOrDefault();
@@ -256,14 +259,16 @@ namespace MackTechGroupProject.Controllers
             var studentGrades = context.SubmissionGrades.Include(x => x.User).Include(x => x.Assignment).Include("Assignment.Course")
                             .Where(x => x.Assignment.Course.CourseId == selectedCourseId).ToList();
 
-            ////only getting a list of submitted assignments
+            //only getting a list of submitted assignments
             var mostRecentStudentGrades = studentGrades.GroupBy(x => x.User).Select(x => x.OrderByDescending(y => y.SubmissionDate).FirstOrDefault()).ToList();
+
+            var courseEnrollmentsStudents = courseEnrollments.Where(x => x.User.Id != userId).ToList();
 
             var instructorGradeBookViewModel = new InstructorGradeBookViewModel()
             {
-                ClassRoll = courseEnrollments,
+                ClassRoll = courseEnrollmentsStudents,
                 CourseAssignments = courseAssignments,
-                StudentGrades = studentGrades
+                StudentGrades = mostRecentStudentGrades
             };
 
             ////to calculate total get a sum off all score and divide by sum of all assignmnet.course.points
