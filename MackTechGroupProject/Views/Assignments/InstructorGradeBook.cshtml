@@ -16,67 +16,97 @@
     <title>Grade Book</title>
 </head>
 <body>
+    <a class="btn btn-default" style="float: right" href="@Url.Action("Assignment1", "Assignments")">
+        Class Statistics
+    </a>
     <table>
-        <tr>
-            <th>
-                @*Space Holder*@
+        <tr class="gradeBookARow">
+            <th class="gradeBookStdCol">
+                @*Space Holder for student name*@
             </th>
             @foreach (var assignment in Model.CourseAssignments)
             {
                 @*assignment Title*@
-                <th class="assName">
+                <th class="gradeBookACol">
                     @Html.DisplayFor(modelItem => assignment.AssignmentTitle)
                 </th>
             }
-            <th>
+            <th class="gradeBookDivder">
                 @*Space Holder*@
+            </th>
+            <th class="gradeBookACol">
+                Points Possible
+            </th>
+            <th class="gradeBookACol">
+                Points Earned
+            </th>
+            <th class="gradeBookACol">
+                Total Score
             </th>
 
         </tr>
         <tr>
-            <th>
+            <th class="gradeBookStdCol">
                 Points Possible:
             </th>
             @foreach (var assignment in Model.CourseAssignments)
             {
                 @*Assignment Points Possible*@
-                <th>
+                <th class="gradeBookAPCol">
                     @Html.DisplayFor(modelItem => assignment.Points)
                 </th>
             }
-            <th>
-                Total Grade
+            <th class="gradeBookDivder">
+                @*Space Holder*@
+            </th>
+            <th class="gradeBookACol">
+                
+            </th>
+            <th class="gradeBookACol">
+                
+            </th>
+            <th class="gradeBookACol">
+                
             </th>
         </tr>
-        <tr>
-            <th>
+        <tr class="gradeBookPtsRow">
+            <th class="gradeBookStdCol">
                 Student Name:
             </th>
             @*Assignment Space Holder, create a blank row*@
             @foreach (var assignment in Model.CourseAssignments)
             {
-                <th>
+                <th >
                 </th>
             }
-            <th>
+            <th class="gradeBookDivder">
                 @*Space Holder*@
+            </th>
+            <th>
+                
+            </th>
+            <th>
+                
+            </th>
+            <th>
+                
             </th>
         </tr>
         @foreach (var student in Model.ClassRoll)
         {
 
-            <tr>
+            <tr class="gradeBookStdRow">
                 @*student name*@
-                <td>
+                <th class="gradeBookStdCol">
 
                     @Html.DisplayFor(modelItem => student.User.FirstName)
                     @Html.DisplayFor(modelItem => student.User.LastName)
-                </td>
-                
+                </th>
+
                 @foreach (var assignment in Model.CourseAssignments)
                 {
                     //ONLY ONE ENTRY PER ASSIGNMENT
-                    <td>
+                    <td class="gradeBookScores">
                         @foreach (var grade in Model.StudentGrades)
                         {
                             //Is it this students assignment?
@@ -111,11 +141,17 @@
 
                     </td>
                 }
-                
 
-                <td>
-                    stuff
-                </td>
+
+                <th class="gradeBookDivder">
+                    @*Space Holder*@
+                </th>
+                <th class="gradeBookAPCol">                
+                </th>
+                <th class="gradeBookAPCol">                
+                </th>
+                <th class="gradeBookAPCol">                
+                </th>
 
             </tr>
         }

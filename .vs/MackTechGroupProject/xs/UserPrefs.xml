@@ -3,13 +3,13 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="MackTechGroupProject/Views/Shared/_Layout.cshtml">
     <Files>
       <File FileName="MackTechGroupProject/Controllers/AssignmentsController.cs" Line="244" Column="1" />
-      <File FileName="MackTechGroupProject/Views/Assignments/InstructorGradeBook.cshtml" Line="29" Column="22" />
+      <File FileName="MackTechGroupProject/Views/Assignments/InstructorGradeBook.cshtml" />
       <File FileName="MackTechGroupProject/Views/Assignments/ViewGrades.cshtml" />
       <File FileName="MackTechGroupProject/Models/AssignmentsModels.cs" />
       <File FileName="MackTechGroupProject/Views/Assignments/StudentSubmission.cshtml" />
       <File FileName="MackTechGroupProject/Views/Home/Index.cshtml" />
-      <File FileName="MackTechGroupProject/Content/bootstrap.css" Line="7039" Column="20" />
-      <File FileName="MackTechGroupProject/BusinessLogic/AssignmentService.cs" Line="1" Column="1" />
+      <File FileName="MackTechGroupProject/Content/bootstrap.css" />
+      <File FileName="MackTechGroupProject/BusinessLogic/AssignmentService.cs" />
       <File FileName="MackTechGroupProject/Views/Shared/_Layout.cshtml" Line="1" Column="1" />
     </Files>
     <Pads>
