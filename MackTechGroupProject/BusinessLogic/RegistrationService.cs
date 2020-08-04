@@ -72,5 +72,61 @@ namespace MackTechGroupProject.BusinessLogic
             
         }
 
+
+        //method to determine if an instructor is already teaching this same class
+        public static Boolean hasCourse(Course course, string userId, ApplicationDbContext context)
+        {
+            //Does this instructor already teach this class? 
+            return (context.Courses.Any(x => x.CourseName == course.CourseName && x.CourseNumber == course.CourseNumber
+                                                                               && x.Instructor.Id == userId));
+        }
+
+        //If the instructor is already teaching this class. Remove the current record. 
+        public static Boolean DeleteDuplicateCourse(Course course, string userId, ApplicationDbContext context)
+        {
+
+            //if enrollment exists
+            var hasEnrollment = context.Enrollments.Any(x => x.Course.CourseName == course.CourseName && x.User.Id == userId);
+            if (hasEnrollment)
+            {
+                var EnrollmentToBeRemoved = context.Enrollments.Where(x => x.Course == course && x.User.Id == userId).FirstOrDefault();
+                context.Enrollments.Remove(EnrollmentToBeRemoved);
+                context.SaveChanges();
+            }
+
+            var CourseToBeRemoved = context.Courses.Where(x => x.CourseName == course.CourseName && x.CourseNumber == course.CourseNumber
+                                                                               && x.Instructor.Id == userId).FirstOrDefault();
+
+            context.Courses.Remove(CourseToBeRemoved);
+            var removed = context.SaveChanges();
+
+            if (removed > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+
+        //Allow a instructor to create a new class for students to take. 
+        public static Boolean addNewCourse(Course course, ApplicationDbContext context)
+        {
+            
+            context.Courses.Add(course);
+            int result = context.SaveChanges();
+
+            if (result > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
     }
 }

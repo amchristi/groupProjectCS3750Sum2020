@@ -251,15 +251,17 @@ namespace MackTechGroupProject.Controllers
                             .Where(x => x.Assignment.Course.CourseId == selectedCourseId).ToList();
 
             //only getting a list of submitted assignments
-            var mostRecentStudentGrades = studentGrades.GroupBy(x => x.User).Select(x => x.OrderByDescending(y => y.SubmissionDate).FirstOrDefault()).ToList();
+            //var mostRecentStudentGrades = studentGrades.GroupBy(x => x.User).Select(x => x.OrderByDescending(y => y.SubmissionDate).FirstOrDefault()).ToList();
 
-            var courseEnrollmentsStudents = courseEnrollments.Where(x => x.User.Id != userId).ToList();
+            //filter the instructor out of the class roll
+            var courseEnrollmentsStudents = courseEnrollments.Where(x => x.User.Id != userId).OrderBy(x => x.User.LastName).ToList();
+            //var courseEnrollmentsStudents = courseEnrollmentsStudents.OrderByDescending(x => x.User.LastName).ToList();
 
             var instructorGradeBookViewModel = new InstructorGradeBookViewModel()
             {
                 ClassRoll = courseEnrollmentsStudents,
                 CourseAssignments = courseAssignments,
-                StudentGrades = mostRecentStudentGrades
+                StudentGrades = studentGrades
             };
 
             ////to calculate total get a sum off all score and divide by sum of all assignmnet.course.points

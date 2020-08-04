@@ -59,11 +59,24 @@ namespace MackTechGroupProject.Controllers
                     User = currentInstructor
                 };
 
-                context.Courses.Add(course);
-                context.Enrollments.Add(instructorEnrollment);
-                context.SaveChanges();
+                //Does this Course Already Exist?
+                //bool hasCourse = RegistrationService.hasCourse(course, userId, context);
 
-                currentEnrollments.Add(instructorEnrollment);
+                //If the course already exists delete the old one. 
+                //if(hasCourse)
+                //{
+                //    RegistrationService.DeleteDuplicateCourse(course, userId, context);
+                //}
+
+                //context.Courses.Add(course);
+                bool result = RegistrationService.addNewCourse(course, context);
+
+                if (result) //check if course was successfully added
+                {
+                    context.Enrollments.Add(instructorEnrollment);
+                    context.SaveChanges();
+                    currentEnrollments.Add(instructorEnrollment);
+                }
 
                 return RedirectToAction("Index", "Home");
             }

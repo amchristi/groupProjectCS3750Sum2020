@@ -7077,14 +7077,18 @@ th.gradeBookStdCol {
     overflow: hidden;
 }
 th.gradeBookACol {
-    text-orientation: sideways-left;
-    column-width: 20px;
+    transform: rotate(-90deg);
+    column-width: 24px;
     
     border: #5900B3 2px solid;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
 }
+
+
+
+
 th.gradeBookAPCol {
     column-width: 20px;
     text-align: center;

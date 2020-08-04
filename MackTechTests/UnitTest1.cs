@@ -169,9 +169,7 @@ namespace MackTechTests
                 TextSubmission = text,
                 FileSubmission = null,
                 Grade = null
-            };
-
-            
+            };            
 
             //perform operations
             Boolean result = AssignmentService.submitTextAssignmentService(aAssignmentId, submissionGrade, _context);
@@ -184,6 +182,63 @@ namespace MackTechTests
 
             Assert.IsTrue(y.TextSubmission.Equals(text));
         }
+
+        [TestMethod]
+        public void InstructorCreateNewCourse () //TestInstructorCreateCourse@mail.univ.edu
+        {
+            //Q: can an instructor create a new course?
+
+            //prep
+            var _context = new MackTechGroupProject.Models.ApplicationDbContext();
+            var InstructorId = "70575558-0756-4469-bab7-f1a0efbb327d";//TestInstructorCreateCourse@mail.univ.edu
+
+            //create a Course Object
+            var course = new Course
+            {                
+                Department = "Psych",
+                CourseNumber = 3010,
+                CourseName = "Advanced Psychology",
+                Instructor = currentInstructor,
+                InstructorName = instructorName,
+                CreditHours = 3,
+                ClassLocation = "WSU",
+                MaxCapacity = 90
+            };
+
+
+            //Perform Operations
+
+            //check if the class already exists
+            var hasCourse = RegistrationService.hasCourse(course, InstructorId, _context);
+
+            //If the class exists delete it
+            if (hasCourse)
+            {
+                RegistrationService.DeleteDuplicateCourse(course, InstructorId, _context);
+            }
+
+            //check again if class exists
+            var notCurrentCourse = RegistrationService.hasCourse(course, InstructorId, _context);
+
+            //display result for class not existing
+            AssertIsFalse(notCurrentCourse);
+
+            //Add Course using business logic class
+            var CourseAdded = RegistrationService.addNewCourse(course, InstructorId, _context);
+            
+            //display result for sending course to business logic
+            AssertIsTrue(CourseAdded);
+
+            //check database that course was actually added
+            var added = _context.Courses.Any(x => x.CourseName == course.CourseName && x.CourseNumber == course.CourseNumber
+                                                                               && x.Instructor.Id == InstructorId);
+            AssertIsTrue(added);
+
+        }
+
+
+
+
 
         [TestMethod]
         public void testCalendarExists() //TestStudentCalendarTest@mail.univ.edu
