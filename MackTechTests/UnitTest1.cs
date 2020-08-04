@@ -21,7 +21,7 @@ namespace MackTechTests
         }
 
         [TestMethod] 
-        public void AddThirdCourse() //uses studentregtwocourses@test.com
+        public void RegisterThirdCourse() //uses studentregtwocourses@test.com
         {
             //Q: can we add a course to existing enrollments
 
@@ -29,7 +29,7 @@ namespace MackTechTests
             var _context = new MackTechGroupProject.Models.ApplicationDbContext();
             var sUserEmail = "StudentRegTwoCourses@test.com";
             var sUserId = "2eb4cb27-3c69-4bd5-9eb0-eb0dd4991a7f";
-            int courseId = 6;
+            int courseId = 34;
             var currentEnrollments = _context.Enrollments.Where(x => x.User.Email == sUserEmail).Include(x => x.User).Include(x => x.Course).ToList();
 
             //perform operations
@@ -44,7 +44,7 @@ namespace MackTechTests
         }
 
         [TestMethod] 
-        public void DeleteThirdCourse() //uses studentregtwocourses@test.com
+        public void DeleteThirdCourseRegistration() //uses studentregtwocourses@test.com
         {
             //Q: can we delete the third course add above
 
@@ -52,7 +52,7 @@ namespace MackTechTests
             var _context = new MackTechGroupProject.Models.ApplicationDbContext();
             var sUserEmail = "StudentRegTwoCourses@test.com";
             var sUserId = "2eb4cb27-3c69-4bd5-9eb0-eb0dd4991a7f";
-            int courseId = 6;
+            int courseId = 34;
             var selectedEnrollment = _context.Enrollments.Where(x => x.User.Id == sUserId).Where(x => x.Course.CourseId == courseId).FirstOrDefault();
             var selectedEnrollmentId = selectedEnrollment.EnrollmentId;
             var currentEnrollments = _context.Enrollments.Where(x => x.User.Email == sUserEmail).Include(x => x.User).Include(x => x.Course).ToList();
@@ -75,7 +75,7 @@ namespace MackTechTests
 
             //prep
             var _context = new MackTechGroupProject.Models.ApplicationDbContext();
-            int courseId = 6;
+            int courseId = 34;
             var selectedCourse = _context.Courses.Where(x => x.CourseId == courseId).FirstOrDefault();
             //Guid assignmentGuid = Guid.NewGuid();
 
@@ -86,7 +86,8 @@ namespace MackTechTests
                 AssignmentTitle = "Unit Test",
                 AssignmentDescription = "Unit Test added course",
                 DueDate = DateTime.Now,
-                SubmissionType = "Text-Submission"
+                SubmissionType = "Text-Submission",
+                AssignmentAddedOn = DateTime.Now
             };
 
             //perform operations
@@ -108,7 +109,7 @@ namespace MackTechTests
             //prep
             var _context = new MackTechGroupProject.Models.ApplicationDbContext();
             //int courseId = 6;
-            var selectedAssignment = _context.Assignments.Where(x => x.AssignmentTitle == "Unit Test").FirstOrDefault();
+            var selectedAssignment = _context.Assignments.Where(x => x.AssignmentTitle.Equals("Unit Test")).FirstOrDefault();
 
             //perform operations
             Boolean result = AssignmentService.DeleteAssignmentService(selectedAssignment.AssignmentId, _context);
@@ -118,18 +119,18 @@ namespace MackTechTests
 
             var y = _context.Assignments.Where(x => x.AssignmentTitle == selectedAssignment.AssignmentTitle);
             System.Diagnostics.Debug.WriteLine(y.Count());
-            Assert.IsTrue(y.Count() == 1);
+            Assert.IsTrue(y.Count() == 0);
         }
 
         [TestMethod]
-        public void updateStudentGrade()
+        public void updateStudentGrade() //TestStudentGradedSubmission@mail.univ.edu
         {
             //Q: can a teacher save or edit a grade?
 
             //prep
             var _context = new MackTechGroupProject.Models.ApplicationDbContext();
-            int selectedSubmissionId = 2;
-            double grade = 75;
+            int selectedSubmissionId = 594;
+            double grade = 25;
 
             //perform operations
             Boolean result = AssignmentService.updateStudentGradeService(selectedSubmissionId, grade, _context);
@@ -140,11 +141,11 @@ namespace MackTechTests
 
             var y = _context.SubmissionGrades.Where(x => x.ID == selectedSubmissionId);
 
-            Assert.IsTrue(y.FirstOrDefault().Grade == 75);
+            Assert.IsTrue(y.FirstOrDefault().Grade == 25);
         }
 
         [TestMethod]
-        public void submitTextAssignment()
+        public void submitTextAssignment() //TestStudentTextSubmission@mail.univ.edu
         {
             //Q: can a student submit a text assignment?
 
@@ -152,8 +153,8 @@ namespace MackTechTests
 
             var _context = new MackTechGroupProject.Models.ApplicationDbContext();
             
-            var sUserId = "20e5366b-21de-48c0-ac56-c5d2629f76e9"; //briella stastics
-            var aAssignmentId = 24; //Phys 2210 - text submission assignment
+            var sUserId = "7033fb11-e3e3-465a-831c-55a0dd215343"; //TestStudent TextSubmission
+            var aAssignmentId = 148; //MATH 1040 - Assignment 1 - text submission assignment
 
             var currentAssignment = _context.Assignments.Where(x => x.AssignmentId == aAssignmentId).FirstOrDefault();
             var currentStudent = _context.Users.Where(x => x.Id == sUserId).FirstOrDefault();
@@ -185,7 +186,7 @@ namespace MackTechTests
         }
 
         [TestMethod]
-        public void testCalendarExists()
+        public void testCalendarExists() //TestStudentCalendarTest@mail.univ.edu
         {
             //Q: can a student or instructor see the calendar
 
@@ -193,7 +194,7 @@ namespace MackTechTests
 
             var _context = new MackTechGroupProject.Models.ApplicationDbContext();
 
-            var sUserId = "20e5366b-21de-48c0-ac56-c5d2629f76e9"; //Hi there sonny
+            var sUserId = "4328fc0b-e442-4e24-8260-c7a7ec2402ba"; //TestStudentCalendarTest@mail.univ.edu
             var currentStudent = _context.Users.Where(x => x.Id == sUserId).FirstOrDefault();
             string text = "This is a unit Test.";
 

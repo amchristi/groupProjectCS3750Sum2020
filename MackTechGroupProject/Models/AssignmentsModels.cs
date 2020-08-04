@@ -81,6 +81,8 @@ namespace MackTechGroupProject.Models
     {
         public List<Enrollment> currentEnrollmentsView { get; set; }
         public List<Assignment> currentAssignmentsView { get; set; }
+        public List<Course> currentCoursesView { get; set; }
+        public List<Assignment> currentInstructorAssignmentsView { get; set; }
     }
 
     public class AllAssignmentsViewModel

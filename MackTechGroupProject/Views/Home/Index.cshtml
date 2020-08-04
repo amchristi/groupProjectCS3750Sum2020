@@ -123,32 +123,32 @@
 
             <table class="classListTable">
 
-                @if (Model.currentEnrollmentsView.Any())
+                @if (Model.currentCoursesView.Any())
                 {
-                    foreach (var item in Model.currentEnrollmentsView)
+                    foreach (var item in Model.currentCoursesView)
                     {
                         <tr>
                             <td>
 
                                 <div class="classCard">
                                     <h3>
-                                        <a style="color: #F2E6FF" class="ToDoItemTaskLink" href="@Url.Action("CourseDetail", "Courses", new { id = item.Course.CourseId })" target="_blank">
-                                            @Html.DisplayFor(modelItem => item.Course.Department)
-                                            @Html.DisplayFor(modelItem => item.Course.CourseNumber)
+                                        <a style="color: #F2E6FF" class="ToDoItemTaskLink" href="@Url.Action("CourseDetail", "Courses", new { id = item.CourseId })" target="_blank">
+                                            @Html.DisplayFor(modelItem => item.Department)
+                                            @Html.DisplayFor(modelItem => item.CourseNumber)
                                         </a>
                                     </h3>
                                     @*Add button to class card to add a new assignemnt, instructor view only*@
                                     <p>
-                                        <a class="btn btn-default" href="@Url.Action("AddAssignment", "Assignments", new { id = item.Course.CourseId })">Add new Assignment</a>
+                                        <a class="btn btn-default" href="@Url.Action("AddAssignment", "Assignments", new { id = item.CourseId })">Add new Assignment</a>
                                         @*@Html.ActionLink("AddAssignment", "Assignments", new { id = item.Course.CourseId })*@
                                     </p>
                                     @*Add button to class card for viewing all assignemnts*@
                                     <p>
-                                        <a class="btn btn-default" href="@Url.Action("ViewAssignments", "Assignments", new { id = item.Course.CourseId })">View Course Assignments</a>
+                                        <a class="btn btn-default" href="@Url.Action("ViewAssignments", "Assignments", new { id = item.CourseId })">View Course Assignments</a>
                                     </p>
                                     @*Add button for instructor to view the grade book*@
                                     <p>
-                                        <a class="btn btn-default" href="@Url.Action("InstructorGradeBook", "Assignments", new { id = item.Course.CourseId })">View Grade Book</a>
+                                        <a class="btn btn-default" href="@Url.Action("InstructorGradeBook", "Assignments", new { id = item.CourseId })">View Grade Book</a>
                                     </p>
                                 </div>
                             </td>
@@ -163,13 +163,13 @@
 
         <section class="Sec-ToDoList">
             <div class="ToDoHeader">
-                <h2>To Do</h2>
+                <h2>Upcoming Assignments to Grade</h2>
             </div>
             <hr style="height:3px;border-width:0;color:#5900B3;background-color:#5900B3" />
             <table class="ToDoItems">
-                @if (Model.currentAssignmentsView.Any())
+                @if (Model.currentInstructorAssignmentsView.Any())
                 {
-                    foreach (var item in Model.currentAssignmentsView)
+                    foreach (var item in Model.currentInstructorAssignmentsView)
                     {
                         <tr class="ToDoItems">
                             <td class="ToDoItems">
@@ -185,7 +185,7 @@
                                 </div>
                                 <div class="ToDoCol2Task">
                                     <a class="ToDoItemTaskLink" href="@Url.Action("AssignmentSubmission", "Assignments", new { assignmentId = item.AssignmentId })" target="_blank">
-                                        @Html.DisplayFor(modelItem => item.AssignmentDescription)
+                                        @Html.DisplayFor(modelItem => item.AssignmentTitle)
                                     </a>
                                 </div>
                             </td>

@@ -409,6 +409,7 @@ C:/Users/Montana/Source/Repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin
 C:/Users/Montana/Source/Repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.Twitter.xml
 C:/Users/Montana/Source/Repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.MicrosoftAccount.xml
 C:/Users/Montana/Source/Repos/groupProjectCS3750Sum2020/MackTechGroupProject/bin/Microsoft.Owin.Security.OAuth.xml
+C:/Users/Montana/Source/Repos/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.csprojAssemblyReference.cache
 C:/Users/Montana/Source/Repos/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.Migrations.Added_Course_Table.resources
 C:/Users/Montana/Source/Repos/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.Migrations.Added_Enrollment_Table.resources
 C:/Users/Montana/Source/Repos/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.Migrations.One_PhoneNumber_Column.resources
@@ -437,47 +438,3 @@ C:/Users/Montana/Source/Repos/groupProjectCS3750Sum2020/MackTechGroupProject/obj
 C:/Users/Montana/Source/Repos/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.csproj.CopyComplete
 C:/Users/Montana/Source/Repos/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.dll
 C:/Users/Montana/Source/Repos/groupProjectCS3750Sum2020/MackTechGroupProject/obj/Debug/MackTechGroupProject.pdb
-/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/csc 2.exe
-/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/csc 2.rsp
-/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/csc.exe 2.config
-/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/csi 2.exe
-/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/csi 2.rsp
-/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/csi.exe 2.config
-/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis 2.dll
-/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.CodeAnalysis 2.dll
-/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.CodeAnalysis.CSharp.Scripting 2.dll
-/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.CodeAnalysis.Scripting 2.dll
-/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.CSharp.Core 2.targets
-/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.DiaSymReader.Native.amd64 2.dll
-/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.DiaSymReader.Native.x86 2.dll
-/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.Managed.Core 2.targets
-/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/Microsoft.VisualBasic.Core 2.targets
-/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.AppContext 2.dll
-/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Collections.Immutable 2.dll
-/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Console 2.dll
-/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Diagnostics.FileVersionInfo 2.dll
-/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Diagnostics.StackTrace 2.dll
-/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.IO.Compression 2.dll
-/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.IO.FileSystem 2.dll
-/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.IO.FileSystem.Primitives 2.dll
-/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.IO.Pipes 2.dll
-/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.IO.Pipes.AccessControl 2.dll
-/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Reflection.Metadata 2.dll
-/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Security.AccessControl 2.dll
-/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Security.Claims 2.dll
-/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Security.Cryptography.Algorithms 2.dll
-/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Security.Cryptography.Encoding 2.dll
-/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Security.Cryptography.Primitives 2.dll
-/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Security.Cryptography.X509Certificates 2.dll
-/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Security.Principal.Windows 2.dll
-/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Text.Encoding.CodePages 2.dll
-/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.ValueTuple 2.dll
-/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Xml.ReaderWriter 2.dll
-/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Xml.XmlDocument 2.dll
-/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Xml.XPath 2.dll
-/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/System.Xml.XPath.XDocument 2.dll
-/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/vbc 2.exe
-/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/vbc 2.rsp
-/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/vbc.exe 2.config
-/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/VBCSCompiler 2.exe
-/Users/AndrewHammon/Documents/GitHub/groupProjectCS3750Sum2020/MackTechGroupProject/bin/roslyn/VBCSCompiler.exe 2.config

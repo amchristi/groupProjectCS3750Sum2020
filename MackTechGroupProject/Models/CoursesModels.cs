@@ -53,14 +53,6 @@ namespace MackTechGroupProject.Models
         [Display(Name = "Max Capacity")]
         public int MaxCapacity { get; set; }
 
-        /*
-        [Required]
-        [DataType(DataType.Time)]
-        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:H:mm}")]
-        [Display(Name = "Class Time")]
-        public DateTime ClassTime { get; set; }
-        */
-
         public ICollection<Enrollment> Enrollments { get; set; }
 
         public ICollection<Assignment> Assignments { get; set; }
@@ -71,6 +63,7 @@ namespace MackTechGroupProject.Models
         public int EnrollmentId { get; set; }
         public ApplicationUser User { get; set; }
         public Course Course { get; set; }
+        
     }
 
     

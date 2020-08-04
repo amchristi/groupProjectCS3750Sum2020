@@ -485,13 +485,9 @@
     <Content Include="Views\Courses\CS3620.cshtml" />
     <Content Include="Views\Courses\MATH1220.cshtml" />
     <Content Include="Views\Courses\PHYS2120.cshtml" />
-    <Content Include="Views\Assignments\Assignment1.cshtml" />
-    <Content Include="Views\Assignments\Assignment2.cshtml" />
-    <Content Include="Views\Assignments\Assignment3.cshtml" />
     <Content Include="Views\Misc\Registration.cshtml" />
     <Content Include="Views\Misc\Message.cshtml" />
     <Content Include="Views\Courses\Grades.cshtml" />
-    <Content Include="Views\Assignments\Discussion.cshtml" />
     <Content Include="Views\Account\ProfileInfoEdit.cshtml" />
     <Content Include="Views\Account\ProfileInfoDetails.cshtml" />
     <Content Include="Views\Courses\AddCourse.cshtml" />
@@ -518,6 +514,7 @@
     <Content Include="Views\Assignments\ViewGrades.cshtml" />
     <Content Include="Views\Assignments\InstructorGradeBook.cshtml" />
     <Content Include="Views\Assignments\DeleteAssignment.cshtml" />
+    <Content Include="Views\Assignments\Assignment1.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

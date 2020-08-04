@@ -44,6 +44,11 @@ namespace MackTechGroupProject.BusinessLogic
             }
         }
 
+        public static Boolean HasCurrentSubmission(long selectedAssignmentId, string studentId, ApplicationDbContext context)
+        {
+            return (context.SubmissionGrades.Any(x => x.Assignment.AssignmentId == selectedAssignmentId && x.User.Id == studentId));
+        }
+
 
         public static Boolean updateStudentGradeService(int selectedSubmissionId, double grade, ApplicationDbContext context)
         {

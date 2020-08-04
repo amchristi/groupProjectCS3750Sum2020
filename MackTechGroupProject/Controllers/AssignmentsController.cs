@@ -131,6 +131,14 @@ namespace MackTechGroupProject.Controllers
 
             var currentAssignment = context.Assignments.Where(x => x.AssignmentId == selectedAssignmentId).FirstOrDefault();
 
+            bool hasSubmission = AssignmentService.HasCurrentSubmission(selectedAssignmentId, userID, context);
+
+            if (hasSubmission)
+            {
+                var submissionToBeRemoved = context.SubmissionGrades.Where(x => x.Assignment.AssignmentId == selectedAssignmentId && x.User.Id == userID).FirstOrDefault();
+                context.SubmissionGrades.Remove(submissionToBeRemoved);
+            }
+            
 
             if (File != null)
             {
@@ -169,27 +177,10 @@ namespace MackTechGroupProject.Controllers
                     FileSubmission = null,
                     Grade = null
                 };
-
                 Boolean result = AssignmentService.submitTextAssignmentService(selectedAssignmentId, submissionGrade, context);
 
-                
             }
 
-            //Working method
-            //if (model.SubmissionText != null)
-            //{
-            //    SubmissionGrades submissionGrade = new SubmissionGrades()
-            //    {
-            //        User = currentStudent,
-            //        Assignment = currentAssignment,
-            //        SubmissionDate = DateTime.Now,
-            //        TextSubmission = model.SubmissionText,
-            //        FileSubmission = null,
-            //        Grade = null
-            //    };
-            //    context.SubmissionGrades.Add(submissionGrade);
-            //    context.SaveChanges();
-            //}
             return RedirectToAction("Index", "Home");
         }
 
