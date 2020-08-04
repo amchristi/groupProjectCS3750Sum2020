@@ -31,10 +31,17 @@
                 $('#calendar').fullCalendar('destroy');
                 $('#calendar').fullCalendar({
                     theme: true,
+                    themeSystem: 'standard',
                     header: {
                         left: 'prev,next today',
                         center: 'title',
                         right: 'month,agendaWeek,agendaDay'
+                    },
+                    buttonIcons: {
+                        next: 'right-single-arrow',
+                        prev: 'left-single-arrow',
+                        prevYear: 'left-double-arrow',
+                        nextYear: 'right-double-arrow'
                     },
                     timeFormat: 'h(:mm)a',
                     defaultView: 'month',
@@ -50,9 +57,9 @@
     </script>
     }
 
-<div class="jumbotron">
-    <h1>Calendar</h1>
-</div>
+<span class="calendarTitle col-md-12" >
+    Calendar
+</span>
 
 <div class="row">
     <div class="col-md-12">

@@ -6918,6 +6918,14 @@ div.ToDoCheckBox {
     vertical-align: text-top;
 }
 
+span.calendarTitle {
+    text-align: center;
+    font-size: 60px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
 
 
 /***************************        Montana's edits for the assignment submission         *************************/

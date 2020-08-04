@@ -48,13 +48,15 @@
                             <li>@Html.ActionLink("Profile", "ProfileInfoDetails", "Account")</li>
                             <li>@Html.ActionLink("Add Course", "AddCourse", "Courses")</li>
                             <li>@Html.ActionLink("Add Assignment", "SelectCourse", "Assignments")</li>
+
                             <li>
-                                <span class="noti glyphicon glyphicon-bell"><span class="count">&nbsp;</span></span>
-                                <div class="noti-content">
-                                    <div class="noti-top-arrow"></div>
-                                    <ul id="noticontent"></ul>
+                                <span class="inoti glyphicon glyphicon-bell"><span class="icount">&nbsp;</span></span>
+                                <div class="inoti-content">
+                                    <div class="inoti-top-arrow"></div>
+                                    <ul id="inoticontent"></ul>
                                 </div>
                             </li>
+
                         }
                     }
                     @*<li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
@@ -75,18 +77,20 @@
     @Scripts.Render("~/bundles/fullcalendarjs")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
-
-    @* Add jquery Library*@
-    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
-
     <script src="~/Scripts/jquery.dateFormat-1.0.js"></script>
     <script src="~/Scripts/jquery.signalR-2.4.1.min.js"></script>
     <script src="~/signalr/hubs"></script>
-    <script src="~/Scripts/boostrap.min.js"></script>
-    <link href="~/Content/boostrap.min.css" rel="stylesheet" />
+
+    @* Add jquery Library*@
+    @*<script src="~/Scripts/jquery-3.3.1.min.js"></script>*@
+
+
+    @*<script src="~/Scripts/boostrap.min.js"></script>*@
+    @*<link href="~/Content/boostrap.min.css" rel="stylesheet" />*@
     <style type="text/css">
 
-        .noti-content {
+
+        .noti-content, .inoti-content {
             position: fixed;
             right: 310px;
             background: #FFFFFF;
@@ -97,13 +101,12 @@
             border: 1px solid #9E988B;
         }
 
-        div.noticontenttitle {
+        div.noticontenttitle, div.inoticontenttitle {
             font-weight: bold;
-
         }
 
 
-        ul#noticontent {
+        ul#noticontent, ul#inoticontent {
             max-height: 400px;
             overflow: auto;
             margin: 0px;
@@ -111,13 +114,13 @@
             list-style-type: none;
         }
 
-            ul#noticontent li {
+            ul#noticontent li, ul#inoticontent li {
                 margin: 3px;
                 padding: 6px;
                 background: #ffffff;
             }
 
-        .noti-top-arrow {
+        .noti-top-arrow, .inoti-top-arrow {
             border-color: transparent;
             border-bottom-color: #F2E6FF;
             border-style: dashed dashed solid;
@@ -127,7 +130,7 @@
             top: -8px;
         }
 
-        span.noti {
+        span.noti, span.inoti {
             color: #F2E6FF;
             margin: 15px;
             position: fixed;
@@ -136,7 +139,7 @@
             cursor: pointer;
         }
 
-        span.count {
+        span.count, span.icount {
             position: relative;
             font-weight: bold;
             top: -5px;
@@ -193,7 +196,7 @@
                                     $('#noticontent').append($('<li><div class=noticontenttitle>New Assignment </div>' + value.AssignmentTitle + ' <br>' + value.CourseNumber + ' ' + value.Department + '<br>' + value.Points + ' Points <br>Due: ' + dueDate + '</li>'));
                                 }
 
-                            //with horizontal line
+                                //with horizontal line
                             } else {
 
                                 //if graded assignment
@@ -219,7 +222,7 @@
                 count++;
                 $('span.count').html(count);
             }
-                        
+
             // signalr js code for start hub and send receive notification
             var notificationHub = $.connection.notificationHub;
             $.connection.hub.start().done(function () {
