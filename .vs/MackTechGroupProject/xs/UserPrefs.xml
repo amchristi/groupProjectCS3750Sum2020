@@ -2,8 +2,8 @@
   <MonoDevelop.Ide.ItemProperties.MackTechGroupProject PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.Workbench ActiveDocument="MackTechTests/UnitTest1.cs">
     <Files>
-      <File FileName="MackTechGroupProject/Controllers/AssignmentsController.cs" Line="136" Column="26" />
-      <File FileName="MackTechGroupProject/Views/Assignments/InstructorGradeBook.cshtml" Line="79" Column="22" />
+      <File FileName="MackTechGroupProject/Controllers/AssignmentsController.cs" Line="268" Column="50" />
+      <File FileName="MackTechGroupProject/Views/Assignments/InstructorGradeBook.cshtml" Line="71" Column="14" />
       <File FileName="MackTechGroupProject/Views/Assignments/ViewGrades.cshtml" Line="86" Column="1" />
       <File FileName="MackTechGroupProject/Models/AssignmentsModels.cs" Line="129" Column="1" />
       <File FileName="MackTechGroupProject/Views/Assignments/StudentSubmission.cshtml" Line="6" Column="2" />
@@ -13,7 +13,8 @@
       <File FileName="MackTechGroupProject/Views/Shared/_Layout.cshtml" Line="1" Column="1" />
       <File FileName="MackTechGroupProject/Controllers/CoursesController.cs" Line="1" Column="1" />
       <File FileName="MackTechGroupProject/Views/Assignments/AssignmentSubmission.cshtml" Line="1" Column="1" />
-      <File FileName="MackTechTests/UnitTest1.cs" Line="1" Column="1" />
+      <File FileName="MackTechTests/UnitTest1.cs" Line="193" Column="1" />
+      <File FileName="MackTechGroupProject/Models/CoursesModels.cs" Line="69" Column="28" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
