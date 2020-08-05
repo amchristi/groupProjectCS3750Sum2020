@@ -1,7 +1,7 @@
-﻿@model MackTechGroupProject.Models.gradeSubmittedAssignmentsViewModel
+﻿@model MackTechGroupProject.Models.ListOfEnrollmentsViewModel
 
 @{
-    ViewBag.Title = "StudentsStatistics";
+    ViewBag.Title = "Final Grade Statistics";
 }
 
 <!DOCTYPE html>
@@ -9,7 +9,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Student Statistics</title>
+    <title>Final Grade Statistics</title>
 
     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 
@@ -45,11 +45,17 @@
 </head>
 
 <body>
-    <h1>@Model.SubmittedAssignments.FirstOrDefault().Assignment.AssignmentTitle</h1>
+    <h1>@Model.Enrollments.FirstOrDefault().Course.Department @Model.Enrollments.FirstOrDefault().Course.CourseNumber </h1>
     <hr />
     <div id="chartContainer"></div>
+
     <div class="row">
-        <div class="col-sm-12" style="text-align: right"> <p>*scores based on graded assignments only</p></div>
+        <div class="col-sm-12" style="text-align: right"> <p>*scores based on graded and ungraded assignments</p></div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12" style="text-align: right"> <b>Your Grade</b>:      @ViewBag.UserGrade </div>
     </div>
 </body>
 </html>
+

@@ -15,96 +15,98 @@
     <meta name="viewport" content="width=device-width" />
     <title>Current Assignments</title>
 </head>
-
-@if (Model.SubmittedAssignments.Any())
-{
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8">
-                <h1>@Html.DisplayFor(model => model.SubmittedAssignments.FirstOrDefault().Assignment.AssignmentTitle)</h1>
-            </div>
-            <div class="col-md-4" style="padding-top: 20px">
-                <a class="btn btn-default" style="float: right" href="@Url.Action("StudentsStatisticsInstructor", "Assignments", new { id = Model.SubmittedAssignments.FirstOrDefault().Assignment.AssignmentId })">
-                    Statistics
-                </a>
+    @if (Model.SubmittedAssignments.Any())
+    {
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <h1>@Html.DisplayFor(model => model.SubmittedAssignments.FirstOrDefault().Assignment.AssignmentTitle)</h1>
+                </div>
+                <div class="col-md-4" style="padding-top: 20px">
+                    <a class="btn btn-default" style="float: right" href="@Url.Action("StudentsStatisticsInstructor", "Assignments", new { id = Model.SubmittedAssignments.FirstOrDefault().Assignment.AssignmentId })">
+                        Statistics
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
 
-    <table class="table">
-        <tr>
-
-            <th>
-                Student Name
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.SubmittedAssignments.FirstOrDefault().SubmissionDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.SubmittedAssignments.FirstOrDefault().Grade)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.SubmittedAssignments.FirstOrDefault().Assignment.Points)
-            </th>
-            <th>
-                @*Space holder for view button*@
-            </th>
-        </tr>
-
-
-        @foreach (var item in Model.SubmittedAssignments)
-        {
+        <table class="table">
             <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.User.FirstName)
-                    @Html.DisplayFor(modelItem => item.User.LastName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.SubmissionDate)
-                </td>
-                @if (item.Grade != null)
-                {
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Grade)
-                    </td>
-                }
-                @if (item.Grade == null)
-                {
-                    <td>
-                        --
-                    </td>
-                }
 
-                <td>
-                    @Html.DisplayFor(modelItem => item.Assignment.Points)
-                </td>
-                <td>
-                    <a class="btn btn-default" href="@Url.Action("StudentSubmission", "Assignments", new { id = item.ID })">
-                        View Submission
-                    </a>
-                </td>
+                <th>
+                    Student Name
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SubmittedAssignments.FirstOrDefault().SubmissionDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SubmittedAssignments.FirstOrDefault().Grade)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SubmittedAssignments.FirstOrDefault().Assignment.Points)
+                </th>
+                <th>
+                    @*Space holder for view button*@
+                </th>
             </tr>
-        }
-    </table>
 
 
-    @*Button for convience purposes. Redirect the instructor back to the assignments list, not working, needs to be able to query the current course Id*@
-    @*
-        <p>
-            <a class="btn btn-default" href="@Url.Action("ViewAssignments", "Assignments",
-                                            new { id = @Html.DisplayNameFor(model => model.SubmittedAssignments.FirstOrDefault().Assignment.Course) })">
-                Back to Assignments List
-            </a>
-        </p>
-    *@
+            @foreach (var item in Model.SubmittedAssignments)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.User.FirstName)
+                        @Html.DisplayFor(modelItem => item.User.LastName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SubmissionDate)
+                    </td>
+                    @if (item.Grade != null)
+                    {
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Grade)
+                        </td>
+                    }
+                    @if (item.Grade == null)
+                    {
+                        <td>
+                            --
+                        </td>
+                    }
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Assignment.Points)
+                    </td>
+                    <td>
+                        <a class="btn btn-default" href="@Url.Action("StudentSubmission", "Assignments", new { id = item.ID })">
+                            View Submission
+                        </a>
+                    </td>
+                </tr>
+            }
+        </table>
+
+
+        @*Button for convience purposes. Redirect the instructor back to the assignments list, not working, needs to be able to query the current course Id*@
+        @*
+            <p>
+                <a class="btn btn-default" href="@Url.Action("ViewAssignments", "Assignments",
+                                                new { id = @Html.DisplayNameFor(model => model.SubmittedAssignments.FirstOrDefault().Assignment.Course) })">
+                    Back to Assignments List
+                </a>
+            </p>
+        *@
+    }
+    @if (!Model.SubmittedAssignments.Any())
+    {
+        <div class="col-sm-12 noAssignments" style="text-align:center">
+            <p>No submissions yet. </p>
+        </div>
+    }
+
+    <p style="color:red">@TempData["ErrorMessage"]</p>
 </body>
-} 
-@if(!Model.SubmittedAssignments.Any())
-{
-<div class="col-sm-12 noAssignments" style="text-align:center">
-    <p>No submissions yet. </p>
-</div>
-}
 </html>
 

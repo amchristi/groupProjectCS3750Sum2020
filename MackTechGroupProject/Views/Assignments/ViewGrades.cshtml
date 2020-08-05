@@ -4,16 +4,29 @@
     ViewBag.Title = "Grades";
 }
 
-<h2>Grades for @Model.StudentGrades.FirstOrDefault().Assignment.Course.Department @Model.StudentGrades.FirstOrDefault().Assignment.Course.CourseNumber</h2>
+<h2>Grades </h2>
 
 <!DOCTYPE html>
 
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>View Grades</title>
 </head>
 <body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h1>@Model.StudentGrades.FirstOrDefault().Assignment.Course.Department @Model.StudentGrades.FirstOrDefault().Assignment.Course.CourseNumber</h1>
+            </div>
+            <div class="col-md-4" style="padding-top: 20px">
+                <a class="btn btn-default" style="float: right" href="@Url.Action("FinalGradeStatisticsStudent", "Assignments", new { id = Model.CourseAssignments.FirstOrDefault().Course.CourseId })">
+                    Course Statistics
+                </a>
+            </div>
+        </div>
+    </div>
+
     <table class="table">
         <tr>
             @*<th></th>*@
@@ -34,69 +47,76 @@
 
         @foreach (var item in Model.CourseAssignments)
         {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.AssignmentTitle)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DueDate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Points)
-        </td>
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AssignmentTitle)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DueDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Points)
+                </td>
 
-        <td>
-            @foreach (var grade in Model.StudentGrades)
-            {
-                //if it is not the assignment continue
-                if (grade.Assignment.AssignmentId != item.AssignmentId)
-                {
-                    continue;
-                }
-                //if it is the assignment
-                else if (grade.Assignment.AssignmentId == item.AssignmentId)
-                {
-                    //display the grade
-                    if (grade.Grade != null)
+                <td>
+                    @foreach (var grade in Model.StudentGrades)
                     {
-                        @Html.DisplayFor(modelItem => grade.Grade)
+                        //if it is not the assignment continue
+                        if (grade.Assignment.AssignmentId != item.AssignmentId)
+                        {
+                            continue;
+                        }
+                        //if it is the assignment
+                        else if (grade.Assignment.AssignmentId == item.AssignmentId)
+                        {
+                            //display the grade
+                            if (grade.Grade != null)
+                            {
+                                @Html.DisplayFor(modelItem => grade.Grade)
+                            }
+                            //display dashes if submitted and not graded
+                            if (grade.Grade == null)
+                            {
+                                <p>--</p>
+                            }
+                        }
                     }
-                    //display dashes if submitted and not graded
-                    if (grade.Grade == null)
+                </td>
+                <td>
+                    @foreach (var grade in Model.StudentGrades)
                     {
-                        <p>--</p>
+                        //if it is not the assignment continue
+                        if (grade.Assignment.AssignmentId != item.AssignmentId)
+                        {
+                            continue;
+                        }
+                        //if it is the assignment
+                        else if (grade.Assignment.AssignmentId == item.AssignmentId)
+                        {
+                            //display the grade
+                            if (grade.Grade != null)
+                            {
+                                <a class="btn btn-default" style="float: right" href="@Url.Action("StudentsStatisticsStudent", "Assignments", new { id = item.AssignmentId })">
+                                    Statistics
+                                </a>
+                            }
+                        }
                     }
-                }
-            }
-        </td>
-        <td>
-            @foreach (var grade in Model.StudentGrades)
-            {
-                //if it is not the assignment continue
-                if (grade.Assignment.AssignmentId != item.AssignmentId)
-                {
-                    continue;
-                }
-                //if it is the assignment
-                else if (grade.Assignment.AssignmentId == item.AssignmentId)
-                {
-                    //display the grade
-                    if (grade.Grade != null)
-                    {
-                        <a class="btn btn-default" style="float: right" href="@Url.Action("StudentsStatisticsStudent", "Assignments", new { id = item.AssignmentId })">
-                            Statistics
-                        </a>
-                    }
-                }
-            }
-        </td>
-    </tr>
+                </td>
+            </tr>
         }
     </table>
 
     <div class="row">
-        <div class="col-sm-12" style="text-align: right"> <b>Total</b>:      @ViewBag.Total</div>
+        <div class="col-sm-12" style="text-align: right"> <p>-- submitted but not yet graded</p></div>
     </div>
 
+    <div class="row">
+        <div class="col-sm-12" style="text-align: right"> <p>*score based on graded assignments only</p></div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12" style="text-align: right"> <b>Total</b>:      @ViewBag.Total</div>
+    </div>
 </body>
 </html>

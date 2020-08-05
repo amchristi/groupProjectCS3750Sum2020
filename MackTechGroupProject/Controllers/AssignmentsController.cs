@@ -125,7 +125,7 @@ namespace MackTechGroupProject.Controllers
             var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
             var currentStudent = context.Users.Where(x => x.Id == userID).FirstOrDefault();
 
-            
+
             var selectedAssignmentId = Convert.ToInt64(Request.Form["asID"]);
 
 
@@ -138,12 +138,12 @@ namespace MackTechGroupProject.Controllers
                 var submissionToBeRemoved = context.SubmissionGrades.Where(x => x.Assignment.AssignmentId == selectedAssignmentId && x.User.Id == userID).FirstOrDefault();
                 context.SubmissionGrades.Remove(submissionToBeRemoved);
             }
-            
+
 
             if (File != null)
             {
                 string path = Server.MapPath("~/Content/fileAssignments/");
-                if(!Directory.Exists(path))
+                if (!Directory.Exists(path))
                 {
                     Directory.CreateDirectory(path);
                 }
@@ -216,12 +216,10 @@ namespace MackTechGroupProject.Controllers
 
             var allSubmissionsOfSelected = allSubmissionGrades.Where(x => x.Assignment == selectedAssignment).ToList();
 
-            var mostRecentSubmissionPerStudent = allSubmissionsOfSelected.GroupBy(x => x.User).Select(x => x.FirstOrDefault(y => y.ID == x.Max(z => z.ID))).OrderBy(x => x.User.Id).ToList();
-
             //set ViewModel list to defined list above
             var gradeSubmittedAssignmentsViewModel = new gradeSubmittedAssignmentsViewModel()
             {
-                SubmittedAssignments = mostRecentSubmissionPerStudent
+                SubmittedAssignments = allSubmissionsOfSelected
             };
 
             return View(gradeSubmittedAssignmentsViewModel);
@@ -250,12 +248,8 @@ namespace MackTechGroupProject.Controllers
             var studentGrades = context.SubmissionGrades.Include(x => x.User).Include(x => x.Assignment).Include("Assignment.Course")
                             .Where(x => x.Assignment.Course.CourseId == selectedCourseId).ToList();
 
-            //only getting a list of submitted assignments
-            //var mostRecentStudentGrades = studentGrades.GroupBy(x => x.User).Select(x => x.OrderByDescending(y => y.SubmissionDate).FirstOrDefault()).ToList();
-
             //filter the instructor out of the class roll
             var courseEnrollmentsStudents = courseEnrollments.Where(x => x.User.Id != instructorUserId).OrderBy(x => x.User.LastName).ToList();
-            //var courseEnrollmentsStudents = courseEnrollmentsStudents.OrderByDescending(x => x.User.LastName).ToList();
 
             //get the total points for assignments for the selectedCourseId
             var courseAssignmentPointsTotal = courseAssignments.Where(x => x.Course.CourseId == selectedCourseId).Sum(x => x.Points);
@@ -294,34 +288,33 @@ namespace MackTechGroupProject.Controllers
             //Get a list of submitted assignments from the SubmissionGrades Table based on the specific assignment
             var allSubmissionGrades = context.SubmissionGrades.Include(x => x.Assignment).Include(x => x.User).Include(x => x.User).ToList();
 
-            var allSubmissionsOfSelected = allSubmissionGrades.Where(x => x.Assignment == selectedAssignment).ToList();
+            var allSubmissionsOfSelected = allSubmissionGrades.Where(x => x.Assignment == selectedAssignment && x.Grade != null).ToList();
 
-            // get most recent submission per student 
-            var mostRecentSubmissionPerStudent = allSubmissionsOfSelected.Where(w => w.Grade != null).GroupBy(x => x.User).Select(x => x.FirstOrDefault(y => y.ID == x.Max(z => z.ID))).OrderBy(x => x.User.Id).ToList();
-
-            // used for calculating percentages
-            var assignmentPointTotal = mostRecentSubmissionPerStudent.FirstOrDefault().Assignment.Points;
-            var userIds = mostRecentSubmissionPerStudent.Select(x => x.User).Select(y => y.Id).ToList();
-
-            // set percentages per user
-            foreach (var userId in userIds)
+            if (allSubmissionsOfSelected.Count() != 0)
             {
-                // get user's grade based off userId
-                var userGrade = mostRecentSubmissionPerStudent.Where(x => x.User.Id == userId).FirstOrDefault().Grade;
+                // used for calculating percentages
+                var assignmentPointTotal = allSubmissionsOfSelected.FirstOrDefault().Assignment.Points;
+                var userIds = allSubmissionsOfSelected.Select(x => x.User).Select(y => y.Id).ToList();
 
-                // set Percentage of user using usergrade
-                mostRecentSubmissionPerStudent.Where(x => x.User.Id == userId).FirstOrDefault().Percentage = Convert.ToDecimal(userGrade) / assignmentPointTotal;
-            }
+                // set percentages per user
+                foreach (var userId in userIds)
+                {
+                    // get user's grade based off userId
+                    var userGrade = allSubmissionsOfSelected.Where(x => x.User.Id == userId).FirstOrDefault().Grade;
 
-            // list of all scores using mostRecentSubmissions including count of student that received scored 0-59, 60-69, etc.
-            var zeroToSixty = mostRecentSubmissionPerStudent.Where(x=> x.Percentage < Convert.ToDecimal(.6)).Count();
-            var sixtyToSeventy = mostRecentSubmissionPerStudent.Where(x => x.Percentage >= Convert.ToDecimal(.6) && x.Percentage < Convert.ToDecimal(.7)).Count();
-            var seventyToEighty = mostRecentSubmissionPerStudent.Where(x => x.Percentage >= Convert.ToDecimal(.7) && x.Percentage < Convert.ToDecimal(.8)).Count();
-            var eightyToNinety = mostRecentSubmissionPerStudent.Where(x => x.Percentage >= Convert.ToDecimal(.8) && x.Percentage < Convert.ToDecimal(.9)).Count();
-            var ninetyToOneHundred = mostRecentSubmissionPerStudent.Where(x => x.Percentage >= Convert.ToDecimal(.9)).Count();
+                    // set Percentage of user using usergrade
+                    allSubmissionsOfSelected.Where(x => x.User.Id == userId).FirstOrDefault().Percentage = Convert.ToDecimal(userGrade) / assignmentPointTotal;
+                }
 
-            // save object for x and y values of chart/graph
-            List<DataPoint> dataPoints = new List<DataPoint>
+                // list of all scores using allSubmissionsOfSelected including count of student that received scored 0-59, 60-69, etc.
+                var zeroToSixty = allSubmissionsOfSelected.Where(x => x.Percentage < Convert.ToDecimal(.6)).Count();
+                var sixtyToSeventy = allSubmissionsOfSelected.Where(x => x.Percentage >= Convert.ToDecimal(.6) && x.Percentage < Convert.ToDecimal(.7)).Count();
+                var seventyToEighty = allSubmissionsOfSelected.Where(x => x.Percentage >= Convert.ToDecimal(.7) && x.Percentage < Convert.ToDecimal(.8)).Count();
+                var eightyToNinety = allSubmissionsOfSelected.Where(x => x.Percentage >= Convert.ToDecimal(.8) && x.Percentage < Convert.ToDecimal(.9)).Count();
+                var ninetyToOneHundred = allSubmissionsOfSelected.Where(x => x.Percentage >= Convert.ToDecimal(.9)).Count();
+
+                // save object for x and y values of chart/graph
+                List<DataPoint> dataPoints = new List<DataPoint>
             {
                 //(range, count of students within range)
                 new DataPoint( "0-59%", zeroToSixty),
@@ -331,16 +324,23 @@ namespace MackTechGroupProject.Controllers
                 new DataPoint( "90-100%", ninetyToOneHundred)
             };
 
-            // pass the data to canvasJS via Json
-            ViewBag.DataPoints = JsonConvert.SerializeObject(dataPoints);
+                // pass the data to canvasJS via Json
+                ViewBag.DataPoints = JsonConvert.SerializeObject(dataPoints);
 
-            //set ViewModel list to defined list above
-            var gradeSubmittedAssignmentsViewModel = new gradeSubmittedAssignmentsViewModel()
+                //set ViewModel list to defined list above
+                var gradeSubmittedAssignmentsViewModel = new gradeSubmittedAssignmentsViewModel()
+                {
+                    SubmittedAssignments = allSubmissionsOfSelected
+                };
+
+                return View(gradeSubmittedAssignmentsViewModel);
+            }
+
+            else
             {
-                SubmittedAssignments = mostRecentSubmissionPerStudent
-            };
-
-            return View(gradeSubmittedAssignmentsViewModel);
+                TempData["ErrorMessage"] = "Error: Assignments not yet graded!";
+                return RedirectToAction("GradeAssignment", new { id = selectedAssignmentId });
+            }
         }
 
         public ActionResult ViewGrades(int id)
@@ -355,18 +355,15 @@ namespace MackTechGroupProject.Controllers
             var studentGrades = context.SubmissionGrades.Include(x => x.User).Include(x => x.Assignment).Include("Assignment.Course")
                                         .Where(x => x.User.Id == userId && x.Assignment.Course.CourseId == selectedCourseId).ToList();
 
-            //only getting a list of submitted assignments
-            var mostRecentStudentGrades = studentGrades.GroupBy(x => x.Assignment.AssignmentId).Select(x => x.OrderByDescending(y => y.SubmissionDate).FirstOrDefault()).ToList();
-
             var studentGradesViewModel = new StudentGradesViewModel()
             {
-                StudentGrades = mostRecentStudentGrades,
+                StudentGrades = studentGrades,
                 CourseAssignments = courseAssignments
             };
 
             //to calculate total get a sum off all score and divide by sum of all assignmnet.course.points
-            var gradeTotal = mostRecentStudentGrades.Where(x => x.Grade != null).Sum(x => x.Grade);
-            var pointsTotal = mostRecentStudentGrades.Where(x => x.Grade != null).Sum(x => x.Assignment.Points);
+            var gradeTotal = studentGrades.Where(x => x.Grade != null).Sum(x => x.Grade);
+            var pointsTotal = studentGrades.Where(x => x.Grade != null).Sum(x => x.Assignment.Points);
 
             var total = gradeTotal / pointsTotal;
             var formattedTotal = string.Format("{0:P2}", total);
@@ -385,15 +382,12 @@ namespace MackTechGroupProject.Controllers
             //Get a list of submitted assignments from the SubmissionGrades Table based on the specific assignment
             var allSubmissionGradesOfAssignment = context.SubmissionGrades.Include(x => x.Assignment).Include(x => x.User).Include(x => x.User).Where(x => x.Assignment.AssignmentId == selectedAssignmentId).ToList();
 
-            // get most recent submission of each student
-            var mostRecentSubmissionsofAllStudents = allSubmissionGradesOfAssignment.GroupBy(x => x.User.Id).Select(x => x.OrderByDescending(y => y.SubmissionDate).FirstOrDefault()).ToList();
-
             double currentUserScore = 0.0;
 
             //user score
             if (allSubmissionGradesOfAssignment.Any(x => x.User.Id == currentUserId && x.Assignment.AssignmentId == selectedAssignmentId))
             {
-                currentUserScore = Convert.ToDouble(mostRecentSubmissionsofAllStudents.Where(x => x.User.Id == currentUserId && x.Assignment.AssignmentId == selectedAssignmentId).FirstOrDefault().Grade);
+                currentUserScore = Convert.ToDouble(allSubmissionGradesOfAssignment.Where(x => x.User.Id == currentUserId && x.Assignment.AssignmentId == selectedAssignmentId).FirstOrDefault().Grade);
             }
             else
             {
@@ -401,22 +395,22 @@ namespace MackTechGroupProject.Controllers
             }
 
             //average score
-            double averageScore = Convert.ToDouble(mostRecentSubmissionsofAllStudents.Average(x => x.Grade));
+            double averageScore = Convert.ToDouble(allSubmissionGradesOfAssignment.Average(x => x.Grade));
 
             //low score
-            var lowScore = Convert.ToDouble(mostRecentSubmissionsofAllStudents.Min(x => x.Grade));
+            var lowScore = Convert.ToDouble(allSubmissionGradesOfAssignment.Min(x => x.Grade));
 
             //high score
-            var highScore = Convert.ToDouble(mostRecentSubmissionsofAllStudents.Max(x => x.Grade));
+            var highScore = Convert.ToDouble(allSubmissionGradesOfAssignment.Max(x => x.Grade));
 
             // save object for x and y values of chart/graph
             List<DataPoint> dataPoints = new List<DataPoint>
             {
                 //(range, count of students within range)
-                new DataPoint( "You", currentUserScore),
                 new DataPoint( "Average", averageScore),
                 new DataPoint( "Low", lowScore),
-                new DataPoint( "High", highScore)
+                new DataPoint( "High", highScore),
+                new DataPoint( "Your Grade", currentUserScore)
             };
 
             // pass the data to canvasJS via Json
@@ -429,6 +423,156 @@ namespace MackTechGroupProject.Controllers
             };
 
             return View(gradeSubmittedAssignmentsViewModel);
+        }
+
+        public ActionResult FinalGradeStatisticsStudent(int id)
+        {
+            var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
+
+            //Get instructor Id
+            var studentUserId = User.Identity.GetUserId();
+
+            //Get course based on course Id
+            var selectedCourseId = id;
+
+            //get list of student enrollments for class 
+            var courseEnrollments = context.Enrollments.Where(x => x.Course.CourseId == selectedCourseId).Include(x => x.User).ToList();
+
+            //get the instructor user id for filtering
+            var instructorUserId = context.Enrollments.Where(x => x.Course.CourseId == selectedCourseId).Include(x => x.Course).FirstOrDefault().Course.Instructor.Id;
+
+            //get list of assignments for course
+            var courseAssignments = context.Assignments.Where(x => x.Course.CourseId == selectedCourseId).ToList();
+
+            //List of All student grades
+            var studentGrades = context.SubmissionGrades.Include(x => x.User).Include(x => x.Assignment).Include("Assignment.Course")
+                            .Where(x => x.Assignment.Course.CourseId == selectedCourseId).ToList();
+
+            //filter the instructor out of the class roll
+            var courseEnrollmentsStudents = courseEnrollments.Where(x => x.User.Id != instructorUserId).OrderBy(x => x.User.LastName).ToList();
+
+            //get the total points for assignments for the selectedCourseId
+            var courseAssignmentPointsTotal = courseAssignments.Where(x => x.Course.CourseId == selectedCourseId).Sum(x => x.Points);
+
+            //get all userId's to use for foreach loop
+            var userIds = courseEnrollmentsStudents.Select(x => x.User).Select(y => y.Id).ToList();
+
+            // set percentages per user
+            foreach (var userId in userIds)
+            {
+                // get user's grade based off userId
+                var userGradesTotal = studentGrades.Where(x => x.User.Id == userId).Sum(x => x.Grade);
+
+                // set Percentage of user using usergrade
+                courseEnrollmentsStudents.Where(x => x.User.Id == userId).FirstOrDefault().User.Percentage = Convert.ToDecimal(userGradesTotal) / courseAssignmentPointsTotal;
+            }
+
+            // list of all scores using courseEnrollmentsStudents including count of student that received scored 0-59, 60-69, etc.
+            var zeroToSixty = courseEnrollmentsStudents.Where(x => x.User.Percentage < Convert.ToDecimal(.6)).Count();
+            var sixtyToSeventy = courseEnrollmentsStudents.Where(x => x.User.Percentage >= Convert.ToDecimal(.6) && x.User.Percentage < Convert.ToDecimal(.7)).Count();
+            var seventyToEighty = courseEnrollmentsStudents.Where(x => x.User.Percentage >= Convert.ToDecimal(.7) && x.User.Percentage < Convert.ToDecimal(.8)).Count();
+            var eightyToNinety = courseEnrollmentsStudents.Where(x => x.User.Percentage >= Convert.ToDecimal(.8) && x.User.Percentage < Convert.ToDecimal(.9)).Count();
+            var ninetyToOneHundred = courseEnrollmentsStudents.Where(x => x.User.Percentage >= Convert.ToDecimal(.9)).Count();
+
+            var currentUserScore = courseEnrollmentsStudents.Where(x => x.User.Id == studentUserId).FirstOrDefault().User.Percentage;
+
+            // save object for x and y values of chart/graph
+            List<DataPoint> dataPoints = new List<DataPoint>
+            {
+                //(range, count of students within range)
+                new DataPoint( "0-59%", zeroToSixty),
+                new DataPoint( "60-69%", sixtyToSeventy),
+                new DataPoint( "70-79%", seventyToEighty),
+                new DataPoint( "80-89%", eightyToNinety),
+                new DataPoint( "90-100%", ninetyToOneHundred)
+            };
+
+            // pass the data to canvasJS via Json
+            ViewBag.DataPoints = JsonConvert.SerializeObject(dataPoints);
+
+            var formattedUserGrade = string.Format("{0:P2}", currentUserScore);
+
+            // TODO: add a column for student's particular grade
+            ViewBag.UserGrade = formattedUserGrade;
+
+            //set ViewModel list to defined list above
+            var ListOfEnrollmentsViewModel = new ListOfEnrollmentsViewModel()
+            {
+                Enrollments = courseEnrollmentsStudents
+            };
+
+            return View(ListOfEnrollmentsViewModel);
+        }
+
+        public ActionResult FinalGradeStatisticsInstructor(int id)
+        {
+            var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
+
+            //Get instructor Id
+            var instructorUserId = User.Identity.GetUserId();
+
+            //Get course based on course Id
+            var selectedCourseId = id;
+            var selectedCourse = context.Courses.Where(x => x.CourseId == selectedCourseId).FirstOrDefault();
+
+            //get list of student enrollments for class 
+            var courseEnrollments = context.Enrollments.Where(x => x.Course.CourseId == selectedCourseId).Include(x => x.User).ToList();
+
+            //get list of assignments for course
+            var courseAssignments = context.Assignments.Where(x => x.Course.CourseId == selectedCourseId).ToList();
+
+
+            //List of All student grades
+            var studentGrades = context.SubmissionGrades.Include(x => x.User).Include(x => x.Assignment).Include("Assignment.Course")
+                            .Where(x => x.Assignment.Course.CourseId == selectedCourseId).ToList();
+
+            //filter the instructor out of the class roll
+            var courseEnrollmentsStudents = courseEnrollments.Where(x => x.User.Id != instructorUserId).OrderBy(x => x.User.LastName).ToList();
+
+            //get the total points for assignments for the selectedCourseId
+            var courseAssignmentPointsTotal = courseAssignments.Where(x => x.Course.CourseId == selectedCourseId).Sum(x => x.Points);
+
+            //get all userId's to use for foreach loop
+            var userIds = courseEnrollmentsStudents.Select(x => x.User).Select(y => y.Id).ToList();
+
+            // set percentages per user
+            foreach (var userId in userIds)
+            {
+                // get user's grade based off userId
+                var userGradesTotal = studentGrades.Where(x => x.User.Id == userId).Sum(x => x.Grade);
+
+                // set Percentage of user using usergrade
+                courseEnrollmentsStudents.Where(x => x.User.Id == userId).FirstOrDefault().User.Percentage = Convert.ToDecimal(userGradesTotal) / courseAssignmentPointsTotal;
+            }
+
+            // list of all scores using courseEnrollmentsStudents including count of student that received scored 0-59, 60-69, etc.
+            var zeroToSixty = courseEnrollmentsStudents.Where(x => x.User.Percentage < Convert.ToDecimal(.6)).Count();
+            var sixtyToSeventy = courseEnrollmentsStudents.Where(x => x.User.Percentage >= Convert.ToDecimal(.6) && x.User.Percentage < Convert.ToDecimal(.7)).Count();
+            var seventyToEighty = courseEnrollmentsStudents.Where(x => x.User.Percentage >= Convert.ToDecimal(.7) && x.User.Percentage < Convert.ToDecimal(.8)).Count();
+            var eightyToNinety = courseEnrollmentsStudents.Where(x => x.User.Percentage >= Convert.ToDecimal(.8) && x.User.Percentage < Convert.ToDecimal(.9)).Count();
+            var ninetyToOneHundred = courseEnrollmentsStudents.Where(x => x.User.Percentage >= Convert.ToDecimal(.9)).Count();
+
+            // save object for x and y values of chart/graph
+            List<DataPoint> dataPoints = new List<DataPoint>
+            {
+                //(range, count of students within range)
+                new DataPoint( "0-59%", zeroToSixty),
+                new DataPoint( "60-69%", sixtyToSeventy),
+                new DataPoint( "70-79%", seventyToEighty),
+                new DataPoint( "80-89%", eightyToNinety),
+                new DataPoint( "90-100%", ninetyToOneHundred)
+            };
+
+            // pass the data to canvasJS via Json
+            ViewBag.DataPoints = JsonConvert.SerializeObject(dataPoints);
+
+            //set ViewModel list to defined list above
+            var ListOfEnrollmentsViewModel = new ListOfEnrollmentsViewModel()
+            {
+                Enrollments = courseEnrollmentsStudents
+            };
+
+            return View(ListOfEnrollmentsViewModel);
         }
 
         public ActionResult StudentSubmission(int id)
@@ -445,7 +589,8 @@ namespace MackTechGroupProject.Controllers
             };
 
             var submissionType = selectedSubmission.Select(x => x.Assignment.SubmissionType).ToList();
-            if (submissionType.Equals("File-Upload")) {
+            if (submissionType.Equals("File-Upload"))
+            {
                 string filePathOriginal = selectedSubmission.Select(x => x.FileSubmission).FirstOrDefault();
                 string[] words = filePathOriginal.Split('$');
                 string fileDisplayName = words[0];
@@ -454,33 +599,6 @@ namespace MackTechGroupProject.Controllers
 
             return View(StudentSubmissionViewModel);
         }
-
-
-        //Current working method
-        //[AcceptVerbs(HttpVerbs.Post)]
-        //public ActionResult StudentSubmission(int id, FormCollection formValues)
-        //{
-        //    var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
-
-        //    //Get the current StudentSubmission for the instructor to grade
-        //    var selectedSubmissionId = id;
-        //    var selectedSubmission = context.SubmissionGrades.Where(x => x.ID == selectedSubmissionId).Include(x => x.Assignment).Include(x => x.User).ToList();
-
-        //    //Do we need the assignment Id?
-        //    //var assignmentId = selectedSubmission.FirstOrDefault().Assignment.AssignmentId;
-
-
-        //    //Update selected Submission with new grade
-            
-        //    selectedSubmission.FirstOrDefault().Grade = Convert.ToDouble(Request.Form["Grade"]);
-        //    selectedSubmission.FirstOrDefault().GradeAddedOn = DateTime.Now;
-
-        //    //save changes to database
-        //    context.SaveChanges();
-
-        //    //changed redirect to land on the list of students to grade, rather than the same assignemnt
-        //    return RedirectToAction("GradeAssignment", new { id = selectedSubmission.FirstOrDefault().Assignment.AssignmentId });
-        //}
 
         //Editing method to create unit test
         [AcceptVerbs(HttpVerbs.Post)]
@@ -504,57 +622,17 @@ namespace MackTechGroupProject.Controllers
             {
                 return RedirectToAction("GradeAssignment", new { id = selectedSubmission.FirstOrDefault().Assignment.AssignmentId });
             }
-            
+
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        //public ActionResult SubmitStudentGrade(int id, double grade)
-        //{
-        //    var newGrade = grade;
-        //    var selectedSubmissionId = id;
-        //    var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
-
-        //    var selectedSubmission = context.SubmissionGrades.Where(x => x.ID == selectedSubmissionId).Include(x => x.Assignment).Include(x => x.User).ToList();
-        //    var assignmentId = selectedSubmission.FirstOrDefault().Assignment.AssignmentId;
-
-        //    // if the submission exists in the database
-        //    if (context.SubmissionGrades.Any(x => x.ID == selectedSubmissionId))
-        //    {
-        //        // set the grade to what the instructor types
-        //        var submissionGrades = new SubmissionGrades()
-        //        {
-        //            Grade = newGrade
-        //        };
-        //        context.SaveChanges();
-        //    }
-
-        //    return RedirectToAction("GradeAssignment", "Assignment", new { id = assignmentId });
-        //}
-
-
 
         public ActionResult DownloadSubmittedAssignemnt(string filePath)
         {
             ////Hopefully will be useful to preserve origial file name and type
-   
+
             //var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
             //var currentStudent = context.Users.Where(x => x.Id == userID).FirstOrDefault();
 
-            
+
             //var selectedSubmissionId = Convert.ToInt64(Request.Form["asID"]);
 
             //var currentAssignment = context.SubmissionGrades.Where(x => x.ID == selectedSubmissionId).FirstOrDefault();
@@ -588,20 +666,6 @@ namespace MackTechGroupProject.Controllers
             return data;
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         #region UnusedCode
 
         public ActionResult Assignment1()
@@ -616,6 +680,55 @@ namespace MackTechGroupProject.Controllers
         {
             return View();
         }
+
+        //Current working method
+        //[AcceptVerbs(HttpVerbs.Post)]
+        //public ActionResult StudentSubmission(int id, FormCollection formValues)
+        //{
+        //    var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
+
+        //    //Get the current StudentSubmission for the instructor to grade
+        //    var selectedSubmissionId = id;
+        //    var selectedSubmission = context.SubmissionGrades.Where(x => x.ID == selectedSubmissionId).Include(x => x.Assignment).Include(x => x.User).ToList();
+
+        //    //Do we need the assignment Id?
+        //    //var assignmentId = selectedSubmission.FirstOrDefault().Assignment.AssignmentId;
+
+
+        //    //Update selected Submission with new grade
+
+        //    selectedSubmission.FirstOrDefault().Grade = Convert.ToDouble(Request.Form["Grade"]);
+        //    selectedSubmission.FirstOrDefault().GradeAddedOn = DateTime.Now;
+
+        //    //save changes to database
+        //    context.SaveChanges();
+
+        //    //changed redirect to land on the list of students to grade, rather than the same assignemnt
+        //    return RedirectToAction("GradeAssignment", new { id = selectedSubmission.FirstOrDefault().Assignment.AssignmentId });
+        //}
+
+        //public ActionResult SubmitStudentGrade(int id, double grade)
+        //{
+        //    var newGrade = grade;
+        //    var selectedSubmissionId = id;
+        //    var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
+
+        //    var selectedSubmission = context.SubmissionGrades.Where(x => x.ID == selectedSubmissionId).Include(x => x.Assignment).Include(x => x.User).ToList();
+        //    var assignmentId = selectedSubmission.FirstOrDefault().Assignment.AssignmentId;
+
+        //    // if the submission exists in the database
+        //    if (context.SubmissionGrades.Any(x => x.ID == selectedSubmissionId))
+        //    {
+        //        // set the grade to what the instructor types
+        //        var submissionGrades = new SubmissionGrades()
+        //        {
+        //            Grade = newGrade
+        //        };
+        //        context.SaveChanges();
+        //    }
+
+        //    return RedirectToAction("GradeAssignment", "Assignment", new { id = assignmentId });
+        //}
 
         //private IEnumerable<SelectListItem> GetCourses()
         //{

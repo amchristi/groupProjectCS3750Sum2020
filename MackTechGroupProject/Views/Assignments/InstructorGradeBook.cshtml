@@ -5,9 +5,6 @@
     ViewBag.Title = "GradeBook";
 
 }
-
-<h2>Grades for @Model.StudentGrades.FirstOrDefault().Assignment.Course.Department @Model.StudentGrades.FirstOrDefault().Assignment.Course.CourseNumber</h2>
-
 <!DOCTYPE html>
 
 <html>
@@ -16,9 +13,20 @@
     <title>Grade Book</title>
 </head>
 <body>
-    <a class="btn btn-default" style="float: right" href="@Url.Action("Assignment1", "Assignments")">
-        Class Statistics
-    </a>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h1>@Model.ClassRoll.FirstOrDefault().Course.Department @Model.ClassRoll.FirstOrDefault().Course.CourseNumber</h1>
+            </div>
+            <div class="col-md-4" style="padding-top: 20px">
+                <a class="btn btn-default" style="float: right" href="@Url.Action("FinalGradeStatisticsInstructor", "Assignments", new { id = Model.ClassRoll.FirstOrDefault().Course.CourseId })">
+                    Course Statistics
+                </a>
+            </div>
+        </div>
+    </div>
+
     <table>
         <tr class="gradeBookARow">
             <th class="gradeBookStdCol">
@@ -53,7 +61,7 @@
             <th class="gradeBookDivder">
                 @*Space Holder*@
             </th>
-            <th class="gradeBookACol">  
+            <th class="gradeBookACol">
             </th>
 
         </tr>
@@ -64,14 +72,14 @@
             @*Assignment Space Holder, create a blank row*@
             @foreach (var assignment in Model.CourseAssignments)
             {
-                <th >
+                <th>
                 </th>
             }
             <th class="gradeBookDivder">
                 @*Space Holder*@
             </th>
             <th>
-                
+
             </th>
         </tr>
 
@@ -127,7 +135,7 @@
                 <th class="gradeBookDivder">
                     @*Space Holder*@
                 </th>
-                <th class="gradeBookAPCol"> 
+                <th class="gradeBookAPCol">
                     @Html.DisplayFor(modelItem => student.User.Percentage)
                 </th>
 
@@ -136,5 +144,11 @@
 
     </table>
 
+    <div class="row">
+        <div class="col-sm-12" style="text-align: right"> <p>-- submitted but not yet graded</p></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12" style="text-align: right"> <p>*scores based on graded and ungraded assignments</p></div>
+    </div>
 </body>
 </html>

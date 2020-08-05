@@ -131,7 +131,10 @@ namespace MackTechGroupProject.Models
 
     }
 
-
+    public class ListOfEnrollmentsViewModel
+    {
+        public List<Enrollment> Enrollments { get; set; }
+    }
 
     public class StudentNotificationViewModel
     {
