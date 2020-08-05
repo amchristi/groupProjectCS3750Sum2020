@@ -79,6 +79,40 @@ namespace MackTechGroupProject
             }
         }
 
+        public Boolean AssignmentSubmittedNotification(DateTime currentTime)
+        {
+            Boolean result = false;
+            string conStr = ConfigurationManager.ConnectionStrings["TitanDbConnection"].ConnectionString;
+            string sqlCommand = @"SELECT Id from [dbo].[SubmissionGrades]
+                                    where SubmissionDate > @SubmissionDate";
+            using (SqlConnection con = new SqlConnection(conStr))
+            {
+                SqlCommand cmd = new SqlCommand(sqlCommand, con);
+                cmd.Parameters.AddWithValue("@SubmissionDate", currentTime);
+                if (con.State != System.Data.ConnectionState.Open)
+                {
+                    con.Open();
+                }
+                cmd.Notification = null;
+                SqlDependency sqlDep = new SqlDependency(cmd);
+                if (sqlDep.HasChanges)
+                {
+                    result = true;
+                }
+                sqlDep.OnChange += new OnChangeEventHandler(sqlDep3_OnChange);
+                //sqlDep.OnChange += sqlDep_OnChange;
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    //nothing need to add here
+                }
+
+
+
+            }
+
+            return result;
+        }
+
         void sqlDep1_OnChange(Object sender, SqlNotificationEventArgs e)
         {
             if (e.Type == SqlNotificationType.Change)
@@ -113,6 +147,23 @@ namespace MackTechGroupProject
             }
         }
 
+        void sqlDep3_OnChange(Object sender, SqlNotificationEventArgs e)
+        {
+            if (e.Type == SqlNotificationType.Change)
+            {
+                SqlDependency sqlDep = sender as SqlDependency;
+                sqlDep.OnChange -= sqlDep3_OnChange;
+
+                //from here we will send message to client
+                var notificationHub = GlobalHost.ConnectionManager.GetHubContext<NotificationHub>();
+                notificationHub.Clients.All.Notify("added");
+
+                //re-register notifcation
+                AssignmentSubmittedNotification(DateTime.Now);
+
+            }
+        }
+
         public List<StudentNotificationViewModel> GetNotificationData(DateTime afterDate, string userId)
         {
 
@@ -126,10 +177,13 @@ namespace MackTechGroupProject
                 var updatedSubmissionsForUser = updatedSubmissions.Where(x => x.User.Id == userId).ToList();
                 var updatedSubmissionsForUserWithGrade = updatedSubmissionsForUser.Where(x => x.Grade != null).ToList();
 
-                //get newly added assignements per user 
+                //get newly added assignments per user 
                 var currentEnrollmentsWithAssignments = context.Enrollments.Where(x => x.User.Id == userId).Include(x => x.User).Include(x => x.Course).Include("Course.Assignments").ToList();
                 var allAssignments = currentEnrollmentsWithAssignments.Select(x => x.Course).SelectMany(y => y.Assignments).ToList();
                 var recentlyAddedAssignments = allAssignments.Where(x => x.AssignmentAddedOn > afterDate).ToList();
+
+                //get newly added submission submitted for instructor
+                var assignmentSubmitted = context.SubmissionGrades.Where(x => x.SubmissionDate > afterDate).ToList();
 
                 //add newly graded submissions to the list
                 foreach (SubmissionGrades sg in updatedSubmissionsForUserWithGrade)
@@ -142,7 +196,8 @@ namespace MackTechGroupProject
                         Points = sg.Assignment.Points,
                         DueDate = null,
                         Department = sg.Assignment.Course.Department,
-                        CourseNumber = sg.Assignment.Course.CourseNumber
+                        CourseNumber = sg.Assignment.Course.CourseNumber,
+                        SubmissionDate = null
                     };
                     result.Add(newGradedNotification);
 
@@ -158,9 +213,28 @@ namespace MackTechGroupProject
                         Points = a.Points,
                         DueDate = a.DueDate,
                         Department = a.Course.Department,
-                        CourseNumber = a.Course.CourseNumber
+                        CourseNumber = a.Course.CourseNumber,
+                        SubmissionDate = null
                     };
                     result.Add(newAddedAssignment);
+
+                }
+
+                //add newly graded submissions to the list
+                foreach (SubmissionGrades sg in assignmentSubmitted)
+                {
+
+                    StudentNotificationViewModel newAssignmentSubmitted = new StudentNotificationViewModel()
+                    {
+                        AssignmentTitle = sg.Assignment.AssignmentTitle,
+                        Grade = (double)sg.Grade,
+                        Points = sg.Assignment.Points,
+                        DueDate = null,
+                        Department = sg.Assignment.Course.Department,
+                        CourseNumber = sg.Assignment.Course.CourseNumber,
+                        SubmissionDate = sg.SubmissionDate
+                    };
+                    result.Add(newAssignmentSubmitted);
 
                 }
 

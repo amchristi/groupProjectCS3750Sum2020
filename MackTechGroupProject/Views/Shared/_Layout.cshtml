@@ -189,25 +189,38 @@
 
                             //without horizontal line
                             if (index == 0) {
-                                if (value.DueDate == null) {
-                                    $('#noticontent').append($('<li><div class=noticontenttitle>New grade </div>' + value.Grade + ' / ' + value.Points + ' <br>' + value.AssignmentTitle + '<br>' + value.Department + ' ' + value.CourseNumber + '</li>'));
-                                } else if (value.DueDate != null) {
-                                    var dueDate = new Date(value.DueDate);
-                                    $('#noticontent').append($('<li><div class=noticontenttitle>New Assignment </div>' + value.AssignmentTitle + ' <br>' + value.CourseNumber + ' ' + value.Department + '<br>' + value.Points + ' Points <br>Due: ' + dueDate + '</li>'));
+                                if (this.User.IsInRole("Student")) //Student Notfication
+                                {
+                                    if (value.DueDate == null) {
+                                        $('#noticontent').append($('<li><div class=noticontenttitle>New grade </div>' + value.Grade + ' / ' + value.Points + ' <br>' + value.AssignmentTitle + '<br>' + value.Department + ' ' + value.CourseNumber + '</li>'));
+                                    } else if (value.DueDate != null) {
+                                        var dueDate = new Date(value.DueDate);
+                                        $('#noticontent').append($('<li><div class=noticontenttitle>New Assignment </div>' + value.AssignmentTitle + ' <br>' + value.CourseNumber + ' ' + value.Department + '<br>' + value.Points + ' Points <br>Due: ' + dueDate + '</li>'));
+                                    }
                                 }
-
+                                if (this.User.IsInRole("Instructor")) //Instructor Notfication
+                                {
+                                    //Work in progress
+                                }
                                 //with horizontal line
                             } else {
 
-                                //if graded assignment
-                                if (value.DueDate == null) {
-                                    $('#noticontent').append($('<hr style="margin-top:-3px;margin-bottom:-3px;height:1px;border-width:0;color:#5900B3;background-color:#5900B3" /><li><div class=noticontenttitle>New grade </div>' + value.Grade + ' / ' + value.Points + ' <br>' + value.AssignmentTitle + '<br>' + value.Department + ' ' + value.CourseNumber + '</li>'));
-                                }
+                                if (this.User.IsInRole("Student")) //Student Notficaiton
+                                {
+                                    //if graded assignment
+                                    if (value.DueDate == null) {
+                                        $('#noticontent').append($('<hr style="margin-top:-3px;margin-bottom:-3px;height:1px;border-width:0;color:#5900B3;background-color:#5900B3" /><li><div class=noticontenttitle>New grade </div>' + value.Grade + ' / ' + value.Points + ' <br>' + value.AssignmentTitle + '<br>' + value.Department + ' ' + value.CourseNumber + '</li>'));
+                                    }
 
-                                //if newly added assignment
-                                else if (value.DueDate != null) {
-                                    var dueDate = new Date(value.DueDate);
-                                    $('#noticontent').append($('<hr style="margin-top:-3px;margin-bottom:-3px;height:1px;border-width:0;color:#5900B3;background-color:#5900B3" /><li><div class=noticontenttitle>New Assignment </div>' + value.AssignmentTitle + ' <br>' + value.Department + ' ' + value.CourseNumber + '<br>' + value.Points + ' Points <br>Due: ' + dueDate + '</li>'));
+                                    //if newly added assignment
+                                    else if (value.DueDate != null) {
+                                        var dueDate = new Date(value.DueDate);
+                                        $('#noticontent').append($('<hr style="margin-top:-3px;margin-bottom:-3px;height:1px;border-width:0;color:#5900B3;background-color:#5900B3" /><li><div class=noticontenttitle>New Assignment </div>' + value.AssignmentTitle + ' <br>' + value.Department + ' ' + value.CourseNumber + '<br>' + value.Points + ' Points <br>Due: ' + dueDate + '</li>'));
+                                    }
+                                }
+                                if (this.User.IsInRole("Instructor")) //Instructor Notfication
+                                {
+                                    //Work in progress
                                 }
                             }
                         });

@@ -141,5 +141,7 @@ namespace MackTechGroupProject.Models
         public DateTime? DueDate { get; set; }
         public string Department { get; set; }
         public int CourseNumber { get; set; }
+        public DateTime? SubmissionDate { get; set; }
     }
+
 }
