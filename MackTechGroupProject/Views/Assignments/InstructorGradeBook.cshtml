@@ -35,12 +35,6 @@
                 @*Space Holder*@
             </th>
             <th class="gradeBookPCol">
-                Points Possible
-            </th>
-            <th class="gradeBookPCol">
-                Points Earned
-            </th>
-            <th class="gradeBookPCol">
                 Total Score
             </th>
 
@@ -59,15 +53,9 @@
             <th class="gradeBookDivder">
                 @*Space Holder*@
             </th>
-            <th class="gradeBookACol">
-                
+            <th class="gradeBookACol">  
             </th>
-            <th class="gradeBookACol">
-                
-            </th>
-            <th class="gradeBookACol">
-                
-            </th>
+
         </tr>
         <tr class="gradeBookPtsRow">
             <th class="gradeBookStdCol">
@@ -81,12 +69,6 @@
             }
             <th class="gradeBookDivder">
                 @*Space Holder*@
-            </th>
-            <th>
-                
-            </th>
-            <th>
-                
             </th>
             <th>
                 
@@ -142,16 +124,11 @@
 
                     </td>
                 }
-
-
                 <th class="gradeBookDivder">
                     @*Space Holder*@
                 </th>
-                <th class="gradeBookAPCol">                
-                </th>
-                <th class="gradeBookAPCol">                
-                </th>
-                <th class="gradeBookAPCol">                
+                <th class="gradeBookAPCol"> 
+                    @Html.DisplayFor(modelItem => student.User.Percentage)
                 </th>
 
             </tr>

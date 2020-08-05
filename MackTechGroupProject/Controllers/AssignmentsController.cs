@@ -232,7 +232,7 @@ namespace MackTechGroupProject.Controllers
             var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
 
             //Get instructor Id
-            var userId = User.Identity.GetUserId();
+            var instructorUserId = User.Identity.GetUserId();
 
             //Get course based on course Id
             var selectedCourseId = id;
@@ -254,8 +254,24 @@ namespace MackTechGroupProject.Controllers
             //var mostRecentStudentGrades = studentGrades.GroupBy(x => x.User).Select(x => x.OrderByDescending(y => y.SubmissionDate).FirstOrDefault()).ToList();
 
             //filter the instructor out of the class roll
-            var courseEnrollmentsStudents = courseEnrollments.Where(x => x.User.Id != userId).OrderBy(x => x.User.LastName).ToList();
+            var courseEnrollmentsStudents = courseEnrollments.Where(x => x.User.Id != instructorUserId).OrderBy(x => x.User.LastName).ToList();
             //var courseEnrollmentsStudents = courseEnrollmentsStudents.OrderByDescending(x => x.User.LastName).ToList();
+
+            //get the total points for assignments for the selectedCourseId
+            var courseAssignmentPointsTotal = courseAssignments.Where(x => x.Course.CourseId == selectedCourseId).Sum(x => x.Points);
+
+            //get all userId's to use for foreach loop
+            var userIds = courseEnrollmentsStudents.Select(x => x.User).Select(y => y.Id).ToList();
+
+            // set percentages per user
+            foreach (var userId in userIds)
+            {
+                // get user's grade based off userId
+                var userGradesTotal = studentGrades.Where(x => x.User.Id == userId).Sum(x => x.Grade);
+
+                // set Percentage of user using usergrade
+                courseEnrollmentsStudents.Where(x => x.User.Id == userId).FirstOrDefault().User.Percentage = Convert.ToDecimal(userGradesTotal) / courseAssignmentPointsTotal;
+            }
 
             var instructorGradeBookViewModel = new InstructorGradeBookViewModel()
             {
@@ -263,14 +279,6 @@ namespace MackTechGroupProject.Controllers
                 CourseAssignments = courseAssignments,
                 StudentGrades = studentGrades
             };
-
-            ////to calculate total get a sum off all score and divide by sum of all assignmnet.course.points
-            //var gradeTotal = mostRecentStudentGrades.Sum(x => x.Grade);
-            //var pointsTotal = mostRecentStudentGrades.Sum(x => x.Assignment.Points);
-
-            //var total = gradeTotal / pointsTotal;
-
-            //ViewBag.Total = total;
 
             return View(instructorGradeBookViewModel);
         }

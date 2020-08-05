@@ -184,13 +184,15 @@ namespace MackTechTests
         }
 
         [TestMethod]
-        public void InstructorCreateNewCourse () //TestInstructorCreateCourse@mail.univ.edu
+        public void InstructorCreateNewCourse() //TestInstructorCreateCourse@mail.univ.edu
         {
             //Q: can an instructor create a new course?
 
             //prep
             var _context = new MackTechGroupProject.Models.ApplicationDbContext();
             var InstructorId = "70575558-0756-4469-bab7-f1a0efbb327d";//TestInstructorCreateCourse@mail.univ.edu
+            var currentInstructor = _context.Users.Where(x => x.Id == InstructorId).FirstOrDefault();
+            var instructorName = currentInstructor.FirstName + " " + currentInstructor.LastName;
 
             //create a Course Object
             var course = new Course
@@ -221,23 +223,20 @@ namespace MackTechTests
             var notCurrentCourse = RegistrationService.hasCourse(course, InstructorId, _context);
 
             //display result for class not existing
-            AssertIsFalse(notCurrentCourse);
+            Assert.IsFalse(notCurrentCourse);
 
             //Add Course using business logic class
-            var CourseAdded = RegistrationService.addNewCourse(course, InstructorId, _context);
+            var CourseAdded = RegistrationService.addNewCourse(course, _context);
             
             //display result for sending course to business logic
-            AssertIsTrue(CourseAdded);
+            Assert.IsTrue(CourseAdded);
 
             //check database that course was actually added
             var added = _context.Courses.Any(x => x.CourseName == course.CourseName && x.CourseNumber == course.CourseNumber
                                                                                && x.Instructor.Id == InstructorId);
-            AssertIsTrue(added);
+            Assert.IsTrue(added);
 
         }
-
-
-
 
 
         [TestMethod]
