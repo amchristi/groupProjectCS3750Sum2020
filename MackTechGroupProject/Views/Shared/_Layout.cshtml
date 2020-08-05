@@ -33,7 +33,7 @@
                         {
                             <li>@Html.ActionLink("Profile", "ProfileInfoDetails", "Account")</li>
                             <li>@Html.ActionLink("Registration", "CourseRegistration", "Courses")</li>
-                            <li>@Html.ActionLink("Student Account", "StudentAccount", "Courses")</li>
+                            <li>@Html.ActionLink("Tuition", "StudentAccount", "Courses")</li>
                             <li>
                                 <span class="noti glyphicon glyphicon-bell"><span class="count">&nbsp;</span></span>
                                 <div class="noti-content">
@@ -68,7 +68,7 @@
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
+        <footer class="col-md-12">
             <p>&copy; @DateTime.Now.Year - MACK Tech</p>
         </footer>
     </div>

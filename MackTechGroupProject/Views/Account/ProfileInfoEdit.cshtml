@@ -6,21 +6,32 @@
     ViewBag.Title = "Profile";
 }
 
-@using (Html.BeginForm("ProfileInfoEdit", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form", enctype = "multipart/form-data"}))
+@using (Html.BeginForm("ProfileInfoEdit", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form", enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
-        <h4>Profile Edit</h4>
-        <hr />
+        <div class="box lightPurple profileHeader">
+            Edit Profile
+        </div>
+        <dl class="dl-horizontal">
 
-        <img id="profileImage"src="@Url.Action("UserPhotos", "Account")" class="user">
-
+            <dt>
+                <div class="userEdit">
+                    <img id="profileImage" src="@Url.Action("UserPhotos", "Account")" class="user">
+                </div>
+            </dt>
+            <dd>
+                <div class="profileName">
+                    @User.Identity.GetUserFirstName() @User.Identity.GetUserLastName()
+                </div>
+            </dd>
+        </dl>
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
             @Html.LabelFor(model => model.ProfileImage, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                <input type="file" name="UserPhoto" id="fileUpload" onchange="document.getElementById('profileImage').src = window.URL.createObjectURL(this.files[0])" />            
+                <input type="file" name="UserPhoto" id="fileUpload" onchange="document.getElementById('profileImage').src = window.URL.createObjectURL(this.files[0])" />
             </div>
         </div>
 
@@ -106,12 +117,12 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
+                <input type="submit" value="Save Changes" class="btn btn-default" />
             </div>
         </div>
     </div>
 
-      
+
 }
 
 @section Scripts {

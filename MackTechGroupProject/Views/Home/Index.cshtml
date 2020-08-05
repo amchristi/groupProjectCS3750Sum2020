@@ -5,220 +5,293 @@
 }
 
 
-<div class="jumbotron">
-    <h1>MACK Tech "Canvas"</h1>
-    <p class="lead">Select your class below to view more detail.</p>
+<div class="dashboardBox lightPurple dashboardHeader">
+    Dashboard
 </div>
 
-@*Bug is here when loading the student profile. Tried to fix but a much more nested bug then I thought it was.*@
-@if (this.User.IsInRole("Student"))
-{
-    <main class="col-md-8">
-        <section class="Sec-ClassCard">
-            <h2 class="ClassCardHeader">Current Enrollments</h2>
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Dashboard</title>
+
+</head>
+<body>
 
 
-            <table class="classListTable">
+    @*Bug is here when loading the student profile. Tried to fix but a much more nested bug then I thought it was.*@
+    @if (this.User.IsInRole("Student"))
+    {
 
-                @if (Model.currentEnrollmentsView.Any())
-                {
-                    foreach (var item in Model.currentEnrollmentsView)
+        <main class="col-md-8">
+            <section class="Sec-ClassCard">
+                <div class="ClassCardHeader">Current Enrollments</div>
+                <hr style="height:1px;border-width:0;color:#5900B3;background-color:#5900B3" />
+                @*<a class="btn btn-default viewAllButton" href="@Url.Action("ViewAllAssignments", "Assignments")">View All Assignments</a>
+                *@
+
+                <table class="classListTable">
+
+                    @if (Model.currentEnrollmentsView.Any())
+                    {
+                        foreach (var item in Model.currentEnrollmentsView)
+                        {
+                            <tr>
+                                <td>
+                                    <div class="classCard">
+                                        <a style="color: #F2E6FF; text-decoration: none;" href="@Url.Action("CourseDetail", "Courses", new { id = item.Course.CourseId })" target="_blank">
+
+                                            <h3>
+
+                                                @Html.DisplayFor(modelItem => item.Course.Department)
+                                                @Html.DisplayFor(modelItem => item.Course.CourseNumber)
+
+                                                <br />
+                                                @Html.DisplayFor(modelItem => item.Course.CourseName)
+
+                                            </h3>
+                                        </a>
+
+
+                                        @*Add button to class card for viewing all assignemnts*@
+
+                                        <p>
+                                            <a class="btn btn-default viewAssignment" href="@Url.Action("ViewAssignments", "Assignments", new { id = item.Course.CourseId })">View Course Assignments</a>
+                                        </p>
+
+                                    </div>
+
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else
                     {
                         <tr>
                             <td>
-
                                 <div class="classCard">
-                                    <h3>
-                                        <a style="color: #F2E6FF" class="ToDoItemTaskLink" href="@Url.Action("CourseDetail", "Courses", new { id = item.Course.CourseId })" target="_blank">
-                                            @Html.DisplayFor(modelItem => item.Course.Department)
-                                            @Html.DisplayFor(modelItem => item.Course.CourseNumber)
-                                        </a>
-                                    </h3>
-
-                                    @*Add button to class card for viewing all assignemnts*@
-                                    <p>
-                                        <a class="btn btn-default" href="@Url.Action("ViewAssignments", "Assignments", new { id = item.Course.CourseId })">View Course Assignments</a>
-                                    </p>
+                                    <h4>Click the Register link above to register for courses.</h4>
                                 </div>
                             </td>
                         </tr>
                     }
-                }
 
-            </table>
-            @*Moved the view all assignments button into the class card div*@
+                </table>
+                @*Moved the view all assignments button into the class card div*@
 
-            <p><a class="btn btn-default" href="@Url.Action("ViewAllAssignments", "Assignments")">View All Assignments</a></p>
 
-        </section>
 
-        <section class="Sec-ToDoList">
-            <div class="ToDoHeader">
-                <h2>To Do</h2>
+            </section>
+
+
+        </main>
+
+        <aside class="col-md-4">
+            <div style="margin-left: 10px; font-size: 28px;">
+                View
             </div>
-            <hr style="height:3px;border-width:0;color:#5900B3;background-color:#5900B3" />
-            <table class="ToDoItems">
+            <hr style="height:1px;width:100%;color:#5900B3;background-color:#5900B3" />
+            <section class="homeClassPageMenu">
+                <div class="homeClassMenuButton">
+                    <a style="color: #160A2E; text-decoration: none;" href="@Url.Action("ViewAllAssignments", "Assignments")">All Assignments</a>
+                </div>
+                <div class="homeClassMenuButton">
+                    <a style="color: #160A2E; text-decoration: none;" href="@Url.Action("Calendar", "Misc")">
+                        Calendar
+                    </a>
+                </div>
+                <div class="homeClassMenuButton">
+                    <a style="color: #160A2E; text-decoration: none;" href="@Url.Action("Grades", "Courses")">
+                        Grades
+                    </a>
+                </div>
 
-                @if (Model.currentAssignmentsView.Any())
-                {
-                    foreach (var item in Model.currentAssignmentsView)
+
+            </section>
+
+
+            <section class="Sec-ToDoList">
+
+                <div style="margin-left: 10px; font-size: 28px;">To Do</div>
+                <hr style="height:1px;width:100%;color:#5900B3;background-color:#5900B3" />
+                <div style="height: 300px; overflow: auto;">
+                    <table class="ToDoItems">
+
+                        @if (Model.currentAssignmentsView.Any())
+                        {
+                            foreach (var item in Model.currentAssignmentsView)
+                            {
+                                <tr class="ToDoItems">
+                                    <td class="ToDoItems">
+                                        <div class="ToDoCol1">
+                                            @Html.DisplayFor(modelItem => item.DueDate.DayOfWeek)<br />
+                                            @Html.DisplayFor(modelItem => item.DueDate)
+                                        </div>
+                                    </td>
+                                    <td class="ToDoItems">
+                                        <div class="ToDoCol2Class">
+                                            @Html.DisplayFor(modelItem => item.Course.Department) @Html.DisplayFor(modelItem => item.Course.CourseNumber)
+                                            <br />
+                                        </div>
+                                        <div class="ToDoCol2Task">
+                                            <a class="ToDoItemTaskLink" href="@Url.Action("AssignmentSubmission", "Assignments", new { assignmentId = item.AssignmentId })" target="_blank">
+                                                @Html.DisplayFor(modelItem => item.AssignmentTitle)
+                                            </a>
+                                        </div>
+                                    </td>
+                                    <td class="ToDoItems">
+                                        <div class="ToDoCol3Points">
+                                            @Html.DisplayFor(modelItem => item.Points) Points<br />
+                                        </div>
+                                        <div class="ToDoCol3DueDate">
+                                            @Html.DisplayFor(modelItem => item.DueDate.TimeOfDay)
+                                        </div>
+                                    </td>
+                                </tr>
+                            }
+                        }
+                    </table>
+                </div>
+            </section>
+        </aside>
+
+
+    }
+
+    @if (this.User.IsInRole("Instructor"))
+    {
+
+        <main class="col-md-8">
+            <section class="Sec-ClassCard">
+                <div class="ClassCardHeader">Current Courses</div>
+                <hr style="height:1px;border-width:0;color:#5900B3;background-color:#5900B3" />
+                <table class="classListTable">
+
+                    @if (Model.currentCoursesView.Any())
                     {
-                        <tr class="ToDoItems">
-                            <td class="ToDoItems">
-                                <div class="ToDoCol1">
-                                    @Html.DisplayFor(modelItem => item.DueDate.DayOfWeek)<br />
-                                    @Html.DisplayFor(modelItem => item.DueDate)
-                                </div>
-                            </td>
-                            <td class="ToDoItems">
-                                <div class="ToDoCol2Class">
-                                    @Html.DisplayFor(modelItem => item.Course.Department) @Html.DisplayFor(modelItem => item.Course.CourseNumber)
-                                    <br />
-                                </div>
-                                <div class="ToDoCol2Task">
-                                    <a class="ToDoItemTaskLink" href="@Url.Action("AssignmentSubmission", "Assignments", new { assignmentId = item.AssignmentId })" target="_blank">
-                                        @Html.DisplayFor(modelItem => item.AssignmentTitle)
-                                    </a>
-                                </div>
-                            </td>
-                            <td class="ToDoItems">
-                                <div class="ToDoCol3Points">
-                                    @Html.DisplayFor(modelItem => item.Points) Points<br />
-                                </div>
-                                <div class="ToDoCol3DueDate">
-                                    @Html.DisplayFor(modelItem => item.DueDate.TimeOfDay)
-                                </div>
-                            </td>
-                        </tr>
+                        foreach (var item in Model.currentCoursesView)
+                        {
+                            <tr>
+                                <td>
+
+                                    <div class="classCard">
+                                        <h3>
+                                            <a style="color: #F2E6FF; text-decoration: none;" href="@Url.Action("CourseDetail", "Courses", new { id = item.CourseId })" target="_blank">
+                                                @Html.DisplayFor(modelItem => item.Department)
+                                                @Html.DisplayFor(modelItem => item.CourseNumber)
+                                            </a>
+                                            <br />
+                                            @Html.DisplayFor(modelItem => item.CourseName)
+                                        </h3>
+                                        <div class="viewAssignment">
+                                            @*Add button to class card to add a new assignemnt, instructor view only*@
+                                            <p>
+                                                <a class="btn btn-default" href="@Url.Action("AddAssignment", "Assignments", new { id = item.CourseId })">Add new Assignment</a>
+                                                @*@Html.ActionLink("AddAssignment", "Assignments", new { id = item.Course.CourseId })*@
+                                            </p>
+                                            @*Add button to class card for viewing all assignemnts*@
+                                            <p>
+                                                <a class="btn btn-default" href="@Url.Action("ViewAssignments", "Assignments", new { id = item.CourseId })">View Course Assignments</a>
+                                            </p>
+                                            @*Add button for instructor to view the grade book*@
+                                            <p>
+                                                <a class="btn btn-default" href="@Url.Action("InstructorGradeBook", "Assignments", new { id = item.CourseId })">View Grade Book</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
                     }
-                }
-            </table>
-        </section>
-    </main>
-
-    <aside class="col-md-4">
-        <section class="homeClassPageMenu">
-            <div class="homeClassMenuButton">
-                <a href="@Url.Action("Calendar", "Misc")">
-                    <h2>Calendar</h2>
-                </a>
-            </div>
-            <div class="homeClassMenuButton">
-                <a href="@Url.Action("Grades", "Courses")">
-                    <h2>Grades</h2>
-                </a>
-            </div>
-
-        </section>
-    </aside>
-
-}
-
-@if (this.User.IsInRole("Instructor"))
-{
-
-    <main class="col-md-8">
-        <section class="Sec-ClassCard">
-            <h2 class="ClassCardHeader">Current Class List</h2>
-
-            <table class="classListTable">
-
-                @if (Model.currentCoursesView.Any())
-                {
-                    foreach (var item in Model.currentCoursesView)
+                    else
                     {
                         <tr>
                             <td>
-
                                 <div class="classCard">
-                                    <h3>
-                                        <a style="color: #F2E6FF" class="ToDoItemTaskLink" href="@Url.Action("CourseDetail", "Courses", new { id = item.CourseId })" target="_blank">
-                                            @Html.DisplayFor(modelItem => item.Department)
-                                            @Html.DisplayFor(modelItem => item.CourseNumber)
-                                        </a>
-                                    </h3>
-                                    @*Add button to class card to add a new assignemnt, instructor view only*@
-                                    <p>
-                                        <a class="btn btn-default" href="@Url.Action("AddAssignment", "Assignments", new { id = item.CourseId })">Add new Assignment</a>
-                                        @*@Html.ActionLink("AddAssignment", "Assignments", new { id = item.Course.CourseId })*@
-                                    </p>
-                                    @*Add button to class card for viewing all assignemnts*@
-                                    <p>
-                                        <a class="btn btn-default" href="@Url.Action("ViewAssignments", "Assignments", new { id = item.CourseId })">View Course Assignments</a>
-                                    </p>
-                                    @*Add button for instructor to view the grade book*@
-                                    <p>
-                                        <a class="btn btn-default" href="@Url.Action("InstructorGradeBook", "Assignments", new { id = item.CourseId })">View Grade Book</a>
-                                    </p>
+                                    <h4>Click the Add Course link above to create new courses.</h4>
                                 </div>
                             </td>
                         </tr>
                     }
-                }
-            </table>
+                </table>
 
-            <p><a class="btn btn-default" href="@Url.Action("ViewAllAssignments", "Assignments")">View All Assignments</a></p>
+            </section>
 
-        </section>
 
-        <section class="Sec-ToDoList">
-            <div class="ToDoHeader">
-                <h2>Upcoming Assignments to Grade</h2>
+        </main>
+
+        <aside class="col-md-4">
+            <div style="margin-left: 10px; font-size: 28px;">
+                View
             </div>
-            <hr style="height:3px;border-width:0;color:#5900B3;background-color:#5900B3" />
-            <table class="ToDoItems">
-                @if (Model.currentInstructorAssignmentsView.Any())
-                {
-                    foreach (var item in Model.currentInstructorAssignmentsView)
-                    {
-                        <tr class="ToDoItems">
-                            <td class="ToDoItems">
-                                <div class="ToDoCol1">
-                                    @Html.DisplayFor(modelItem => item.DueDate.DayOfWeek)<br />
-                                    @Html.DisplayFor(modelItem => item.DueDate)
-                                </div>
-                            </td>
-                            <td class="ToDoItems">
-                                <div class="ToDoCol2Class">
-                                    @Html.DisplayFor(modelItem => item.Course.Department) @Html.DisplayFor(modelItem => item.Course.CourseNumber)
-                                    <br />
-                                </div>
-                                <div class="ToDoCol2Task">
-                                    <a class="ToDoItemTaskLink" href="@Url.Action("AssignmentSubmission", "Assignments", new { assignmentId = item.AssignmentId })" target="_blank">
-                                        @Html.DisplayFor(modelItem => item.AssignmentTitle)
-                                    </a>
-                                </div>
-                            </td>
-                            <td class="ToDoItems">
-                                <div class="ToDoCol3Points">
-                                    @Html.DisplayFor(modelItem => item.Points) Points<br />
-                                </div>
-                                <div class="ToDoCol3DueDate">
-                                    @Html.DisplayFor(modelItem => item.DueDate.TimeOfDay)
-                                </div>
-                            </td>
-                        </tr>
-                    }
-                }
-            </table>
-        </section>
-    </main>
-
-    <aside class="col-md-4">
-        <section class="homeClassPageMenu">
-            <div class="homeClassMenuButton">
-                <a href="@Url.Action("Calendar", "Misc")">
-                    <h2>Calendar</h2>
-                </a>
-            </div>
-            <div class="homeClassMenuButton">
-                <a href="@Url.Action("ViewAllAssignments", "Assignments")">
-                    <h2>Grade Assignments</h2>
-                </a>
-            </div>
-
-        </section>
-    </aside>
+            <hr style="height:1px;width:100%;color:#5900B3;background-color:#5900B3" />
+            <section class="homeClassPageMenu">
+                <div class="homeClassMenuButton">
+                    <a style="color: #160A2E; text-decoration: none;" href="@Url.Action("ViewAllAssignments", "Assignments")">Grade Assignments</a>
+                </div>
+                <div class="homeClassMenuButton">
+                    <a style="color: #160A2E; text-decoration: none;" href="@Url.Action("Calendar", "Misc")">
+                        Calendar
+                    </a>
+                </div>
 
 
-}
+            </section>
+
+
+            <section class="Sec-ToDoList">
+
+                <div style="margin-left: 10px; font-size: 28px;">To Grade</div>
+                <hr style="height:1px;width:100%;color:#5900B3;background-color:#5900B3" />
+                <div style="height: 300px; overflow: auto;">
+                    <table class="ToDoItems">
+
+                        @if (Model.currentAssignmentsView.Any())
+                        {
+                            foreach (var item in Model.currentAssignmentsView)
+                            {
+                                <tr class="ToDoItems">
+                                    <td class="ToDoItems">
+                                        <div class="ToDoCol1">
+                                            @Html.DisplayFor(modelItem => item.DueDate.DayOfWeek)<br />
+                                            @Html.DisplayFor(modelItem => item.DueDate)
+                                        </div>
+                                    </td>
+                                    <td class="ToDoItems">
+                                        <div class="ToDoCol2Class">
+                                            @Html.DisplayFor(modelItem => item.Course.Department) @Html.DisplayFor(modelItem => item.Course.CourseNumber)
+                                            <br />
+                                        </div>
+                                        <div class="ToDoCol2Task">
+                                            <a class="ToDoItemTaskLink" href="@Url.Action("GradeAssignment", "Assignments", new { id = item.AssignmentId })" target="_blank">
+                                                @Html.DisplayFor(modelItem => item.AssignmentTitle)
+                                            </a>
+                                        </div>
+                                    </td>
+                                    <td class="ToDoItems">
+                                        <div class="ToDoCol3Points">
+                                            @Html.DisplayFor(modelItem => item.Points) Points<br />
+                                        </div>
+                                        <div class="ToDoCol3DueDate">
+                                            @Html.DisplayFor(modelItem => item.DueDate.TimeOfDay)
+                                        </div>
+                                    </td>
+                                </tr>
+                            }
+                        }
+                    </table>
+                </div>
+            </section>
+        </aside>
+
+        <footer class="col-md-12" style="margin-top: 30px;">
+            <p>&nbsp;</p>
+        </footer>
+
+    }
+
+</body>
+</html>
+

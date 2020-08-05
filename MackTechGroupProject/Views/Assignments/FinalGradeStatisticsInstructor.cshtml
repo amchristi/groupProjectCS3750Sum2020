@@ -44,14 +44,21 @@
     </script>
 </head>
 
-<body>
-    <h1>@Model.Enrollments.FirstOrDefault().Course.Department @Model.Enrollments.FirstOrDefault().Course.CourseNumber </h1>
-    <hr />
-    <div id="chartContainer"></div>
+<div class="gradebookBox lightPurple profileHeader">
 
-    <div class="row">
-        <div class="col-sm-12" style="text-align: right"> <p>*scores based on graded and ungraded assignments</p></div>
-    </div>
-</body>
+    @Model.Enrollments.FirstOrDefault().Course.Department @Model.Enrollments.FirstOrDefault().Course.CourseNumber
+    <br />
+    @Model.Enrollments.FirstOrDefault().Course.CourseName
+</div>
+<hr />
+    <body>
+        @*<h1>@Model.Enrollments.FirstOrDefault().Course.Department @Model.Enrollments.FirstOrDefault().Course.CourseNumber </h1>
+        *@
+        <div id="chartContainer"></div>
+
+        <div class="row">
+            <div class="col-sm-12" style="text-align: right"> <p>*scores based on graded and ungraded assignments</p></div>
+        </div>
+    </body>
 </html>
 

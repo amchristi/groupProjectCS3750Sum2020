@@ -3,7 +3,9 @@
 @{
     ViewBag.Title = "Tuition Payment";
 }
-<h2>@ViewBag.Title</h2>
+<div class="box lightPurple profileHeader">
+    @ViewBag.Title
+</div>
 
 @using (Html.BeginForm("TuitionPayment", "Courses", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
 {

@@ -15,108 +15,118 @@
 <body>
 
     <div class="container">
-        <div class="row">
-            <div class="col-md-8">
-                <h1>@Model.ClassRoll.FirstOrDefault().Course.Department @Model.ClassRoll.FirstOrDefault().Course.CourseNumber</h1>
-            </div>
-            <div class="col-md-4" style="padding-top: 20px">
-                <a class="btn btn-default" style="float: right" href="@Url.Action("FinalGradeStatisticsInstructor", "Assignments", new { id = Model.ClassRoll.FirstOrDefault().Course.CourseId })">
-                    Course Statistics
-                </a>
-            </div>
+
+        <div class="gradebookBox lightPurple profileHeader">
+
+                        @Model.ClassRoll.FirstOrDefault().Course.Department @Model.ClassRoll.FirstOrDefault().Course.CourseNumber
+                        <br />
+                        @Model.ClassRoll.FirstOrDefault().Course.CourseName
+                   
+
+
+                    <a class="btn btn-default" style="float: right; margin-right: 30px; margin-top: 10px;" href="@Url.Action("FinalGradeStatisticsInstructor", "Assignments", new { id = Model.ClassRoll.FirstOrDefault().Course.CourseId })">
+                        Course Statistics
+                    </a>
+
+            
         </div>
     </div>
 
-    <table>
-        <tr class="gradeBookARow">
-            <th class="gradeBookStdCol">
-                @*Space Holder for student name*@
-            </th>
-            @foreach (var assignment in Model.CourseAssignments)
-            {
-                @*assignment Title*@
-                <th class="gradeBookACol">
-                    @Html.DisplayFor(modelItem => assignment.AssignmentTitle)
-                </th>
-            }
-            <th class="gradeBookDivder">
-                @*Space Holder*@
-            </th>
-            <th class="gradeBookPCol">
-                Total Score
-            </th>
-
-        </tr>
-        <tr>
-            <th class="gradeBookStdCol">
-                Points Possible:
-            </th>
-            @foreach (var assignment in Model.CourseAssignments)
-            {
-                @*Assignment Points Possible*@
-                <th class="gradeBookAPCol">
-                    @Html.DisplayFor(modelItem => assignment.Points)
-                </th>
-            }
-            <th class="gradeBookDivder">
-                @*Space Holder*@
-            </th>
-            <th class="gradeBookACol">
-            </th>
-
-        </tr>
-        <tr class="gradeBookPtsRow">
-            <th class="gradeBookStdCol">
-                Student Name:
-            </th>
-            @*Assignment Space Holder, create a blank row*@
-            @foreach (var assignment in Model.CourseAssignments)
-            {
-                <th>
-                </th>
-            }
-            <th class="gradeBookDivder">
-                @*Space Holder*@
-            </th>
-            <th>
-
-            </th>
-        </tr>
-
-        @foreach (var student in Model.ClassRoll)
-        {
-
-            <tr class="gradeBookStdRow">
-                @*student name*@
+        <table>
+            <tr class="gradeBookARow">
                 <th class="gradeBookStdCol">
-
-                    @Html.DisplayFor(modelItem => student.User.FirstName)
-                    @Html.DisplayFor(modelItem => student.User.LastName)
+                    @*Space Holder for student name*@
                 </th>
-
                 @foreach (var assignment in Model.CourseAssignments)
                 {
-                    //ONLY ONE ENTRY PER ASSIGNMENT
-                    <td class="gradeBookScores">
-                        @foreach (var grade in Model.StudentGrades)
-                        {
-                            //Is it this students assignment?
-                            if (student.User == grade.User)
+                    @*assignment Title*@
+                    <th class="gradeBookACol">
+                        @Html.DisplayFor(modelItem => assignment.AssignmentTitle)
+                    </th>
+                }
+                <th class="gradeBookDivder">
+                    @*Space Holder*@
+                </th>
+                <th class="gradeBookPCol">
+                    Total Score
+                </th>
+
+            </tr>
+            <tr>
+                <th class="gradeBookStdCol">
+                    Points Possible:
+                </th>
+                @foreach (var assignment in Model.CourseAssignments)
+                {
+                    @*Assignment Points Possible*@
+                    <th class="gradeBookAPCol">
+                        @Html.DisplayFor(modelItem => assignment.Points)
+                    </th>
+                }
+                <th class="gradeBookDivder">
+                    @*Space Holder*@
+                </th>
+                <th class="gradeBookACol">
+                </th>
+
+            </tr>
+            <tr class="gradeBookPtsRow">
+                <th class="gradeBookStdCol">
+                    Student Name:
+                </th>
+                @*Assignment Space Holder, create a blank row*@
+                @foreach (var assignment in Model.CourseAssignments)
+                {
+                    <th>
+                    </th>
+                }
+                <th class="gradeBookDivder">
+                    @*Space Holder*@
+                </th>
+                <th>
+
+                </th>
+            </tr>
+
+            @foreach (var student in Model.ClassRoll)
+            {
+
+                <tr class="gradeBookStdRow">
+                    @*student name*@
+                    <th class="gradeBookStdCol">
+
+                        @Html.DisplayFor(modelItem => student.User.FirstName)
+                        @Html.DisplayFor(modelItem => student.User.LastName)
+                    </th>
+
+                    @foreach (var assignment in Model.CourseAssignments)
+                    {
+                        //ONLY ONE ENTRY PER ASSIGNMENT
+                        <td class="gradeBookScores">
+                            @foreach (var grade in Model.StudentGrades)
                             {
-                                //Is this the Assignment for this column
-                                if (assignment.AssignmentId == grade.Assignment.AssignmentId)
+                                //Is it this students assignment?
+                                if (student.User == grade.User)
                                 {
-                                    //display the grade
-                                    if (grade.Grade != null)
+                                    //Is this the Assignment for this column
+                                    if (assignment.AssignmentId == grade.Assignment.AssignmentId)
                                     {
-                                        @Html.DisplayFor(modelItem => grade.Grade)
-                                        break;
+                                        //display the grade
+                                        if (grade.Grade != null)
+                                        {
+                                            @Html.DisplayFor(modelItem => grade.Grade)
+                                            break;
+                                        }
+                                        //display dashes if submitted and not graded
+                                        if (grade.Grade == null)
+                                        {
+                                            <p>--</p>
+                                            break;
+                                        }
                                     }
-                                    //display dashes if submitted and not graded
-                                    if (grade.Grade == null)
+                                    else
                                     {
-                                        <p>--</p>
-                                        break;
+                                        continue;
                                     }
                                 }
                                 else
@@ -124,31 +134,26 @@
                                     continue;
                                 }
                             }
-                            else
-                            {
-                                continue;
-                            }
-                        }
 
-                    </td>
-                }
-                <th class="gradeBookDivder">
-                    @*Space Holder*@
-                </th>
-                <th class="gradeBookAPCol">
-                    @Html.DisplayFor(modelItem => student.User.Percentage)
-                </th>
+                        </td>
+                    }
+                    <th class="gradeBookDivder">
+                        @*Space Holder*@
+                    </th>
+                    <th class="gradeBookAPCol">
+                        @Html.DisplayFor(modelItem => student.User.Percentage)
+                    </th>
 
-            </tr>
-        }
+                </tr>
+            }
 
-    </table>
+        </table>
 
-    <div class="row">
-        <div class="col-sm-12" style="text-align: right"> <p>-- submitted but not yet graded</p></div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12" style="text-align: right"> <p>*scores based on graded and ungraded assignments</p></div>
-    </div>
+        <div class="row">
+            <div class="col-sm-12" style="text-align: right"> <p>-- submitted but not yet graded</p></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12" style="text-align: right"> <p>*scores based on graded and ungraded assignments</p></div>
+        </div>
 </body>
 </html>

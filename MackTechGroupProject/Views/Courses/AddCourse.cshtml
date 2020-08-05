@@ -5,12 +5,14 @@
     ViewBag.Title = "AddCourse";
 }
 
-<h2>Add Course</h2>
+<div class="box lightPurple profileHeader">
+    Add Course
+</div>
 
 @using (Html.BeginForm("AddCourse", "Courses", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
 {
     @Html.AntiForgeryToken()
-    <h4>Add a new course.</h4>
+    <h4>Enter course details.</h4>
     <hr />
     @Html.ValidationSummary("", new { @class = "text-danger" })
     <div class="form-group">

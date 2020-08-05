@@ -4,17 +4,18 @@
     ViewBag.Title = "SelectCourse";
 }
 
-<h2>Account</h2>
+<div class="box lightPurple profileHeader">
+    Select Course
+</div>
 
 <!DOCTYPE html>
 
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>StudentAccount</title>
+    <title>SelectCourse</title>
 </head>
 <body>
-    <h4>Courses Teaching</h4>
     <table class="table">
         <tr>
             @*<th></th>*@
@@ -25,23 +26,23 @@
                 @Html.DisplayNameFor(model => model.CourseNumber)
             </th>
             @*
-            <th>
-                @Html.DisplayNameFor(model => model.CourseName)
-            </th>            
-            <th>
-                @Html.DisplayNameFor(model => model.CreditHours)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.InstructorName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ClassLocation)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.MaxCapacity)
-            </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CourseName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CreditHours)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.InstructorName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ClassLocation)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MaxCapacity)
+                </th>
             *@
-            <th></th>                
+            <th></th>
         </tr>
 
         @foreach (var item in Model)
@@ -57,21 +58,21 @@
                     @Html.DisplayFor(modelItem => item.CourseNumber)
                 </td>
                 @*
-                <td>
-                    @Html.DisplayFor(modelItem => item.CourseName)
-                </td>                
-                <td>
-                    @Html.DisplayFor(modelItem => item.CreditHours)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.InstructorName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ClassLocation)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.MaxCapacity)
-                </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CourseName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CreditHours)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.InstructorName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ClassLocation)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MaxCapacity)
+                    </td>
                 *@
                 <td>
                     @Html.ActionLink("Add Assignment", "AddAssignment", new { id = item.CourseId })

@@ -4,7 +4,9 @@
     ViewBag.Title = "StudentAccount";
 }
 
-    <h2>Account</h2>
+<div class="box lightPurple profileHeader">
+    Tuition Balance
+</div>
 
 <!DOCTYPE html>
 
@@ -14,7 +16,6 @@
     <title>StudentAccount</title>
 </head>
 <body>
-    <h4>Enrollments</h4>
     <table class="table">
         <tr>
             <th>
@@ -68,25 +69,26 @@
                 <td>
                     @*@Html.ActionLink("Edit", "Edit", new { id = item.EnrollmentId }) |
                         @Html.ActionLink("Details", "Details", new { id = item.EnrollmentId }) |*@
-                    @Html.ActionLink("Delete", "DeleteCourseFromEnrollments", new { id = item.EnrollmentId })
+                    @Html.ActionLink("Drop", "DeleteCourseFromEnrollments", new { id = item.EnrollmentId })
                 </td>
             </tr>
         }
     </table>
 
-    <div class="row">
-        <div class="col-sm-6" style="text-align: right">Credit Hours:      @ViewBag.TotalCreditHours</div>
-        <div class="col-sm-6" style="text-align: right">Account Balance:     @ViewBag.TotalFormattedCost</div>
-    </div>
-    
-    <div class="row">
-        <div class="col-sm-12" style="text-align: right">
-            <a href="@Url.Action("TuitionPayment", "Courses")">
-                <h4>Pay Tuition</h4>
-            </a>
+    <div class="tuitionBalance">
+        <div class="row tuitionBalanceText">
+            <div style="display: inline-block; margin-left: 50%; margin-top:5px;">Credit Hours:      @ViewBag.TotalCreditHours</div>
+            <div style="float:right; margin-right: 20px; margin-top:5px;">Account Balance:     @ViewBag.TotalFormattedCost</div>
+            @*class="col-sm-6" style="text-align: right"*@
         </div>
     </div>
-    
+    <div class="row">
+        <div class="col-sm-12" style="text-align: right">
+
+            <a class="btn btn-default editProfileButton" href="@Url.Action("TuitionPayment", "Courses")">Pay Tuition</a>
+        </div>
+    </div>
+
 
 </body>
 </html>

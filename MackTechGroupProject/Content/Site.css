@@ -116,6 +116,7 @@ textarea {
 
 /****TEMP OVERIDE OF ANDREW'S CLASS CARD****/
 div.classCard {
+    /*
     height: auto;
     width: 95%;
     border: #343A44 6px ridge;
@@ -130,4 +131,5 @@ div.classCard {
     padding-top: 20px;
     color: #F2E6FF;
     transition: box-shadow 1s;
+        */
 }

@@ -15,16 +15,25 @@
 </head>
 <body>
     <div>
-        <h4>Profile Details</h4>
-        <hr />
+        <div class="box lightPurple profileHeader">
+            Profile Details
+        </div>
 
         <dl class="dl-horizontal">
 
             <dt>
-                <img src="@Url.Action("UserPhotos", "Account")" class="user">
+                <div class="userEdit">
+                    <img src="@Url.Action("UserPhotos", "Account")" class="user">
+                </div>
             </dt>
+
+
             <dd>
+                <div class="profileName">
+                    @User.Identity.GetUserFirstName() @User.Identity.GetUserLastName()
+                </div>
             </dd>
+
 
             <dt>Id</dt>
             <dd>
@@ -113,10 +122,18 @@
                 <p> @User.Identity.GetUserBioInfo() </p>
             </dd>
 
+            <dt>
+
+            </dt>
+            <dd>
+                <a class="btn btn-default editProfileButton" href="@Url.Action("ProfileInfoEdit", "Account")">Edit Profile</a>
+            </dd>
+
         </dl>
     </div>
     <p>
-        @Html.ActionLink("Edit Profile", "ProfileInfoEdit", "Account")
+        @*@Html.ActionLink("Edit Profile", "ProfileInfoEdit", "Account")*@
+
     </p>
 </body>
 </html>

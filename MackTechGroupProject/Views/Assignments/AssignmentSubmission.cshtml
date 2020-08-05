@@ -6,83 +6,84 @@
 }
 
 
+<div class="box lightPurple profileHeader">
+    @*<h1 style="text-align:left;">*@
+        Submit Assignment
+        <span style="float:right; color:red; margin-right: 20px;">
+            @Html.DisplayFor(modelItem => Model.currentAssignment.Points) points
+        </span>
+    
+    </div>
 
-<h1 style="text-align:left;">
-    Submit Assignment
-    <span style="float:right; color:red">
-        @Html.DisplayFor(modelItem => Model.currentAssignment.Points) points
-    </span>
-</h1>
-
-<main class="col-md-12">
-    <div class="row assignmentHeader">
-        <div>
-            <div class="col-sm-4" style="text-align:left">Due:  @Html.DisplayFor(modelItem => Model.currentAssignment.DueDate) </div>
-            <div class="col-sm-4" style="text-align: center">Submitting: @Html.DisplayFor(modelItem => Model.currentAssignment.SubmissionType) </div>
-            <div class="col-sm-4" style="text-align:right">Available: until @Html.DisplayFor(modelItem => Model.currentAssignment.DueDate)</div>
+    <main class="col-md-12">
+        <div class="row assignmentHeader">
+            <div>
+                <div class="col-sm-4" style="text-align:left">Due:  @Html.DisplayFor(modelItem => Model.currentAssignment.DueDate) </div>
+                <div class="col-sm-4" style="text-align: center">Submitting: @Html.DisplayFor(modelItem => Model.currentAssignment.SubmissionType) </div>
+                <div class="col-sm-4" style="text-align:right">Available: until @Html.DisplayFor(modelItem => Model.currentAssignment.DueDate)</div>
+            </div>
         </div>
-    </div>
 
-    <div class="assignmentTitle">
-        <h4>@Html.DisplayFor(modelItem => Model.currentAssignment.AssignmentTitle) </h4>
-    </div>
-    <div class="assignmentDescription">
-        <p>@Html.DisplayFor(modelItem => Model.currentAssignment.AssignmentDescription)</p>
+        <div class="assignmentTitle">
+            <h4>@Html.DisplayFor(modelItem => Model.currentAssignment.AssignmentTitle) </h4>
+        </div>
+        <div class="assignmentDescription">
+            <p>@Html.DisplayFor(modelItem => Model.currentAssignment.AssignmentDescription)</p>
 
-    </div>
+        </div>
 
 
-    @if (Model.currentAssignment.SubmissionType == "Text-Submission")
-    {
-        using (Html.BeginForm("AssignmentSubmission", "Assignments", FormMethod.Post, new { @class = "form-horizontal", role = "form", enctype = "multipart/form-data" }))
+        @if (Model.currentAssignment.SubmissionType == "Text-Submission")
         {
-            @Html.AntiForgeryToken()
+            using (Html.BeginForm("AssignmentSubmission", "Assignments", FormMethod.Post, new { @class = "form-horizontal", role = "form", enctype = "multipart/form-data" }))
+            {
+                @Html.AntiForgeryToken()
 
-            <div class="form-horizontal">
-                <div class="form-group">
-                    @Html.LabelFor(model => model.SubmissionText, htmlAttributes: new { @class = "col-md-12" })
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.SubmissionText, htmlAttributes: new { @class = "col-md-12" })
 
-                    @Html.EditorFor(model => model.SubmissionText, new { htmlAttributes = new { @class = "col-md-offset-1 col-md-11", style = "max-width:900px; height:300px" } })
-                    @Html.ValidationMessageFor(model => model.SubmissionText, "", new { @class = "text-danger" })
+                        @Html.EditorFor(model => model.SubmissionText, new { htmlAttributes = new { @class = "col-md-offset-1 col-md-11", style = "max-width:900px; height:300px" } })
+                        @Html.ValidationMessageFor(model => model.SubmissionText, "", new { @class = "text-danger" })
 
-                </div>
+                    </div>
 
-                
-                @Html.Hidden("asID", Model.currentAssignment.AssignmentId)
-                
-                <div class="form-group">
-                    <div class="col-md-offset-10 col-md-2">
-                        <input type="submit" value="Submit" class="btn btn-default" />
+
+                    @Html.Hidden("asID", Model.currentAssignment.AssignmentId)
+
+                    <div class="form-group">
+                        <div class="col-md-offset-10 col-md-2">
+                            <input type="submit" value="Submit" class="btn btn-default" />
+                        </div>
                     </div>
                 </div>
-            </div>
-            
+
+            }
         }
-    }
-    @if (Model.currentAssignment.SubmissionType == "File-Upload")
-    {
-        using (Html.BeginForm("AssignmentSubmission", "Assignments", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        @if (Model.currentAssignment.SubmissionType == "File-Upload")
         {
-            <div>
-                @Html.LabelFor(x => x.File)
+            using (Html.BeginForm("AssignmentSubmission", "Assignments", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                <div>
+                    @Html.LabelFor(x => x.File)
+                    <br />
+                    <br />
+                    @Html.TextBoxFor(x => x.File, new { type = "file" })
+                    <br />
+                    @Html.ValidationMessageFor(x => x.File)
+                </div>
+                <br />
+
+                @Html.Hidden("asID", Model.currentAssignment.AssignmentId)
+
+
+                <button class="" col-md-offset-1 col-md-11" type="submit">Submit</button>
                 <br />
                 <br />
-                @Html.TextBoxFor(x => x.File, new { type = "file" })
                 <br />
-                @Html.ValidationMessageFor(x => x.File)
-            </div>
-            <br />
+                <br />
+                <br />
 
-            @Html.Hidden("asID", Model.currentAssignment.AssignmentId)
-
-
-            <button class="" col-md-offset-1 col-md-11" type="submit">Submit</button>
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-
+            }
         }
-    }
-</main>
+    </main>

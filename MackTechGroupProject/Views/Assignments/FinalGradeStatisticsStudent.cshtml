@@ -44,9 +44,16 @@
     </script>
 </head>
 
+<div class="gradebookBox lightPurple profileHeader">
+
+    @Model.Enrollments.FirstOrDefault().Course.Department @Model.Enrollments.FirstOrDefault().Course.CourseNumber
+    <br />
+    @Model.Enrollments.FirstOrDefault().Course.CourseName
+</div>
+<hr />
+
 <body>
-    <h1>@Model.Enrollments.FirstOrDefault().Course.Department @Model.Enrollments.FirstOrDefault().Course.CourseNumber </h1>
-    <hr />
+    
     <div id="chartContainer"></div>
 
     <div class="row">

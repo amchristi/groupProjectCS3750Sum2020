@@ -4,7 +4,9 @@
     ViewBag.Title = "CourseRegistration";
 }
 
-<h2>Course Registration</h2>
+<div class="box lightPurple profileHeader">
+    Register for Courses
+</div>
 
 <!DOCTYPE html>
 
@@ -15,8 +17,9 @@
 </head>
 <body>
     <table class="table">
-        <tr>
+        <tr style="color: #160A2E">
             @*<th></th>*@
+
             <th>
                 @Html.DisplayNameFor(model => model.Department)
             </th>
@@ -40,38 +43,39 @@
             </th>
             <th></th>
         </tr>
-    
-    @foreach (var item in Model) {
-    <tr>
-        @*<td>
-            @Html.ActionLink("Details", "Details", new { id = item.CourseID })
-        </td>*@
-        <td>
-            @Html.DisplayFor(modelItem => item.Department)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CourseNumber)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CourseName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CreditHours)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.InstructorName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ClassLocation)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.MaxCapacity)
-        </td>
-        <td>
-            @Html.ActionLink("Register", "RegisterForCourse", new { id = item.CourseId })
-        </td>
-    </tr>
-    }
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                @*<td>
+                        @Html.ActionLink("Details", "Details", new { id = item.CourseID })
+                    </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.Department)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CourseNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CourseName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreditHours)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.InstructorName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ClassLocation)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaxCapacity)
+                </td>
+                <td>
+                    @Html.ActionLink("Add", "RegisterForCourse", new { id = item.CourseId })
+                </td>
+            </tr>
+        }
     </table>
 
     <p style="color:red">@TempData["ErrorMessage"]</p>

@@ -3,9 +3,9 @@
     ViewBag.Title = "Course Detail View";
 }
 
-<h1>
+<div class="box lightPurple profileHeader">
     Welcome to @Model.Department @Model.CourseNumber
-</h1>
+</div>
 
 <p><a class="btn btn-default" href="@Url.Action("ViewAssignments", "Assignments", new { id = Model.CourseId })">View All Assignments</a></p>
 @if (this.User.IsInRole("Instructor"))

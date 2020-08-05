@@ -6760,13 +6760,26 @@ button.close {
     light purple:#F2E6FF
     Dark Purple: #5900B3
 */
+
+.ClassCardHeader {
+    display: inline-block;
+    font-size: 28px;
+    margin-top: 5px;
+}
+
+a.viewAllButton {
+    float: right;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 div.classCard {
-    height: 320px;
-    width: 300px;
-    border: #343A44 6px ridge;
+    height: auto;
+    width: 95%;
+    border: #888888 2px solid;
     background-color: #5900B3;
-    border-radius: 20px;
-    box-shadow: 6px -6px 18px #343A44, -6px 6px 18px #343A44;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px #888888;
     margin-top: 10px;
     margin-bottom: 20px;
     margin-right: 20px;
@@ -6774,10 +6787,31 @@ div.classCard {
     padding: 15px;
     padding-top: 20px;
     color: #F2E6FF;
-    transition: box-shadow 1s;
 }
 
-section.Sec-ClassCard {
+    div.classCard:hover {
+        box-shadow: 7px -7px 13px #888888, -7px 7px 13px #888888;
+    }
+
+a.viewAssignment {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.viewAssignment {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+table.classListTable {
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+
+section .Sec-ClassCard {
+    /*
     height: auto;
     width: auto;
     border: #343A44 6px ridge;
@@ -6791,27 +6825,12 @@ section.Sec-ClassCard {
     padding: 10px;
     color: #000000;
     transition: box-shadow 1s;
-    text-align: center;
+    */
 }
 
-section.homePageNotifications {
-    height: 320px;
-    width: auto;
-    border: #343A44 6px ridge;
-    background-color: #5900B3;
-    border-radius: 20px;
-    box-shadow: 6px -6px 18px #343A44, -6px 6px 18px #343A44;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    margin-right: 0;
-    margin-left: 0;
-    padding: 10px;
-    color: #F2E6FF;
-    transition: box-shadow 1s;
-    text-align: center;
-}
-
+/*
 section.homeClassPageMenu {
+    
     height: auto;
     width: auto;
     border: #343A44 6px ridge;
@@ -6825,51 +6844,43 @@ section.homeClassPageMenu {
     padding: 10px;
     color: #000000;
     transition: box-shadow 1s;
+        
 }
 
-table.classListTable {
-    width: 100%;
-    height: auto;
-    text-align: center;
+    
+        
+}
+*/
+
+section.homeClassPageMenu {
+    margin-left: 50px;
+    padding-bottom: 20px;
+    margin-top: 10px;
+    padding-top: 10px;
 }
 
 div.homeClassMenuButton {
-    height: auto;
-    width: auto;
-    border: #343A44 2px inset;
+    height: 50px;
+    width: 70%;
+    margin-left: 60px;
+    border: #888888 2px solid;
     background-color: #F2E6FF;
-    border-radius: 20px;
+    border-radius: 10px;
     text-align: center;
     margin: 5px;
+    font-size: 20px;
+    padding: 8px;
 }
+
+    div.homeClassMenuButton:hover {
+        box-shadow: 2px -2px 5px #888888, -2px 2px 5px #888888;
+    }
+
 
 a.homeClassMenuButton {
     color: #F2E6FF;
 }
 
-table.Notifications{
-    width: 100%;
-    color: #F2E6FF;
-}
-td.noteCol2 {
-    width: 80px;
-}
-
-td.noteCol3{
-    width:80px;
-}
-
-td.NoteScore {
-    text-align: right;
-
-}
-
-tr.noteRow {
-    border-bottom: solid 1px #F2E6FF;
-    padding-bottom: 7px;
-    padding-top: 7px;
-    color: #F2E6FF;
-}
 
 /***************************        Montana's edits for the todo list            *************************/
 /*
@@ -6883,14 +6894,18 @@ div.ToDoHeader {
     margin-bottom: -15px;
 }
 
+section.Sec-ToDoList {
+    margin-bottom: 50px;
+}
+
 table.ToDoItems {
     table-layout: auto;
-    width:100%;
-    margin-top: -13px;
+    width: 100%;
+    padding: 3px;
 }
 
 div.ToDoCol1 {
-    text-align: center;
+    text-align: left;
 }
 
 ToDoCol2Class {
@@ -6898,11 +6913,11 @@ ToDoCol2Class {
 }
 
 div.ToDoCol3Points {
-    text-align: right;
+    text-align: left;
 }
 
 div.ToDoCol3DueDate {
-    text-align: right;
+    text-align: left;
 }
 
 
@@ -6927,6 +6942,64 @@ span.calendarTitle {
     margin-bottom: 5px;
 }
 
+div.box {
+    width: 100%;
+    height: 100px;
+    padding-left: 20px;
+    margin-bottom: 40px;
+}
+
+.lightPurple {
+    background: #F2E6FF;
+}
+
+.profileHeader {
+    font-size: 36px;
+    padding-top: 20px;
+    margin-bottom: 30px;
+}
+
+div.dashboardBox {
+    width: 100%;
+    height: 100px;
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.gradebookBox {
+    display: inline-block;
+    width: 100%;
+    height: 140px;
+    margin-left: -20px;
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.dashboardHeader {
+    font-size: 36px;
+    padding-top: 20px;
+}
+
+.profileName {
+    font-size: 36px;
+    padding-top: 30px;
+}
+
+
+.editProfileButton {
+    margin-top: 20px;
+}
+
+.tuitionBalance {
+    width: 100%;
+    height: 30px;
+    background: #5900B3;
+    color: #F2E6FF;
+}
+
+.tuitionBalanceText {
+    margin-top: 25px;
+}
 
 /***************************        Montana's edits for the assignment submission         *************************/
 /*
