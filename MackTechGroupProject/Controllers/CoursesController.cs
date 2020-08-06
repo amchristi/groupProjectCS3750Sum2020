@@ -333,7 +333,37 @@ namespace MackTechGroupProject.Controllers
 
         public ActionResult Grades()
         {
-            return View();
+            var userId = User.Identity.GetUserId();
+
+            var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
+
+            //var courseAssignments = context.Assignments.Where(x => x.Course.CourseId == selectedCourseId).ToList();
+
+            var courseIds = currentEnrollments.Where(x => x.User.Id == userId).Select(x => x.Course).Select(y => y.CourseId).ToList();
+
+            foreach (var courseId in courseIds)
+            {
+                //get a list of all submission for courseId
+                var studentGrades = context.SubmissionGrades.Include(x => x.User).Include(x => x.Assignment).Include("Assignment.Course")
+                                        .Where(x => x.User.Id == userId && x.Assignment.Course.CourseId == courseId && x.Grade != null).ToList();
+
+                //get a total points for courseId where assignments are graded
+                var pointsTotal = studentGrades.Sum(x => x.Assignment.Points);
+
+                //get user grade
+                var gradeTotal = studentGrades.Sum(x => x.Grade);
+
+                // set Percentage of user using usergrade
+                currentEnrollments.Where(x => x.Course.CourseId == courseId).FirstOrDefault().Course.Percentage = Convert.ToDecimal(gradeTotal / pointsTotal);
+
+            }
+
+            var ListOfEnrollments = new ListOfEnrollmentsViewModel()
+            {
+                Enrollments = currentEnrollments
+            };
+
+            return View(ListOfEnrollments);
         }
     }
 }

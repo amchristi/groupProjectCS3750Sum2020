@@ -1,8 +1,53 @@
-﻿
+﻿@model MackTechGroupProject.Models.ListOfEnrollmentsViewModel
+
 @{
     ViewBag.Title = "Grades";
 }
 
-<h1>Grades</h1>
+<!DOCTYPE html>
 
-<p>We're sorry! This page is under construction..</p>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+</head>
+<body>
+    <div class="dashboardBox lightPurple profileHeader">
+        Grades for @Model.Enrollments.FirstOrDefault().User.FirstName @Model.Enrollments.FirstOrDefault().User.LastName
+    </div>
+
+    <table class="table">
+        <tr>
+            @*<th></th>*@
+            <th>
+                @Html.Raw("Course Title")
+            </th>
+            <th>
+                @Html.Raw("Grade")
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model.Enrollments)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Course.Department)
+                    @Html.DisplayFor(modelItem => item.Course.CourseNumber)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Course.Percentage)
+                </td>
+                <td>
+                    <a class="btn btn-default" style="float: right" href="@Url.Action("ViewGrades", "Assignments", new { id = item.Course.CourseId })">
+                        View Grades
+                    </a>
+                </td>
+            </tr>
+        }
+    </table>
+
+    <hr />
+    <div class="col-sm-12" style="text-align: right"> <p>*grades based on graded assignments only</p></div>
+</body>
+</html>

@@ -57,6 +57,10 @@ namespace MackTechGroupProject.Models
         public ICollection<Enrollment> Enrollments { get; set; }
 
         public ICollection<Assignment> Assignments { get; set; }
+
+        [NotMapped]
+        [DisplayFormat(DataFormatString = "{0:P2}")]
+        public decimal? Percentage { get; set; }
     }
 
     public class Enrollment
