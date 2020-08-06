@@ -152,7 +152,7 @@
     <script type="text/javascript">
         $(function () {
 
-            // Click on notification icon for show notification
+            // Click on notification icon to show student notifcations 
             $('span.noti').click(function (e) {
                 e.stopPropagation();
                 $('#noticontent').empty();
@@ -168,21 +168,45 @@
                 $('span.count', this).html('&nbsp;');
             })
 
-            // hide notifications
+            // hide student notifications
             $('html').click(function () {
                 $('.noti-content').hide();
+            })
+
+            // Click on notification icon to show Instructor notifcations 
+            $('span.inoti').click(function (e) {
+                e.stopPropagation();
+                $('#inoticontent').empty();
+                $('.inoti-content').show();
+                var count = 0;
+                count = parseInt($('span.icount').html()) || 0;
+
+                //only load notification if not already loaded
+                if (count > -1) {
+                    getNotifications();
+                }
+
+                $('span.icount', this).html('&nbsp;');
+            })
+
+            // hide Instructor notifications
+            $('html').click(function () {
+                $('.inoti-content').hide();
             })
 
             // update notification for grade changed
             function getNotifications() {
                 $('#noticontent').append($('<li>Loading...</li>'));
+                $('#inoticontent').append($('<li>Loading...</li>'));
                 $.ajax({
                     type: 'GET',
                     url: '/home/GetNotifications',
                     success: function (response) {
                         $('#noticontent').empty();
+                        $('#inoticontent').empty();
                         if (response.length == 0) {
                             $('#noticontent').append($('<li>No new notifications</li>'));
+                            $('#inoticontent').append($('<li>No new notifications</li>'));
                         }
 
                         $.each(response, function (index, value) {
@@ -200,10 +224,11 @@
                                 }
                                 if (value.isInstructor == true) //Instructor Notfication
                                 {
-                                    //Work in progress
+                                    $('#inoticontent').append($('<li><div class=noticontenttitle> New Assignment Submitted </div>' + value.AssignmentTitle + ' <br>' + value.Department + ' ' + value.CourseNumber  + '</li>'));
                                 }
+                            }
                                 //with horizontal line
-                            } else {
+                            else {
 
                                 if (value.isInstructor == false) //Student Notficaiton
                                 {
@@ -220,7 +245,7 @@
                                 }
                                 if (value.isInstructor == true) //Instructor Notfication
                                 {
-                                    //Work in progress
+                                    $('#inoticontent').append($('<hr style="margin-top:-3px;margin-bottom:-3px;height:1px;border-width:0;color:#5900B3;background-color:#5900B3" /><li><div class=noticontenttitle> New Assignment Submitted </div>' + value.AssignmentTitle + ' <br>' + value.Department + ' ' + value.CourseNumber  + '</li>'));
                                 }
                             }
                         });

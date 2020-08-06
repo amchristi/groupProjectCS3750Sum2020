@@ -78,7 +78,12 @@ namespace MackTechGroupProject
 
             }
         }
-
+        
+        /// <summary>
+        /// This is for the instructor side notifications 
+        /// </summary>
+        /// <param name="currentTime"></param>
+        /// <returns></returns>
         public Boolean AssignmentSubmittedNotification(DateTime currentTime)
         {
             Boolean result = false;
@@ -231,9 +236,7 @@ namespace MackTechGroupProject
                     StudentNotificationViewModel newAssignmentSubmitted = new StudentNotificationViewModel()
                     {
                         AssignmentTitle = sg.Assignment.AssignmentTitle,
-                        Grade = (double)sg.Grade,
                         Points = sg.Assignment.Points,
-                        DueDate = null,
                         Department = sg.Assignment.Course.Department,
                         CourseNumber = sg.Assignment.Course.CourseNumber,
                         SubmissionDate = sg.SubmissionDate,
