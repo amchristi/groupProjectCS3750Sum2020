@@ -107,6 +107,9 @@ C:\Users\Montana\Source\Repos\groupProjectCS3750Sum2020\MackTechTests\bin\Debug\
 C:\Users\Montana\Source\Repos\groupProjectCS3750Sum2020\MackTechTests\bin\Debug\Antlr3.Runtime.dll
 C:\Users\Montana\Source\Repos\groupProjectCS3750Sum2020\MackTechTests\bin\Debug\Microsoft.Owin.Security.OAuth.xml
 C:\Users\Montana\Source\Repos\groupProjectCS3750Sum2020\MackTechTests\bin\Debug\Antlr3.Runtime.pdb
+C:\Users\Montana\Source\Repos\groupProjectCS3750Sum2020\MackTechTests\bin\Debug\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\Montana\Source\Repos\groupProjectCS3750Sum2020\MackTechTests\bin\Debug\Microsoft.AspNet.SignalR.Core.pdb
+C:\Users\Montana\Source\Repos\groupProjectCS3750Sum2020\MackTechTests\bin\Debug\Microsoft.AspNet.SignalR.Core.xml
 C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
 C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
 C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
@@ -126,6 +129,7 @@ C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechTests\bin\Debug
 C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechTests\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
 C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechTests\bin\Debug\Microsoft.Owin.Security.dll
 C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechTests\bin\Debug\Owin.dll
+C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechTests\bin\Debug\Microsoft.AspNet.SignalR.Core.dll
 C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechTests\bin\Debug\Microsoft.Owin.Security.Cookies.dll
 C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechTests\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
 C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechTests\bin\Debug\Newtonsoft.Json.dll
@@ -150,6 +154,8 @@ C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechTests\bin\Debug
 C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechTests\bin\Debug\System.Web.Mvc.xml
 C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechTests\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
 C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechTests\bin\Debug\Microsoft.Owin.Security.xml
+C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechTests\bin\Debug\Microsoft.AspNet.SignalR.Core.pdb
+C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechTests\bin\Debug\Microsoft.AspNet.SignalR.Core.xml
 C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechTests\bin\Debug\Microsoft.Owin.Security.Cookies.xml
 C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechTests\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
 C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechTests\bin\Debug\Newtonsoft.Json.xml
@@ -164,9 +170,3 @@ C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechTests\obj\Debug
 C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechTests\obj\Debug\MackTechTests.csproj.CopyComplete
 C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechTests\obj\Debug\MackTechTests.dll
 C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechTests\obj\Debug\MackTechTests.pdb
-C:\Users\Montana\Source\Repos\groupProjectCS3750Sum2020\MackTechTests\bin\Debug\Microsoft.AspNet.SignalR.Core.dll
-C:\Users\Montana\Source\Repos\groupProjectCS3750Sum2020\MackTechTests\bin\Debug\Microsoft.AspNet.SignalR.Core.pdb
-C:\Users\Montana\Source\Repos\groupProjectCS3750Sum2020\MackTechTests\bin\Debug\Microsoft.AspNet.SignalR.Core.xml
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechTests\bin\Debug\Microsoft.AspNet.SignalR.Core.dll
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechTests\bin\Debug\Microsoft.AspNet.SignalR.Core.pdb
-C:\Users\KEVIN-PC\source\repos\groupProjectCS3750Sum2020\MackTechTests\bin\Debug\Microsoft.AspNet.SignalR.Core.xml

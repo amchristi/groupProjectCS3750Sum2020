@@ -102,14 +102,14 @@ namespace MackTechTests
         }
 
         [TestMethod]
-        public void DeleteAssignment() //uses studentregtwocourses@test.com
+        public void DeleteAssignment()
         {
             //Q: can we delete the assignment added from above?
 
             //prep
             var _context = new MackTechGroupProject.Models.ApplicationDbContext();
             //int courseId = 6;
-            var selectedAssignment = _context.Assignments.Where(x => x.AssignmentTitle.Equals("Unit Test")).FirstOrDefault();
+            var selectedAssignment = _context.Assignments.Where(x => x.AssignmentTitle == "Unit Test").FirstOrDefault();
 
             //perform operations
             Boolean result = AssignmentService.DeleteAssignmentService(selectedAssignment.AssignmentId, _context);
