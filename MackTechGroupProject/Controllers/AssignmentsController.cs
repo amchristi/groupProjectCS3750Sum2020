@@ -121,65 +121,10 @@ namespace MackTechGroupProject.Controllers
         public ActionResult AssignmentSubmission(SubmitAssignmentModel model)
         {
             var userID = User.Identity.GetUserId();
-            var File = model.File;
             var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
-            var currentStudent = context.Users.Where(x => x.Id == userID).FirstOrDefault();
-
-
             var selectedAssignmentId = Convert.ToInt64(Request.Form["asID"]);
 
-
-            var currentAssignment = context.Assignments.Where(x => x.AssignmentId == selectedAssignmentId).FirstOrDefault();
-
-            bool hasSubmission = AssignmentService.HasCurrentSubmission(selectedAssignmentId, userID, context);
-
-            if (hasSubmission)
-            {
-                var submissionToBeRemoved = context.SubmissionGrades.Where(x => x.Assignment.AssignmentId == selectedAssignmentId && x.User.Id == userID).FirstOrDefault();
-                context.SubmissionGrades.Remove(submissionToBeRemoved);
-            }
-
-
-            if (File != null)
-            {
-                string path = Server.MapPath("~/Content/fileAssignments/");
-                if (!Directory.Exists(path))
-                {
-                    Directory.CreateDirectory(path);
-                }
-                Guid g = Guid.NewGuid();
-                String filename = System.IO.Path.GetFileName(File.FileName);
-                String fileSubmissionPath = path + filename + "$" + g;
-                File.SaveAs(fileSubmissionPath);
-
-                SubmissionGrades submissionGrade = new SubmissionGrades()
-                {
-                    User = currentStudent,
-                    Assignment = currentAssignment,
-                    SubmissionDate = DateTime.Now,
-                    TextSubmission = null,
-                    FileSubmission = filename + "$" + g,
-                    Grade = null
-                };
-
-                context.SubmissionGrades.Add(submissionGrade);
-                context.SaveChanges();
-            }
-            //method for unit testing
-            if (model.SubmissionText != null)
-            {
-                SubmissionGrades submissionGrade = new SubmissionGrades()
-                {
-                    User = currentStudent,
-                    Assignment = currentAssignment,
-                    SubmissionDate = DateTime.Now,
-                    TextSubmission = model.SubmissionText,
-                    FileSubmission = null,
-                    Grade = null
-                };
-                Boolean result = AssignmentService.submitTextAssignmentService(selectedAssignmentId, submissionGrade, context);
-
-            }
+            Boolean result = AssignmentService.submitAssignmentService(userID, selectedAssignmentId, model, context);
 
             return RedirectToAction("Index", "Home");
         }

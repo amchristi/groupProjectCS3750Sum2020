@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.IO;
+using System.Web.Hosting;
 
 namespace MackTechGroupProject.BusinessLogic
 {
@@ -52,7 +54,7 @@ namespace MackTechGroupProject.BusinessLogic
 
         public static Boolean updateStudentGradeService(int selectedSubmissionId, double grade, ApplicationDbContext context)
         {
-                        
+
             var selectedSubmission = context.SubmissionGrades.Where(x => x.ID == selectedSubmissionId).FirstOrDefault();
 
 
@@ -74,6 +76,83 @@ namespace MackTechGroupProject.BusinessLogic
 
         }
 
+        public static Boolean submitAssignmentService(String userID, long selectedAssignmentId, SubmitAssignmentModel model, ApplicationDbContext context)
+        {
+            var currentStudent = context.Users.Where(x => x.Id == userID).FirstOrDefault();
+            var File = model.File;
+            var currentAssignment = context.Assignments.Where(x => x.AssignmentId == selectedAssignmentId).FirstOrDefault();
+
+            bool hasSubmission = AssignmentService.HasCurrentSubmission(selectedAssignmentId, userID, context);
+
+            if (hasSubmission)
+            {
+                var submissionToBeRemoved = context.SubmissionGrades.Where(x => x.Assignment.AssignmentId == selectedAssignmentId && x.User.Id == userID).FirstOrDefault();
+
+                //if FILE, use above to query file path and delete file from content folder
+                if (File != null)
+                {
+                    String filename = submissionToBeRemoved.FileSubmission;
+                    string path = HostingEnvironment.MapPath("~/Content/fileAssignments/");
+                    String fileSubmissionPath = path + filename;
+                    System.IO.File.Delete(fileSubmissionPath);
+                }
+
+                //remove row from table
+                context.SubmissionGrades.Remove(submissionToBeRemoved);
+                context.SaveChanges();
+            }
+
+
+            if (File != null)
+            {
+                string path = HostingEnvironment.MapPath("~/Content/fileAssignments/");
+                if (!Directory.Exists(path))
+                {
+                    Directory.CreateDirectory(path);
+                }
+                Guid g = Guid.NewGuid();
+                String filename = System.IO.Path.GetFileName(File.FileName);
+                String fileSubmissionPath = path + filename + "$" + g;
+                File.SaveAs(fileSubmissionPath);
+
+                SubmissionGrades submissionGrade = new SubmissionGrades()
+                {
+                    User = currentStudent,
+                    Assignment = currentAssignment,
+                    SubmissionDate = DateTime.Now,
+                    TextSubmission = null,
+                    FileSubmission = filename + "$" + g,
+                    Grade = null
+                };
+
+                context.SubmissionGrades.Add(submissionGrade);
+                context.SaveChanges();
+                return true;
+            }
+            //method for unit testing
+            else if (model.SubmissionText != null)
+            {
+                SubmissionGrades submissionGrade = new SubmissionGrades()
+                {
+                    User = currentStudent,
+                    Assignment = currentAssignment,
+                    SubmissionDate = DateTime.Now,
+                    TextSubmission = model.SubmissionText,
+                    FileSubmission = null,
+                    Grade = null
+                };
+                context.SubmissionGrades.Add(submissionGrade);
+                context.SaveChanges();
+                return true;
+
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        //deprecated
         public static Boolean submitTextAssignmentService(long selectedAssignmentId, SubmissionGrades submissionGrade, ApplicationDbContext context)
         {
 
@@ -81,7 +160,7 @@ namespace MackTechGroupProject.BusinessLogic
 
             if (hasAssignment)
             {
-                
+
                 context.SubmissionGrades.Add(submissionGrade);
 
                 //save changes to database
