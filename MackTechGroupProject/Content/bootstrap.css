@@ -6789,6 +6789,18 @@ div.classCard {
     color: #F2E6FF;
 }
 
+div.noCourses {
+    height: auto;
+    width: 95%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding: 15px;
+    padding-top: 20px;
+    color: #160A2E;
+}
+
     div.classCard:hover {
         box-shadow: 7px -7px 13px #888888, -7px 7px 13px #888888;
     }
