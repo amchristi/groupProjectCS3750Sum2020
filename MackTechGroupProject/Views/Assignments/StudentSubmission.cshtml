@@ -15,70 +15,69 @@
 
 
 <body>
-    <h1>
+    <div class="gradebookBox lightPurple profileHeader">
         @Html.DisplayFor(model => model.SelectedStudentSubmission.FirstOrDefault().User.FirstName)
         @Html.DisplayFor(model => model.SelectedStudentSubmission.FirstOrDefault().User.LastName)
 
-    </h1>
-    <h2>
-        @Html.DisplayFor(model => model.SelectedStudentSubmission.FirstOrDefault().Assignment.AssignmentTitle)
-    </h2>
+        <p style="font-size: 28px;">
+            @Html.DisplayFor(model => model.SelectedStudentSubmission.FirstOrDefault().Assignment.AssignmentTitle)
+        </p>
+        </div>
+        <hr />
 
-    <hr />
+        @using (Html.BeginForm())
+        {
+            <fieldset>
+                <table>
+                    <tr>
+                        <th>
+                            Points Earned:
+                        </th>
+                        <th>
+                            @Html.TextBox("Grade", Model.SelectedStudentSubmission.FirstOrDefault().Grade)
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            Points Possible:
+                        </th>
+                        <th>
+                            @Html.DisplayFor(model => model.SelectedStudentSubmission.FirstOrDefault().Assignment.Points)
+                        </th>
+                    </tr>
+                </table>
 
-    @using (Html.BeginForm())
-    {
-        <fieldset>
-            <table>
-                <tr>
-                    <th>
-                        Points Earned:
-                    </th>
-                    <th>
-                        @Html.TextBox("Grade", Model.SelectedStudentSubmission.FirstOrDefault().Grade)
-                    </th>
-                </tr>
-                <tr>
-                    <th>
-                        Points Possible:
-                    </th>
-                    <th>
-                        @Html.DisplayFor(model => model.SelectedStudentSubmission.FirstOrDefault().Assignment.Points)
-                    </th>
-                </tr>
-            </table>
-
-            <p>
-                <input type="submit" value="Update Grade" />
-            </p>
-        </fieldset>
-    }
-
-
-    @if (Model.SelectedStudentSubmission.FirstOrDefault().Assignment.SubmissionType == "Text-Submission")
-    {
-
-        <h3>
-            Student Text Submission
-        </h3>
-        @Html.DisplayFor(model => model.SelectedStudentSubmission.FirstOrDefault().TextSubmission)
-
-    }
+                <p>
+                    <input type="submit" value="Update Grade" />
+                </p>
+            </fieldset>
+        }
 
 
-    @if (Model.SelectedStudentSubmission.FirstOrDefault().Assignment.SubmissionType == "File-Upload")
-    {
-        <h3>
-            Student File Submission
-        </h3>
+        @if (Model.SelectedStudentSubmission.FirstOrDefault().Assignment.SubmissionType == "Text-Submission")
+        {
+
+            <h3>
+                Student Text Submission
+            </h3>
+            @Html.DisplayFor(model => model.SelectedStudentSubmission.FirstOrDefault().TextSubmission)
+
+        }
 
 
-        <a href="@Url.Action("DownloadSubmittedAssignemnt", "Assignments",
+        @if (Model.SelectedStudentSubmission.FirstOrDefault().Assignment.SubmissionType == "File-Upload")
+        {
+            <h3>
+                Student File Submission
+            </h3>
+
+
+            <a href="@Url.Action("DownloadSubmittedAssignemnt", "Assignments",
                                         new { filePath = Model.SelectedStudentSubmission.FirstOrDefault().FileSubmission })">
-            Download @ViewBag.displayFile
-        </a>
+                Download @ViewBag.displayFile
+            </a>
 
-    }
+        }
 
 </body>
 </html>
