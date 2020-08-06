@@ -20,7 +20,7 @@ namespace MackTechTests
 
         }
 
-        [TestMethod] 
+        [TestMethod]
         public void RegisterThirdCourse() //uses studentregtwocourses@test.com
         {
             //Q: can we add a course to existing enrollments
@@ -43,7 +43,7 @@ namespace MackTechTests
             Assert.IsTrue(y.Count() == 3);
         }
 
-        [TestMethod] 
+        [TestMethod]
         public void DeleteThirdCourseRegistration() //uses studentregtwocourses@test.com
         {
             //Q: can we delete the third course add above
@@ -152,7 +152,7 @@ namespace MackTechTests
             //prep
 
             var _context = new MackTechGroupProject.Models.ApplicationDbContext();
-            
+
             var sUserId = "7033fb11-e3e3-465a-831c-55a0dd215343"; //TestStudent TextSubmission
             var aAssignmentId = 148; //MATH 1040 - Assignment 1 - text submission assignment
 
@@ -169,10 +169,20 @@ namespace MackTechTests
                 TextSubmission = text,
                 FileSubmission = null,
                 Grade = null
-            };            
+            };
+
+            SubmitAssignmentModel model = new SubmitAssignmentModel
+            {
+                SubmissionText = text,
+                currentAssignment = currentAssignment,
+                assignmentID = (int)aAssignmentId
+            };
 
             //perform operations
-            Boolean result = AssignmentService.submitTextAssignmentService(aAssignmentId, submissionGrade, _context);
+            Boolean result = AssignmentService.submitAssignmentService(sUserId, aAssignmentId, model, _context);
+
+            //perform operations
+            //Boolean result = AssignmentService.submitTextAssignmentService(aAssignmentId, submissionGrade, _context);
 
 
             //verify and interpret results
@@ -182,6 +192,43 @@ namespace MackTechTests
 
             Assert.IsTrue(y.TextSubmission.Equals(text));
         }
+
+        [TestMethod]
+        public void submitSecondTextAssignment()
+        {
+
+            // Q: does a second text submission for same assignment remove the first and add the second in its place?
+            //using testsecondtextsubmission@mail.univ.edu who already has one text submission submitted
+
+            var _context = new MackTechGroupProject.Models.ApplicationDbContext();
+
+            var sUserId = "fd6deecf-8a00-4458-a1a5-0810c3213b67"; //TestStudent TextSubmission
+            long aAssignmentId = 148; //MATH 1040 - Assignment 1 - text submission assignment
+
+            var currentAssignment = _context.Assignments.Where(x => x.AssignmentId == aAssignmentId).FirstOrDefault();
+            var currentStudent = _context.Users.Where(x => x.Id == sUserId).FirstOrDefault();
+            string text = "This is a second text submission for same assignment.";
+
+            SubmitAssignmentModel model = new SubmitAssignmentModel
+            {
+                SubmissionText = text,
+                currentAssignment = currentAssignment,
+                assignmentID = (int)aAssignmentId
+            };
+
+            //perform operations
+            Boolean result = AssignmentService.submitAssignmentService(sUserId, aAssignmentId, model, _context);
+            
+
+            //verify and interpret results
+            Assert.IsTrue(result);
+
+            var yList = _context.SubmissionGrades.Where(x => x.User.Id == sUserId).Where(x => x.Assignment.AssignmentId == (int)aAssignmentId).ToList();
+            var ySingle = _context.SubmissionGrades.Where(x => x.User.Id == sUserId).Where(x => x.Assignment.AssignmentId == (int)aAssignmentId).FirstOrDefault();
+            Assert.IsTrue(yList.Count() == 1);
+            Assert.IsTrue(ySingle.TextSubmission.Equals(text));
+        }
+
 
         [TestMethod]
         public void InstructorCreateNewCourse() //TestInstructorCreateCourse@mail.univ.edu
@@ -196,7 +243,7 @@ namespace MackTechTests
 
             //create a Course Object
             var course = new Course
-            {                
+            {
                 Department = "Psych",
                 CourseNumber = 3010,
                 CourseName = "Advanced Psychology",
@@ -227,7 +274,7 @@ namespace MackTechTests
 
             //Add Course using business logic class
             var CourseAdded = RegistrationService.addNewCourse(course, _context);
-            
+
             //display result for sending course to business logic
             Assert.IsTrue(CourseAdded);
 
