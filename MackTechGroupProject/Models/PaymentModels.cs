@@ -22,7 +22,7 @@ namespace MackTechGroupProject.Models
 
             [Required]
             [DataType(DataType.Text)]
-            [RegularExpression(@"^([1-9]|1[012])$", ErrorMessage = "Invalid Month")]
+            [RegularExpression(@"^(0[1-9]|[1-9]|1[012])$", ErrorMessage = "Invalid Month")]
             [Display(Name = "Expiration Month (MM)")]
             public int ExpirationMonth { get; set; }
 
@@ -34,7 +34,7 @@ namespace MackTechGroupProject.Models
 
             [Required]
             [DataType(DataType.Text)]
-            [RegularExpression(@"^[1-9]{3}$", ErrorMessage = "Invalid CVC")]
+            [RegularExpression(@"^[0-9]{3}$", ErrorMessage = "Invalid CVC")]
             [Display(Name = "CVC")]
             public int CVC { get; set; }
 

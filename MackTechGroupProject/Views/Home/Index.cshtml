@@ -54,18 +54,15 @@
                                             </h3>
                                         </a>
 
-
-                                        @*Add button to class card for viewing all assignemnts*@
-
-                                        <p>
-                                            <a class="btn btn-default viewAssignment" href="@Url.Action("ViewAssignments", "Assignments", new { id = item.Course.CourseId })">View Course Assignments</a>
-                                        </p>
-                                        <p>
-                                            <a class="btn btn-default viewAssignment" href="@Url.Action("ViewGrades", "Assignments", new { id = item.Course.CourseId })">View Course Grades</a>
-                                        </p>
-
+                                        <div class="viewAssignment">
+                                            <p>
+                                                <a class="btn btn-default" href="@Url.Action("ViewAssignments", "Assignments", new { id = item.Course.CourseId })">View Course Assignments</a>
+                                            </p>
+                                            <p>
+                                                <a class="btn btn-default" href="@Url.Action("ViewGrades", "Assignments", new { id = item.Course.CourseId })">View Course Grades</a>
+                                            </p>
+                                        </div>
                                     </div>
-
                                 </td>
                             </tr>
                         }
@@ -74,8 +71,8 @@
                     {
                         <tr>
                             <td>
-                                <div class="classCard">
-                                    <h4>Click the Register link above to register for courses.</h4>
+                                <div class="noCourses">
+                                    <h4>Click Registration above to add courses.</h4>
                                 </div>
                             </td>
                         </tr>
@@ -92,7 +89,7 @@
         </main>
 
         <aside class="col-md-4">
-            <div style="margin-left: 10px; font-size: 28px;">
+            <div style="margin-left: 10px; font-size: 28px; margin-top: 3px;">
                 View
             </div>
             <hr style="height:1px;width:100%;color:#5900B3;background-color:#5900B3" />
@@ -192,7 +189,7 @@
                                             @*Add button to class card to add a new assignemnt, instructor view only*@
                                             <p>
                                                 <a class="btn btn-default" href="@Url.Action("AddAssignment", "Assignments", new { id = item.CourseId })">Add new Assignment</a>
-                                                @*@Html.ActionLink("AddAssignment", "Assignments", new { id = item.Course.CourseId })*@
+                                               
                                             </p>
                                             @*Add button to class card for viewing all assignemnts*@
                                             <p>
@@ -212,8 +209,8 @@
                     {
                         <tr>
                             <td>
-                                <div class="classCard">
-                                    <h4>Click the Add Course link above to create new courses.</h4>
+                                <div class="noCourses">
+                                    <h4>Click Add Course above to create new courses.</h4>
                                 </div>
                             </td>
                         </tr>
@@ -226,7 +223,7 @@
         </main>
 
         <aside class="col-md-4">
-            <div style="margin-left: 10px; font-size: 28px;">
+            <div style="margin-left: 10px; font-size: 28px; margin-top: 3px;">
                 View
             </div>
             <hr style="height:1px;width:100%;color:#5900B3;background-color:#5900B3" />
