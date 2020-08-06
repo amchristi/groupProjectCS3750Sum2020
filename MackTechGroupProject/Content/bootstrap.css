@@ -7125,48 +7125,64 @@ th.StudentBillCol {
 /*# sourceMappingURL=bootstrap.css.map */
 
 /*Style for instructor gradebook*/
+table.instructotGradeBook {
+    border-collapse: collapse;
+}
+
 tr.gradeBookARow {
     height: 140px;
     border: #5900B3 2px solid;
+}
+/*
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
-        
-}
+*/
+
 tr.gradeBookPtsRow {
     height: 15px;
     border: #5900B3 2px solid;
+}
+/*
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
-}
+*/
 tr.gradeBookStdRow {
     height: 15px;
     border: #5900B3 2px solid;
+}
+/*
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
-}
+*/
 
 
 th.gradeBookStdCol {
     width: 140px;
     text-align: left;
     border: #5900B3 2px solid;
+    padding-left: 4px;
+}
+/*
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
-}
+*/
 th.gradeBookACol {
     transform: rotate(-90deg);
     column-width: 24px;
-    
     border: #5900B3 2px solid;
     white-space: nowrap;
     text-overflow: ellipsis;
-    overflow: hidden;
+    
 }
-
+/*
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+*/
 
 
 
@@ -7174,28 +7190,37 @@ th.gradeBookAPCol {
     column-width: 20px;
     text-align: center;
     border: #5900B3 2px solid;
+}
+/*
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
-}
+*/
+
 
 td.gradeBookScores {
     width: 20px;
     text-align: center;
     border: #5900B3 2px solid;
+}
+/*
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
-}
+*/
 
 th.gradeBookPtsCol {
     width: 20px;
     text-align: right;
     border: #5900B3 2px solid;
+}
+
+/*
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
-}
+*/
+
 
 th.gradeBookDivider {
     width: 4px;

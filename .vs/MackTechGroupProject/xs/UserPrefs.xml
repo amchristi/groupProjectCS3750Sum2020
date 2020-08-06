@@ -2,7 +2,7 @@
   <MonoDevelop.Ide.ItemProperties.MackTechGroupProject PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.Workbench ActiveDocument="MackTechGroupProject/Views/Assignments/AssignmentSubmission.cshtml">
     <Files>
-      <File FileName="MackTechGroupProject/Controllers/AssignmentsController.cs" Line="265" Column="15" />
+      <File FileName="MackTechGroupProject/Controllers/AssignmentsController.cs" Line="265" Column="1" />
       <File FileName="MackTechGroupProject/Views/Assignments/InstructorGradeBook.cshtml" />
       <File FileName="MackTechGroupProject/Views/Assignments/ViewGrades.cshtml" />
       <File FileName="MackTechGroupProject/Models/AssignmentsModels.cs" />
