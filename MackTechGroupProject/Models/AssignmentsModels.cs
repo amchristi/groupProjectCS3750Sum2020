@@ -145,6 +145,7 @@ namespace MackTechGroupProject.Models
         public string Department { get; set; }
         public int CourseNumber { get; set; }
         public DateTime? SubmissionDate { get; set; }
+        public Boolean isInstructor { get; set; }
     }
 
 }

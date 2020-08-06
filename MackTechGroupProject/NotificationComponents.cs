@@ -172,21 +172,21 @@ namespace MackTechGroupProject
 
                 List<StudentNotificationViewModel> result = new List<StudentNotificationViewModel>();
 
-                //get newly graded submissions per user
+                //student - get newly graded submissions per user
                 var updatedSubmissions = context.SubmissionGrades.Where(x => x.GradeAddedOn > afterDate).Include(x => x.Assignment).Include(x => x.User).OrderByDescending(x => x.GradeAddedOn).ToList();
                 var updatedSubmissionsForUser = updatedSubmissions.Where(x => x.User.Id == userId).ToList();
-                var updatedSubmissionsForUserWithGrade = updatedSubmissionsForUser.Where(x => x.Grade != null).ToList();
 
-                //get newly added assignments per user 
+                //student - get newly added assignments per user 
                 var currentEnrollmentsWithAssignments = context.Enrollments.Where(x => x.User.Id == userId).Include(x => x.User).Include(x => x.Course).Include("Course.Assignments").ToList();
                 var allAssignments = currentEnrollmentsWithAssignments.Select(x => x.Course).SelectMany(y => y.Assignments).ToList();
                 var recentlyAddedAssignments = allAssignments.Where(x => x.AssignmentAddedOn > afterDate).ToList();
 
-                //get newly added submission submitted for instructor
+                
+                //instructor - get newly added submission submitted for instructor
                 var assignmentSubmitted = context.SubmissionGrades.Where(x => x.SubmissionDate > afterDate).ToList();
 
-                //add newly graded submissions to the list
-                foreach (SubmissionGrades sg in updatedSubmissionsForUserWithGrade)
+                //student - add newly graded submissions to the list
+                foreach (SubmissionGrades sg in updatedSubmissionsForUser)
                 {
 
                     StudentNotificationViewModel newGradedNotification = new StudentNotificationViewModel()
@@ -197,13 +197,15 @@ namespace MackTechGroupProject
                         DueDate = null,
                         Department = sg.Assignment.Course.Department,
                         CourseNumber = sg.Assignment.Course.CourseNumber,
-                        SubmissionDate = null
+                        SubmissionDate = null,
+                        isInstructor = false
                     };
                     result.Add(newGradedNotification);
 
                 }
+                           
 
-                //add newly added assignments to the same list
+                //student - add newly added assignments to the same list
                 foreach (Assignment a in recentlyAddedAssignments)
                 {
                     StudentNotificationViewModel newAddedAssignment = new StudentNotificationViewModel()
@@ -214,13 +216,15 @@ namespace MackTechGroupProject
                         DueDate = a.DueDate,
                         Department = a.Course.Department,
                         CourseNumber = a.Course.CourseNumber,
-                        SubmissionDate = null
+                        SubmissionDate = null,
+                        isInstructor = false
                     };
                     result.Add(newAddedAssignment);
 
                 }
 
-                //add newly graded submissions to the list
+                
+                //instructor add newly graded submissions to the list
                 foreach (SubmissionGrades sg in assignmentSubmitted)
                 {
 
@@ -232,12 +236,13 @@ namespace MackTechGroupProject
                         DueDate = null,
                         Department = sg.Assignment.Course.Department,
                         CourseNumber = sg.Assignment.Course.CourseNumber,
-                        SubmissionDate = sg.SubmissionDate
+                        SubmissionDate = sg.SubmissionDate,
+                        isInstructor = true
                     };
                     result.Add(newAssignmentSubmitted);
 
                 }
-
+                
                 //return the list
                 return result;
             }

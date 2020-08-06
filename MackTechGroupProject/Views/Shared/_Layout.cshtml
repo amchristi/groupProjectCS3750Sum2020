@@ -189,7 +189,7 @@
 
                             //without horizontal line
                             if (index == 0) {
-                                if (this.User.IsInRole("Student")) //Student Notfication
+                                if (value.isInstructor == false) //Student Notfication
                                 {
                                     if (value.DueDate == null) {
                                         $('#noticontent').append($('<li><div class=noticontenttitle>New grade </div>' + value.Grade + ' / ' + value.Points + ' <br>' + value.AssignmentTitle + '<br>' + value.Department + ' ' + value.CourseNumber + '</li>'));
@@ -198,14 +198,14 @@
                                         $('#noticontent').append($('<li><div class=noticontenttitle>New Assignment </div>' + value.AssignmentTitle + ' <br>' + value.CourseNumber + ' ' + value.Department + '<br>' + value.Points + ' Points <br>Due: ' + dueDate + '</li>'));
                                     }
                                 }
-                                if (this.User.IsInRole("Instructor")) //Instructor Notfication
+                                if (value.isInstructor == true) //Instructor Notfication
                                 {
                                     //Work in progress
                                 }
                                 //with horizontal line
                             } else {
 
-                                if (this.User.IsInRole("Student")) //Student Notficaiton
+                                if (value.isInstructor == false) //Student Notficaiton
                                 {
                                     //if graded assignment
                                     if (value.DueDate == null) {
@@ -218,7 +218,7 @@
                                         $('#noticontent').append($('<hr style="margin-top:-3px;margin-bottom:-3px;height:1px;border-width:0;color:#5900B3;background-color:#5900B3" /><li><div class=noticontenttitle>New Assignment </div>' + value.AssignmentTitle + ' <br>' + value.Department + ' ' + value.CourseNumber + '<br>' + value.Points + ' Points <br>Due: ' + dueDate + '</li>'));
                                     }
                                 }
-                                if (this.User.IsInRole("Instructor")) //Instructor Notfication
+                                if (value.isInstructor == true) //Instructor Notfication
                                 {
                                     //Work in progress
                                 }
