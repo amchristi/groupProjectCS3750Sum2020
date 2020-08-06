@@ -1,9 +1,9 @@
 ﻿<Properties StartupConfiguration="{68BB2547-5AC6-47D1-9037-103D8041AE7B}|">
   <MonoDevelop.Ide.ItemProperties.MackTechGroupProject PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="MackTechGroupProject/Views/Assignments/AssignmentSubmission.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MackTechGroupProject/Views/Assignments/InstructorGradeBook.cshtml">
     <Files>
-      <File FileName="MackTechGroupProject/Controllers/AssignmentsController.cs" Line="265" Column="1" />
-      <File FileName="MackTechGroupProject/Views/Assignments/InstructorGradeBook.cshtml" />
+      <File FileName="MackTechGroupProject/Controllers/AssignmentsController.cs" Line="369" Column="65" />
+      <File FileName="MackTechGroupProject/Views/Assignments/InstructorGradeBook.cshtml" Line="51" Column="1" />
       <File FileName="MackTechGroupProject/Views/Assignments/ViewGrades.cshtml" />
       <File FileName="MackTechGroupProject/Models/AssignmentsModels.cs" />
       <File FileName="MackTechGroupProject/Views/Assignments/StudentSubmission.cshtml" />
@@ -11,10 +11,11 @@
       <File FileName="MackTechGroupProject/Content/bootstrap.css" />
       <File FileName="MackTechGroupProject/BusinessLogic/AssignmentService.cs" />
       <File FileName="MackTechGroupProject/Controllers/CoursesController.cs" />
-      <File FileName="MackTechGroupProject/Views/Assignments/AssignmentSubmission.cshtml" Line="6" Column="2" />
+      <File FileName="MackTechGroupProject/Views/Assignments/AssignmentSubmission.cshtml" />
       <File FileName="MackTechGroupProject/BusinessLogic/RegistrationService.cs" />
       <File FileName="MackTechTests/UnitTest1.cs" />
       <File FileName="MackTechGroupProject/Models/CoursesModels.cs" />
+      <File FileName="MackTechGroupProject/Models/IdentityModels.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -22,11 +23,12 @@
           <Node name="MackTechGroupProject" expanded="True">
             <Node name="MackTechGroupProject" expanded="True">
               <Node name="BusinessLogic" expanded="True" />
+              <Node name="Content" expanded="True" />
               <Node name="Controllers" expanded="True" />
               <Node name="Models" expanded="True" />
               <Node name="Views" expanded="True">
                 <Node name="Assignments" expanded="True">
-                  <Node name="AssignmentSubmission.cshtml" selected="True" />
+                  <Node name="InstructorGradeBook.cshtml" selected="True" />
                 </Node>
                 <Node name="Home" expanded="True" />
               </Node>

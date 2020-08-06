@@ -7130,7 +7130,7 @@ table.instructotGradeBook {
 }
 
 tr.gradeBookARow {
-    height: 140px;
+    height: 180px;
     border: #5900B3 2px solid;
 }
 /*
@@ -7149,7 +7149,7 @@ tr.gradeBookPtsRow {
     overflow: hidden;
 */
 tr.gradeBookStdRow {
-    height: 15px;
+    min-height: 24px;
     border: #5900B3 2px solid;
 }
 /*
@@ -7160,10 +7160,13 @@ tr.gradeBookStdRow {
 
 
 th.gradeBookStdCol {
-    width: 140px;
     text-align: left;
     border: #5900B3 2px solid;
     padding-left: 4px;
+    min-width: 200px;
+    /*
+
+    */
 }
 /*
     white-space: nowrap;
@@ -7172,11 +7175,15 @@ th.gradeBookStdCol {
 */
 th.gradeBookACol {
     transform: rotate(-90deg);
-    column-width: 24px;
     border: #5900B3 2px solid;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    
+
+    /*
+
+    column-width: 24px;
+    margin-bottom: -20px;
+    text-wrap: avoid;
+    text-align: start;
+    */
 }
 /*
     white-space: nowrap;
@@ -7187,9 +7194,11 @@ th.gradeBookACol {
 
 
 th.gradeBookAPCol {
-    column-width: 20px;
+    min-width: 100px;
     text-align: center;
     border: #5900B3 2px solid;
+
+ 
 }
 /*
     white-space: nowrap;
@@ -7199,7 +7208,7 @@ th.gradeBookAPCol {
 
 
 td.gradeBookScores {
-    width: 20px;
+    
     text-align: center;
     border: #5900B3 2px solid;
 }
@@ -7210,7 +7219,7 @@ td.gradeBookScores {
 */
 
 th.gradeBookPtsCol {
-    width: 20px;
+ 
     text-align: right;
     border: #5900B3 2px solid;
 }
