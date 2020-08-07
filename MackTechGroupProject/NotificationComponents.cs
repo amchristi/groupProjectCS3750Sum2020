@@ -129,7 +129,7 @@ namespace MackTechGroupProject
                 var notificationHub = GlobalHost.ConnectionManager.GetHubContext<NotificationHub>();
                 notificationHub.Clients.All.Notify("added");
 
-                //re-register notifcation
+                //re-register notification
                 UpdatedAssignmentGradeNotification(DateTime.Now);
 
             }
@@ -146,7 +146,7 @@ namespace MackTechGroupProject
                 var notificationHub = GlobalHost.ConnectionManager.GetHubContext<NotificationHub>();
                 notificationHub.Clients.All.Notify("added");
 
-                //re-register notifcation
+                //re-register notification
                 AddedAssignmentNotification(DateTime.Now);
 
             }
@@ -163,7 +163,7 @@ namespace MackTechGroupProject
                 var notificationHub = GlobalHost.ConnectionManager.GetHubContext<NotificationHub>();
                 notificationHub.Clients.All.Notify("added");
 
-                //re-register notifcation
+                //re-register notification
                 AssignmentSubmittedNotification(DateTime.Now);
 
             }
@@ -236,14 +236,15 @@ namespace MackTechGroupProject
                     StudentNotificationViewModel newAssignmentSubmitted = new StudentNotificationViewModel()
                     {
                         AssignmentTitle = sg.Assignment.AssignmentTitle,
+                        Grade = 0,
                         Points = sg.Assignment.Points,
+                        DueDate = null,
                         Department = sg.Assignment.Course.Department,
                         CourseNumber = sg.Assignment.Course.CourseNumber,
                         SubmissionDate = sg.SubmissionDate,
                         isInstructor = true
                     };
-                    result.Add(newAssignmentSubmitted);
-
+                        result.Add(newAssignmentSubmitted);
                 }
                 
                 //return the list

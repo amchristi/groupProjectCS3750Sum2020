@@ -224,7 +224,7 @@
                                 }
                                 if (value.isInstructor == true) //Instructor Notfication
                                 {
-                                    $('#inoticontent').append($('<li><div class=noticontenttitle> New Assignment Submitted </div>' + value.AssignmentTitle + ' <br>' + value.Department + ' ' + value.CourseNumber  + '</li>'));
+                                    $('#inoticontent').append($('<li><div class=inoticontenttitle> New Assignment Submitted </div>' + value.AssignmentTitle + ' <br>' + value.Department + ' ' + value.CourseNumber  + '</li>'));
                                 }
                             }
                                 //with horizontal line
@@ -245,7 +245,7 @@
                                 }
                                 if (value.isInstructor == true) //Instructor Notfication
                                 {
-                                    $('#inoticontent').append($('<hr style="margin-top:-3px;margin-bottom:-3px;height:1px;border-width:0;color:#5900B3;background-color:#5900B3" /><li><div class=noticontenttitle> New Assignment Submitted </div>' + value.AssignmentTitle + ' <br>' + value.Department + ' ' + value.CourseNumber  + '</li>'));
+                                    $('#inoticontent').append($('<hr style="margin-top:-3px;margin-bottom:-3px;height:1px;border-width:0;color:#5900B3;background-color:#5900B3" /><li><div class=inoticontenttitle> New Assignment Submitted </div>' + value.AssignmentTitle + ' <br>' + value.Department + ' ' + value.CourseNumber  + '</li>'));
                                 }
                             }
                         });
@@ -256,9 +256,13 @@
             // update notification count
             function updateNotificationCount() {
                 var count = 0;
+                var icount = 0;
                 count = parseInt($('span.count').html()) || 0;
+                icount = parseInt($('span.icount').html()) || 0;
                 count++;
+                icount++;
                 $('span.count').html(count);
+                $('span.icount').html(icount);
             }
 
             // signalr js code for start hub and send receive notification

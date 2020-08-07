@@ -197,7 +197,6 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="BusinessLogic\AssignmentService.cs" />
     <Compile Include="BusinessLogic\CalendarService.cs" />
-    <Compile Include="BusinessLogic\CalendarServices.cs" />
     <Compile Include="BusinessLogic\RegistrationService.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AssignmentsController.cs" />

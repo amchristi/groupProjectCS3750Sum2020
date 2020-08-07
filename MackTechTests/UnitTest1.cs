@@ -297,24 +297,17 @@ namespace MackTechTests
 
             var sUserId = "4328fc0b-e442-4e24-8260-c7a7ec2402ba"; //TestStudentCalendarTest@mail.univ.edu
             var currentStudent = _context.Users.Where(x => x.Id == sUserId).FirstOrDefault();
-            string text = "This is a unit Test.";
-
-            //create a submissionGrade object
-            Assignment assignment = new Assignment()
-            {
-
-            };
 
             //perform operations
-            Boolean result = CalendarService.ChecklCalendarService(sUserId, assignment, _context);
+            Boolean result = CalendarService.CheckCalendarService(sUserId, _context);
 
 
             //verify and interpret results
             Assert.IsTrue(result);
 
-            var y = _context.SubmissionGrades.Where(x => x.User.Id == sUserId).FirstOrDefault();
+            var y = _context.SubmissionGrades.Where(x => x.User.Id == sUserId);
 
-            Assert.IsTrue(y.TextSubmission.Equals(text));
+            Assert.IsTrue(result);
         }
 
     }
