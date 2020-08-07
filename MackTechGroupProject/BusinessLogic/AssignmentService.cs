@@ -92,7 +92,8 @@ namespace MackTechGroupProject.BusinessLogic
                 if (File != null)
                 {
                     String filename = submissionToBeRemoved.FileSubmission;
-                    string path = HostingEnvironment.MapPath("~/Content/fileAssignments/");
+                    //string path = HostingEnvironment.MapPath("~/Content/fileAssignments/");
+                    var path = Path.Combine(Directory.GetParent(System.IO.Directory.GetCurrentDirectory()).Parent.Parent.FullName, "MackTechGroupProject", "fileAssignments");
                     String fileSubmissionPath = path + filename;
                     System.IO.File.Delete(fileSubmissionPath);
                 }
@@ -105,7 +106,8 @@ namespace MackTechGroupProject.BusinessLogic
 
             if (File != null)
             {
-                string path = HostingEnvironment.MapPath("~/Content/fileAssignments/");
+                //string path = HostingEnvironment.MapPath("~/Content/fileAssignments/");
+                var path = Path.Combine(Directory.GetParent(System.IO.Directory.GetCurrentDirectory()).Parent.Parent.FullName, "MackTechGroupProject", "fileAssignments");
                 if (!Directory.Exists(path))
                 {
                     Directory.CreateDirectory(path);
