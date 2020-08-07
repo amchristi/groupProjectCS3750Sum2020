@@ -124,7 +124,9 @@ namespace MackTechGroupProject.Controllers
             var context = HttpContext.GetOwinContext().Get<ApplicationDbContext>();
             var selectedAssignmentId = Convert.ToInt64(Request.Form["asID"]);
 
-            Boolean result = AssignmentService.submitAssignmentService(userID, selectedAssignmentId, model, context);
+            bool isUnitTest = false;
+
+            Boolean result = AssignmentService.submitAssignmentService(userID, selectedAssignmentId, model, context, isUnitTest);
 
             return RedirectToAction("Index", "Home");
         }

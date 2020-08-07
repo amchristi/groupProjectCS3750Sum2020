@@ -133,7 +133,7 @@ namespace MackTechTests
             var _context = new MackTechGroupProject.Models.ApplicationDbContext();
 
             var sUserId = "7033fb11-e3e3-465a-831c-55a0dd215343"; //TestStudent TextSubmission
-            var aAssignmentId = 64; //MATH 1040 - Assignment 2 - Upload file of scanned homework
+            var aAssignmentId = 164; //MATH 1040 - Assignment 2 - Upload file of scanned homework
 
             var currentAssignment = _context.Assignments.Where(x => x.AssignmentId == aAssignmentId).FirstOrDefault();
             var currentStudent = _context.Users.Where(x => x.Id == sUserId).FirstOrDefault();
@@ -164,15 +164,15 @@ namespace MackTechTests
                 assignmentID = (int)aAssignmentId
             };
 
-            //bool isUnitTest = true;
+            bool isUnitTest = true;
 
             //perform operations
-            Boolean result = AssignmentService.submitAssignmentService(sUserId, aAssignmentId, model, _context);
+            Boolean result = AssignmentService.submitAssignmentService(sUserId, aAssignmentId, model, _context, isUnitTest);
 
             //verify and interpret results
             Assert.IsTrue(result);
 
-            var y = _context.SubmissionGrades.Where(x => x.User.Id == sUserId).FirstOrDefault();
+            var y = _context.SubmissionGrades.Where(x => x.User.Id == sUserId && x.Assignment.AssignmentId == aAssignmentId).FirstOrDefault();
 
             Assert.IsTrue(y.FileSubmission.Contains(fileName));
 
@@ -235,8 +235,10 @@ namespace MackTechTests
                 assignmentID = (int)aAssignmentId
             };
 
+            bool isUnitTest = true;
+
             //perform operations
-            Boolean result = AssignmentService.submitAssignmentService(sUserId, aAssignmentId, model, _context);
+            Boolean result = AssignmentService.submitAssignmentService(sUserId, aAssignmentId, model, _context, isUnitTest);
 
             //perform operations
             //Boolean result = AssignmentService.submitTextAssignmentService(aAssignmentId, submissionGrade, _context);
@@ -245,7 +247,7 @@ namespace MackTechTests
             //verify and interpret results
             Assert.IsTrue(result);
 
-            var y = _context.SubmissionGrades.Where(x => x.User.Id == sUserId).FirstOrDefault();
+            var y = _context.SubmissionGrades.Where(x => x.User.Id == sUserId && x.Assignment.AssignmentId == 148).FirstOrDefault();
 
             Assert.IsTrue(y.TextSubmission.Equals(text));
         }
@@ -273,8 +275,10 @@ namespace MackTechTests
                 assignmentID = (int)aAssignmentId
             };
 
+            bool isUnitTest = true;
+
             //perform operations
-            Boolean result = AssignmentService.submitAssignmentService(sUserId, aAssignmentId, model, _context);
+            Boolean result = AssignmentService.submitAssignmentService(sUserId, aAssignmentId, model, _context, isUnitTest);
             
 
             //verify and interpret results
