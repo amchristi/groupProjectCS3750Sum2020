@@ -76,8 +76,9 @@ namespace MackTechGroupProject.BusinessLogic
 
         }
 
-        public static Boolean submitAssignmentService(String userID, long selectedAssignmentId, SubmitAssignmentModel model, ApplicationDbContext context)
+        public static Boolean submitAssignmentService(String userID, long selectedAssignmentId, SubmitAssignmentModel model, ApplicationDbContext context, bool isUnitTest)
         {
+            string path = "";
             var currentStudent = context.Users.Where(x => x.Id == userID).FirstOrDefault();
             var File = model.File;
             var currentAssignment = context.Assignments.Where(x => x.AssignmentId == selectedAssignmentId).FirstOrDefault();
@@ -92,7 +93,17 @@ namespace MackTechGroupProject.BusinessLogic
                 if (File != null)
                 {
                     String filename = submissionToBeRemoved.FileSubmission;
-                    string path = HostingEnvironment.MapPath("~/Content/fileAssignments/");
+
+                    if (isUnitTest == false)
+                    {
+                        path = HostingEnvironment.MapPath("~/Content/fileAssignments/");
+                    }
+
+                    if (isUnitTest == true)
+                    {
+                        path = Path.Combine(Directory.GetParent(System.IO.Directory.GetCurrentDirectory()).Parent.Parent.FullName, "MackTechGroupProject", "fileAssignments");
+                    }
+                    
                     String fileSubmissionPath = path + filename;
                     System.IO.File.Delete(fileSubmissionPath);
                 }
@@ -105,7 +116,16 @@ namespace MackTechGroupProject.BusinessLogic
 
             if (File != null)
             {
-                string path = HostingEnvironment.MapPath("~/Content/fileAssignments/");
+                if (isUnitTest == false)
+                {
+                    path = HostingEnvironment.MapPath("~/Content/fileAssignments/");
+                }
+
+                if (isUnitTest == true)
+                {
+                    path = Path.Combine(Directory.GetParent(System.IO.Directory.GetCurrentDirectory()).Parent.Parent.FullName, "MackTechGroupProject", "fileAssignments");
+                }
+                
                 if (!Directory.Exists(path))
                 {
                     Directory.CreateDirectory(path);

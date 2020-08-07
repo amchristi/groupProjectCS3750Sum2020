@@ -4,6 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MackTechGroupProject.BusinessLogic;
 using System.Data.Entity;
 using MackTechGroupProject.Models;
+using System.IO;
 
 namespace MackTechTests
 {
@@ -102,14 +103,14 @@ namespace MackTechTests
         }
 
         [TestMethod]
-        public void DeleteAssignment() //uses studentregtwocourses@test.com
+        public void DeleteAssignment()
         {
             //Q: can we delete the assignment added from above?
 
             //prep
             var _context = new MackTechGroupProject.Models.ApplicationDbContext();
             //int courseId = 6;
-            var selectedAssignment = _context.Assignments.Where(x => x.AssignmentTitle.Equals("Unit Test")).FirstOrDefault();
+            var selectedAssignment = _context.Assignments.Where(x => x.AssignmentTitle == "Unit Test").FirstOrDefault();
 
             //perform operations
             Boolean result = AssignmentService.DeleteAssignmentService(selectedAssignment.AssignmentId, _context);
@@ -120,6 +121,62 @@ namespace MackTechTests
             var y = _context.Assignments.Where(x => x.AssignmentTitle == selectedAssignment.AssignmentTitle);
             System.Diagnostics.Debug.WriteLine(y.Count());
             Assert.IsTrue(y.Count() == 0);
+        }
+
+        [TestMethod]
+        public void SubmitFileUploadAssignment() //TestStudentTextSubmission@mail.univ.edu
+        {
+            //Q: can a student submit a file upload assignment?
+
+            //prep
+
+            var _context = new MackTechGroupProject.Models.ApplicationDbContext();
+
+            var sUserId = "7033fb11-e3e3-465a-831c-55a0dd215343"; //TestStudent TextSubmission
+            var aAssignmentId = 164; //MATH 1040 - Assignment 2 - Upload file of scanned homework
+
+            var currentAssignment = _context.Assignments.Where(x => x.AssignmentId == aAssignmentId).FirstOrDefault();
+            var currentStudent = _context.Users.Where(x => x.Id == sUserId).FirstOrDefault();
+
+            string fileName = "Test_Document.docx";
+            //string path = HostingEnvironment.MapPath("~/Content/");
+            var filePath = Path.Combine(Directory.GetParent(System.IO.Directory.GetCurrentDirectory()).Parent.Parent.FullName, "MackTechGroupProject", "Content", fileName);
+
+            //https://stackoverflow.com/questions/7466687/how-to-create-an-instance-of-httppostedfilebaseor-its-inherited-type
+            FileStream fileStream = new FileStream(filePath, FileMode.Open);
+            MemoryFile fileSubmission = new MemoryFile(fileStream, "application/vnd.openxmlformats-officedocument.wordprocessingml.document", fileName);
+
+            //create a submissionGrade object
+            SubmissionGrades submissionGrade = new SubmissionGrades()
+            {
+                User = currentStudent,
+                Assignment = currentAssignment,
+                SubmissionDate = DateTime.Now,
+                TextSubmission = null,
+                FileSubmission = "UnitTestFileSubmission",
+                Grade = null
+            };
+
+            SubmitAssignmentModel model = new SubmitAssignmentModel
+            {
+                File = fileSubmission,
+                currentAssignment = currentAssignment,
+                assignmentID = (int)aAssignmentId
+            };
+
+            bool isUnitTest = true;
+
+            //perform operations
+            Boolean result = AssignmentService.submitAssignmentService(sUserId, aAssignmentId, model, _context, isUnitTest);
+
+            //verify and interpret results
+            Assert.IsTrue(result);
+
+            var y = _context.SubmissionGrades.Where(x => x.User.Id == sUserId && x.Assignment.AssignmentId == aAssignmentId).FirstOrDefault();
+
+            Assert.IsTrue(y.FileSubmission.Contains(fileName));
+
+            fileStream.Close();
         }
 
         [TestMethod]
@@ -178,8 +235,10 @@ namespace MackTechTests
                 assignmentID = (int)aAssignmentId
             };
 
+            bool isUnitTest = true;
+
             //perform operations
-            Boolean result = AssignmentService.submitAssignmentService(sUserId, aAssignmentId, model, _context);
+            Boolean result = AssignmentService.submitAssignmentService(sUserId, aAssignmentId, model, _context, isUnitTest);
 
             //perform operations
             //Boolean result = AssignmentService.submitTextAssignmentService(aAssignmentId, submissionGrade, _context);
@@ -188,7 +247,7 @@ namespace MackTechTests
             //verify and interpret results
             Assert.IsTrue(result);
 
-            var y = _context.SubmissionGrades.Where(x => x.User.Id == sUserId).FirstOrDefault();
+            var y = _context.SubmissionGrades.Where(x => x.User.Id == sUserId && x.Assignment.AssignmentId == 148).FirstOrDefault();
 
             Assert.IsTrue(y.TextSubmission.Equals(text));
         }
@@ -216,8 +275,10 @@ namespace MackTechTests
                 assignmentID = (int)aAssignmentId
             };
 
+            bool isUnitTest = true;
+
             //perform operations
-            Boolean result = AssignmentService.submitAssignmentService(sUserId, aAssignmentId, model, _context);
+            Boolean result = AssignmentService.submitAssignmentService(sUserId, aAssignmentId, model, _context, isUnitTest);
             
 
             //verify and interpret results
