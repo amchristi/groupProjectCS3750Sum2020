@@ -255,13 +255,14 @@
 
             // update notification count
             function updateNotificationCount() {
-                var count = 0;
+                var count = 0;                
+                count = parseInt($('span.count').html()) || 0;                
+                count++;                
+                $('span.count').html(count);                
+
                 var icount = 0;
-                count = parseInt($('span.count').html()) || 0;
                 icount = parseInt($('span.icount').html()) || 0;
-                count++;
                 icount++;
-                $('span.count').html(count);
                 $('span.icount').html(icount);
             }
 

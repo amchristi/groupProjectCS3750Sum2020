@@ -8,6 +8,7 @@ using Microsoft.AspNet.SignalR;
 using MackTechGroupProject.Models;
 using Microsoft.AspNet.Identity.Owin;
 using System.Data.Entity;
+using Microsoft.AspNet.Identity;
 
 namespace MackTechGroupProject
 {
@@ -110,9 +111,6 @@ namespace MackTechGroupProject
                 {
                     //nothing need to add here
                 }
-
-
-
             }
 
             return result;
@@ -177,6 +175,8 @@ namespace MackTechGroupProject
 
                 List<StudentNotificationViewModel> result = new List<StudentNotificationViewModel>();
 
+                //******STUDENT NOTIFICATIONS**************
+
                 //student - get newly graded submissions per user
                 var updatedSubmissions = context.SubmissionGrades.Where(x => x.GradeAddedOn > afterDate).Include(x => x.Assignment).Include(x => x.User).OrderByDescending(x => x.GradeAddedOn).ToList();
                 var updatedSubmissionsForUser = updatedSubmissions.Where(x => x.User.Id == userId).ToList();
@@ -185,10 +185,6 @@ namespace MackTechGroupProject
                 var currentEnrollmentsWithAssignments = context.Enrollments.Where(x => x.User.Id == userId).Include(x => x.User).Include(x => x.Course).Include("Course.Assignments").ToList();
                 var allAssignments = currentEnrollmentsWithAssignments.Select(x => x.Course).SelectMany(y => y.Assignments).ToList();
                 var recentlyAddedAssignments = allAssignments.Where(x => x.AssignmentAddedOn > afterDate).ToList();
-
-                
-                //instructor - get newly added submission submitted for instructor
-                var assignmentSubmitted = context.SubmissionGrades.Where(x => x.SubmissionDate > afterDate).ToList();
 
                 //student - add newly graded submissions to the list
                 foreach (SubmissionGrades sg in updatedSubmissionsForUser)
@@ -208,7 +204,7 @@ namespace MackTechGroupProject
                     result.Add(newGradedNotification);
 
                 }
-                           
+
 
                 //student - add newly added assignments to the same list
                 foreach (Assignment a in recentlyAddedAssignments)
@@ -228,25 +224,37 @@ namespace MackTechGroupProject
 
                 }
 
-                
+
+                //******INSTRUCTOR NOTIFICATIONS**************
+
+                //instructor - get newly added submission submitted for instructor
+
+                var recentStudentSubmissions = context.SubmissionGrades.Where(x => x.SubmissionDate > afterDate).Include(x => x.Assignment).Include(x => x.User).OrderByDescending(x => x.SubmissionDate).ToList();
+                var getInstructor = context.Users.Where(x => x.Id == userId).FirstOrDefault();
+                var instructorCourses = context.Courses.Where(x => x.Instructor.Id == getInstructor.Id).ToList();
+                var instructorCourseSubmission = from submission in recentStudentSubmissions
+                                                 where instructorCourses.Any(x => x.CourseId == submission.Assignment.Course.CourseId)
+                                                 select submission;
+
                 //instructor add newly graded submissions to the list
-                foreach (SubmissionGrades sg in assignmentSubmitted)
+                foreach (SubmissionGrades studentSubmission in instructorCourseSubmission)
                 {
 
                     StudentNotificationViewModel newAssignmentSubmitted = new StudentNotificationViewModel()
                     {
-                        AssignmentTitle = sg.Assignment.AssignmentTitle,
+                        AssignmentTitle = studentSubmission.Assignment.AssignmentTitle,
                         Grade = 0,
-                        Points = sg.Assignment.Points,
+                        Points = studentSubmission.Assignment.Points,
                         DueDate = null,
-                        Department = sg.Assignment.Course.Department,
-                        CourseNumber = sg.Assignment.Course.CourseNumber,
-                        SubmissionDate = sg.SubmissionDate,
+                        Department = studentSubmission.Assignment.Course.Department,
+                        CourseNumber = studentSubmission.Assignment.Course.CourseNumber,
+                        SubmissionDate = studentSubmission.SubmissionDate,
                         isInstructor = true
                     };
-                        result.Add(newAssignmentSubmitted);
+                    result.Add(newAssignmentSubmitted);
                 }
-                
+
+
                 //return the list
                 return result;
             }

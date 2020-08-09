@@ -32,6 +32,7 @@ namespace MackTechGroupProject
             HttpContext.Current.Session["LastUpdated"] = currentTime;
             NC.UpdatedAssignmentGradeNotification(currentTime);
             NC.AddedAssignmentNotification(currentTime);
+            NC.AssignmentSubmittedNotification(currentTime);
         }
 
         protected void Application_End()
